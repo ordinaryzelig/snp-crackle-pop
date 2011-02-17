@@ -1,4 +1,3 @@
-
 # Connection.new takes host, port
 host = 'localhost'
 port = Mongo::Connection::DEFAULT_PORT

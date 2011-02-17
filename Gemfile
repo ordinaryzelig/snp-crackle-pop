@@ -6,14 +6,18 @@ gem 'rack-flash', '0.1.1'
 gem 'thin', '1.2.7' # or mongrel
 
 # Component requirements
+gem 'bson_ext', '1.2'
 gem 'slim', '0.9.0'
-gem 'mongoid', '1.9.2'
-gem 'eutils', '0.1.2'
-gem 'libxml-ruby', '1.1.4'
+gem 'mongoid', '2.0.0.rc.7'
+gem 'entrez', '0.1.1'
 
 # Test requirements
 group :test do
   gem 'rspec', '2.4.0'
+end
+
+group :development, :test do
+  gem 'awesome_print'
 end
 
 # Padrino

@@ -8,13 +8,17 @@ class Snp
   # You can define indexes on documents using the index macro:
   # index :field <, :unique => true>
 
-  def self.fetch_hash(rs_number)
-    Eutils.new('ruby', 'jared@redningja.com').efetch('snp', nil, nil, {id: rs_number})
+  def self.fetch!(rs_number)
+    results = Entrez.efetch('snp', {id: rs_number, HETZ: 345})
+    #... parse XML.
+    parsed = Nokigiri::XML.parse(results)
+    snp = new rs_number: rs_number
+    snp.save!
+    snp
   end
 
-  def self.fetch(rs_number)
-    hash = fetch_hash rs_number
-    new(rs_number: hash['ExchangeSet']['Rs']['rsId'])
+  def self.find_or_fetch(rs_number)
+    find(rs_number) || fetch(rs_number)
   end
 
 end

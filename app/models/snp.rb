@@ -11,7 +11,7 @@ class Snp
   def self.fetch!(rs_number)
     results = Entrez.efetch('snp', {id: rs_number, HETZ: 345})
     #... parse XML.
-    parsed = Nokigiri::XML.parse(results)
+    parsed = Nok0giri::XML.parse(results)
     snp = new rs_number: rs_number
     snp.save!
     snp

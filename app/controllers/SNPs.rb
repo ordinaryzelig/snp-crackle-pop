@@ -1,23 +1,9 @@
-require 'slim'
-
 SnpCracklePop.controllers :snps do
 
   get :index do
-    slim :'snps/index'
+    #@snp = Snp.find_or_fetch(params[:rs_number]) if params[:rs_number].present?
+    @snp = Snp.first
+    haml :'snps/index'
   end
-
-  # get :sample, :map => "/sample/url", :provides => [:any, :js] do
-  #   case content_type
-  #     when :js then ...
-  #     else ...
-  # end
-
-  # get :foo, :with => :id do
-  #   "Maps to url '/foo/#{params[:id]}'"
-  # end
-
-  # get "/example" do
-  #   "Hello world!"
-  # end
 
 end

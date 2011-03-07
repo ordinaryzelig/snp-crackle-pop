@@ -7,7 +7,6 @@ gem 'thin', '1.2.7' # or mongrel
 
 # Component requirements
 gem 'bson_ext', '1.2.4'
-#gem 'slim', '0.9.0'
 gem 'entrez', '0.1.1'
 gem 'haml', '3.0.25'
 gem 'mongoid', '2.0.0.rc.7'

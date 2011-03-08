@@ -25,9 +25,6 @@ class Snp
     response = Entrez.efetch('snp', {id: rs_number, retmode: 'xml'})
     #... parse XML.
     document = Nokogiri::XML(response.body)
-    testfile = File.new(rs_number.to_s() + ".xml", "w")
-    testfile.puts(document)
-    testfile.close
     rsId = document.root.css('Rs').first['rsId']
     chromosome = document.root.css('Rs Assembly Component').first['chromosome']
     gene = document.root.css('Rs Assembly Component MapLoc FxnSet').first['symbol']

@@ -13,7 +13,7 @@ gem 'mongoid', '2.0.0.rc.7'
 gem 'nokogiri', '1.4.4'
 
 group :test do
-  gem 'rspec', '2.4.0'
+  gem 'rspec', '2.5.0'
 end
 
 group :development, :test do

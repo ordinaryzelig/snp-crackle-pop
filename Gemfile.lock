@@ -13,7 +13,7 @@ GEM
     crack (0.1.8)
     daemons (1.1.0)
     diff-lcs (1.1.2)
-    entrez (0.1.1)
+    entrez (0.2.0)
       httparty
     eventmachine (0.12.10)
     git (1.2.5)
@@ -101,7 +101,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bson_ext (= 1.2.4)
-  entrez (= 0.1.1)
+  entrez (= 0.2.0)
   haml (= 3.0.25)
   mongoid (= 2.0.0.rc.7)
   nokogiri (= 1.4.4)

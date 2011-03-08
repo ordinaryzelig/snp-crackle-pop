@@ -1,6 +1,8 @@
 class Snp
 
-  include Mongoid::Document
+  extend NCBIRecord
+
+  set_entrez_id_field :rs_number
 
   field :rs_number,              type: Integer, xml: proc { |doc| doc.css('Rs').first['rsId'] }
   field :chromosome,             type: Integer, xml: proc { |doc| doc.css('Rs Assembly Component').first['chromosome'] }
@@ -17,35 +19,8 @@ class Snp
   field :snp_class,              type: String,  xml: proc { |doc| doc.css('Rs').first['snpClass'] }
   field :base_position,          type: Integer
 
-  # You can define indexes on documents using the index macro:
-  # index :field <, :unique => true>
+  index :rs_number, unique: true
 
-  class << self
-
-    def fetch(rs_number)
-      response = Entrez.efetch('snp', {id: rs_number, retmode: 'xml'})
-      attributes = parse(response.body)
-      snp = new(attributes)
-      #snp.save!
-      snp
-    end
-
-    def find_or_fetch(rs_number)
-      where(rs_number: rs_number).first || fetch!(rs_number)
-    end
-
-    private
-
-    # Given XML string, parse attributes based on xml procs defined for each field.
-    def parse(xml)
-      document = Nokogiri::XML(xml)
-      fields.inject({}) do |attributes, (field_name, field)|
-        xml_proc = field.options[:xml]
-        attributes[field_name] = xml_proc.call(document) if xml_proc
-        attributes
-      end
-    end
-
-  end
+  validates_uniqueness_of :rs_number
 
 end

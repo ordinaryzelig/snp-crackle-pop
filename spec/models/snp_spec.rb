@@ -70,6 +70,25 @@ describe Snp do
     snp.max_success_rate.should eq(99)
   end
 
-  it 'should find it, if it is not found, fetch it'
+  it 'should persist in the database' do
+    snp = Snp.fetch! 121908378
+    snp.persisted?.should be_true
+  end
+
+  it 'should set rs_number as entrez_id_field' do
+    rs_number = 121908378
+    snp = Snp.fetch! rs_number
+    Snp.find_by_entrez_id(rs_number).should eq(snp)
+  end
+
+  it 'should find it, if it is not found, fetch it' do
+    rs_number = 121908378
+    fetched_snp = Snp.find_by_entrez_id_or_fetch rs_number
+    fetched_snp.rs_number.should eq(rs_number)
+    fetched_snp.save!
+    found_snp = Snp.find_by_entrez_id_or_fetch rs_number
+    found_snp.should eq(fetched_snp)
+    Snp.count.should eq(1)
+  end
 
 end

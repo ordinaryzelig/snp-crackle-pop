@@ -9,4 +9,4 @@
 
 - if @snp
   #snp
-    %p.rs_number= @snp.rs_number
+    %p.xml= (h @snp.xml).gsub(/  /, '&nbsp' * 2).gsub(/$/, '<br />')

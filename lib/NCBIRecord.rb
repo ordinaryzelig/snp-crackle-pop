@@ -1,9 +1,13 @@
 # The standard module for an NCBI model.
-# Will includ Mongoid::Document and add standard methods.
+# Will include Mongoid::Document and add standard methods.
 module NCBIRecord
+
 
   def self.extended(base)
     base.send :include, Mongoid::Document
+    base.instance_eval do
+      attr_accessor :xml
+    end
   end
 
   # NCBI database name.
@@ -29,6 +33,7 @@ module NCBIRecord
     response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
     attributes = parse(response.body)
     object = new(attributes)
+    object.xml = response.body
     object
   end
 
@@ -56,9 +61,18 @@ module NCBIRecord
     document = Nokogiri::XML(xml)
     fields.inject({}) do |attributes, (field_name, field)|
       xml_proc = field.options[:xml]
-      attributes[field_name] = xml_proc.call(document) if xml_proc
+      begin
+        attributes[field_name] = xml_proc.call(document) if xml_proc
+      rescue Exception => ex
+        raise ParseError.new(self, field_name, ex)
+      end
       attributes
     end
   end
 
+  class ParseError < StandardError
+    def initialize(model, field_name, ex)
+      super("Error parsing #{model}##{field_name}: #{ex.message}")
+    end
+  end
 end

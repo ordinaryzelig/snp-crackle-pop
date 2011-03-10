@@ -1,8 +1,9 @@
 SnpCracklePop.controllers :snps do
 
   get :index do
-    #@snp = Snp.find_or_fetch(params[:rs_number]) if params[:rs_number].present?
-    @snp = Snp.first
+    if params[:rs_number]
+      @snp = Snp.fetch(params[:rs_number])
+    end
     haml :'snps/index'
   end
 

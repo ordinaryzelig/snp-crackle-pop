@@ -2,6 +2,11 @@
 # Will include Mongoid::Document and add standard methods.
 module NCBIRecord
 
+  def references_one(name, options, &block)
+    @references_xml_procs ||= {}
+    @references_xml_procs[name] = options.delete(:xml)
+    super(name, options, &block)
+  end
 
   def self.extended(base)
     base.send :include, Mongoid::Document
@@ -31,6 +36,9 @@ module NCBIRecord
   # Fetch data from NCBI.
   def fetch(entrez_id)
     response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
+    xmlfile = File.new(entrez_id.to_s() + ".xml", "w")
+    xmlfile.write(response)
+    xmlfile.close
     attributes = parse(response.body)
     object = new(attributes)
     object.xml = response.body
@@ -67,6 +75,10 @@ module NCBIRecord
         raise ParseError.new(self, field_name, ex)
       end
       attributes
+    end
+    @references_xml_procs.each do |name, xml_proc|
+      tax_id = xml_proc.call(document)
+
     end
   end
 

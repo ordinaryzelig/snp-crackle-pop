@@ -32,6 +32,14 @@ describe Snp do
     snp_attributes.should eq(attributes)
   end
 
+  it 'fetches accession'
+
+  it 'fetches function_class'
+
+  it 'fetches allele'
+
+  it 'fetches base_position'
+
   it 'should fetch gene' do
     rs = 121908378 # foxp2 rs no.
     snp = Snp.fetch(rs)

@@ -7,8 +7,6 @@ Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
 RSpec.configure do |config|
   config.include(Macros)
   config.before :each do
-    Mongoid.master.collections.select do |collection|
-      collection.name !~ /system/
-    end.each(&:drop)
+    drop_tables
   end
 end

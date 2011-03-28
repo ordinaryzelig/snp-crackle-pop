@@ -2,84 +2,79 @@
 # Will include Mongoid::Document and add standard methods.
 module NCBIRecord
 
-  def references_one(name, options, &block)
-    @references_xml_procs ||= {}
-    @references_xml_procs[name] = options.delete(:xml)
-    super(name, options, &block)
-  end
-
-  def self.extended(base)
+  def self.included(base)
     base.send :include, Mongoid::Document
+    base.extend ClassMethods
     base.instance_eval do
       attr_accessor :xml
     end
   end
 
-  # NCBI database name.
-  def database_name
-    @database_name ||= name.underscore.downcase
-  end
+  module ClassMethods
 
-  # Set NCBI database name.
-  def database_name=(name)
-    @database_name = name
-  end
+    # NCBI database name.
+    def database_name
+      @database_name ||= name.underscore.downcase
+    end
 
-  # What NCBI uses as their ID.
-  attr_reader :entrez_id_field
+    # Set NCBI database name.
+    def database_name=(name)
+      @database_name = name
+    end
 
-  # Set what NCBI uses as their ID.
-  def set_entrez_id_field(field_name)
-    @entrez_id_field = field_name
-  end
+    # What NCBI uses as their ID.
+    attr_reader :entrez_id_field
 
-  # Fetch data from NCBI.
-  def fetch(entrez_id)
-    response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
-    xmlfile = File.new(entrez_id.to_s() + ".xml", "w")
-    xmlfile.write(response)
-    xmlfile.close
-    attributes = parse(response.body)
-    object = new(attributes)
-    object.xml = response.body
-    object
-  end
+    # Set what NCBI uses as their ID.
+    def set_entrez_id_field(field_name)
+      @entrez_id_field = field_name
+    end
 
-  # Same as fetch and saves to database.
-  def fetch!(entrez_id)
-    object = fetch(entrez_id)
-    object.save!
-    object
-  end
+    # Fetch data from NCBI.
+    def fetch(entrez_id)
+      response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
+      attributes = parse(response.body)
+      object = new(attributes)
+      object.xml = response.body
+      object
+    end
 
-  # Find from database.
-  def find_by_entrez_id(entrez_id)
-    where(entrez_id_field => entrez_id).first
-  end
+    # Same as fetch and saves to database.
+    def fetch!(entrez_id)
+      object = fetch(entrez_id)
+      object.save!
+      object
+    end
 
-  # Find from database, if not found, fetch it from NCBI.
-  def find_by_entrez_id_or_fetch(entrez_id)
-    find_by_entrez_id(entrez_id) || fetch(entrez_id)
-  end
+    # Find from database.
+    def find_by_entrez_id(entrez_id)
+      where(entrez_id_field => entrez_id).first
+    end
 
-  private
+    # Find from database, if not found, fetch! it from NCBI (and store it in DB).
+    def find_by_entrez_id_or_fetch!(entrez_id)
+      find_by_entrez_id(entrez_id) || fetch!(entrez_id)
+    end
 
-  # Given XML string, parse attributes based on xml procs defined for each field.
-  def parse(xml)
-    document = Nokogiri::XML(xml)
-    fields.inject({}) do |attributes, (field_name, field)|
-      xml_proc = field.options[:xml]
-      begin
-        attributes[field_name] = xml_proc.call(document) if xml_proc
-      rescue Exception => ex
-        raise ParseError.new(self, field_name, ex)
+    # Find from database, if not found, fetch it from NCBI.
+    def find_by_entrez_id_or_fetch(entrez_id)
+      find_by_entrez_id(entrez_id) || fetch(entrez_id)
+    end
+
+    private
+
+    # Given XML string, parse attributes based on xml procs defined for each field.
+    # Return attributes hash.
+    def parse(xml)
+      document = Nokogiri::XML(xml)
+      attributes = {}
+      fields.each do |field_name, field|
+        xml_proc = field.options[:xml]
+        attributes[field_name] = document.extract(field_name, xml_proc) if xml_proc
       end
       attributes
     end
-    @references_xml_procs.each do |name, xml_proc|
-      tax_id = xml_proc.call(document)
 
-    end
   end
 
   class ParseError < StandardError

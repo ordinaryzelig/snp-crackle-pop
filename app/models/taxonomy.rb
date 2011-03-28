@@ -1,6 +1,6 @@
 class Taxonomy
 
-  extend NCBIRecord
+  include NCBIRecord
 
   set_entrez_id_field :tax_id
 
@@ -8,13 +8,22 @@ class Taxonomy
   field :scientific_name, type: String, xml: proc { |doc| doc.css('Taxon ScientificName').first.content }
   field :genbank_common_name, type: String, xml: proc { |doc| doc.css('Taxon OtherNames GenbankCommonName').first.content }
   field :common_name, type: String, xml: proc { |doc| doc.css('Taxon OtherNames CommonName').first.content }
-  
-  referenced_in :snp
 
+  index :tax_id, unique: true
 
+  validates_uniqueness_of :tax_id
 
-  index :taxid, unique: true
+  class << self
 
-  validates_uniqueness_of :taxid
+    # Search scientific_name, genbank_common_name, and common_name.
+    def search(name)
+      reg_exp = Regexp.new(name, true)
+      conditions = [:scientific_name, :genbank_common_name, :common_name].map do |field_to_search|
+        {field_to_search => reg_exp}
+      end
+      any_of(conditions)
+    end
+
+  end
 
 end

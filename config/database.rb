@@ -8,7 +8,7 @@ database_name = case Padrino.env
   when :test        then 'snp_crackle_pop_test'
 end
 
-#Mongoid.database = Mongo::Connection.new(host, port).db(database_name)
+Mongoid.database = Mongo::Connection.new(host, port).db(database_name)
 
 # You can also configure Mongoid this way
 # Mongoid.configure do |config|

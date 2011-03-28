@@ -12,58 +12,52 @@ describe Snp do
     snp = Snp.fetch(rs)
     snp.rs_number.should eq(rs)
     attributes = {
-      "rs_number" => 121908378,
-      "chromosome" => 7,
-      "gene" => "FOXP2",
+      'rs_number' => 121908378,
+      'chromosome' => 7,
+      'gene' => 'FOXP2',
+      'tax_id' => 9606,
       #'accession' => '',
-      #'organism' => '',
       #'function_class' => '',
-      "not_reference_assembly" => true,
-      "heterozygosity" => 0.0,
-      "het_uncertainty" => 0.0,
-      "min_success_rate" => 0.0,
-      "max_success_rate" => 0.0,
+      'not_reference_assembly' => true,
+      'heterozygosity' => 0.0,
+      'het_uncertainty' => 0.0,
+      'min_success_rate' => 0.0,
+      'max_success_rate' => 0.0,
       #'allele' => '',
-      "snp_class" => "snp",
+      'snp_class' => 'snp',
       #'base_position' => '',
     }
     snp_attributes = snp.attributes
-    snp_attributes.delete("_id")
+    snp_attributes.delete('_id')
     snp_attributes.should eq(attributes)
   end
 
-  it "should fetch gene" do
+  it 'should fetch gene' do
     rs = 121908378 # foxp2 rs no.
     snp = Snp.fetch(rs)
-    snp.gene.should eq("FOXP2")
+    snp.gene.should eq('FOXP2')
   end
 
-  it "should fetch organism"# do
-    #rs = 119028036 # red-winged blackbird rs no.
-    #snp = Snp.fetch(rs)
-    #snp.organism.should eq("Agelaius phoeniceus")
-  #end
-
-  it "should fetch reference assembly" do
+  it 'should fetch reference assembly' do
     rs = 121908378
     snp = Snp.fetch(rs)
     snp.not_reference_assembly.should eq(true)
   end
 
-  it "should fetch SNP class" do
+  it 'should fetch SNP class' do
     rs = 121908378
     snp = Snp.fetch(rs)
-    snp.snp_class.should eq("snp")
+    snp.snp_class.should eq('snp')
   end
 
-  it "should fetch heterozygosity" do
+  it 'should fetch heterozygosity' do
     rs = 4884357
     snp = Snp.fetch(rs)
-    snp.heterozygosity.should eq(0.045)
-    snp.het_uncertainty.should eq(0.143)
+    snp.heterozygosity.should eq(0.042)
+    snp.het_uncertainty.should eq(0.139)
   end
 
-  it "should fetch success rate" do
+  it 'should fetch success rate' do
     rs = 1494555
     snp = Snp.fetch(rs)
     snp.min_success_rate.should eq(95)
@@ -89,6 +83,21 @@ describe Snp do
     found_snp = Snp.find_by_entrez_id_or_fetch rs_number
     found_snp.should eq(fetched_snp)
     Snp.count.should eq(1)
+  end
+
+  it 'should fetch tax_id' do
+    rs_number = 4884357
+    snp = Snp.fetch(rs_number)
+    snp.tax_id.should eq(9606)
+  end
+
+  it 'should return taxonomy object for tax_id' do
+    rs_number = 4884357
+    snp = Snp.fetch(rs_number)
+    taxonomy = snp.taxonomy
+    taxonomy.should_not be_nil
+    taxonomy.genbank_common_name.should eq('human')
+    taxonomy.should eq(Taxonomy.first)
   end
 
 end

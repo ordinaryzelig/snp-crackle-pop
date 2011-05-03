@@ -2,19 +2,27 @@ require 'spec_helper'
 
 describe Taxonomy do
 
-  it 'should fetch data from NCBI' do
+  # This tests if the actual response matches what we have stored in the fixture file.
+  # If this test passes, we can mock the rest of the way.
+  it 'fetches data from NCBI' do
     tax_id = 9606
-    attributes = {
-      'tax_id' => 9606,
-      'scientific_name' => 'Homo sapiens',
-      'genbank_common_name' => 'human',
-      'common_name' => 'man',
-    }
-    tax = Taxonomy.fetch(tax_id)
-    tax.tax_id.should eq(tax_id)
-    tax_attributes = tax.attributes
-    tax_attributes.delete('_id')
-    tax_attributes.should eq(attributes)
+    fixture_file_xml_content = fixture_file("taxonomy_#{tax_id}.xml").read.chomp
+    taxonomy = Taxonomy.fetch(tax_id)
+    taxonomy.response.body.chomp.should == fixture_file_xml_content
+  end
+
+  context 'parses attribute' do
+
+    before :all do
+      taxonomy = taxonomy_from_fixture_file
+      @record = taxonomy
+    end
+
+    it_parses_attribute :common_name,         'man'
+    it_parses_attribute :genbank_common_name, 'human'
+    it_parses_attribute :scientific_name,     'Homo sapiens'
+    it_parses_attribute :tax_id,              9606
+
   end
 
   it 'should search for any name' do

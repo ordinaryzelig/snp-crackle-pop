@@ -13,7 +13,9 @@ gem 'mongoid', '2.0.0.rc.7'
 gem 'nokogiri', '1.4.4'
 
 group :test do
+  gem 'mocha', '0.9.12'
   gem 'rspec', '2.5.0'
+  gem 'spork', '0.8.4'
 end
 
 group :development, :test do

@@ -6,8 +6,18 @@ module NCBIRecord
     base.send :include, Mongoid::Document
     base.extend ClassMethods
     base.instance_eval do
-      attr_accessor :xml
+      attr_reader   :response
     end
+  end
+
+  def xml
+    response.body
+  end
+
+  private
+
+  def response=(httparty_response)
+    @response = httparty_response
   end
 
   module ClassMethods
@@ -33,9 +43,8 @@ module NCBIRecord
     # Fetch data from NCBI.
     def fetch(entrez_id)
       response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
-      attributes = parse(response.body)
-      object = new(attributes)
-      object.xml = response.body
+      object = new_from_xml(response.body)
+      object.send(:response=, response)
       object
     end
 
@@ -75,11 +84,17 @@ module NCBIRecord
       attributes
     end
 
+    def new_from_xml(xml)
+      attributes = parse(xml)
+      new(attributes)
+    end
+
   end
 
   class ParseError < StandardError
     def initialize(model, field_name, ex)
-      super("Error parsing #{model}##{field_name}: #{ex.message}")
+      super("Error parsing #{model}##{field_name}:\n#{ex.message}")
     end
   end
+
 end

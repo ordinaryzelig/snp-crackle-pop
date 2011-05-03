@@ -2,106 +2,53 @@ require 'spec_helper'
 
 describe Snp do
 
-  # This is here just as a reminder to find an rs# that has all fields.
-  # It would help to test that it all works together.
-  # We can then also get rid of tests for individual fields.
-  it 'should fetch data from NCBI (see note in spec)'
-
-  it 'should fetch data from NCBI' do
-    rs = 121908378
+  # This tests if the actual response matches what we have stored in the fixture file.
+  # If this test passes, we can mock the rest of the way.
+  it 'fetches data from NCBI' do
+    rs = 9268480
+    fixture_file_xml_content = fixture_file("snp_#{rs}.xml").read.chomp
     snp = Snp.fetch(rs)
-    snp.rs_number.should eq(rs)
-    attributes = {
-      'rs_number' => 121908378,
-      'chromosome' => 7,
-      'gene' => 'FOXP2',
-      'tax_id' => 9606,
-      #'accession' => '',
-      #'function_class' => '',
-      'not_reference_assembly' => true,
-      'heterozygosity' => 0.0,
-      'het_uncertainty' => 0.0,
-      'min_success_rate' => 0.0,
-      'max_success_rate' => 0.0,
-      #'allele' => '',
-      'snp_class' => 'snp',
-      #'base_position' => '',
-    }
-    snp_attributes = snp.attributes
-    snp_attributes.delete('_id')
-    snp_attributes.should eq(attributes)
+    snp.response.body.chomp.should == fixture_file_xml_content
   end
 
-  it 'fetches accession'
+  context 'parses attribute' do
 
-  it 'fetches function_class'
+    before :all do
+      snp = snp_from_fixture_file
+      @record = snp
+    end
 
-  it 'fetches allele'
+    it_parses_attribute :accession,          :pending
+    it_parses_attribute :allele,             :pending
+    it_parses_attribute :base_position,      :pending
+    it_parses_attribute :chromosome,         6
+    it_parses_attribute :function_class,     :pending
+    it_parses_attribute :gene,               'BTNL2'
+    it_parses_attribute :het_uncertainty,    0.244
+    it_parses_attribute :heterozygosity,     0.307
+    it_parses_attribute :max_success_rate,   nil
+    it_parses_attribute :min_success_rate,   nil
+    it_parses_attribute :reference_assembly, true
+    it_parses_attribute :rs_number,          9268480
+    it_parses_attribute :snp_class,          'snp'
+    it_parses_attribute :tax_id,             9606
 
-  it 'fetches base_position'
-
-  it 'should fetch gene' do
-    rs = 121908378 # foxp2 rs no.
-    snp = Snp.fetch(rs)
-    snp.gene.should eq('FOXP2')
   end
 
-  it 'should fetch reference assembly' do
-    rs = 121908378
-    snp = Snp.fetch(rs)
-    snp.not_reference_assembly.should eq(true)
+  it '#find_by_entrez_id_or_fetch finds rs from database if it exists' do
+    snp = snp_from_fixture_file
+    snp.save!
+    Snp.expects(:fetch).never
+    Snp.find_by_entrez_id_or_fetch snp.rs_number
   end
 
-  it 'should fetch SNP class' do
-    rs = 121908378
-    snp = Snp.fetch(rs)
-    snp.snp_class.should eq('snp')
-  end
-
-  it 'should fetch heterozygosity' do
-    rs = 4884357
-    snp = Snp.fetch(rs)
-    snp.heterozygosity.should eq(0.042)
-    snp.het_uncertainty.should eq(0.139)
-  end
-
-  it 'should fetch success rate' do
-    rs = 1494555
-    snp = Snp.fetch(rs)
-    snp.min_success_rate.should eq(95)
-    snp.max_success_rate.should eq(99)
-  end
-
-  it 'should persist in the database' do
-    snp = Snp.fetch! 121908378
-    snp.persisted?.should be_true
-  end
-
-  it 'should set rs_number as entrez_id_field' do
-    rs_number = 121908378
-    snp = Snp.fetch! rs_number
-    Snp.find_by_entrez_id(rs_number).should eq(snp)
-  end
-
-  it 'should find it, if it is not found, fetch it' do
-    rs_number = 121908378
-    fetched_snp = Snp.find_by_entrez_id_or_fetch rs_number
-    fetched_snp.rs_number.should eq(rs_number)
-    fetched_snp.save!
-    found_snp = Snp.find_by_entrez_id_or_fetch rs_number
-    found_snp.should eq(fetched_snp)
-    Snp.count.should eq(1)
-  end
-
-  it 'should fetch tax_id' do
-    rs_number = 4884357
-    snp = Snp.fetch(rs_number)
-    snp.tax_id.should eq(9606)
+  it '#find_by_entrez_id_or_fetch fetches rs from NCBI if not found' do
+    Snp.expects(:fetch).once
+    Snp.find_by_entrez_id_or_fetch 1 rescue nil
   end
 
   it 'should return taxonomy object for tax_id' do
-    rs_number = 4884357
-    snp = Snp.fetch(rs_number)
+    snp = snp_from_fixture_file
     taxonomy = snp.taxonomy
     taxonomy.should_not be_nil
     taxonomy.genbank_common_name.should eq('human')

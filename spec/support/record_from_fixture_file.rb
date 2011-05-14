@@ -3,9 +3,10 @@
 # E.G. Snp.from_fixture_file would return a new Snp object from the contents of spec/fixtures/snp_9268480.xml.
 
 MODEL_FIXTURE_FILES = {
-  Snp =>      'snp_9268480.xml',
-  Taxonomy => 'taxonomy_9606.xml',
-  Gene =>     'gene_672.xml',
+  Gene =>          'gene_672.xml',
+  GenomeProject => 'genome_project_28911.xml',
+  Snp =>           'snp_9268480.xml',
+  Taxonomy =>      'taxonomy_9606.xml',
 }
 
 MODEL_FIXTURE_FILES.keys.each do |model_class|

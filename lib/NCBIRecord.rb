@@ -29,7 +29,7 @@ module NCBIRecord
     end
 
     # Set NCBI database name.
-    def database_name=(name)
+    def set_database_name(name)
       @database_name = name
     end
 
@@ -37,13 +37,17 @@ module NCBIRecord
     attr_reader :entrez_id_field
 
     # Set what NCBI uses as their ID.
+    # Set that field as a MongoDB uniq index.
     def set_entrez_id_field(field_name)
       @entrez_id_field = field_name
+      index @entrez_id_field, unique: true
     end
 
     # Fetch data from NCBI.
+    # Instantiate new object and return.
+    # Record response.
     def fetch(entrez_id)
-      response = Entrez.efetch(database_name, {id: entrez_id, retmode: 'xml'})
+      response = perform_Entrez_request(entrez_id)
       object = new_from_xml(response.body)
       object.send(:response=, response)
       object
@@ -88,6 +92,12 @@ module NCBIRecord
     def new_from_xml(xml)
       attributes = parse(xml)
       new(attributes)
+    end
+
+    # Override to customize how data is fetched from Entrez.
+    # See GenomeProject for example.
+    def perform_Entrez_request(entrez_id)
+      Entrez.EFetch(database_name, {id: entrez_id, retmode: 'xml'})
     end
 
   end

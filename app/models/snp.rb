@@ -3,7 +3,6 @@ class Snp
   include NCBIRecord
 
   set_entrez_id_field :rs_number
-  index :rs_number, unique: true
 
   field :accession,          type: Integer  # Many accessions, grab all?
   field :allele,             type: String
@@ -20,8 +19,8 @@ class Snp
   field :snp_class,          type: String,  xml: proc { |doc| doc.css('Rs').first['snpClass'] }
   field :tax_id,             type: Integer, xml: proc { |doc| doc.css('Rs').first['taxId']}
 
-  has_taxonomy
-
   validates_uniqueness_of :rs_number
+
+  has_taxonomy
 
 end

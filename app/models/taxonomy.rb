@@ -9,8 +9,6 @@ class Taxonomy
   field :scientific_name, type: String, xml: proc { |doc| doc.css('Taxon ScientificName').first.content }
   field :tax_id, type: Integer, xml: proc { |doc| doc.css('Taxon TaxId').first.content }
 
-  index :tax_id, unique: true
-
   validates_uniqueness_of :tax_id
 
   class << self

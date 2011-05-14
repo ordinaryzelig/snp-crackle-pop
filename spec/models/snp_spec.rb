@@ -14,7 +14,7 @@ describe Snp do
   context 'parses attribute' do
 
     before :all do
-      snp = snp_from_fixture_file
+      snp = Snp.from_fixture_file
       @record = snp
     end
 
@@ -36,7 +36,7 @@ describe Snp do
   end
 
   it '#find_by_entrez_id_or_fetch finds rs from database if it exists' do
-    snp = snp_from_fixture_file
+    snp = Snp.from_fixture_file
     snp.save!
     Snp.expects(:fetch).never
     Snp.find_by_entrez_id_or_fetch snp.rs_number
@@ -47,12 +47,6 @@ describe Snp do
     Snp.find_by_entrez_id_or_fetch 1 rescue nil
   end
 
-  it 'should return taxonomy object for tax_id' do
-    snp = snp_from_fixture_file
-    taxonomy = snp.taxonomy
-    taxonomy.should_not be_nil
-    taxonomy.genbank_common_name.should eq('human')
-    taxonomy.should eq(Taxonomy.first)
-  end
+  it_has_taxonomy
 
 end

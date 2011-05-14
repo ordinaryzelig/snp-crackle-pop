@@ -14,7 +14,7 @@ describe Taxonomy do
   context 'parses attribute' do
 
     before :all do
-      taxonomy = taxonomy_from_fixture_file
+      taxonomy = Taxonomy.from_fixture_file
       @record = taxonomy
     end
 

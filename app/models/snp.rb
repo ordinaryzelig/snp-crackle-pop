@@ -3,6 +3,7 @@ class Snp
   include NCBIRecord
 
   set_entrez_id_field :rs_number
+  index :rs_number, unique: true
 
   field :accession,          type: Integer  # Many accessions, grab all?
   field :allele,             type: String
@@ -19,14 +20,8 @@ class Snp
   field :snp_class,          type: String,  xml: proc { |doc| doc.css('Rs').first['snpClass'] }
   field :tax_id,             type: Integer, xml: proc { |doc| doc.css('Rs').first['taxId']}
 
-  index :rs_number, unique: true
+  has_taxonomy
 
   validates_uniqueness_of :rs_number
-
-  # Thought about using referenced_in/references_many, but
-  # then we'd have to store mongo ids and that seems like overkill.
-  def taxonomy
-    Taxonomy.find_by_entrez_id_or_fetch!(tax_id)
-  end
 
 end

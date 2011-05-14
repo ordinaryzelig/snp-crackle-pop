@@ -5,6 +5,7 @@ module NCBIRecord
   def self.included(base)
     base.send :include, Mongoid::Document
     base.extend ClassMethods
+    base.extend HasTaxonomy
     base.instance_eval do
       attr_reader   :response
     end

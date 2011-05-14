@@ -3,6 +3,8 @@ require 'spork'
 
 Spork.prefork do
   # Spork::AppFramework::Padrino will load environment.
+  ENV["PADRINO_ENV"] ||= "test"
+  require File.expand_path("config/boot.rb", Dir.pwd)
   RSpec.configure do |config|
     config.mock_with :mocha
     config.before :each do

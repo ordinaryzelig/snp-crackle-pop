@@ -25,6 +25,7 @@ end
 # Add here your after load hooks
 #
 Padrino.after_load do
+  Dir[Padrino.root + '/config/initializers/*.rb'].each {|f| require f}
 end
 
 Padrino.load!

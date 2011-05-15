@@ -2,7 +2,6 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
-  # Spork::AppFramework::Padrino will load environment.
   ENV["PADRINO_ENV"] ||= "test"
   require File.expand_path("config/boot.rb", Dir.pwd)
   RSpec.configure do |config|
@@ -11,6 +10,9 @@ Spork.prefork do
       drop_tables
     end
   end
+  require 'capybara/rspec'
+  Capybara.app = SnpCracklePop
+  SnpCracklePop.setup_application!
 end
 
 Spork.each_run do

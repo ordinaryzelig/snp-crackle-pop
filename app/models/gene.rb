@@ -14,6 +14,15 @@ class Gene
   field :symbols_other, type: Array,   xml: proc { |doc| doc.css('Gene-ref_syn Gene-ref_syn_E').map(&:content) }
   field :tax_id,        type: Integer, xml: proc { |doc| doc.css('Org-ref_db Dbtag Dbtag_tag Object-id Object-id_id').first.content }
 
+  has_many :snps
+
   has_taxonomy
+
+  # For any Snps that have the same gene_id,
+  # but don't yet have a gene object in the db,
+  # assign this one to them.
+  def assign_to_child_snps
+    Snp.without_gene_object.for_NCBI_gene_id(self.gene_id).update_all(gene_id: self.id)
+  end
 
 end

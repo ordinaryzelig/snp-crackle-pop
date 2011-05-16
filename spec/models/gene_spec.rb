@@ -40,4 +40,12 @@ describe Gene do
 
   it_has_taxonomy
 
+  it 'assigns itself to child Snps' do
+    gene_id = 1
+    snp = Snp.make(_gene_id: gene_id)
+    gene = Gene.make(gene_id: gene_id)
+    gene.assign_to_child_snps
+    snp.reload.gene.should == gene
+  end
+
 end

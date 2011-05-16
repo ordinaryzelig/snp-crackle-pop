@@ -23,7 +23,8 @@ describe Snp do
     it_parses_attribute :base_position,      :pending
     it_parses_attribute :chromosome,         6
     it_parses_attribute :function_class,     :pending
-    it_parses_attribute :gene,               'BTNL2'
+    it_parses_attribute :_gene_id,           56244
+    it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244
     it_parses_attribute :heterozygosity,     0.307
     it_parses_attribute :max_success_rate,   nil
@@ -39,12 +40,12 @@ describe Snp do
     snp = Snp.from_fixture_file
     snp.save!
     Snp.expects(:fetch).never
-    Snp.find_by_entrez_id_or_fetch snp.rs_number
+    Snp.find_by_entrez_id_or_fetch! snp.rs_number
   end
 
   it '#find_by_entrez_id_or_fetch fetches rs from NCBI if not found' do
     Snp.expects(:fetch).once
-    Snp.find_by_entrez_id_or_fetch 1 rescue nil
+    Snp.find_by_entrez_id_or_fetch! 1 rescue nil
   end
 
   it_has_taxonomy

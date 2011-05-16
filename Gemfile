@@ -9,7 +9,7 @@ gem 'rack-flash', '0.1.1'
 gem 'thin', '1.2.7' # or mongrel
 
 # Component requirements
-gem 'bson_ext', '1.2.4'
+gem 'bson_ext', '1.3.1'
 gem 'entrez', '0.3.0'
 gem 'haml', '3.1.1'
 gem 'mongoid', '2.0.0.rc.7'
@@ -18,6 +18,7 @@ gem 'sass', '3.1.1'
 
 group :test do
   gem 'capybara', '~>0.4.1'
+  gem 'launchy', '0.4.0'
   gem 'machinist_mongo', '1.2.0', require: 'machinist/mongoid'
   gem 'mocha', '0.9.12'
   gem 'rspec', '2.5.0'

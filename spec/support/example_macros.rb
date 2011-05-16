@@ -15,4 +15,12 @@ module ExampleMacros
     click_button 'Search'
   end
 
+  def search_snps_path
+    SnpCracklePop.url(:snps, :index)
+  end
+
+  def saop
+    save_and_open_page
+  end
+
 end

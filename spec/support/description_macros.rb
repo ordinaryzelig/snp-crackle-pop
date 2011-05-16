@@ -12,7 +12,7 @@ module DescriptionMacros
     it 'should return taxonomy object for tax_id' do
       record = model.from_fixture_file
       taxonomy = record.taxonomy
-      taxonomy.should_not be_nil
+      taxonomy.should be_present
       taxonomy.should eq(Taxonomy.first)
     end
   end

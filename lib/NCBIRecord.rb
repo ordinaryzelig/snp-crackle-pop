@@ -54,8 +54,8 @@ module NCBIRecord
     end
 
     # Same as fetch and saves to database.
-    def fetch!(entrez_id)
-      object = fetch(entrez_id)
+    def fetch!(*args)
+      object = fetch(*args)
       object.save!
       object
     end
@@ -68,11 +68,6 @@ module NCBIRecord
     # Find from database, if not found, fetch! it from NCBI (and store it in DB).
     def find_by_entrez_id_or_fetch!(entrez_id)
       find_by_entrez_id(entrez_id) || fetch!(entrez_id)
-    end
-
-    # Find from database, if not found, fetch it from NCBI.
-    def find_by_entrez_id_or_fetch(entrez_id)
-      find_by_entrez_id(entrez_id) || fetch(entrez_id)
     end
 
     private

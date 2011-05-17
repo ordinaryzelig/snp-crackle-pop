@@ -26,7 +26,7 @@ describe Taxonomy do
   end
 
   it 'should search for any name' do
-    taxonomy = Taxonomy.fetch!(9606)
+    taxonomy = Taxonomy.make_from_fixture_file
     ['Homo sapiens', 'human', 'man', 'uma', 'homo'].each do |name|
       Taxonomy.search(name).should include(taxonomy)
     end

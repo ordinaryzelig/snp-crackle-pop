@@ -7,14 +7,4 @@ module DescriptionMacros
     end
   end
 
-  def it_has_taxonomy
-    model = description.constantize
-    it 'should return taxonomy object for tax_id' do
-      record = model.from_fixture_file
-      taxonomy = record.taxonomy
-      taxonomy.should be_present
-      taxonomy.should eq(Taxonomy.first)
-    end
-  end
-
 end

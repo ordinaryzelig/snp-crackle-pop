@@ -35,10 +35,9 @@ describe Gene do
     it_parses_attribute :protein_name,  'breast cancer type 1 susceptibility protein'
     it_parses_attribute :symbol,        'BRCA1'
     it_parses_attribute :symbols_other, ["IRIS", "PSCP", "BRCAI", "BRCC1", "PNCA4", "RNF53", "BROVCA1"]
+    it_parses_attribute :_taxonomy_id,  9606
 
   end
-
-  it_has_taxonomy
 
   it 'assigns itself to child Snps' do
     gene_id = 1

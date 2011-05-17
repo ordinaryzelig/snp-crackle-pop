@@ -5,13 +5,12 @@ class GenomeProject
   set_database_name   'genomeprj'
   set_entrez_id_field :project_id
 
-  field :tax_id,             type: Integer, xml: proc { |doc| doc.xpath('.//Item[@Name="TaxId"]').first.content }
   field :name,               type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Defline"]').first.content }
   field :project_id,         type: Integer, xml: proc { |doc| doc.xpath('.//Id').first.content }
   field :sequencing_centers, type: Array,   xml: proc { |doc| doc.xpath('.//Item[@Name="Center"]').map(&:content) }
   field :sequencing_status,  type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
-
-  has_taxonomy
+  field :_taxonomy_id,       type: Integer, xml: proc { |doc| doc.xpath('.//Item[@Name="TaxId"]').first.content }
+  belongs_to :taxonomy
 
   validates_uniqueness_of :project_id
 

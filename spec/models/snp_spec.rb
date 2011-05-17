@@ -32,7 +32,7 @@ describe Snp do
     it_parses_attribute :reference_assembly, true
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
-    it_parses_attribute :tax_id,             9606
+    it_parses_attribute :_taxonomy_id,       9606
 
   end
 
@@ -47,7 +47,5 @@ describe Snp do
     Snp.expects(:fetch).once
     Snp.find_by_entrez_id_or_fetch! 1 rescue nil
   end
-
-  it_has_taxonomy
 
 end

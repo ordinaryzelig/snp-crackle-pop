@@ -13,7 +13,7 @@ describe 'Snps', type: :acceptance do
     snp = Snp.make_from_fixture_file
     visit search_snps_path
     search_for_rs_number snp.rs_number
-    click_link snp.gene_symbol
+    find_link(snp.gene_symbol)
   end
 
 end

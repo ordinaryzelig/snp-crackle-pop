@@ -18,14 +18,13 @@ class Snp
   field :reference_assembly, type: Boolean, xml: proc { |doc| doc.css('Rs Assembly').any? { |assembly| assembly['reference'] == 'true'} }
   field :rs_number,          type: Integer, xml: proc { |doc| doc.css('Rs').first['rsId'] }
   field :snp_class,          type: String,  xml: proc { |doc| doc.css('Rs').first['snpClass'] }
-  field :tax_id,             type: Integer, xml: proc { |doc| doc.css('Rs').first['taxId']}
+  field :_taxonomy_id,       type: Integer, xml: proc { |doc| doc.css('Rs').first['taxId']}
   belongs_to :gene
+  belongs_to :taxonomy
 
   validates_uniqueness_of :rs_number
 
   scope :for_NCBI_gene_id, ->(gene_id) { where(_gene_id: gene_id) }
   scope :without_gene_object, where(gene_id: nil)
-
-  has_taxonomy
 
 end

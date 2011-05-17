@@ -15,7 +15,7 @@
       = row_for_attribute @snp, :chromosome
       = row_for_attribute @snp, :function_class
       = row_for_attribute @snp, :gene_symbol,        label: 'Gene' do
-        = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.gene_id)
+        = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.gene_symbol)
       = row_for_attribute @snp, :het_uncertainty
       = row_for_attribute @snp, :heterozygosity
       = row_for_attribute @snp, :min_success_rate
@@ -23,4 +23,4 @@
       = row_for_attribute @snp, :reference_assembly
       = row_for_attribute @snp, :rs_number,          label: 'RS number'
       = row_for_attribute @snp, :snp_class,          label: 'SNP class'
-      = row_for_attribute @snp, :tax_id,             label: 'Taxonomy ID'
+      = row_for_attribute @snp, :_taxonomy_id,       label: 'Taxonomy ID'

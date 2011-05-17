@@ -20,9 +20,8 @@ describe GenomeProject do
     it_parses_attribute :project_id,         28911
     it_parses_attribute :sequencing_centers, ['1000 Genomes Project']
     it_parses_attribute :sequencing_status,  'inprogress'
+    it_parses_attribute :_taxonomy_id,       9606
 
   end
-
-  it_has_taxonomy
 
 end

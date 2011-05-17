@@ -2,17 +2,15 @@ class GenomeProject
 
   include NCBIRecord
 
-  set_database_name   'genomeprj'
-  set_entrez_id_field :project_id
+  set_ncbi_database_name 'genomeprj'
+  verify_xml { |doc| doc.css('Id') }
 
   field :name,               type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Defline"]').first.content }
-  field :project_id,         type: Integer, xml: proc { |doc| doc.xpath('.//Id').first.content }
+  field :ncbi_taxonomy_id,   type: Integer, xml: proc { |doc| doc.xpath('.//Item[@Name="TaxId"]').first.content }
+  field :ncbi_id,            type: Integer, xml: proc { |doc| doc.xpath('.//Id').first.content }
   field :sequencing_centers, type: Array,   xml: proc { |doc| doc.xpath('.//Item[@Name="Center"]').map(&:content) }
   field :sequencing_status,  type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
-  field :_taxonomy_id,       type: Integer, xml: proc { |doc| doc.xpath('.//Item[@Name="TaxId"]').first.content }
   belongs_to :taxonomy
-
-  validates_uniqueness_of :project_id
 
   class << self
 
@@ -29,7 +27,7 @@ class GenomeProject
 
     # Customize fetching data using ESummary instead of EFetch.
     def perform_Entrez_request(entrez_id)
-      Entrez.ESummary(database_name, {id: entrez_id, retmode: 'xml'})
+      Entrez.ESummary(ncbi_database_name, {id: entrez_id, retmode: 'xml'})
     end
 
   end

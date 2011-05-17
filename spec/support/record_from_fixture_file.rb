@@ -12,7 +12,7 @@ MODEL_FIXTURE_FILES = {
 MODEL_FIXTURE_FILES.keys.each do |model_class|
   def model_class.from_fixture_file
     fixture_file_name = MODEL_FIXTURE_FILES[self]
-    fixture_file = File.open(Padrino.root + '/spec/fixtures/' + fixture_file_name)
+    fixture_file = File.open(Padrino.root + '/spec/support/fixtures/' + fixture_file_name)
     xml = fixture_file.read
     send :new_from_xml, xml
   end

@@ -1,0 +1,19 @@
+%h2
+  :plain
+    Gene #{@gene.symbol}: #{@gene.name}
+
+%table.model_info
+  %tbody
+    = row_for_attribute @gene, :diseases do
+      %ul
+        - @gene.diseases.each do |disease|
+          %li= disease
+    = row_for_attribute @gene, :location
+    = row_for_attribute @gene, :mim,           label: 'MIM'
+    = row_for_attribute @gene, :protein_name
+    = row_for_attribute @gene, :symbols_other do
+      %ul
+        - @gene.symbols_other.each do |symbol|
+          %li= symbol
+    = row_for_attribute @gene, :taxonomy do
+      = @gene.taxonomy.scientific_name

@@ -15,20 +15,18 @@ class SnpCracklePop < Padrino::Application
   # layout  :my_layout          # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
 
-  ##
-  # You can configure for a specified environment like:
-  #
-  #   configure :development do
-  #     set :foo, :bar
-  #     disable :asset_stamp # no asset timestamping for dev
-  #   end
-  #
+  configure :development do
+    # Uncomment next 2 lines to test error handling.
+    #set :raise_errors, false
+    #disable :show_exceptions
+  end
 
-  ##
-  # You can manage errors like:
-  #
-  #   error 404 do
-  #     render 'errors/404'
-  #   end
-  #
+  # Overwrite Padrino's default errors.
+  def self.default_errors!
+    error NCBIRecord::NotFound do
+      @exception = env['sinatra.error']
+      haml :'shared/exception'
+    end
+  end
+
 end

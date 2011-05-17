@@ -23,16 +23,17 @@ describe Snp do
     it_parses_attribute :base_position,      :pending
     it_parses_attribute :chromosome,         6
     it_parses_attribute :function_class,     :pending
-    it_parses_attribute :_gene_id,           56244
     it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244
     it_parses_attribute :heterozygosity,     0.307
     it_parses_attribute :max_success_rate,   nil
     it_parses_attribute :min_success_rate,   nil
+    it_parses_attribute :ncbi_id,            9268480
+    it_parses_attribute :ncbi_gene_id,       56244
+    it_parses_attribute :ncbi_taxonomy_id,   9606
     it_parses_attribute :reference_assembly, true
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
-    it_parses_attribute :_taxonomy_id,       9606
 
   end
 
@@ -40,12 +41,27 @@ describe Snp do
     snp = Snp.from_fixture_file
     snp.save!
     Snp.expects(:fetch).never
-    Snp.find_by_entrez_id_or_fetch! snp.rs_number
+    Snp.find_by_entrez_id_or_fetch! snp.ncbi_id
   end
 
   it '#find_by_entrez_id_or_fetch fetches rs from NCBI if not found' do
     Snp.expects(:fetch).once
     Snp.find_by_entrez_id_or_fetch! 1 rescue nil
   end
+
+  it 'assigns gene after creation' do
+    gene_id = 1
+    gene = Gene.make(ncbi_id: gene_id)
+    snp = Snp.make(ncbi_gene_id: gene_id)
+    snp.gene.should == gene
+  end
+
+  it 'assigns taxonomy after creation' do
+    snp = Snp.make_from_fixture_file
+    Taxonomy.count.should == 1
+    snp.taxonomy.should == Taxonomy.first
+  end
+
+  it_raises_error_if_NCBI_cannot_find_it
 
 end

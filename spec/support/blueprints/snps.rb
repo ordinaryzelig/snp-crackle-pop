@@ -1,4 +1,5 @@
 Snp.blueprint do
+  taxonomy { Taxonomy.first || Taxonomy.make_from_fixture_file }
 end
 
 def Snp.make_from_fixture_file(atts = {})

@@ -5,7 +5,9 @@ module NCBIRecord
   def self.included(base)
     base.send :include, Mongoid::Document
     base.extend ClassMethods
+    base.extend HasTaxonomy
     base.instance_eval do
+      index :ncbi_id, unique: true
       attr_reader   :response
     end
   end
@@ -22,24 +24,12 @@ module NCBIRecord
 
   module ClassMethods
 
-    # NCBI database name.
-    def database_name
-      @database_name ||= name.underscore.downcase
+    def ncbi_database_name
+      @ncbi_database_name ||= name.underscore.downcase
     end
 
-    # Set NCBI database name.
-    def set_database_name(name)
-      @database_name = name
-    end
-
-    # What NCBI uses as their ID.
-    attr_reader :entrez_id_field
-
-    # Set what NCBI uses as their ID.
-    # Set that field as a MongoDB uniq index.
-    def set_entrez_id_field(field_name)
-      @entrez_id_field = field_name
-      index @entrez_id_field, unique: true
+    def set_ncbi_database_name(name)
+      @ncbi_database_name = name
     end
 
     # Fetch data from NCBI.
@@ -50,6 +40,12 @@ module NCBIRecord
       object = new_from_xml(response.body)
       object.send(:response=, response)
       object
+    rescue XMLCouldNotBeVerified
+      # This might happen if entrez_id was the correct format, but it wasn't found anyway.
+      raise NotFound.new(entrez_id, self)
+    rescue BadResponse
+      # This could either be a badly formed request, or more likely, entrez_id was not valid.
+      raise NotFound.new(entrez_id, self)
     end
 
     # Same as fetch and saves to database.
@@ -61,7 +57,7 @@ module NCBIRecord
 
     # Find from database.
     def find_by_entrez_id(entrez_id)
-      where(entrez_id_field => entrez_id).first
+      where(ncbi_id: entrez_id).first
     end
 
     # Find from database, if not found, fetch! it from NCBI (and store it in DB).
@@ -71,10 +67,9 @@ module NCBIRecord
 
     private
 
-    # Given XML string, parse attributes based on xml procs defined for each field.
+    # Given Nokogiri XML document, parse attributes based on xml procs defined for each field.
     # Return attributes hash.
-    def parse(xml)
-      document = Nokogiri::XML(xml)
+    def parse(document)
       attributes = {}
       fields.each do |field_name, field|
         xml_proc = field.options[:xml]
@@ -83,15 +78,38 @@ module NCBIRecord
       attributes
     end
 
+    # Instantiate a new object from an XML string.
     def new_from_xml(xml)
-      attributes = parse(xml)
+      document = Nokogiri.XML(xml)
+      raise XMLCouldNotBeVerified.new(xml) unless verify_xml document
+      attributes = parse(document)
       new(attributes)
     end
 
     # Override to customize how data is fetched from Entrez.
     # See GenomeProject for example.
     def perform_Entrez_request(entrez_id)
-      Entrez.EFetch(database_name, {id: entrez_id, retmode: 'xml'})
+      response = Entrez.EFetch(ncbi_database_name, {id: entrez_id, retmode: 'xml'})
+      raise BadResponse.new(response) unless response.ok?
+      response
+    end
+
+    # Verify that the XML about to parsed is going to give good data.
+    # The verification process is a simple search for a key "ingredient" that
+    # if present, probably means that this is a good XML document to parse.
+    # This method can be called in 2 ways:
+    #   1) In the model where the instructions to search for the key ingredient are located:
+    #     class Snp
+    #       verify_xml { |doc| doc['KeyIngredient'] }
+    #     end
+    #   2) In new_from_xml where the document gets passed here for verification.
+    def verify_xml(document = nil, &block)
+      if block_given?
+        # Store for later use.
+        @xml_verification_proc = block
+      else
+        @xml_verification_proc.call(document).present?
+      end
     end
 
   end
@@ -99,6 +117,24 @@ module NCBIRecord
   class ParseError < StandardError
     def initialize(model, field_name, ex)
       super("Error parsing #{model}##{field_name}:\n#{ex.message}")
+    end
+  end
+
+  class NotFound < StandardError
+    def initialize(entrez_id, model_class)
+      super("Entrez could not find #{model_class.name.humanize} with id: #{entrez_id}")
+    end
+  end
+
+  class XMLCouldNotBeVerified < StandardError
+    def initialize(xml)
+      super(xml)
+    end
+  end
+
+  class BadResponse < StandardError
+    def initialize(response)
+      super("bad response (code: #{response.code}):\n" + response.body)
     end
   end
 

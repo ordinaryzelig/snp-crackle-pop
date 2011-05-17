@@ -7,20 +7,29 @@ module ExampleMacros
   end
 
   def fixture_file(file_name)
-    File.open(Padrino.root + '/spec/fixtures/' + file_name)
+    File.open(Padrino.root + '/spec/support/fixtures/' + file_name)
   end
 
-  def search_for_rs_number(rs_number)
-    fill_in 'Rs number', with: rs_number
+  # Generic steps to search for a term.
+  # Assumes there is a form with a text field named 'q'
+  # and a Search button.
+  def submit_search_for(term)
+    fill_in 'q', with: term
     click_button 'Search'
-  end
-
-  def search_snps_path
-    SnpCracklePop.url(:snps, :index)
   end
 
   def saop
     save_and_open_page
+  end
+
+  # Delegate to SnpCracklePop.
+  def url(*args)
+    SnpCracklePop.url(*args)
+  end
+
+  # Polymorphic url generator.
+  def url_for(document, action = :show)
+    url(document.class.name.tableize.to_sym, action, id: document.ncbi_id)
   end
 
 end

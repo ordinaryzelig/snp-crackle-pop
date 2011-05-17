@@ -17,11 +17,13 @@ describe GenomeProject do
     end
 
     it_parses_attribute :name,               '1000 Genomes Project Pilot 1 (low coverage sequencing of 180 Hapmap individuals from multiple populations.'
-    it_parses_attribute :project_id,         28911
+    it_parses_attribute :ncbi_id,            28911
     it_parses_attribute :sequencing_centers, ['1000 Genomes Project']
     it_parses_attribute :sequencing_status,  'inprogress'
-    it_parses_attribute :_taxonomy_id,       9606
+    it_parses_attribute :ncbi_taxonomy_id,   9606
 
   end
+
+  it_raises_error_if_NCBI_cannot_find_it
 
 end

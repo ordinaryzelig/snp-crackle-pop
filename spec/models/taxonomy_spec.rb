@@ -20,15 +20,15 @@ describe Taxonomy do
 
     it_parses_attribute :common_name,         'man'
     it_parses_attribute :genbank_common_name, 'human'
+    it_parses_attribute :ncbi_id,             9606
     it_parses_attribute :scientific_name,     'Homo sapiens'
-    it_parses_attribute :tax_id,              9606
 
   end
 
   it 'should search for any name' do
     taxonomy = Taxonomy.make_from_fixture_file
     ['Homo sapiens', 'human', 'man', 'uma', 'homo'].each do |name|
-      Taxonomy.search(name).should include(taxonomy)
+      Taxonomy.search(name).should == [taxonomy]
     end
   end
 

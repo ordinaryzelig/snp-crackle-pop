@@ -20,6 +20,7 @@ Spork.each_run do
   Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
   RSpec.configure do |config|
     config.include(ExampleMacros)
+    config.include(MochaMacros)
     config.extend(DescriptionMacros)
   end
 end

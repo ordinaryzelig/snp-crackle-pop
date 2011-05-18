@@ -15,4 +15,18 @@ module DescriptionMacros
     end
   end
 
+  # Clicking link to get updates will refetch data.
+  # Start object with attribute set to initial value.
+  def it_can_be_refetched(attribute, initial_value)
+    model_class = description.singularize.classify.constantize
+    it 'can be refetched' do
+      object = model_class.make_from_fixture_file(attribute => initial_value)
+      stub_entrez_request_with_contents_of_fixture_file model_class
+      visit url_for(object)
+      click_link('Get updates')
+      updated_value = model_class.from_fixture_file.send(attribute)
+      page.should have_content(updated_value.to_s)
+    end
+  end
+
 end

@@ -8,6 +8,7 @@ class Taxonomy
   field :genbank_common_name, type: String, xml: proc { |doc| doc.css('Taxon OtherNames GenbankCommonName').first.content }
   field :ncbi_id,             type: Integer, xml: proc { |doc| doc.css('Taxon TaxId').first.content }
   field :scientific_name,     type: String, xml: proc { |doc| doc.css('Taxon ScientificName').first.content }
+  ncbi_timestamp_field
 
   class << self
 

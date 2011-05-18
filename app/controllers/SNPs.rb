@@ -9,10 +9,11 @@ SnpCracklePop.controllers :snps do
     end
   end
 
-  get :show, '/snps/:id' do
-    rs_number = params[:id]
-    @snp = Snp.find_by_entrez_id_or_fetch! rs_number
+  get :show, 'snps/:id' do
+    @snp = Snp.find_by_entrez_id_or_fetch!(params[:id])
     haml :'snps/show'
   end
+
+  refetch_action Snp
 
 end

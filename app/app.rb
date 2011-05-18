@@ -21,12 +21,24 @@ class SnpCracklePop < Padrino::Application
     #disable :show_exceptions
   end
 
-  # Overwrite Padrino's default errors.
-  def self.default_errors!
-    error NCBIRecord::NotFound do
-      @exception = env['sinatra.error']
-      haml :'shared/exception'
+  class << self
+
+    # Overwrite Padrino's default errors.
+    def default_errors!
+      error NCBIRecord::NotFound do
+        @exception = env['sinatra.error']
+        haml :'shared/exception'
+      end
     end
+
+    def refetch_action(model_class)
+      get :refetch, with: :id do
+        object = model_class.find_by_entrez_id(params[:id])
+        object.refetch!
+        redirect url(object.class.name.tableize.to_sym, :show, id: object.ncbi_id)
+      end
+    end
+
   end
 
 end

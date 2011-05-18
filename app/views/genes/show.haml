@@ -17,3 +17,4 @@
           %li= symbol
     = row_for_attribute @gene, :taxonomy do
       = @gene.taxonomy.scientific_name
+    = row_for_updated_from_NCBI_at @gene

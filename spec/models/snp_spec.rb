@@ -64,4 +64,12 @@ describe Snp do
 
   it_raises_error_if_NCBI_cannot_find_it
 
+  it 'can refetch data from NCBI' do
+    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_NCBI_at: 1.year.ago)
+    stub_entrez_request_with_contents_of_fixture_file Snp
+    snp.refetch
+    snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
+    snp.updated_from_NCBI_at_changed?.should be_true
+  end
+
 end

@@ -15,4 +15,6 @@ describe 'Genes', type: :acceptance do
     page.should have_content(gene.name)
   end
 
+  it_can_be_refetched :symbol, 'asdf'
+
 end

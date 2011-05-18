@@ -20,7 +20,7 @@ class Snp
   field :reference_assembly, type: Boolean, xml: proc { |doc| doc.css('Rs Assembly').any? { |assembly| assembly['reference'] == 'true'} }
   field :rs_number,          type: Integer, xml: proc { |doc| doc.css('Rs').first['rsId'] }
   field :snp_class,          type: String,  xml: proc { |doc| doc.css('Rs').first['snpClass'] }
-  field :updated_at,         type: Time
+  ncbi_timestamp_field
   belongs_to :gene
 
   validates_uniqueness_of :rs_number

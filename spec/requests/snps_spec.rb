@@ -15,4 +15,6 @@ describe 'Snps', type: :acceptance do
     find_link(snp.gene_symbol)
   end
 
+  it_can_be_refetched :het_uncertainty, 0.999
+
 end

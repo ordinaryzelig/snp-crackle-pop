@@ -14,4 +14,6 @@ SnpCracklePop.controllers :genes do
     haml :'genes/show'
   end
 
+  refetch_action Gene
+
 end

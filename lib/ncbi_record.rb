@@ -3,17 +3,30 @@
 module NCBIRecord
 
   def self.included(base)
-    base.send :include, Mongoid::Document
+    base.instance_eval do
+      include Mongoid::Document
+      include NCBITimestamp
+      index :ncbi_id, unique: true
+      attr_reader :response
+    end
     base.extend ClassMethods
     base.extend HasTaxonomy
-    base.instance_eval do
-      index :ncbi_id, unique: true
-      attr_reader   :response
-    end
   end
 
   def xml
     response.body
+  end
+
+  # Update with fresh data from NCBI.
+  def refetch
+    response = self.class.send(:perform_Entrez_request, ncbi_id)
+    self.attributes = self.class.send(:attributes_from_xml, response.body)
+    set_updated_from_NCBI_at
+  end
+
+  def refetch!
+    refetch
+    save!
   end
 
   private
@@ -39,6 +52,7 @@ module NCBIRecord
       response = perform_Entrez_request(entrez_id)
       object = new_from_xml(response.body)
       object.send(:response=, response)
+      object.fetched = true
       object
     rescue XMLCouldNotBeVerified
       # This might happen if entrez_id was the correct format, but it wasn't found anyway.
@@ -80,10 +94,13 @@ module NCBIRecord
 
     # Instantiate a new object from an XML string.
     def new_from_xml(xml)
+      new(attributes_from_xml(xml))
+    end
+
+    def attributes_from_xml(xml)
       document = Nokogiri.XML(xml)
       raise XMLCouldNotBeVerified.new(xml) unless verify_xml document
       attributes = parse(document)
-      new(attributes)
     end
 
     # Override to customize how data is fetched from Entrez.

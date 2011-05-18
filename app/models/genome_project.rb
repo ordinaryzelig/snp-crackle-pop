@@ -10,6 +10,7 @@ class GenomeProject
   field :ncbi_id,            type: Integer, xml: proc { |doc| doc.xpath('.//Id').first.content }
   field :sequencing_centers, type: Array,   xml: proc { |doc| doc.xpath('.//Item[@Name="Center"]').map(&:content) }
   field :sequencing_status,  type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
+  ncbi_timestamp_field
   belongs_to :taxonomy
 
   class << self

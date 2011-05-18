@@ -13,6 +13,7 @@ class Gene
   field :protein_name,     type: String,  xml: proc { |doc| doc.css('Prot-ref_name_E').first.content }
   field :symbol,           type: String,  xml: proc { |doc| doc.css('Gene-ref_locus').first.content }
   field :symbols_other,    type: Array,   xml: proc { |doc| doc.css('Gene-ref_syn Gene-ref_syn_E').map(&:content) }
+  ncbi_timestamp_field
 
   has_many :snps
 

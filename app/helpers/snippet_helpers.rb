@@ -11,4 +11,8 @@ SnpCracklePop.helpers do
     partial 'shared/row_for_updated_from_ncbi_at', locals: {object: object}
   end
 
+  def row_for_taxonomy(object)
+    partial 'shared/row_for_taxonomy', locals: {object: object}
+  end
+
 end

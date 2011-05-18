@@ -1,0 +1,13 @@
+%h2
+  :plain
+    Genome Project #{@genome_project.name}
+
+%table.model_info
+  %tbody
+    = row_for_attribute @genome_project, :sequencing_centers do
+      %ul
+        - @genome_project.sequencing_centers.each do |sequencing_center|
+          %li= sequencing_center
+    = row_for_attribute @genome_project, :sequencing_status
+    = row_for_taxonomy @genome_project
+    = row_for_updated_from_ncbi_at @genome_project

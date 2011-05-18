@@ -1,5 +1,6 @@
 SnpCracklePop.controllers :snps do
 
+  # Instead of searching, just redirect to show.
   get :search do
     rs_number = params[:q]
     if rs_number

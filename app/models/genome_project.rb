@@ -11,14 +11,15 @@ class GenomeProject
   field :sequencing_centers, type: Array,   xml: proc { |doc| doc.xpath('.//Item[@Name="Center"]').map(&:content) }
   field :sequencing_status,  type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
   ncbi_timestamp_field
-  belongs_to :taxonomy
+
+  has_taxonomy
 
   class << self
 
-    # Search scientific_name, genbank_common_name, and common_name.
+    # Search name and sequencing centers.
     def search(name)
-      reg_exp = Regexp.new(name, true)
-      conditions = [:scientific_name, :genbank_common_name, :common_name].map do |field_to_search|
+      reg_exp = Regexp.new(Regexp.escape(name), true)
+      conditions = [:name, :sequencing_centers].map do |field_to_search|
         {field_to_search => reg_exp}
       end
       any_of(conditions)

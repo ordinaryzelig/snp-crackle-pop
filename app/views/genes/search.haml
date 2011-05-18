@@ -5,7 +5,7 @@
     = submit_tag :Search
 
 - if @genes
-  %h3= pluralize(@genes.size, 'gene found')
+  %h3= 'Found ' + pluralize(@genes.size, 'gene')
   %ul
     - @genes.each do |gene|
       %li= link_to gene.symbol_and_name, url(:genes, :show, id: gene.ncbi_id)

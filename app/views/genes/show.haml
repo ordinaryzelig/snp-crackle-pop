@@ -15,6 +15,5 @@
       %ul
         - @gene.symbols_other.each do |symbol|
           %li= symbol
-    = row_for_attribute @gene, :taxonomy do
-      = @gene.taxonomy.scientific_name
+    = row_for_taxonomy @gene
     = row_for_updated_from_ncbi_at @gene

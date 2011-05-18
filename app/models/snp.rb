@@ -32,6 +32,14 @@ class Snp
 
   has_taxonomy
 
+  class << self
+
+    def humanize
+      'SNP'
+    end
+
+  end
+
   private
 
   def assign_gene

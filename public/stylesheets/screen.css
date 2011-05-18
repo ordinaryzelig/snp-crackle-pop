@@ -37,6 +37,17 @@ blockquote, q {
 html {
   font-family: sans-serif; }
 
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+strong.highlight {
+  font-weight: bold;
+  background-color: yellow;
+  text-decoration: inherit;
+  color: green; }
+
 table.model_info tbody tr:nth-child(odd) {
   background-color: #eeeeee; }
 table.model_info tbody th, table.model_info tbody td {

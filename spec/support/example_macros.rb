@@ -18,6 +18,12 @@ module ExampleMacros
     click_button 'Search'
   end
 
+  def submit_polymorphic_search_for(object, attribute_to_search)
+    fill_in 'q', with: object.send(attribute_to_search)
+    select object.class.humanize, from: 'Database'
+    click_button 'Search'
+  end
+
   def saop
     save_and_open_page
   end

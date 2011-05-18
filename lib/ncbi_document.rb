@@ -80,6 +80,22 @@ module NCBI
         find_by_ncbi_id(ncbi_id) || fetch!(ncbi_id)
       end
 
+      # Some naming convenience methods.
+
+      def model_name
+        @model_name ||= ActiveModel::Name.new(self)
+      end
+
+      def humanize
+        model_name.human
+      end
+
+      def collectionize
+        model_name.collection
+      end
+
+      # End of naming convenience methods.
+
       private
 
       # Given Nokogiri XML document, parse attributes based on xml procs defined for each field.

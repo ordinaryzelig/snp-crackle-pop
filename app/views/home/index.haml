@@ -1,0 +1,6 @@
+= form_tag url(:search), method: :get do
+  = search_field_tag 'q', id: 'q', placeholder: 'Search'
+  in
+  = label_tag 'database'
+  = select_tag 'database', collection: [Gene, GenomeProject, Snp], fields: [:humanize, :collectionize], id: 'database'
+  = submit_tag 'Search'

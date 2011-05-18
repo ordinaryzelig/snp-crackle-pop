@@ -29,4 +29,15 @@ module DescriptionMacros
     end
   end
 
+  def it_can_polymorphically_search_for(model_class, options)
+    it "can polymorphically search for #{model_class}" do
+      visit '/'
+      attribute_to_search = options[:with]
+      attribute_to_find_after_search = options[:finding]
+      object = model_class.make_from_fixture_file
+      submit_polymorphic_search_for object, attribute_to_search
+      page.should have_content(object.send(attribute_to_find_after_search))
+    end
+  end
+
 end

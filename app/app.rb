@@ -41,4 +41,14 @@ class SnpCracklePop < Padrino::Application
 
   end
 
+  get '/' do
+    haml :'home/index'
+  end
+
+  get :search do
+    database = params[:database]
+    term = params[:q]
+    redirect url(database.to_sym, :search, q: term)
+  end
+
 end

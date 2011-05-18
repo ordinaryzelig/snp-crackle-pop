@@ -15,4 +15,8 @@ SnpCracklePop.helpers do
     partial 'shared/row_for_taxonomy', locals: {object: object}
   end
 
+  def search_field_tag(name, options = {})
+    input_tag :search, options.reverse_merge!(name: name)
+  end
+
 end

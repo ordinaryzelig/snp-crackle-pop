@@ -1,9 +1,9 @@
 SnpCracklePop.controllers :genes do
 
   get :search do
-    term = params[:q]
-    if term
-      @genes = Gene.search(term)
+    @term = params[:q]
+    if @term
+      @genes = Gene.search(@term)
     end
     haml :'genes/search'
   end

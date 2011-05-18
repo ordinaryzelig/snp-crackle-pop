@@ -1,9 +1,9 @@
 SnpCracklePop.controllers :genome_projects do
 
   get :search do
-    term = params[:q]
-    if term
-      @genome_projects = GenomeProject.search(term)
+    @term = params[:q]
+    if @term
+      @genome_projects = GenomeProject.search(@term)
     end
     haml :'genome_projects/search'
   end

@@ -10,7 +10,7 @@ SnpCracklePop.controllers :snps do
   end
 
   get :show, 'snps/:id' do
-    @snp = Snp.find_by_entrez_id_or_fetch!(params[:id])
+    @snp = Snp.find_by_ncbi_id_or_fetch!(params[:id])
     haml :'snps/show'
   end
 

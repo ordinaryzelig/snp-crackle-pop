@@ -11,7 +11,7 @@ module HasTaxonomy
     private
 
     def assign_taxonomy
-      self.taxonomy = Taxonomy.find_by_entrez_id_or_fetch! self.ncbi_taxonomy_id
+      self.taxonomy = Taxonomy.find_by_ncbi_id_or_fetch! self.ncbi_taxonomy_id
     end
 
   end

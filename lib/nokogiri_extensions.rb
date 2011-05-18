@@ -5,7 +5,7 @@ class Nokogiri::XML::Document
   def extract(field_name, procedure)
     procedure.call(self)
   rescue Exception => ex
-    raise NCBIRecord::ParseError.new(self, field_name, ex)
+    raise NCBI::Document::ParseError.new(self, field_name, ex)
   end
 
 end

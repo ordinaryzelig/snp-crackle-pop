@@ -9,7 +9,7 @@ SnpCracklePop.controllers :genes do
   end
 
   get :show, 'genes/:id' do
-    @gene = Gene.find_by_entrez_id_or_fetch!(params[:id])
+    @gene = Gene.find_by_ncbi_id_or_fetch!(params[:id])
     @gene.assign_to_child_snps
     haml :'genes/show'
   end

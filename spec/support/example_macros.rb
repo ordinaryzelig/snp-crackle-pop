@@ -28,8 +28,8 @@ module ExampleMacros
   end
 
   # Polymorphic url generator.
-  def url_for(document, action = :show)
-    url(document.class.name.tableize.to_sym, action, id: document.ncbi_id)
+  def url_for(object, action = :show)
+    url(object.class.name.tableize.to_sym, action, id: object.ncbi_id)
   end
 
 end

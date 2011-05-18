@@ -1,6 +1,6 @@
 class Taxonomy
 
-  include NCBIRecord
+  include NCBI::Document
 
   verify_xml { |doc| doc.css('Taxon') }
 

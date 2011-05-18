@@ -1,6 +1,6 @@
 class Snp
 
-  include NCBIRecord
+  include NCBI::Document
 
   verify_xml { |doc| doc.css('Rs') }
 
@@ -35,7 +35,7 @@ class Snp
   private
 
   def assign_gene
-    self.gene = Gene.find_by_entrez_id self.ncbi_gene_id
+    self.gene = Gene.find_by_ncbi_id self.ncbi_gene_id
   end
 
 end

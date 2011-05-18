@@ -1,6 +1,6 @@
 class Gene
 
-  include NCBIRecord
+  include NCBI::Document
 
   verify_xml { |doc| doc.css('Entrezgene') }
 

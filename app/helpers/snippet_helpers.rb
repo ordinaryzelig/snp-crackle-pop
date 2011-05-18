@@ -7,8 +7,8 @@ SnpCracklePop.helpers do
     partial 'shared/row_for_attribute', locals: {object: object, attribute: attribute, options: options}
   end
 
-  def row_for_updated_from_NCBI_at(object)
-    partial 'shared/row_for_updated_from_NCBI_at', locals: {object: object}
+  def row_for_updated_from_ncbi_at(object)
+    partial 'shared/row_for_updated_from_ncbi_at', locals: {object: object}
   end
 
 end

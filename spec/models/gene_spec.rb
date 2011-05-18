@@ -55,6 +55,6 @@ describe Gene do
     end
   end
 
-  it_raises_error_if_NCBI_cannot_find_it
+  it_raises_error_if_ncbi_cannot_find_it
 
 end

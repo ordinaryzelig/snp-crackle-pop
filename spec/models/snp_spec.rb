@@ -37,16 +37,16 @@ describe Snp do
 
   end
 
-  it '#find_by_entrez_id_or_fetch finds rs from database if it exists' do
+  it '#find_by_ncbi_id_or_fetch finds rs from database if it exists' do
     snp = Snp.from_fixture_file
     snp.save!
     Snp.expects(:fetch).never
-    Snp.find_by_entrez_id_or_fetch! snp.ncbi_id
+    Snp.find_by_ncbi_id_or_fetch! snp.ncbi_id
   end
 
-  it '#find_by_entrez_id_or_fetch fetches rs from NCBI if not found' do
+  it '#find_by_ncbi_id_or_fetch fetches rs from NCBI if not found' do
     Snp.expects(:fetch).once
-    Snp.find_by_entrez_id_or_fetch! 1 rescue nil
+    Snp.find_by_ncbi_id_or_fetch! 1 rescue nil
   end
 
   it 'assigns gene after creation' do
@@ -62,14 +62,14 @@ describe Snp do
     snp.taxonomy.should == Taxonomy.first
   end
 
-  it_raises_error_if_NCBI_cannot_find_it
+  it_raises_error_if_ncbi_cannot_find_it
 
   it 'can refetch data from NCBI' do
-    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_NCBI_at: 1.year.ago)
+    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago)
     stub_entrez_request_with_contents_of_fixture_file Snp
     snp.refetch
     snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
-    snp.updated_from_NCBI_at_changed?.should be_true
+    snp.updated_from_ncbi_at_changed?.should be_true
   end
 
 end

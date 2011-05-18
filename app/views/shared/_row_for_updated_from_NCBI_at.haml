@@ -1,3 +1,0 @@
-= row_for_attribute object, :updated_from_NCBI_at, label: 'Updated from NCBI at' do
-  = object.updated_from_NCBI_at
-  = link_to 'Get updates', url(object.class.name.tableize.to_sym, :refetch, id: object.ncbi_id, method: :put)

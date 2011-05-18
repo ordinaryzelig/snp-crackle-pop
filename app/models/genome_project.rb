@@ -1,6 +1,6 @@
 class GenomeProject
 
-  include NCBIRecord
+  include NCBI::Document
 
   set_ncbi_database_name 'genomeprj'
   verify_xml { |doc| doc.css('Id') }
@@ -27,8 +27,8 @@ class GenomeProject
     private
 
     # Customize fetching data using ESummary instead of EFetch.
-    def perform_Entrez_request(entrez_id)
-      Entrez.ESummary(ncbi_database_name, {id: entrez_id, retmode: 'xml'})
+    def perform_entrez_request(ncbi_id)
+      Entrez.ESummary(ncbi_database_name, {id: ncbi_id, retmode: 'xml'})
     end
 
   end

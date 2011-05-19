@@ -1,9 +1,12 @@
+# Note: NCBI has renamed Genome Project to BioProject.
+# 2011-05-19 Tried changing database name from genomeprj to bioproject, but that didn't work.
+
 class GenomeProject
 
   include NCBI::Document
 
   set_ncbi_database_name 'genomeprj'
-  set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/genomeprj/'
+  set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/bioproject/'
   verify_xml { |doc| doc.css('Id') }
 
   field :name,               type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Defline"]').first.content }

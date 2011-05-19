@@ -4,6 +4,7 @@ SnpCracklePop.helpers do
     if block_given?
       options[:content] = capture_haml &block
     end
+    options[:content] ||= '(pending)' if options[:pending]
     partial 'shared/row_for_attribute', locals: {object: object, attribute: attribute, options: options}
   end
 

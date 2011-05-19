@@ -1,19 +1,24 @@
-%h2
-  :plain
-    Gene #{@gene.symbol}: #{@gene.name}
+- title "Gene #{@gene.symbol}"
 
-%table.model_info
-  %tbody
-    = row_for_attribute @gene, :diseases do
-      %ul
-        - @gene.diseases.each do |disease|
-          %li= disease
-    = row_for_attribute @gene, :location
-    = row_for_attribute @gene, :mim,           label: 'MIM'
-    = row_for_attribute @gene, :protein_name
-    = row_for_attribute @gene, :symbols_other do
-      %ul
-        - @gene.symbols_other.each do |symbol|
-          %li= symbol
-    = row_for_taxonomy @gene
-    = row_for_updated_from_ncbi_at @gene
+.show_model
+
+  %h1
+    :plain
+      Gene #{@gene.symbol}: #{@gene.name}
+
+  %table
+    %tbody
+      = row_for_attribute @gene, :diseases do
+        %ul
+          - @gene.diseases.each do |disease|
+            %li= disease
+      = row_for_attribute @gene, :location
+      = row_for_attribute @gene, :mim,           label: 'MIM'
+      = row_for_attribute @gene, :protein_name
+      = row_for_attribute @gene, :all_symbols do
+        %ul
+          - @gene.all_symbols.each do |symbol|
+            %li= symbol
+      = row_for_taxonomy @gene
+    %tfoot
+      = row_for_updated_from_ncbi_at @gene

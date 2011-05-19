@@ -19,4 +19,8 @@ SnpCracklePop.helpers do
     input_tag :search, options.reverse_merge!(name: name)
   end
 
+  def title(page_title)
+    content_for(:title) { truncate(page_title, length: 40) }
+  end
+
 end

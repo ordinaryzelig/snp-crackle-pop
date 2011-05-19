@@ -1,13 +1,15 @@
-html
-  font-family: sans-serif
-
 a
+  $color: blue
+  color: $color
   text-decoration: none
   &:hover
     text-decoration: underline
+  &:visited
+    color: $color
 
 strong.highlight
-  font-weight: bold
   background-color: yellow
-  text-decoration: inherit
-  color: green
+  font-weight: bold
+  $padding: 1px
+  padding-left: $padding
+  padding-right: $padding

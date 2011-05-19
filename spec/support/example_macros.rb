@@ -14,14 +14,18 @@ module ExampleMacros
   # Assumes there is a form with a text field named 'q'
   # and a Search button.
   def submit_search_for(term)
-    fill_in 'q', with: term
-    click_button 'Search'
+    within '#main' do
+      fill_in 'q', with: term
+      click_button 'Search'
+    end
   end
 
   def submit_polymorphic_search_for(object, attribute_to_search)
-    fill_in 'q', with: object.send(attribute_to_search)
-    select object.class.humanize, from: 'Database'
-    click_button 'Search'
+    within '#menu_bar' do
+      fill_in 'q', with: object.send(attribute_to_search)
+      select object.class.humanize, from: 'database'
+      click_button 'Search'
+    end
   end
 
   def saop

@@ -34,26 +34,87 @@ blockquote:before, blockquote:after, q:before, q:after {
 blockquote, q {
   quotes: "" ""; }
 
-html {
-  font-family: sans-serif; }
-
 a {
+  color: blue;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+  a:visited {
+    color: blue; }
 
 strong.highlight {
-  font-weight: bold;
   background-color: yellow;
-  text-decoration: inherit;
-  color: green; }
+  font-weight: bold;
+  padding-left: 1px;
+  padding-right: 1px; }
 
-table.model_info tbody tr:nth-child(odd) {
-  background-color: #eeeeee; }
-table.model_info tbody th, table.model_info tbody td {
-  padding: 5px; }
-table.model_info tbody th {
-  text-align: right;
+html {
+  font-family: sans-serif; }
+
+body {
+  padding-top: 0; }
+
+#menu_bar {
+  height: 1.5em;
+  position: fixed;
+  width: 100%;
+  min-width: 200px;
+  background: lightblue;
+  padding: 5px;
+  -webkit-box-shadow: 0px 1px 5px gray;
+  -moz-box-shadow: 0px 1px 5px gray; }
+  #menu_bar #title {
+    float: left;
+    font-size: 20px;
+    font-weight: bold; }
+  #menu_bar #polymorphic_search {
+    float: right;
+    margin-right: 10px; }
+
+#main {
+  padding: 10px;
+  padding-top: 3em;
+  background-color: white;
+  border-radius: 10px; }
+
+.show_model h1 {
+  font-size: 20pt;
+  margin-bottom: 10px;
   font-weight: bold; }
-table.model_info tbody td {
-  padding-left: 10px; }
+.show_model table tbody tr:nth-child(odd) {
+  background-color: #eeeeee; }
+.show_model table tbody th, .show_model table tbody td {
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+.show_model table tbody th {
+  text-align: right;
+  font-weight: bold;
+  font-size: 14pt; }
+.show_model table tbody td {
+  padding-left: 20px; }
+.show_model table tfoot {
+  background-color: #cccccc; }
+  .show_model table tfoot th {
+    padding: 5px; }
+    .show_model table tfoot th .time {
+      font-weight: bold; }
+.show_model ul {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 1em;
+  text-indent: -1em; }
+  .show_model ul li {
+    padding-bottom: 5px; }
+
+.search_model h1 {
+  font-size: 20pt;
+  margin-bottom: 10px;
+  font-weight: bold; }
+.search_model form, .search_model #found {
+  margin-bottom: 10px; }
+.search_model ul {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 1em;
+  text-indent: -1em; }

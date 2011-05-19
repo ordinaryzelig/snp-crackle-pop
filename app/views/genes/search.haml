@@ -1,12 +1,16 @@
-%h2 Genes
+- title 'Gene search'
 
-= form_tag url_for(:genes_search), method: 'get' do
-  %p
-    = search_field_tag 'q', value: params[:q], id: 'q', size: 30, placeholder: 'Symbol, name, protein, location'
-    = submit_tag :Search
+.search_model
 
-- if @genes
-  %h3= 'Found ' + pluralize(@genes.size, 'gene')
-  %ul
-    - @genes.each do |gene|
-      %li= link_to highlight(gene.symbol_and_name, @term), url(:genes, :show, id: gene.ncbi_id)
+  %h1 Genes
+
+  = form_tag url_for(:genes_search), method: 'get' do
+    %p
+      = search_field_tag 'q', value: params[:q], id: 'q', size: 30, placeholder: 'Symbol, name, protein, location'
+      = submit_tag :Search
+
+  - if @genes
+    %h2#found= 'Found ' + pluralize(@genes.size, 'gene')
+    %ul
+      - @genes.each do |gene|
+        %li= link_to highlight(gene.symbol_and_name, @term), url(:genes, :show, id: gene.ncbi_id)

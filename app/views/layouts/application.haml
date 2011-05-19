@@ -2,5 +2,12 @@
 %html
   %head
     = stylesheet_link_tag 'screen'
+    %title
+      :plain
+        SNP Crackle Pop - #{yield_content :title}
   %body
-    = yield
+    %nav#menu_bar
+      %ul
+        %li#title= link_to 'SNP Crackle Pop', '/'
+        %li= partial 'shared/polymorphic_search'
+    #main= yield

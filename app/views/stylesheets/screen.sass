@@ -1,14 +1,52 @@
 @import reset
 @import global
+@import layout
 
-table.model_info
-  tbody
-    tr:nth-child(odd)
-      background-color: #eee
-    th, td
-      padding: 5px
-    th
-      text-align: right
-      font-weight: bold
-    td
-      padding-left: 10px
+@mixin model_h1
+  font-size: 20pt
+  margin-bottom: 10px
+  font-weight: bold
+
+@mixin bullet_list_hanging_indent
+  list-style: disc
+  list-style-position: inside
+  padding-left: 1em
+  text-indent: -1em
+
+.show_model
+  h1
+    @include model_h1
+  table
+    tbody
+      tr:nth-child(odd)
+        background-color: #eee
+      th, td
+        $padding: 5px
+        padding: $padding
+        $vertical_padding: 8px
+        padding-top: $vertical_padding
+        padding-bottom: $vertical_padding
+      th
+        text-align: right
+        font-weight: bold
+        font-size: 14pt
+      td
+        padding-left: 20px
+    tfoot
+      background-color: #eee - #222
+      th
+        padding: 5px
+        .time
+          font-weight: bold
+  ul
+    @include bullet_list_hanging_indent
+    li
+      padding-bottom: 5px
+
+.search_model
+  h1
+    @include model_h1
+  form, #found
+    margin-bottom: 10px
+  ul
+    @include bullet_list_hanging_indent

@@ -30,6 +30,10 @@ class Gene
     "#{symbol}: #{name}"
   end
 
+  def all_symbols
+    [symbol] + symbols_other
+  end
+
   class << self
 
     def search(term)

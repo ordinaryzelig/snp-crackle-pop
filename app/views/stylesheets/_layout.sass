@@ -1,0 +1,30 @@
+html
+  font-family: sans-serif
+
+body
+  padding-top: 0
+
+$menu_bar_height: 1.5em
+#menu_bar
+  height: $menu_bar_height
+  position: fixed
+  width: 100%
+  min-width: 200px
+  background: lightblue
+  padding: 5px
+  $box_shadow: 0px 1px 5px gray
+  -webkit-box-shadow: $box_shadow
+  -moz-box-shadow: $box_shadow
+  #title
+    float: left
+    font-size: 20px
+    font-weight: bold
+  #polymorphic_search
+    float: right
+    margin-right: 10px // going off page.
+
+#main
+  padding: 10px
+  padding-top: $menu_bar_height + 1.5
+  background-color: white
+  border-radius: 10px

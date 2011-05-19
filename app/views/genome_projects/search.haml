@@ -1,12 +1,14 @@
-%h2 Genome Projects
+.search_model
 
-= form_tag url_for(:genome_projects, :search), method: 'get' do
-  %p
-    = search_field_tag 'q', value: params[:q], id: 'q', placeholder: 'Name, sequencing centers', size: 30
-    = submit_tag :Search
+  %h1 Genome Projects
 
-- if @genome_projects
-  %h3= 'Found ' + pluralize(@genome_projects.size, 'genome project')
-  %ul
-    - @genome_projects.each do |genome_project|
-      %li= link_to highlight(genome_project.name, @term), url(:genome_projects, :show, id: genome_project.ncbi_id)
+  = form_tag url_for(:genome_projects, :search), method: 'get' do
+    %p
+      = search_field_tag 'q', value: params[:q], id: 'q', placeholder: 'Name, sequencing centers', size: 30
+      = submit_tag :Search
+
+  - if @genome_projects
+    %h2#found= 'Found ' + pluralize(@genome_projects.size, 'genome project')
+    %ul
+      - @genome_projects.each do |genome_project|
+        %li= link_to highlight(genome_project.name, @term), url(:genome_projects, :show, id: genome_project.ncbi_id)

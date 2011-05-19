@@ -1,0 +1,4 @@
+= form_tag url(:search), method: :get, id: 'polymorphic_search' do
+  = search_field_tag 'q', placeholder: 'Search', size: 30
+  = select_tag 'database', collection: [Gene, GenomeProject, Snp], fields: [:humanize, :collectionize]
+  = submit_tag 'Search'

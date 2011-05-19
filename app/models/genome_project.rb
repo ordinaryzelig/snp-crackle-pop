@@ -3,6 +3,7 @@ class GenomeProject
   include NCBI::Document
 
   set_ncbi_database_name 'genomeprj'
+  set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/genomeprj/'
   verify_xml { |doc| doc.css('Id') }
 
   field :name,               type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Defline"]').first.content }

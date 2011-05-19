@@ -2,6 +2,7 @@ class Snp
 
   include NCBI::Document
 
+  set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
   verify_xml { |doc| doc.css('Rs') }
 
   field :accession,          type: Integer  # Many accessions, grab all?

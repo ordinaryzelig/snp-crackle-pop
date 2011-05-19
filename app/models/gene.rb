@@ -3,6 +3,7 @@ class Gene
   include NCBI::Document
 
   verify_xml { |doc| doc.css('Entrezgene') }
+  set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/gene/'
 
   field :diseases,         type: Array,   xml: proc { |doc| doc.css('Entrezgene-Set > Entrezgene > Entrezgene_comments > Gene-commentary > Gene-commentary_comment > Gene-commentary > Gene-commentary_type').select { |node| node.attributes['value'].value == 'phenotype' }.map { |node| node.next.next.content } }
   field :location,         type: String,  xml: proc { |doc| doc.css('Gene-ref_maploc').first.content }

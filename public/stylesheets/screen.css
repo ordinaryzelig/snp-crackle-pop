@@ -81,6 +81,9 @@ body {
   font-size: 20pt;
   margin-bottom: 10px;
   font-weight: bold; }
+.show_model #ncbi_url {
+  margin-bottom: 10px;
+  font-size: 10pt; }
 .show_model table tbody tr:nth-child(odd) {
   background-color: #eeeeee; }
 .show_model table tbody th, .show_model table tbody td {

@@ -6,6 +6,8 @@
     :plain
       Genome Project #{@genome_project.name}
 
+  = partial 'shared/ncbi_url', locals: {object: @genome_project}
+
   %table
     %tbody
       = row_for_attribute @genome_project, :sequencing_centers do

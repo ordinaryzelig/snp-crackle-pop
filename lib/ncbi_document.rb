@@ -30,6 +30,10 @@ module NCBI
       save!
     end
 
+    def ncbi_url
+      "#{self.class.ncbi_base_uri}#{ncbi_id}"
+    end
+
     private
 
     def response=(httparty_response)
@@ -38,12 +42,18 @@ module NCBI
 
     module ClassMethods
 
+      attr_reader :ncbi_base_uri
+
       def ncbi_database_name
         @ncbi_database_name ||= name.underscore.downcase
       end
 
       def set_ncbi_database_name(name)
         @ncbi_database_name = name
+      end
+
+      def set_ncbi_base_uri(base_uri)
+        @ncbi_base_uri ||= base_uri
       end
 
       # Fetch data from NCBI.

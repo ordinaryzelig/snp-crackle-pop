@@ -6,6 +6,8 @@
     :plain
       SNP #{@snp.rs_number}
 
+  = partial 'shared/ncbi_url', locals: {object: @snp}
+
   %table
     %tbody
       = row_for_attribute @snp, :accession

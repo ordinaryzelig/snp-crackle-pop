@@ -6,6 +6,8 @@
     :plain
       Gene #{@gene.symbol}: #{@gene.name}
 
+  = partial 'shared/ncbi_url', locals: {object: @gene}
+
   %table
     %tbody
       = row_for_attribute @gene, :diseases do

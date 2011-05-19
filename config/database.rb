@@ -2,8 +2,8 @@ case Padrino.env
 when :production
   # Use MongoHQ Heroku addon.
   uri = URI.parse(ENV['MONGOHQ_URL'])
-  conn = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
-  db = conn.db(uri.path.gsub(/^\//, ''))
+  connection = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
+  db = connection.db(uri.path.gsub(/^\//, ''))
 when :development, :test
   # Connect to local
   host = 'localhost'
@@ -12,7 +12,10 @@ when :development, :test
     when :development then 'snp_crackle_pop_development'
     when :test        then 'snp_crackle_pop_test'
   end
-  Mongoid.database = Mongo::Connection.new(host, port).db(database_name)
+  connection = Mongo::Connection.new(host, port)
+  db = connection.db(database_name)
 else
   raise "No database configuration for #{Padrino.env} environment"
 end
+
+Mongoid.database = db

@@ -22,7 +22,6 @@ describe Snp do
     it_parses_attribute :ancestral_allele,   'C'
     it_parses_attribute :base_position,      :pending
     it_parses_attribute :chromosome,         6
-    it_parses_attribute :function_class,     :pending
     it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244
     it_parses_attribute :heterozygosity,     0.307
@@ -33,7 +32,7 @@ describe Snp do
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606
-    it_parses_attribute :reference_assembly, :pending#true
+    it_parses_attribute :reference_assembly, true
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
 

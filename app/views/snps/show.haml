@@ -16,7 +16,6 @@
         = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
       = row_for_attribute @snp, :base_position, pending: true
       = row_for_attribute @snp, :chromosome
-      = row_for_attribute @snp, :function_class, pending: true
       = row_for_attribute @snp, :gene do
         = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.ncbi_gene_id)
       = row_for_attribute @snp, :het_uncertainty

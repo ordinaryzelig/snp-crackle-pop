@@ -10,7 +10,6 @@ class Snp
   field :ancestral_allele,   type: String,   xml: proc { |doc| doc.css('Rs > Sequence').first['ancestralAllele'] }
   field :base_position,      type: Integer
   field :chromosome,         type: Integer,  xml: proc { |doc| doc.css('Rs Assembly Component').first['chromosome'] }
-  field :function_class,     type: Integer
   field :gene_symbol,        type: Integer,  xml: proc { |doc| doc.css('Rs Assembly Component MapLoc FxnSet').first['symbol'] }
   field :het_uncertainty,    type: Float,    xml: proc { |doc| doc.css('Rs Het').first['stdError'].to_f.round(3) }
   field :heterozygosity,     type: Float,    xml: proc { |doc| doc.css('Rs Het').first['value'].to_f.round(3) }

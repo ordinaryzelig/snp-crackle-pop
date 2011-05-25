@@ -19,6 +19,7 @@ describe Snp do
     end
 
     it_parses_attribute :accession,          :pending
+    it_parses_attribute :ancestral_allele,   'C'
     it_parses_attribute :base_position,      :pending
     it_parses_attribute :chromosome,         6
     it_parses_attribute :function_class,     :pending

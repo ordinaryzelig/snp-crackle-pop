@@ -7,6 +7,7 @@ class Snp
 
   field :accession,          type: Integer  # Many accessions, grab all?
   embeds_many :alleles,                        options: {xml: :parse_alleles}, autosave: true
+  field :ancestral_allele,   type: String,  xml: proc { |doc| doc.css('Rs > Sequence').first['ancestralAllele'] }
   field :base_position,      type: Integer
   field :chromosome,         type: Integer, xml: proc { |doc| doc.css('Rs Assembly Component').first['chromosome'] }
   field :function_class,     type: Integer

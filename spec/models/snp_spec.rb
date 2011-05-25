@@ -28,6 +28,8 @@ describe Snp do
     it_parses_attribute :heterozygosity,     0.307
     it_parses_attribute :max_success_rate,   nil
     it_parses_attribute :min_success_rate,   nil
+    it_parses_attribute :modification_build, 132
+    it_parses_attribute :modification_date,  Time.new(2011, 1, 11, 17, 13)
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606

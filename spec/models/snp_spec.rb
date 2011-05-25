@@ -19,7 +19,6 @@ describe Snp do
     end
 
     it_parses_attribute :accession,          :pending
-    it_parses_attribute :allele,             :pending
     it_parses_attribute :base_position,      :pending
     it_parses_attribute :chromosome,         6
     it_parses_attribute :function_class,     :pending
@@ -31,7 +30,7 @@ describe Snp do
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606
-    it_parses_attribute :reference_assembly, true
+    it_parses_attribute :reference_assembly, :pending#true
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
 
@@ -49,7 +48,7 @@ describe Snp do
     Snp.find_by_ncbi_id_or_fetch! 1 rescue nil
   end
 
-  it 'assigns gene after creation' do
+  it 'assigns existing gene after creation' do
     gene_id = 1
     gene = Gene.make(ncbi_id: gene_id)
     snp = Snp.make(ncbi_gene_id: gene_id)
@@ -70,6 +69,37 @@ describe Snp do
     snp.refetch
     snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
     snp.updated_from_ncbi_at_changed?.should be_true
+  end
+
+  it 'has 2 alleles' do
+    snp = Snp.make_from_fixture_file
+    snp.alleles.first.should have_attributes({
+      base: 'A',
+      function_class: 'coding-synonymous'
+    })
+    snp.alleles.last.should have_attributes({
+      base: 'G',
+      function_class: 'reference'
+    })
+    snp.alleles.each do |allele|
+      allele.should be_persisted
+    end
+  end
+
+  it 'accepts nested attributes for existing alleles and updates them' do
+    snp = Snp.make_from_fixture_file
+    # Construct hash for accepts_nested_attributes_for.
+    # Set bases to 0 and 1.
+    new_attributes = snp.alleles.each_with_index.inject({}) do |attributes, (allele, i)|
+      attributes[i] = {}
+      attributes[i][:base] = i
+      attributes
+    end
+    snp.reload
+    snp.alleles_attributes = new_attributes
+    snp.alleles.map(&:base).should == ['0', '1']
+    # function_class should still be there.
+    snp.alleles.map(&:function_class).compact.should be_present
   end
 
 end

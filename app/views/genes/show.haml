@@ -12,7 +12,7 @@
     %tbody
       = row_for_attribute @gene, :accessions, pending: true
       = row_for_attribute @gene, :diseases do
-        %ul
+        %ul.bullet_list.hanging_indent
           - @gene.diseases.each do |disease|
             %li= disease
       = row_for_attribute @gene, :exon_count, pending: true

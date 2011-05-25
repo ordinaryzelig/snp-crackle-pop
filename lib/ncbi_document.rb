@@ -22,7 +22,7 @@ module NCBI
     def refetch
       response = self.class.send(:perform_entrez_request, ncbi_id)
       self.attributes = self.class.send(:attributes_from_xml, response.body)
-      set_updated_from_ncbi_at
+      set_updated_from_ncbi_at if fields.has_key?(:updated_from_ncbi_at)
     end
 
     def refetch!
@@ -108,15 +108,46 @@ module NCBI
 
       private
 
-      # Given Nokogiri XML document, parse attributes based on xml procs defined for each field.
+      # Given Nokogiri XML document, parse attributes based on xml procs defined for each field and relation.
+      # XML instructions are attached as the :xml option for a field or relation.
+      # XML instructions can be proc with Nokogiri document as arg or symbol for method to be called.
       # Return attributes hash.
       def parse(document)
         attributes = {}
-        fields.each do |field_name, field|
-          xml_proc = field.options[:xml]
-          attributes[field_name] = document.extract(field_name, xml_proc) if xml_proc
-        end
+        attributes.merge! parse_fields(document)
+        attributes.merge! parse_relations(document)
         attributes
+      end
+
+      # Field options that contain :xml key will have proc to parse doc.
+      # Assign attribute field to value of called proc.
+      def parse_fields(document)
+        fields.inject({}) do |attributes, (field_name, field_object)|
+          begin
+            xml_proc = (field_object.options || {})[:xml]
+            attributes[field_name] = xml_proc.call(document) if xml_proc
+            attributes
+          rescue Exception => ex
+            raise NCBI::Document::ParseError.new(self, field_name, ex)
+          end
+        end
+      end
+
+      # Relations with options that contain :xml key will pass symbol of method to be called.
+      # Assign relation_attributes (e.g. alleles_attributes) to result.
+      def parse_relations(document)
+        relations.inject({}) do |attributes, (relation_name, relation_object)|
+          begin
+            method_name = (relation_object.options || {})[:xml]
+            if method_name
+              relation_attributes_name = relation_name + '_attributes'
+              attributes[relation_attributes_name] = send(method_name, document)
+            end
+            attributes
+          rescue Exception => ex
+            raise NCBI::Document::ParseError.new(self, relation_name, ex)
+          end
+        end
       end
 
       # Instantiate a new object from an XML string.
@@ -127,7 +158,7 @@ module NCBI
       def attributes_from_xml(xml)
         document = Nokogiri.XML(xml)
         raise XMLCouldNotBeVerified.new(xml) unless verify_xml document
-        attributes = parse(document)
+        parse(document)
       end
 
       # Override to customize how data is fetched from Entrez.
@@ -160,7 +191,7 @@ module NCBI
 
     class ParseError < StandardError
       def initialize(model, field_name, ex)
-        super("Error parsing #{model}##{field_name}:\n#{ex.message}")
+        super("Error parsing #{model}##{field_name}\n#{ex.class}: #{ex.message}")
       end
     end
 

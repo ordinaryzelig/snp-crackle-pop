@@ -6,7 +6,7 @@ class Snp
   verify_xml { |doc| doc.css('Rs') }
 
   field :accession,          type: Integer  # Many accessions, grab all?
-  field :allele,             type: String
+  embeds_many :alleles,                        options: {xml: :parse_alleles}, autosave: true
   field :base_position,      type: Integer
   field :chromosome,         type: Integer, xml: proc { |doc| doc.css('Rs Assembly Component').first['chromosome'] }
   field :function_class,     type: Integer
@@ -33,10 +33,38 @@ class Snp
 
   has_taxonomy
 
+  # Custom accepts_nested_attributes_for.
+  # If there are existing alleles, update them in the order they are presented.
+  # If there are no existing alleles, make new ones.
+  def alleles_attributes=(attributes_hash = {})
+    atts_hashes = attributes_hash.values # Don't care about index.
+    raise "Snp can only have 2 alleles" unless atts_hashes.size == 2
+    if alleles.any?
+      alleles.each_with_index do |allele, i|
+        new_attributes = atts_hashes[i]
+        allele.attributes = new_attributes
+      end
+    else
+      atts_hashes.each do |atts|
+        alleles.push(Allele.new(atts))
+      end
+    end
+  end
+
   class << self
 
     def humanize
       'SNP'
+    end
+
+    private
+
+    # Given XML document, construct attributes hash for accepts_nested_attributes_for allele.
+    def parse_alleles(document)
+      document.css('FxnSet').each_with_index.inject({}) do |attributes, (function_set, i)|
+        attributes[i] = Allele.send(:attributes_from_xml, function_set.to_s)
+        attributes
+      end
     end
 
   end

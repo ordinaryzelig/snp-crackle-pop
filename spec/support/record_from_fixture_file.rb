@@ -21,4 +21,12 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
     send :new_from_xml, xml
   end
 
+  def model_class.attributes_from_fixture_file
+    send :attributes_from_xml, fixture_file.read
+  end
+
+  def model_class.make_from_fixture_file(atts = {})
+    make(attributes_from_fixture_file.merge(atts))
+  end
+
 end

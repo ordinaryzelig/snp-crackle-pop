@@ -11,7 +11,8 @@
   %table
     %tbody
       = row_for_attribute @snp, :accession, pending: true
-      = row_for_attribute @snp, :allele, pending: true
+      = row_for_attribute @snp, :alleles do
+        = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
       = row_for_attribute @snp, :base_position, pending: true
       = row_for_attribute @snp, :chromosome
       = row_for_attribute @snp, :function_class, pending: true

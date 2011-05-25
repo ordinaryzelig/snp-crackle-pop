@@ -1,0 +1,6 @@
+%dl
+  - [:base, :function_class].each do |attribute|
+    %dt
+      :plain
+        #{attribute.to_s.humanize}:
+    %dd= alleles.map { |allele| allele.send(attribute) }.join('/')

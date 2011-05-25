@@ -7,12 +7,6 @@
   margin-bottom: 10px
   font-weight: bold
 
-@mixin bullet_list_hanging_indent
-  list-style: disc
-  list-style-position: inside
-  padding-left: 1em
-  text-indent: -1em
-
 .show_model
   h1
     @include model_h1
@@ -33,6 +27,7 @@
         text-align: right
         font-weight: bold
         font-size: 14pt
+        vertical-align: top
       td
         padding-left: 20px
     tfoot
@@ -41,15 +36,18 @@
         padding: 5px
         .time
           font-weight: bold
-  ul
-    @include bullet_list_hanging_indent
-    li
-      padding-bottom: 5px
+  li
+    padding-bottom: 5px
+  dl
+    dt, dd
+      float: left
+    dt
+      clear: both
+      margin-right: 5px
+      font-weight: bold
 
 .search_model
   h1
     @include model_h1
   form, #found
     margin-bottom: 10px
-  ul
-    @include bullet_list_hanging_indent

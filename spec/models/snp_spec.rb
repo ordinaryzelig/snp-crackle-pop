@@ -20,7 +20,7 @@ describe Snp do
 
     it_parses_attribute :accession,          :pending
     it_parses_attribute :ancestral_allele,   'C'
-    it_parses_attribute :base_position,      :pending
+    it_parses_attribute :base_position,      33930588
     it_parses_attribute :chromosome,         6
     it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244

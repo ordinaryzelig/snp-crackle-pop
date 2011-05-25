@@ -14,7 +14,9 @@
       = row_for_attribute @snp, :ancestral_allele
       = row_for_attribute @snp, :alleles do
         = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
-      = row_for_attribute @snp, :base_position, pending: true
+      = row_for_attribute @snp, :base_position do
+        :plain
+          #{@snp.base_position} +/- 1
       = row_for_attribute @snp, :chromosome
       = row_for_attribute @snp, :gene do
         = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.ncbi_gene_id)

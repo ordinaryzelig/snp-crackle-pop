@@ -25,8 +25,6 @@ describe Gene do
 
     it_parses_attribute :accessions,       :pending
     it_parses_attribute :diseases,         ["Breast cancer", "Breast-ovarian cancer, familial, 1", "Pancreatic cancer, susceptibility to, 4"]
-    it_parses_attribute :exon_count,       :pending
-    it_parses_attribute :group,            :pending
     it_parses_attribute :length,           :pending
     it_parses_attribute :location,         '17q21'
     it_parses_attribute :name,             'breast cancer 1, early onset'

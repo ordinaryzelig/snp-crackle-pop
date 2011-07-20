@@ -11,7 +11,7 @@ organism=""/>
   <Het type="est" value="0.306968957185745" stdError="0.243591338396072"/>
   <Validation byCluster="true" byFrequency="true"></Validation>
   <Create build="118" date="2003-10-31 16:50"/>
-  <Update build="132" date="2011-01-11 17:13"/>
+  <Update build="132" date="2011-06-17 15:29"/>
   <Sequence exemplarSs="12693244" ancestralAllele="C">
     <Seq5>CCAGTTTAGTCTTCAGATGATTACAGTTTCTAGAATTTTATTGCATTTCTCAGAATTCTAATAACACACTGTGAAACAATGAGCCTTTTGTAAAATATGTAGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
     <Observed>C/T</Observed>
@@ -194,7 +194,7 @@ organism=""/>
   <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="GRCh37" current="true" reference="true">
     <Component componentType="contig" ctgId="224514668" accession="NT_007592.15" name="NT_007592.15" chromosome="6" start="60000" end="58780165" orientation="fwd" gi="224514668" groupTerm="GRCh37" contigLabel="GRCh37">
       <MapLoc asnFrom="32303843" asnTo="32303843" locType="exact" alnQuality="1" orient="forward" physMapInt="32363843" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="32303842" rightContigNeighborPos="32303844" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0">
-        <FxnSet geneId="56244" symbol="BTNL2" mrnaAcc="NM_019602" mrnaVer="1" protAcc="NP_062548" protVer="1" fxnClass="coding-synonymous" readingFrame="3" allele="A" residue="Q" aaPosition="349"/>
+        <FxnSet geneId="56244" symbol="BTNL2" mrnaAcc="NM_019602" mrnaVer="1" protAcc="NP_062548" protVer="1" fxnClass="synonymous-codon" readingFrame="3" allele="A" residue="Q" aaPosition="349"/>
         <FxnSet geneId="56244" symbol="BTNL2" mrnaAcc="NM_019602" mrnaVer="1" protAcc="NP_062548" protVer="1" fxnClass="reference" readingFrame="3" allele="G" residue="Q" aaPosition="349"/>
       </MapLoc>
     </Component>

@@ -1,7 +1,7 @@
 source :rubygems
 
 # Padrino
-gem 'padrino', '0.9.22'
+gem 'padrino', '0.9.29'
 
 # Project requirements
 gem 'rake', '0.8.7'
@@ -10,7 +10,7 @@ gem 'thin', '1.2.7' # or mongrel
 
 # Component requirements
 gem 'bson_ext', '1.3.1'
-gem 'entrez', '0.4.0'
+gem 'entrez', '0.5.6'
 gem 'haml', '3.1.1'
 gem 'mongoid', '2.0.0.rc.7'
 gem 'nokogiri', '1.4.4'
@@ -21,8 +21,8 @@ group :test do
   gem 'launchy', '0.4.0'
   gem 'machinist_mongo', '1.2.0', require: 'machinist/mongoid'
   gem 'mocha', '0.9.12'
-  gem 'rspec', '2.5.0'
-  gem 'spork', '0.8.4'
+  gem 'rspec', '2.6.0'
+  gem 'spork', '0.8.5'
 end
 
 group :development, :test do

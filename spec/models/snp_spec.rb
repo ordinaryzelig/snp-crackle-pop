@@ -6,16 +6,16 @@ describe Snp do
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
     rs = 9268480
-    fixture_file_xml_content = fixture_file("snp_#{rs}.xml").read.chomp
+    fixture_file_xml_content = fixture_file("snp_#{rs}.xml").read
     snp = Snp.fetch(rs)
-    snp.response.body.chomp.should == fixture_file_xml_content
+    snp.should match_xml_response_with(fixture_file_xml_content)
   end
 
   context 'parses attribute' do
 
     before :all do
       snp = Snp.from_fixture_file
-      @record = snp
+      @object = snp
     end
 
     it_parses_attribute :accession,          :pending
@@ -28,7 +28,7 @@ describe Snp do
     it_parses_attribute :max_success_rate,   nil
     it_parses_attribute :min_success_rate,   nil
     it_parses_attribute :modification_build, 132
-    it_parses_attribute :modification_date,  Time.new(2011, 1, 11, 17, 13)
+    it_parses_attribute :modification_date,  Time.new(2011, 6, 17, 15, 29)
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606
@@ -67,7 +67,7 @@ describe Snp do
 
   it 'can refetch data from NCBI' do
     snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago)
-    stub_entrez_request_with_contents_of_fixture_file Snp
+    stub_entrez_request_with_stubbed_response :EFetch, Snp.fixture_file.read
     snp.refetch
     snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
     snp.updated_from_ncbi_at_changed?.should be_true

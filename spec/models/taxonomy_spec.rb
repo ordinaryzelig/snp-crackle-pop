@@ -6,16 +6,16 @@ describe Taxonomy do
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
     tax_id = 9606
-    fixture_file_xml_content = fixture_file("taxonomy_#{tax_id}.xml").read.chomp
+    fixture_file_xml_content = fixture_file("taxonomy_#{tax_id}.xml").read
     taxonomy = Taxonomy.fetch(tax_id)
-    taxonomy.response.body.chomp.should == fixture_file_xml_content
+    taxonomy.should match_xml_response_with(fixture_file_xml_content)
   end
 
   context 'parses attribute' do
 
     before :all do
       taxonomy = Taxonomy.from_fixture_file
-      @record = taxonomy
+      @object = taxonomy
     end
 
     it_parses_attribute :common_name,         'man'

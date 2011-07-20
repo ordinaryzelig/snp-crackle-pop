@@ -42,4 +42,12 @@ module ExampleMacros
     url(object.class.name.tableize.to_sym, action, id: object.ncbi_id)
   end
 
+  def Gene.search_ncbi_from_fixture_file
+    Gene::SearchResult.parse_esummary(Gene::SearchRequest.fixture_file.read)
+  end
+
+  def GenomeProject.search_ncbi_from_fixture_file
+    GenomeProject::SearchResult.parse_esummary(GenomeProject::SearchRequest.fixture_file.read)
+  end
+
 end

@@ -1,5 +1,6 @@
-# The standard module for an NCBI model.
+# The ORM for an NCBI model.
 # Will include Mongoid::Document and add standard methods.
+
 module NCBI
   module Document
 
@@ -7,30 +8,20 @@ module NCBI
       base.instance_eval do
         include Mongoid::Document
         include NCBI::Timestamp
+        include HTTPartyResponse
+        extend NCBI::XMLParseable
         index :ncbi_id, unique: true
-        attr_reader :response
+        attr_reader :ncbi_base_uri
       end
       base.extend ClassMethods
       base.extend HasTaxonomy
-    end
-
-    def xml
-      response.body
     end
 
     def ncbi_url
       "#{self.class.ncbi_base_uri}#{ncbi_id}"
     end
 
-    private
-
-    def response=(httparty_response)
-      @response = httparty_response
-    end
-
     module ClassMethods
-
-      attr_reader :ncbi_base_uri
 
       def ncbi_database_name
         @ncbi_database_name ||= name.underscore.downcase
@@ -53,7 +44,7 @@ module NCBI
         object.send(:response=, response)
         object.fetched = true
         object
-      rescue XMLCouldNotBeVerified
+      rescue NCBI::XMLParseable::XMLCouldNotBeVerified
         # This might happen if ncbi_id was the correct format, but it wasn't found anyway.
         raise NotFound.new(ncbi_id, self)
       rescue BadResponse
@@ -102,6 +93,7 @@ module NCBI
       # Return attributes hash.
       def parse(document)
         attributes = {}
+        verify_xml(document)
         attributes.merge! parse_fields(document)
         attributes.merge! parse_relations(document)
         attributes
@@ -116,7 +108,9 @@ module NCBI
             attributes[field_name] = xml_proc.call(document) if xml_proc
             attributes
           rescue Exception => ex
-            raise NCBI::Document::ParseError.new(self, field_name, ex)
+            # Uncomment for debugging.
+            # raise NCBI::Document::ParseError.new(self, field_name, ex)
+            attributes
           end
         end
       end
@@ -138,41 +132,12 @@ module NCBI
         end
       end
 
-      # Instantiate a new object from an XML string.
-      def new_from_xml(xml)
-        new(attributes_from_xml(xml))
-      end
-
-      def attributes_from_xml(xml)
-        document = Nokogiri.XML(xml)
-        raise XMLCouldNotBeVerified.new(xml) unless verify_xml document
-        parse(document)
-      end
-
       # Override to customize how data is fetched from Entrez.
       # See GenomeProject for example.
       def perform_entrez_request(ncbi_id)
-        response = Entrez.EFetch(ncbi_database_name, {id: ncbi_id, retmode: 'xml'})
+        response = Entrez.EFetch(ncbi_database_name, id: ncbi_id)
         raise BadResponse.new(response) unless response.ok?
         response
-      end
-
-      # Verify that the XML about to parsed is going to give good data.
-      # The verification process is a simple search for a key "ingredient" that
-      # if present, probably means that this is a good XML document to parse.
-      # This method can be called in 2 ways:
-      #   1) In the model where the instructions to search for the key ingredient are located:
-      #     class Snp
-      #       verify_xml { |doc| doc['KeyIngredient'] }
-      #     end
-      #   2) In new_from_xml where the document gets passed here for verification.
-      def verify_xml(document = nil, &block)
-        if block_given?
-          # Store for later use.
-          @xml_verification_proc = block
-        else
-          @xml_verification_proc.call(document).present?
-        end
       end
 
     end
@@ -186,12 +151,6 @@ module NCBI
     class NotFound < StandardError
       def initialize(ncbi_id, model_class)
         super("NCBI could not find #{model_class.name.humanize} with id: #{ncbi_id}")
-      end
-    end
-
-    class XMLCouldNotBeVerified < StandardError
-      def initialize(xml)
-        super(xml)
       end
     end
 

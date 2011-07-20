@@ -6,28 +6,23 @@ describe Gene do
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
     gene_id = 672
-    fixture_file_xml_content = fixture_file("gene_#{gene_id}.xml").read.chomp
+    fixture_file_xml_content = fixture_file("gene_#{gene_id}.xml").read
     gene = Gene.fetch(gene_id)
-    begin
-      timeout(2.seconds) { gene.response.body.chomp.should == fixture_file_xml_content }
-    rescue Timeout::Error
-      puts gene.response.body
-      fail 'File comparison taking too long. Most likely because files do not match.'
-    end
+    gene.should match_xml_response_with(fixture_file_xml_content)
   end
 
   context 'parses attribute' do
 
     before :all do
       gene = Gene.from_fixture_file
-      @record = gene
+      @object = gene
     end
 
     it_parses_attribute :accessions,       :pending
+    it_parses_attribute :description,     'breast cancer 1, early onset'
     it_parses_attribute :diseases,         ["Breast cancer", "Breast-ovarian cancer, familial, 1", "Pancreatic cancer, susceptibility to, 4"]
     it_parses_attribute :length,           :pending
     it_parses_attribute :location,         '17q21'
-    it_parses_attribute :name,             'breast cancer 1, early onset'
     it_parses_attribute :ncbi_id,          672
     it_parses_attribute :ncbi_taxonomy_id, 9606
     it_parses_attribute :mim,              113705
@@ -46,10 +41,28 @@ describe Gene do
     snp.reload.gene.should == gene
   end
 
-  it 'can be searched by symbols, name, location, or protein name' do
+  it 'searches local DB by symbols, name, location, or protein name' do
     gene = Gene.make_from_fixture_file
     ['BRCA1', 'br', 'IRIS', 'ir', 'breast cancer', 'susceptibility', 'early onset', '17q21', '17'].each do |term|
-      gene.should be_found_when_searching_for(term)
+      gene.should be_found_when_searching_locally_for(term)
+    end
+  end
+
+  it 'searches NCBI by symbols or location' do
+    gene = Gene.from_fixture_file
+    ['BRCA1', 'IRIS', '17q21'].each do |term|
+      gene.should be_found_when_searching_NCBI_for(term)
+    end
+  end
+
+  it 'requires at least 3 characters or be a number to search NCBI' do
+    valids = ['iri', 1, 123, '1', '-1.23']
+    valids.each do |term|
+      term.should be_valid_for_search_request
+    end
+    invalids = ['ir', '']
+    invalids.each do |term|
+      term.should_not be_valid_for_search_request
     end
   end
 

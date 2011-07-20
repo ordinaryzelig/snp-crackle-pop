@@ -24,7 +24,7 @@
     <MGCId>2</MGCId>
     <MGCName>Vertebrate Mitochondrial</MGCName>
   </MitoGeneticCode>
-  <Lineage>cellular organisms; Eukaryota; Fungi/Metazoa group; Metazoa; Eumetazoa; Bilateria; Coelomata; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Euarchontoglires; Primates; Haplorrhini; Simiiformes; Catarrhini; Hominoidea; Hominidae; Homininae; Homo</Lineage>
+  <Lineage>cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Coelomata; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Euarchontoglires; Primates; Haplorrhini; Simiiformes; Catarrhini; Hominoidea; Hominidae; Homininae; Homo</Lineage>
   <LineageEx>
     <Taxon>
       <TaxId>131567</TaxId>
@@ -38,7 +38,7 @@
     </Taxon>
     <Taxon>
       <TaxId>33154</TaxId>
-      <ScientificName>Fungi/Metazoa group</ScientificName>
+      <ScientificName>Opisthokonta</ScientificName>
       <Rank>no rank</Rank>
     </Taxon>
     <Taxon>

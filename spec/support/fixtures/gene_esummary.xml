@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>672</Id>
+	<Item Name="Name" Type="String">BRCA1</Item>
+	<Item Name="Description" Type="String">breast cancer 1, early onset</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">17</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">17q21</Item>
+	<Item Name="OtherAliases" Type="String">BRCAI, BRCC1, BROVCA1, IRIS, PNCA4, PSCP, RNF53</Item>
+	<Item Name="OtherDesignations" Type="String">BRCA1/BRCA2-containing complex, subunit 1|OTTHUMP00000212143|OTTHUMP00000212147|OTTHUMP00000212148|OTTHUMP00000212149|OTTHUMP00000212150|OTTHUMP00000212151|OTTHUMP00000212155|RING finger protein 53|breast and ovarian cancer susceptibility protein 1|breast and ovarian cancer sususceptibility protein|breast cancer type 1 susceptibility protein</Item>
+	<Item Name="NomenclatureSymbol" Type="String">BRCA1</Item>
+	<Item Name="NomenclatureName" Type="String">breast cancer 1, early onset</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">113705</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">17</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000017.10</Item>
+			<Item Name="ChrStart" Type="Integer">41277499</Item>
+			<Item Name="ChrStop" Type="Integer">41196311</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">326668</Item>
+	<Item Name="Summary" Type="String">This gene encodes a nuclear phosphoprotein that plays a role in maintaining genomic stability, and it also acts as a tumor suppressor. The encoded protein combines with other tumor suppressors, DNA damage sensors, and signal transducers to form a large multi-subunit protein complex known as the BRCA1-associated genome surveillance complex (BASC). This gene product associates with RNA polymerase II, and through the C-terminal domain, also interacts with histone deacetylase complexes. This protein thus plays a role in transcription, DNA repair of double-stranded breaks, and recombination. Mutations in this gene are responsible for approximately 40% of inherited breast cancers and more than 80% of inherited breast and ovarian cancers. Alternative splicing plays a role in modulating the subcellular localization and physiological function of this gene. Many alternatively spliced transcript variants, some of which are disease-associated mutations, have been described for this gene, but the full-length natures of only some of these variants has been described. A related pseudogene, which is also located on chromosome 17, has been identified. [provided by RefSeq]</Item>
+	<Item Name="ChrSort" Type="String">17</Item>
+	<Item Name="ChrStart" Type="Integer">41196311</Item>
+</DocSum>
+
+</eSummaryResult>

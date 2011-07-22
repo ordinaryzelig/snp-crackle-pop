@@ -11,7 +11,7 @@ class SnpCracklePop < Padrino::Application
   # set :default_builder, "foo" # Set a custom form builder (default 'StandardFormBuilder')
   # set :locale_path, "bar"     # Set path for I18n translations (defaults to app/locale/)
   # enable  :sessions           # Disabled by default
-  # disable :flash              # Disables rack-flash (enabled by default if sessions)
+  disable :flash              # Disables rack-flash (enabled by default if sessions)
   # layout  :my_layout          # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
 
@@ -35,7 +35,17 @@ class SnpCracklePop < Padrino::Application
       get :refetch, with: :id do
         object = model_class.find_by_ncbi_id(params[:id])
         object.refetch!
-        redirect url(object.class.name.tableize.to_sym, :show, id: object.ncbi_id)
+        redirect url(model_class.name.tableize.to_sym, :show, id: object.ncbi_id)
+      end
+    end
+
+    def download_action(model_class)
+      post :download do
+        # Only supports 1 id per line, no commas.
+        ids = params[:ids].split
+        data = model_class.with_ncbi_ids(ids).to_csv
+        file_name = "#{model_class.humanize.pluralize} #{Time.now}.csv"
+        csv data, file_name
       end
     end
 

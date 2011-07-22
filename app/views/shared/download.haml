@@ -1,0 +1,6 @@
+= form_tag "#{current_path}/download" do
+  %p
+    = label_tag :ids, caption: 'IDs'
+    %br
+    = text_area_tag :ids, id: 'ids'
+  = submit_tag 'Download'

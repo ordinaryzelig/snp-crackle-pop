@@ -17,4 +17,6 @@ describe 'Genes', type: :acceptance do
 
   it_can_be_refetched :symbol, 'asdf'
 
+  it_can_download_csv_of_list_of_ncbi_ids
+
 end

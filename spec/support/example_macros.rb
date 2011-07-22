@@ -38,8 +38,15 @@ module ExampleMacros
   end
 
   # Polymorphic url generator.
-  def url_for(object, action = :show)
-    url(object.class.name.tableize.to_sym, action, id: object.ncbi_id)
+  def url_for(object, action = :show, params = {})
+    parameters = params
+    if object.is_a?(Mongoid::Document)
+      model_class = object.class
+      parameters[:id] ||= object.ncbi_id
+    else
+      model_class = object
+    end
+    url(model_class.name.tableize.to_sym, action, parameters)
   end
 
   def Gene.search_ncbi_from_fixture_file

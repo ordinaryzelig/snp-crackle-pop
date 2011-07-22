@@ -13,4 +13,4 @@
     %h2#found= 'Found ' + pluralize(@genes.size, 'gene')
     %ul
       - @genes.each do |gene|
-        %li= link_to highlight(gene.symbol_and_name, @term), url(:genes, :show, id: gene.ncbi_id)
+        %li= link_to highlight(gene.name_and_description, @term), url(:genes, :show, id: gene.ncbi_id)

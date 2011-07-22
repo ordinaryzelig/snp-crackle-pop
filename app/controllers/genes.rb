@@ -1,9 +1,13 @@
 SnpCracklePop.controllers :genes do
 
+  get :index do
+    haml :'shared/download'
+  end
+
   get :search do
     @term = params[:q]
     if @term
-      @genes = Gene.search(@term)
+      @genes = Gene.search_local(@term)
     end
     haml :'genes/search'
   end
@@ -15,5 +19,7 @@ SnpCracklePop.controllers :genes do
   end
 
   refetch_action Gene
+
+  download_action Gene
 
 end

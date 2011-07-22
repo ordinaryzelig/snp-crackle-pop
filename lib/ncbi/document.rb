@@ -5,13 +5,15 @@ module NCBI
   module Document
 
     def self.included(base)
+      class << base
+        attr_reader :ncbi_base_uri
+      end
       base.instance_eval do
         include Mongoid::Document
         include NCBI::Timestamp
         include HTTPartyResponse
         extend NCBI::XMLParseable
         index :ncbi_id, unique: true
-        attr_reader :ncbi_base_uri
       end
       base.extend ClassMethods
       base.extend HasTaxonomy
@@ -67,6 +69,10 @@ module NCBI
       # Find from database, if not found, fetch! it from NCBI (and store it in DB).
       def find_by_ncbi_id_or_fetch!(ncbi_id)
         find_by_ncbi_id(ncbi_id) || fetch!(ncbi_id)
+      end
+
+      def with_ncbi_ids(ids)
+        where :ncbi_id.in => ids
       end
 
       # Some naming convenience methods.

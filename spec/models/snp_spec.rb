@@ -104,4 +104,10 @@ describe Snp do
     snp.alleles.map(&:function_class).compact.should be_present
   end
 
+  it 'finds multiple objects by NCBI ids' do
+    ids = [1, 2]
+    ids.each { |id| Snp.make(ncbi_id: id) }
+    Snp.with_ncbi_ids(ids).map(&:ncbi_id).should =~ ids
+  end
+
 end

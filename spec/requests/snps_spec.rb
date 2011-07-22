@@ -17,4 +17,6 @@ describe 'Snps', type: :acceptance do
 
   it_can_be_refetched :het_uncertainty, 0.999
 
+  it_can_download_csv_of_list_of_ncbi_ids
+
 end

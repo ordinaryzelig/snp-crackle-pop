@@ -1,5 +1,9 @@
 SnpCracklePop.controllers :snps do
 
+  get :index do
+    haml :'shared/download'
+  end
+
   # Instead of searching, just redirect to show.
   get :search do
     rs_number = params[:q]
@@ -16,5 +20,7 @@ SnpCracklePop.controllers :snps do
   end
 
   refetch_action Snp
+
+  download_action Snp
 
 end

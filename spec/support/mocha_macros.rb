@@ -7,6 +7,7 @@ module MochaMacros
     response = mock()
     response.stubs(:body).returns(content)
     response.stubs(:ok?).returns(true)
+    response.stubs(:[]).returns(nil) # so verify_response will not find 'ERROR'.
     Entrez.stubs(entrez_request_type).returns(response)
   end
 

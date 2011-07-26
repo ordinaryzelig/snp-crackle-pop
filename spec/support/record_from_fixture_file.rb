@@ -3,7 +3,7 @@
 # E.G. Snp.from_fixture_file would return a new Snp object from the contents of spec/fixtures/snp_9268480.xml.
 
 MODEL_FIXTURE_FILES = {
-  Gene =>                         'gene_672.xml',
+  Gene =>                         'gene_55245.xml',
   Gene::SearchRequest =>          'gene_esummary.xml',
   GenomeProject =>                'genome_project_28911.xml',
   GenomeProject::SearchRequest => 'genome_project_esummary.xml',
@@ -20,11 +20,11 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
 
   def model_class.from_fixture_file
     xml = fixture_file.read
-    send :new_from_xml, xml
+    send :new_from_xml, split_xml(xml).first
   end
 
   def model_class.attributes_from_fixture_file
-    send :attributes_from_xml, fixture_file.read
+    send :attributes_from_xml, split_xml(fixture_file.read).first
   end
 
   def model_class.make_from_fixture_file(atts = {})

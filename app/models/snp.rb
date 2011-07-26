@@ -3,26 +3,27 @@ class Snp
   include NCBI::Document
 
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
-  verify_xml { |doc| doc.css('Rs') }
+  split_xml_on { |doc| doc.css('Rs') }
+  verify_xml { |node| node.attributes['rsId'] }
 
   field :accession,          type: Integer  # Many accessions, grab all?
   embeds_many :alleles,                        options: {xml: :parse_alleles}, autosave: true
-  field :ancestral_allele,   type: String,   xml: proc { |doc| doc.css('Rs > Sequence').first['ancestralAllele'] }
-  field :base_position,      type: Integer,  xml: proc { |doc| doc.css('Assembly').first.css('MapLoc').first['physMapInt'] }
-  field :chromosome,         type: Integer,  xml: proc { |doc| doc.css('Rs Assembly Component').first['chromosome'] }
-  field :gene_symbol,        type: Integer,  xml: proc { |doc| doc.css('Rs Assembly Component MapLoc FxnSet').first['symbol'] }
-  field :het_uncertainty,    type: Float,    xml: proc { |doc| doc.css('Rs Het').first['stdError'].to_f.round(3) }
-  field :heterozygosity,     type: Float,    xml: proc { |doc| doc.css('Rs Het').first['value'].to_f.round(3) }
-  field :max_success_rate,   type: Float,    xml: proc { |doc| doc.css('Rs').first['validProbMax'] }
-  field :min_success_rate,   type: Float,    xml: proc { |doc| doc.css('Rs').first['validProbMin'] }
-  field :modification_build, type: Integer,  xml: proc { |doc| doc.css('Rs Update').first['build'] }
-  field :modification_date,  type: Time,     xml: proc { |doc| doc.css('Rs Update').first['date'] }
-  field :ncbi_gene_id,       type: Integer,  xml: proc { |doc| doc.css('Rs Assembly Component MapLoc FxnSet').first['geneId'] }
-  field :ncbi_id,            type: Integer,  xml: proc { |doc| doc.css('Rs').first['rsId'] }
-  field :ncbi_taxonomy_id,   type: Integer,  xml: proc { |doc| doc.css('Rs').first['taxId']}
-  field :reference_assembly, type: Boolean,  xml: proc { |doc| doc.css('Rs Assembly').any? { |assembly| assembly['reference'] == 'true'} }
-  field :rs_number,          type: Integer,  xml: proc { |doc| doc.css('Rs').first['rsId'] }
-  field :snp_class,          type: String,   xml: proc { |doc| doc.css('Rs').first['snpClass'] }
+  field :ancestral_allele,   type: String,   xml: proc { |node| node.css('Sequence').first['ancestralAllele'] }
+  field :base_position,      type: Integer,  xml: proc { |node| node.css('Assembly').first.css('MapLoc').first['physMapInt'] }
+  field :chromosome,         type: Integer,  xml: proc { |node| node.css('Assembly Component').first['chromosome'] }
+  field :gene_symbol,        type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
+  field :het_uncertainty,    type: Float,    xml: proc { |node| node.css('Het').first['stdError'].to_f.round(3) }
+  field :heterozygosity,     type: Float,    xml: proc { |node| node.css('Het').first['value'].to_f.round(3) }
+  field :max_success_rate,   type: Float,    xml: proc { |node| node.css('validProbMax').first }
+  field :min_success_rate,   type: Float,    xml: proc { |node| node.css('validProbMin').first }
+  field :modification_build, type: Integer,  xml: proc { |node| node.css('Update').first['build'] }
+  field :modification_date,  type: Time,     xml: proc { |node| node.css('Update').first['date'] }
+  field :ncbi_gene_id,       type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
+  field :ncbi_id,            type: Integer,  xml: proc { |node| node.attributes['rsId'].value }
+  field :ncbi_taxonomy_id,   type: Integer,  xml: proc { |node| node.attributes['taxId'].value }
+  field :reference_assembly, type: Boolean,  xml: proc { |node| node.css('Assembly').any? { |assembly| assembly['reference'] == 'true'} }
+  field :rs_number,          type: Integer,  xml: proc { |node| node.attributes['rsId'].value }
+  field :snp_class,          type: String,   xml: proc { |node| node.attributes['snpClass'].value }
   ncbi_timestamp_field
   belongs_to :gene
 

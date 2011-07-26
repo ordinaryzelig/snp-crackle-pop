@@ -54,13 +54,11 @@ RSpec::Matchers.define :match_xml_response_with do |expected_string|
       @actual_string = model.response.body.chomp
       timeout(2.seconds) { @actual_string.should == expected_string.chomp }
     rescue Timeout::Error
-      fail
+      false
     end
   end
   failure_message_for_should do |model|
     puts @actual_string
-    puts '------------'
-    puts expected_string
     "#{model.class} response did not match given string."
   end
 end

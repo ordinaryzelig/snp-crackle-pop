@@ -20,6 +20,18 @@ module NCBI
       parse(document)
     end
 
+    # Define instructions on how to split multiple EFetch results.
+    def split_xml_on(&block)
+      @split_proc = block
+    end
+
+    # Using split_proc, split the Nokogiri::Document which should return an array of Nokogiri nodes.
+    def split_xml(string)
+      doc = Nokogiri.XML(string)
+      raise "no split_on defined for #{self}" unless @split_proc
+      @split_proc.call(doc)
+    end
+
     private
 
     # Verify that the XML about to parsed is going to give good data.

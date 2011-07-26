@@ -40,24 +40,39 @@ module NCBI
       # Fetch data from NCBI.
       # Instantiate new object and return.
       # Record response.
-      def fetch(ncbi_id)
-        response = perform_entrez_request(ncbi_id)
-        object = new_from_xml(response.body)
-        object.send(:response=, response)
-        object.fetched = true
-        object
+      # Can fetch single id or array of ids.
+      def fetch(ncbi_id_or_ids)
+        ids = [ncbi_id_or_ids].flatten
+        response = perform_entrez_request(ids)
+        verify_response(response)
+        # Split into individual sections, parse, and instantiate objects.
+        objects = split_xml(response.body).map do |node|
+          object = new_from_xml(node)
+          object.send(:response=, response)
+          object.fetched = true
+          object
+        end
+        # Verify all found.
+        ids_not_found = ids - objects.map(&:ncbi_id)
+        raise NotFound.new(ids_not_found, self) if ids_not_found.any?
+        if ncbi_id_or_ids.respond_to?(:each)
+          objects
+        else
+          objects.first
+        end
+        # TODO: raise exception if any not found.
       rescue NCBI::XMLParseable::XMLCouldNotBeVerified
-        # This might happen if ncbi_id was the correct format, but it wasn't found anyway.
-        raise NotFound.new(ncbi_id, self)
+        # This might happen if ncbi_ids had the correct format, but were not found anyway.
+        raise NotFound.new(ncbi_id_or_ids, self)
       rescue BadResponse
-        # This could either be a badly formed request, or more likely, ncbi_id was not valid.
-        raise NotFound.new(ncbi_id, self)
+        # This could either be a badly formed request, or more likely, ncbi_ids were not valid.
+        raise NotFound.new(ncbi_id_or_ids, self)
       end
 
       # Same as fetch and saves to database.
-      def fetch!(*args)
-        object = fetch(*args)
-        object.save!
+      def fetch!(ncbi_id_or_ids)
+        object = fetch(ncbi_id_or_ids)
+        [object].flatten.each(&:save!)
         object
       end
 
@@ -69,6 +84,23 @@ module NCBI
       # Find from database, if not found, fetch! it from NCBI (and store it in DB).
       def find_by_ncbi_id_or_fetch!(ncbi_id)
         find_by_ncbi_id(ncbi_id) || fetch!(ncbi_id)
+      end
+
+      # Find objects that already exist in local DB.
+      # If any not found locally, fetch from NCBI.
+      def find_all_by_ncbi_id_or_fetch!(ncbi_ids)
+        found_locally = with_ncbi_ids(ncbi_ids)
+        ids_not_found_locally = ncbi_ids - found_locally.map(&:ncbi_id)
+        if ids_not_found_locally.any?
+          fetched = fetch!(ids_not_found_locally)
+        else
+          fetched = []
+        end
+        # found_locally is a Mongoid::Criteria object.
+        # Since we are fetch!-ing, the new objects are being stored in the DB.
+        # Criteria will query the DB each time it is accessed.
+        # So now all should be "found locally".
+        found_locally
       end
 
       def with_ncbi_ids(ids)
@@ -93,15 +125,15 @@ module NCBI
 
       private
 
-      # Given Nokogiri XML document, parse attributes based on xml procs defined for each field and relation.
+      # Given Nokogiri XML document_or_node, parse attributes based on xml procs defined for each field and relation.
       # XML instructions are attached as the :xml option for a field or relation.
-      # XML instructions can be proc with Nokogiri document as arg or symbol for method to be called.
+      # XML instructions can be proc with Nokogiri document_or_node as arg or symbol for method to be called.
       # Return attributes hash.
-      def parse(document)
+      def parse(document_or_node)
         attributes = {}
-        verify_xml(document)
-        attributes.merge! parse_fields(document)
-        attributes.merge! parse_relations(document)
+        verify_xml(document_or_node)
+        attributes.merge! parse_fields(document_or_node)
+        attributes.merge! parse_relations(document_or_node)
         attributes
       end
 
@@ -140,10 +172,20 @@ module NCBI
 
       # Override to customize how data is fetched from Entrez.
       # See GenomeProject for example.
-      def perform_entrez_request(ncbi_id)
-        response = Entrez.EFetch(ncbi_database_name, id: ncbi_id)
-        raise BadResponse.new(response) unless response.ok?
-        response
+      def perform_entrez_request(ncbi_ids)
+        ids_string = [ncbi_ids].flatten.join(',')
+        Entrez.EFetch(ncbi_database_name, id: ids_string)
+      end
+
+      # HTTParty response must have 200 status and
+      # if it is the result of an ESummary, there must not be an error.
+      def verify_response(response)
+        if response['eSummaryResult']
+          esummary_error = response['eSummaryResult'].has_key?('ERROR')
+        end
+        unless response.ok? && !esummary_error
+          raise BadResponse.new(response)
+        end
       end
 
     end
@@ -155,8 +197,8 @@ module NCBI
     end
 
     class NotFound < StandardError
-      def initialize(ncbi_id, model_class)
-        super("NCBI could not find #{model_class.name.humanize} with id: #{ncbi_id}")
+      def initialize(ncbi_ids, model_class)
+        super("NCBI could not find #{model_class.name.humanize} with id(s): #{ncbi_ids}")
       end
     end
 

@@ -11,6 +11,11 @@ describe Snp do
     snp.should match_xml_response_with(fixture_file_xml_content)
   end
 
+  it 'splits XML into Rs sections' do
+    fixture_file_xml_content = fixture_file('snp_9268480.xml').read
+    Snp.split_xml(fixture_file_xml_content).first['rsId'].should == Nokogiri.XML(fixture_file_xml_content).css('Rs').first['rsId']
+  end
+
   context 'parses attribute' do
 
     before :all do
@@ -67,8 +72,10 @@ describe Snp do
 
   it 'can refetch data from NCBI' do
     snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago)
+    old_id = snp._id
     stub_entrez_request_with_stubbed_response :EFetch, Snp.fixture_file.read
     snp.refetch
+    snp._id.should == old_id
     snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
     snp.updated_from_ncbi_at_changed?.should be_true
   end
@@ -104,10 +111,29 @@ describe Snp do
     snp.alleles.map(&:function_class).compact.should be_present
   end
 
-  it 'finds multiple objects by NCBI ids' do
+  it 'finds multiple objects that exist in local db by NCBI ids' do
     ids = [1, 2]
     ids.each { |id| Snp.make(ncbi_id: id) }
     Snp.with_ncbi_ids(ids).map(&:ncbi_id).should =~ ids
+  end
+
+  it 'fetches multiple objects from NCBI' do
+    ids = [9268480, 672]
+    fixture_file_xml_content = fixture_file('snps_9268480_672.xml')
+    stub_entrez_request_with_stubbed_response :EFetch, fixture_file_xml_content
+    Snp.fetch(ids).map(&:rs_number).should == ids
+  end
+
+  it 'finds multiple objects some of which exist locally and some that do not' do
+    ids = [9268480, 672]
+    Snp.make_from_fixture_file # Will create Snp 9268480.
+    snps = Snp.find_all_by_ncbi_id_or_fetch!(ids)
+    snps.map(&:ncbi_id).should == ids
+    snps.map(&:_id).any?(&:nil?).should be_false
+  end
+
+  it 'raises exception if all ids not found when fetching' do
+    proc { Snp.fetch([9268480, 1]) }.should raise_error(NCBI::Document::NotFound)
   end
 
 end

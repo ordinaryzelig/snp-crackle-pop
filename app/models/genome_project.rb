@@ -7,13 +7,14 @@ class GenomeProject
 
   set_ncbi_database_name 'genomeprj'
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/bioproject/'
-  verify_xml { |doc| doc.css('Id') }
+  split_xml_on { |doc| doc.css('DocSum') }
+  verify_xml { |node| node.css('Id') }
 
-  field :name,               type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Defline"]').first.content }
-  field :ncbi_taxonomy_id,   type: Integer, xml: proc { |doc| doc.xpath('.//Item[@Name="TaxId"]').first.content }
-  field :ncbi_id,            type: Integer, xml: proc { |doc| doc.xpath('.//Id').first.content }
-  field :sequencing_centers, type: Array,   xml: proc { |doc| doc.xpath('.//Item[@Name="Center"]').map(&:content) }
-  field :sequencing_status,  type: String,  xml: proc { |doc| doc.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
+  field :name,               type: String,  xml: proc { |node| node.xpath('.//Item[@Name="Defline"]').first.content }
+  field :ncbi_taxonomy_id,   type: Integer, xml: proc { |node| node.xpath('.//Item[@Name="TaxId"]').first.content }
+  field :ncbi_id,            type: Integer, xml: proc { |node| node.xpath('.//Id').first.content }
+  field :sequencing_centers, type: Array,   xml: proc { |node| node.xpath('.//Item[@Name="Center"]').map(&:content) }
+  field :sequencing_status,  type: String,  xml: proc { |node| node.xpath('.//Item[@Name="Sequencing_Status"]').first.content }
   ncbi_timestamp_field
 
   has_taxonomy

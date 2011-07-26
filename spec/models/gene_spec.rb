@@ -5,7 +5,7 @@ describe Gene do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    gene_id = 672
+    gene_id = 55245
     fixture_file_xml_content = fixture_file("gene_#{gene_id}.xml").read
     gene = Gene.fetch(gene_id)
     gene.should match_xml_response_with(fixture_file_xml_content)
@@ -19,16 +19,23 @@ describe Gene do
     end
 
     it_parses_attribute :accessions,       :pending
-    it_parses_attribute :description,     'breast cancer 1, early onset'
-    it_parses_attribute :diseases,         ["Breast cancer", "Breast-ovarian cancer, familial, 1", "Pancreatic cancer, susceptibility to, 4"]
+    it_parses_attribute :description,     'ubiquinol-cytochrome c reductase complex chaperone'
+    it_parses_attribute :diseases,         ["A genome-wide association study in 19 633 Japanese subjects identified LHX3-QSOX2 and IGF1 as adult height loci.",
+                                            "Common variants in the GDF5-UQCC region are associated with variation in human height.",
+                                            "Genome-wide association analysis identifies 20 loci that influence adult height.",
+                                            "Identification of ten loci associated with height highlights new biological pathways in human growth.",
+                                            "Many sequence variants affecting diversity of adult human height.",
+                                            "Meta-analysis of genome-wide scans for human adult stature identifies novel Loci and associations with measures of skeletal frame size.",
+                                            "Stature quantitative trait locus 14",
+                                           ]
     it_parses_attribute :length,           :pending
-    it_parses_attribute :location,         '17q21'
-    it_parses_attribute :ncbi_id,          672
+    it_parses_attribute :location,         '20q11.22'
+    it_parses_attribute :ncbi_id,          55245
     it_parses_attribute :ncbi_taxonomy_id, 9606
-    it_parses_attribute :mim,              113705
-    it_parses_attribute :protein_name,     'breast cancer type 1 susceptibility protein'
-    it_parses_attribute :symbol,           'BRCA1'
-    it_parses_attribute :symbols_other,    ['IRIS', 'PSCP', 'BRCAI', 'BRCC1', 'PNCA4', 'RNF53', 'BROVCA1']
+    it_parses_attribute :mim,              611797
+    it_parses_attribute :protein_name,     'ubiquinol-cytochrome c reductase complex chaperone CBP3 homolog'
+    it_parses_attribute :symbol,           'UQCC'
+    it_parses_attribute :symbols_other,    ['BFZB', 'CBP3', 'C20orf44', 'MGC104353', 'MGC141902']
 
   end
 
@@ -43,14 +50,14 @@ describe Gene do
 
   it 'searches local DB by symbols, name, location, or protein name' do
     gene = Gene.make_from_fixture_file
-    ['BRCA1', 'br', 'IRIS', 'ir', 'breast cancer', 'susceptibility', 'early onset', '17q21', '17'].each do |term|
+    ['UQCC', 'uq', 'BFZB', 'bf', 'ubiquinol', 'CBP3 homol', '20q11.22', '20q'].each do |term|
       gene.should be_found_when_searching_locally_for(term)
     end
   end
 
   it 'searches NCBI by symbols or location' do
     gene = Gene.from_fixture_file
-    ['BRCA1', 'IRIS', '17q21'].each do |term|
+    ['UQCC', 'BFZB', '20q11.22'].each do |term|
       gene.should be_found_when_searching_NCBI_for(term)
     end
   end
@@ -67,5 +74,12 @@ describe Gene do
   end
 
   it_raises_error_if_ncbi_cannot_find_it
+
+  it 'fetches multiple objects from NCBI' do
+    ids = [253461, 55245]
+    fixture_file_xml_content = fixture_file('genes_253461_55245.xml')
+    stub_entrez_request_with_stubbed_response :EFetch, fixture_file_xml_content
+    Gene.fetch(ids).map(&:ncbi_id).should == ids
+  end
 
 end

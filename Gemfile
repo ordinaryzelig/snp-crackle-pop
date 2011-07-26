@@ -23,7 +23,7 @@ group :test do
   gem 'machinist_mongo', '1.2.0', require: 'machinist/mongoid'
   gem 'mocha', '0.9.12'
   gem 'rspec', '2.6.0'
-  gem 'spork', '0.8.5'
+  gem 'spork', '>= 0.9.0.rc9'
 end
 
 group :development, :test do

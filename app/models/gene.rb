@@ -7,7 +7,7 @@ class Gene
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/gene/'
 
   field :description,      type: String,  xml: proc { |node| node.css('Gene-ref_desc').first.content }
-  field :diseases,         type: Array,   xml: proc { |node| node.css('Entrezgene_comments > Gene-commentary > Gene-commentary_comment > Gene-commentary > Gene-commentary_type').select { |node| node.attributes['value'].value == 'phenotype' }.map { |node| node.next.next.content } }
+  field :diseases,         type: Array,   xml: proc { |node| node.css('Entrezgene_comments > Gene-commentary > Gene-commentary_comment > Gene-commentary > Gene-commentary_type').select { |node| node['value'] == 'phenotype' }.map { |node| node.next.next.content } }
   field :location,         type: String,  xml: proc { |node| node.css('Gene-ref_maploc').first.content }
   field :mim,              type: Integer, xml: proc { |node| node.css('Entrezgene_unique-keys Dbtag_db').detect { |node| node.content == 'MIM' }.next.next.css('Object-id_id').first.content }
   field :ncbi_id,          type: Integer, xml: proc { |node| node.css('Gene-track_geneid').first.content }

@@ -5,9 +5,8 @@ describe Gene do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    gene_id = 55245
-    fixture_file_xml_content = fixture_file("gene_#{gene_id}.xml").read
-    gene = Gene.fetch(gene_id)
+    fixture_file_xml_content = Gene.fixture_file.read
+    gene = Gene.fetch(55245)
     gene.should match_xml_response_with(fixture_file_xml_content)
   end
 
@@ -77,7 +76,7 @@ describe Gene do
 
   it 'fetches multiple objects from NCBI' do
     ids = [253461, 55245]
-    fixture_file_xml_content = fixture_file('genes_253461_55245.xml')
+    fixture_file_xml_content = fixture_file('genes_253461_55245_efetch.xml')
     stub_entrez_request_with_stubbed_response :EFetch, fixture_file_xml_content
     Gene.fetch(ids).map(&:ncbi_id).should == ids
   end

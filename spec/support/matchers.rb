@@ -19,7 +19,7 @@ end
 
 RSpec::Matchers.define :have_attributes do |atts|
   match do |object|
-    atts.each do |attribute, value|
+    atts.all? do |attribute, value|
       @attribute = attribute
       @expected_value = value
       @actual_value = object.send(attribute)

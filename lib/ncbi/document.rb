@@ -161,6 +161,8 @@ module NCBI
               case relation_object.macro
               when :embeds_many
                 attributes[relation_name] = parse_embeds_many_relation(relation_object, xml_proc.call(document_or_node))
+              else
+                raise "parse_#{relation_object.macro} not yet implemented"
               end
             end
           rescue Exception => ex

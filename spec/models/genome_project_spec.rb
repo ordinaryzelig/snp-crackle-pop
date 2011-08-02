@@ -3,9 +3,8 @@ require 'spec_helper'
 describe GenomeProject do
 
   it 'fetches data from NCBI' do
-    genome_project_id = 28911
-    genome_project = GenomeProject.fetch(genome_project_id)
-    fixture_file_xml_content = fixture_file("genome_project_#{genome_project_id}.xml").read
+    fixture_file_xml_content = GenomeProject.fixture_file.read
+    genome_project = GenomeProject.fetch(28911)
     genome_project.should match_xml_response_with(fixture_file_xml_content)
   end
 

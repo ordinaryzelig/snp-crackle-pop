@@ -5,9 +5,8 @@ describe Taxonomy do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    tax_id = 9606
-    fixture_file_xml_content = fixture_file("taxonomy_#{tax_id}.xml").read
-    taxonomy = Taxonomy.fetch(tax_id)
+    fixture_file_xml_content = Taxonomy.fixture_file.read
+    taxonomy = Taxonomy.fetch(9606)
     taxonomy.should match_xml_response_with(fixture_file_xml_content)
   end
 

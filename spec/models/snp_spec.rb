@@ -5,14 +5,13 @@ describe Snp do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    rs = 9268480
-    fixture_file_xml_content = fixture_file("snp_#{rs}.xml").read
-    snp = Snp.fetch(rs)
+    fixture_file_xml_content = Snp.fixture_file.read
+    snp = Snp.fetch(9268480)
     snp.should match_xml_response_with(fixture_file_xml_content)
   end
 
   it 'splits XML into Rs sections' do
-    fixture_file_xml_content = fixture_file('snp_9268480.xml').read
+    fixture_file_xml_content = Snp.fixture_file.read
     Snp.split_xml(fixture_file_xml_content).first['rsId'].should == Nokogiri.XML(fixture_file_xml_content).css('Rs').first['rsId']
   end
 
@@ -23,9 +22,7 @@ describe Snp do
       @object = snp
     end
 
-    it_parses_attribute :accession,          :pending
     it_parses_attribute :ancestral_allele,   'C'
-    #it_parses_attribute :base_position,      33930588
     it_parses_attribute :chromosome,         6
     it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244
@@ -37,7 +34,6 @@ describe Snp do
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606
-    it_parses_attribute :reference_assembly, true
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
 
@@ -80,21 +76,6 @@ describe Snp do
     snp.updated_from_ncbi_at_changed?.should be_true
   end
 
-  it 'parses alleles' do
-    snp = Snp.make_from_fixture_file
-    snp.alleles.first.should have_attributes({
-      base: 'A',
-      function_class: 'coding-synonymous'
-    })
-    snp.alleles.last.should have_attributes({
-      base: 'G',
-      function_class: 'reference'
-    })
-    snp.alleles.each do |allele|
-      allele.should be_persisted
-    end
-  end
-
   it 'finds multiple objects that exist in local db by NCBI ids' do
     ids = [1, 2]
     ids.each { |id| Snp.make(ncbi_id: id) }
@@ -103,7 +84,7 @@ describe Snp do
 
   it 'fetches multiple objects from NCBI' do
     ids = [9268480, 672]
-    fixture_file_xml_content = fixture_file('snps_9268480_672.xml')
+    fixture_file_xml_content = fixture_file('snps_9268480_672_efetch.xml')
     stub_entrez_request_with_stubbed_response :EFetch, fixture_file_xml_content
     Snp.fetch(ids).map(&:rs_number).should == ids
   end
@@ -118,12 +99,6 @@ describe Snp do
 
   it 'raises exception if all ids not found when fetching' do
     proc { Snp.fetch([9268480, 1]) }.should raise_error(NCBI::Document::NotFound)
-  end
-
-  it 'parses assemblies and base positions' do
-    snp = Snp.make_from_fixture_file
-    assemblies = snp.assemblies
-    assemblies.map(&:base_position).should == [33930588, 32363843, 32117765]
   end
 
 end

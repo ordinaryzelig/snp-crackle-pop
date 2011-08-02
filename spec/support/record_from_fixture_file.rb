@@ -3,12 +3,12 @@
 # E.G. Snp.from_fixture_file would return a new Snp object from the contents of spec/fixtures/snp_9268480.xml.
 
 MODEL_FIXTURE_FILES = {
-  Gene =>                         'gene_55245.xml',
-  Gene::SearchRequest =>          'gene_esummary.xml',
-  GenomeProject =>                'genome_project_28911.xml',
-  GenomeProject::SearchRequest => 'genome_project_esummary.xml',
-  Snp =>                          'snp_9268480.xml',
-  Taxonomy =>                     'taxonomy_9606.xml',
+  Gene =>                         'gene_55245_efetch.xml',
+  Gene::SearchRequest =>          'gene_672_esummary.xml',
+  GenomeProject =>                'genome_project_28911_esummary.xml',
+  GenomeProject::SearchRequest => 'genome_project_28911_esummary.xml',
+  Snp =>                          'snp_9268480_efetch.xml',
+  Taxonomy =>                     'taxonomy_9606_efetch.xml',
 }
 
 MODEL_FIXTURE_FILES.keys.each do |model_class|

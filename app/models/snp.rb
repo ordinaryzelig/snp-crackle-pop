@@ -8,7 +8,6 @@ class Snp
 
   field :accession,          type: Integer  # Many accessions, grab all?
   field :ancestral_allele,   type: String,   xml: proc { |node| node.css('Sequence').first['ancestralAllele'] }
-  #field :base_position,      type: Integer,  xml: proc { |node| node.css('Assembly').first.css('MapLoc').first['physMapInt'] }
   field :chromosome,         type: Integer,  xml: proc { |node| node.css('Assembly Component').first['chromosome'] }
   field :gene_symbol,        type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
   field :het_uncertainty,    type: Float,    xml: proc { |node| node.css('Het').first['stdError'].to_f.round(3) }
@@ -18,15 +17,14 @@ class Snp
   field :modification_build, type: Integer,  xml: proc { |node| node.css('Update').first['build'] }
   field :modification_date,  type: Time,     xml: proc { |node| node.css('Update').first['date'] }
   field :ncbi_gene_id,       type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
-  field :ncbi_id,            type: Integer,  xml: proc { |node| node.attributes['rsId'].value }
-  field :ncbi_taxonomy_id,   type: Integer,  xml: proc { |node| node.attributes['taxId'].value }
-  field :reference_assembly, type: Boolean,  xml: proc { |node| node.css('Assembly').any? { |assembly| assembly['reference'] == 'true'} }
-  field :rs_number,          type: Integer,  xml: proc { |node| node.attributes['rsId'].value }
-  field :snp_class,          type: String,   xml: proc { |node| node.attributes['snpClass'].value }
+  field :ncbi_id,            type: Integer,  xml: proc { |node| node['rsId'] }
+  field :ncbi_taxonomy_id,   type: Integer,  xml: proc { |node| node['taxId'] }
+  field :rs_number,          type: Integer,  xml: proc { |node| node['rsId'] }
+  field :snp_class,          type: String,   xml: proc { |node| node['snpClass'] }
   ncbi_timestamp_field
 
   embeds_many :alleles,    autosave: true, options: {xml: lambda { |node| node.css('FxnSet') }}
-  #embeds_many :assemblies, autosave: true, options: {xml: lambda { |node| node.css('Assembly') }}
+  embeds_many :assemblies, autosave: true, options: {xml: lambda { |node| node.css('Assembly') }}
   belongs_to :gene
 
   validates_uniqueness_of :rs_number

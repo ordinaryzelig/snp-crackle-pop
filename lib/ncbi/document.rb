@@ -139,11 +139,11 @@ module NCBI
 
       # Field options that contain :xml key will have proc to parse doc.
       # Assign attribute field to value of called proc.
-      def parse_fields(document)
+      def parse_fields(document_or_node)
         fields.inject({}) do |attributes, (field_name, field_object)|
           begin
             xml_proc = (field_object.options || {})[:xml]
-            attributes[field_name] = xml_proc.call(document) if xml_proc
+            attributes[field_name] = xml_proc.call(document_or_node) if xml_proc
             attributes
           rescue Exception => ex
             # Uncomment for debugging.
@@ -153,20 +153,27 @@ module NCBI
         end
       end
 
-      # Relations with options that contain :xml key will pass symbol of method to be called.
-      # Assign relation_attributes (e.g. alleles_attributes) to result.
-      def parse_relations(document)
-        relations.inject({}) do |attributes, (relation_name, relation_object)|
+      def parse_relations(document_or_node)
+        relations.each_with_object({}) do |(relation_name, relation_object), attributes|
           begin
-            method_name = (relation_object.options || {})[:xml]
-            if method_name
-              relation_attributes_name = relation_name + '_attributes'
-              attributes[relation_attributes_name] = send(method_name, document)
+            xml_proc = (relation_object.options || {})[:xml]
+            if xml_proc
+              case relation_object.macro
+              when :embeds_many
+                attributes[relation_name] = parse_embeds_many_relation(relation_object, xml_proc.call(document_or_node))
+              end
             end
-            attributes
           rescue Exception => ex
             raise NCBI::Document::ParseError.new(self, relation_name, ex)
           end
+        end
+      end
+
+      # Given nodes, extract attributes and return array of attributes.
+      def parse_embeds_many_relation(relation_object, nodes)
+        nodes.each_with_object([]) do |node, attributes|
+          relation_class = Object.const_get(relation_object.class_name)
+          attributes << relation_class.attributes_from_xml(node)
         end
       end
 
@@ -193,6 +200,7 @@ module NCBI
     class ParseError < StandardError
       def initialize(model, field_name, ex)
         super("Error parsing #{model}##{field_name}\n#{ex.class}: #{ex.message}")
+        set_backtrace(ex.backtrace)
       end
     end
 

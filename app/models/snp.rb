@@ -7,9 +7,8 @@ class Snp
   verify_xml { |node| node.attributes['rsId'] }
 
   field :accession,          type: Integer  # Many accessions, grab all?
-  embeds_many :alleles,                        options: {xml: :parse_alleles}, autosave: true
   field :ancestral_allele,   type: String,   xml: proc { |node| node.css('Sequence').first['ancestralAllele'] }
-  field :base_position,      type: Integer,  xml: proc { |node| node.css('Assembly').first.css('MapLoc').first['physMapInt'] }
+  #field :base_position,      type: Integer,  xml: proc { |node| node.css('Assembly').first.css('MapLoc').first['physMapInt'] }
   field :chromosome,         type: Integer,  xml: proc { |node| node.css('Assembly Component').first['chromosome'] }
   field :gene_symbol,        type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
   field :het_uncertainty,    type: Float,    xml: proc { |node| node.css('Het').first['stdError'].to_f.round(3) }
@@ -25,6 +24,9 @@ class Snp
   field :rs_number,          type: Integer,  xml: proc { |node| node.attributes['rsId'].value }
   field :snp_class,          type: String,   xml: proc { |node| node.attributes['snpClass'].value }
   ncbi_timestamp_field
+
+  embeds_many :alleles,    autosave: true, options: {xml: lambda { |node| node.css('FxnSet') }}
+  #embeds_many :assemblies, autosave: true, options: {xml: lambda { |node| node.css('Assembly') }}
   belongs_to :gene
 
   validates_uniqueness_of :rs_number
@@ -36,38 +38,10 @@ class Snp
 
   has_taxonomy
 
-  # Custom accepts_nested_attributes_for.
-  # If there are existing alleles, update them in the order they are presented.
-  # If there are no existing alleles, make new ones.
-  def alleles_attributes=(attributes_hash = {})
-    atts_hashes = attributes_hash.values # Don't care about index.
-    raise "Snp can only have 2 alleles" unless atts_hashes.size == 2
-    if alleles.any?
-      alleles.each_with_index do |allele, i|
-        new_attributes = atts_hashes[i]
-        allele.attributes = new_attributes
-      end
-    else
-      atts_hashes.each do |atts|
-        alleles.push(Allele.new(atts))
-      end
-    end
-  end
-
   class << self
 
     def humanize
       'SNP'
-    end
-
-    private
-
-    # Given XML document, construct attributes hash for accepts_nested_attributes_for allele.
-    def parse_alleles(document)
-      document.css('FxnSet').each_with_index.inject({}) do |attributes, (function_set, i)|
-        attributes[i] = Allele.send(:attributes_from_xml, function_set.to_s)
-        attributes
-      end
     end
 
   end

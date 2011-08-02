@@ -25,7 +25,7 @@ describe Snp do
 
     it_parses_attribute :accession,          :pending
     it_parses_attribute :ancestral_allele,   'C'
-    it_parses_attribute :base_position,      33930588
+    #it_parses_attribute :base_position,      33930588
     it_parses_attribute :chromosome,         6
     it_parses_attribute :gene_symbol,        'BTNL2'
     it_parses_attribute :het_uncertainty,    0.244
@@ -80,7 +80,7 @@ describe Snp do
     snp.updated_from_ncbi_at_changed?.should be_true
   end
 
-  it 'has 2 alleles' do
+  it 'parses alleles' do
     snp = Snp.make_from_fixture_file
     snp.alleles.first.should have_attributes({
       base: 'A',
@@ -93,22 +93,6 @@ describe Snp do
     snp.alleles.each do |allele|
       allele.should be_persisted
     end
-  end
-
-  it 'accepts nested attributes for existing alleles and updates them' do
-    snp = Snp.make_from_fixture_file
-    # Construct hash for accepts_nested_attributes_for.
-    # Set bases to 0 and 1.
-    new_attributes = snp.alleles.each_with_index.inject({}) do |attributes, (allele, i)|
-      attributes[i] = {}
-      attributes[i][:base] = i
-      attributes
-    end
-    snp.reload
-    snp.alleles_attributes = new_attributes
-    snp.alleles.map(&:base).should == ['0', '1']
-    # function_class should still be there.
-    snp.alleles.map(&:function_class).compact.should be_present
   end
 
   it 'finds multiple objects that exist in local db by NCBI ids' do
@@ -134,6 +118,12 @@ describe Snp do
 
   it 'raises exception if all ids not found when fetching' do
     proc { Snp.fetch([9268480, 1]) }.should raise_error(NCBI::Document::NotFound)
+  end
+
+  it 'parses assemblies and base positions' do
+    snp = Snp.make_from_fixture_file
+    assemblies = snp.assemblies
+    assemblies.map(&:base_position).should == [33930588, 32363843, 32117765]
   end
 
 end

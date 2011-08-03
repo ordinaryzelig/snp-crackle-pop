@@ -49,7 +49,6 @@ module NCBI
         objects = split_xml(response.body).map do |node|
           object = new_from_xml(node)
           object.response = response
-          object.fetched = true
           object
         end
         # Verify all found.
@@ -90,11 +89,7 @@ module NCBI
       def find_all_by_ncbi_id_or_fetch!(ncbi_ids)
         found_locally = with_ncbi_ids(ncbi_ids)
         ids_not_found_locally = ncbi_ids - found_locally.map(&:ncbi_id)
-        if ids_not_found_locally.any?
-          fetched = fetch!(ids_not_found_locally)
-        else
-          fetched = []
-        end
+        fetch!(ids_not_found_locally) if ids_not_found_locally.any?
         # found_locally is a Mongoid::Criteria object.
         # Since we are fetch!-ing, the new objects are being stored in the DB.
         # Criteria will query the DB each time it is accessed.

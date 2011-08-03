@@ -20,7 +20,6 @@ module NCBI
       def ncbi_timestamp_field
         include NCBI::Refetchable
         field :updated_from_ncbi_at, type: Time
-        attr_accessor :fetched # Set in NCBI::Document#refetch().
         before_create :set_updated_from_ncbi_at, unless: :updated_from_ncbi_at?
       end
 

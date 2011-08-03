@@ -119,9 +119,9 @@ module NCBI
 
       private
 
-      # Given Nokogiri XML document_or_node, parse attributes based on xml procs defined for each field and relation.
+      # Given Nokogiri XML document_or_node, parse attributes based on xml lambdas defined for each field and relation.
       # XML instructions are attached as the :xml option for a field or relation.
-      # XML instructions can be proc with Nokogiri document_or_node as arg or symbol for method to be called.
+      # XML instructions can be lambda with Nokogiri document_or_node as arg or symbol for method to be called.
       # Return attributes hash.
       def parse(document_or_node)
         attributes = {}
@@ -131,18 +131,16 @@ module NCBI
         attributes
       end
 
-      # Field options that contain :xml key will have proc to parse doc.
-      # Assign attribute field to value of called proc.
+      # Field options that contain :xml key will have lambda to parse doc.
+      # Assign attribute field to value of lambda.
       def parse_fields(document_or_node)
-        fields.inject({}) do |attributes, (field_name, field_object)|
+        fields.each_with_object({}) do |(field_name, field_object), attributes|
           begin
-            xml_proc = (field_object.options || {})[:xml]
-            attributes[field_name] = xml_proc.call(document_or_node) if xml_proc
-            attributes
+            xml_lambda = (field_object.options || {})[:xml]
+            attributes[field_name] = xml_lambda.call(document_or_node) if xml_lambda
           rescue Exception => ex
             # Uncomment for debugging.
             # raise NCBI::Document::ParseError.new(self, field_name, ex)
-            attributes
           end
         end
       end
@@ -150,11 +148,11 @@ module NCBI
       def parse_relations(document_or_node)
         relations.each_with_object({}) do |(relation_name, relation_object), attributes|
           begin
-            xml_proc = (relation_object.options || {})[:xml]
-            if xml_proc
+            xml_lambda = (relation_object.options || {})[:xml]
+            if xml_lambda
               case relation_object.macro
               when :embeds_many
-                attributes[relation_name] = parse_embeds_many_relation(relation_object, xml_proc.call(document_or_node))
+                attributes[relation_name] = parse_embeds_many_relation(relation_object, xml_lambda.call(document_or_node))
               else
                 raise "parse_#{relation_object.macro} not yet implemented"
               end

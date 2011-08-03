@@ -6,20 +6,20 @@ class Snp
   split_xml_on { |doc| doc.css('Rs') }
   verify_xml { |node| node.attributes['rsId'] }
 
-  field :ancestral_allele,   type: String,   xml: proc { |node| node.css('Sequence').first['ancestralAllele'] }
-  field :chromosome,         type: Integer,  xml: proc { |node| node.css('Assembly Component').first['chromosome'] }
-  field :gene_symbol,        type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
-  field :het_uncertainty,    type: Float,    xml: proc { |node| node.css('Het').first['stdError'].to_f.round(3) }
-  field :heterozygosity,     type: Float,    xml: proc { |node| node.css('Het').first['value'].to_f.round(3) }
-  field :max_success_rate,   type: Float,    xml: proc { |node| node.css('validProbMax').first }
-  field :min_success_rate,   type: Float,    xml: proc { |node| node.css('validProbMin').first }
-  field :modification_build, type: Integer,  xml: proc { |node| node.css('Update').first['build'] }
-  field :modification_date,  type: Time,     xml: proc { |node| node.css('Update').first['date'] }
-  field :ncbi_gene_id,       type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
-  field :ncbi_id,            type: Integer,  xml: proc { |node| node['rsId'] }
-  field :ncbi_taxonomy_id,   type: Integer,  xml: proc { |node| node['taxId'] }
-  field :rs_number,          type: Integer,  xml: proc { |node| node['rsId'] }
-  field :snp_class,          type: String,   xml: proc { |node| node['snpClass'] }
+  field :ancestral_allele,   type: String,   xml: lambda { |node| node.css('Sequence').first['ancestralAllele'] }
+  field :chromosome,         type: Integer,  xml: lambda { |node| node.css('Assembly Component').first['chromosome'] }
+  field :gene_symbol,        type: Integer,  xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
+  field :het_uncertainty,    type: Float,    xml: lambda { |node| node.css('Het').first['stdError'].to_f.round(3) }
+  field :heterozygosity,     type: Float,    xml: lambda { |node| node.css('Het').first['value'].to_f.round(3) }
+  field :max_success_rate,   type: Float,    xml: lambda { |node| node.css('validProbMax').first }
+  field :min_success_rate,   type: Float,    xml: lambda { |node| node.css('validProbMin').first }
+  field :modification_build, type: Integer,  xml: lambda { |node| node.css('Update').first['build'] }
+  field :modification_date,  type: Time,     xml: lambda { |node| node.css('Update').first['date'] }
+  field :ncbi_gene_id,       type: Integer,  xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
+  field :ncbi_id,            type: Integer,  xml: lambda { |node| node['rsId'] }
+  field :ncbi_taxonomy_id,   type: Integer,  xml: lambda { |node| node['taxId'] }
+  field :rs_number,          type: Integer,  xml: lambda { |node| node['rsId'] }
+  field :snp_class,          type: String,   xml: lambda { |node| node['snpClass'] }
   ncbi_timestamp_field
 
   embeds_many :alleles,    autosave: true, options: {xml: lambda { |node| node.css('FxnSet') }}

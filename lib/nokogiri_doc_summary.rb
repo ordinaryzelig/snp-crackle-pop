@@ -12,14 +12,13 @@ module NokogiriDocSummary
   def items
     @items ||= children.select do |node|
       node.name == 'Item'
-    end.inject({}) do |hash, item_node|
+    end.each_with_object({}) do |item_node, hash|
       value = item_node.content
       case item_node['Type']
       when 'Integer'
         value = value.to_i
       end
       hash[item_node['Name']] = value
-      hash
     end
   end
 

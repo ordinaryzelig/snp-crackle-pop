@@ -42,9 +42,8 @@ module NCBI
       # Parse a Nokogiri::Document and return attributes hash.
       def parse(document)
         document.extend NokogiriDocSummary
-        fields.inject({}) do |attributes, (attribute, parse_proc)|
+        fields.each_with_object({}) do |(attribute, parse_proc), attributes|
           attributes[attribute] = parse_proc.call(document)
-          attributes
         end
       end
 

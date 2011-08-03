@@ -15,11 +15,14 @@
         %ul.bullet_list.hanging_indent
           - @gene.diseases.each do |disease|
             %li= disease
-      = row_for_attribute @gene, :length, pending: true
       = row_for_attribute @gene, :location
       = row_for_attribute @gene, :mim,           label: 'MIM'
       = row_for_attribute @gene, :protein_name
-      = row_for_attribute @gene, :all_symbols do
+      = row_for_attribute @gene, :sequence_range do
+        :plain
+          #{@gene.sequence_range} (+/-1)
+      = row_for_attribute @gene, :sequence_length
+      = row_for_attribute @gene, :symbols do
         %ul
           - @gene.all_symbols.each do |symbol|
             %li= symbol

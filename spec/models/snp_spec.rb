@@ -34,6 +34,8 @@ describe Snp do
     it_parses_attribute :ncbi_id,            9268480
     it_parses_attribute :ncbi_gene_id,       56244
     it_parses_attribute :ncbi_taxonomy_id,   9606
+    it_parses_attribute :protein_accession,  'NP_062548'
+    it_parses_attribute :protein_version,    1
     it_parses_attribute :rs_number,          9268480
     it_parses_attribute :snp_class,          'snp'
 

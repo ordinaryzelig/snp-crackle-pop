@@ -10,7 +10,6 @@
 
   %table
     %tbody
-      = row_for_attribute @gene, :accessions, pending: true
       = row_for_attribute @gene, :diseases do
         %ul.bullet_list.hanging_indent
           - @gene.diseases.each do |disease|

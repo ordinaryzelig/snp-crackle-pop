@@ -18,6 +18,8 @@ class Snp
   field :ncbi_gene_id,       type: Integer,  xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
   field :ncbi_id,            type: Integer,  xml: lambda { |node| node['rsId'] }
   field :ncbi_taxonomy_id,   type: Integer,  xml: lambda { |node| node['taxId'] }
+  field :protein_accession,  type: String,   xml: lambda { |node| node.css('FxnSet').first['protAcc'] }
+  field :protein_version,    type: Integer,  xml: lambda { |node| node.css('FxnSet').first['protVer'] }
   field :rs_number,          type: Integer,  xml: lambda { |node| node['rsId'] }
   field :snp_class,          type: String,   xml: lambda { |node| node['snpClass'] }
   ncbi_timestamp_field
@@ -41,6 +43,11 @@ class Snp
       'SNP'
     end
 
+  end
+
+  def protein_accession_str
+    return nil unless protein_accession.present? && protein_version.present?
+    "#{protein_accession}.#{protein_version}"
   end
 
   private

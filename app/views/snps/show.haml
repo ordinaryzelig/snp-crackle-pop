@@ -25,6 +25,8 @@
       = row_for_attribute @snp, :modification_date
       = row_for_attribute @snp, :modification_build
       = row_for_attribute @snp, :ncbi_id,            label: 'RS number'
+      = row_for_attribute @snp, 'Protein accession' do
+        = @snp.protein_accession_str
       = row_for_attribute @snp, :snp_class,          label: 'SNP class'
       = row_for_attribute @snp, :taxonomy do
         = @snp.taxonomy.scientific_name

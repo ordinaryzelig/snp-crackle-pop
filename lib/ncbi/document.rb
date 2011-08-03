@@ -48,7 +48,7 @@ module NCBI
         # Split into individual sections, parse, and instantiate objects.
         objects = split_xml(response.body).map do |node|
           object = new_from_xml(node)
-          object.send(:response=, response)
+          object.response = response
           object.fetched = true
           object
         end

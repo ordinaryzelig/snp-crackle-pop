@@ -2,16 +2,12 @@
 
 module HTTPartyResponse
 
-  attr_reader :response
+  attr_accessor :response
 
+  # YAGNI: Allow to be assigned instead of always referring to @response.
   def xml
-    response.body
-  end
-
-  private
-
-  def response=(httparty_response)
-    @response = httparty_response
+    # HTTParty::Response overwrites #try.
+    @response.body if @response
   end
 
 end

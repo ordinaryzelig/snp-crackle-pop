@@ -6,7 +6,6 @@ class Snp
   split_xml_on { |doc| doc.css('Rs') }
   verify_xml { |node| node.attributes['rsId'] }
 
-  field :accession,          type: Integer  # Many accessions, grab all?
   field :ancestral_allele,   type: String,   xml: proc { |node| node.css('Sequence').first['ancestralAllele'] }
   field :chromosome,         type: Integer,  xml: proc { |node| node.css('Assembly Component').first['chromosome'] }
   field :gene_symbol,        type: Integer,  xml: proc { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }

@@ -1,0 +1,5 @@
+%ul
+- assemblies.each do |assembly|
+  %li
+    :plain
+      #{assembly.base_position} #{'(reference)' if assembly.reference?}

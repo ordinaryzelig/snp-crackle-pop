@@ -66,13 +66,15 @@ describe Snp do
 
   it_raises_error_if_ncbi_cannot_find_it
 
-  it 'can refetch data from NCBI' do
-    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago)
+  it 'refetches data from NCBI' do
+    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago, alleles: [])
     old_id = snp._id
     stub_entrez_request_with_stubbed_response :EFetch, Snp.fixture_file.read
     snp.refetch
     snp._id.should == old_id
-    snp.het_uncertainty.should == Snp.from_fixture_file.het_uncertainty
+    snp_fixture = Snp.from_fixture_file
+    snp.het_uncertainty.should == snp_fixture.het_uncertainty
+    snp.alleles.should == snp_fixture.alleles
     snp.updated_from_ncbi_at_changed?.should be_true
   end
 

@@ -10,4 +10,11 @@ class Allele
   field       :function_class, type: String, xml: proc { |node| node['fxnClass'] }
   embedded_in :snp
 
+  # Compare everything except _id.
+  def ==(allele)
+    self.class.fields.keys.all? do |field|
+      send(field) == allele.send(field)
+    end
+  end
+
 end

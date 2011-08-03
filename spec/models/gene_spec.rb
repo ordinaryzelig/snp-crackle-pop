@@ -84,9 +84,9 @@ describe Gene do
     Gene.fetch(ids).map(&:ncbi_id).should == ids
   end
 
-   it 'calculates seequence length' do
-     gene = Gene.make_from_fixture_file
-     gene.sequence_length.should == 109_577
-   end
+  it 'calculates seequence length' do
+    gene = Gene.make_from_fixture_file
+    gene.sequence_length.should == 109_577
+  end
 
 end

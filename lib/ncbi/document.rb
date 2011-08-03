@@ -60,7 +60,6 @@ module NCBI
         else
           objects.first
         end
-        # TODO: raise exception if any not found.
       rescue NCBI::XMLParseable::XMLCouldNotBeVerified
         # This might happen if ncbi_ids had the correct format, but were not found anyway.
         raise NotFound.new(ncbi_id_or_ids, self)

@@ -15,7 +15,8 @@ SnpCracklePop.controllers :snps do
   end
 
   get :show, 'snps/:id' do
-    @snp = Snp.find_by_ncbi_id_or_fetch!(params[:id])
+    truncated_id = params[:id].match(/(?<number>\d+)/)[:number]
+    @snp = Snp.find_by_ncbi_id_or_fetch!(truncated_id)
     haml :'snps/show'
   end
 

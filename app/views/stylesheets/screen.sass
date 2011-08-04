@@ -12,24 +12,7 @@
     @include model_h1
   #ncbi_url
     margin-bottom: 10px
-    font-size: 10pt
-  table
-    tbody
-      tr:nth-child(odd)
-        background-color: #eee
-      th, td
-        $padding: 5px
-        padding: $padding
-        $vertical_padding: 8px
-        padding-top: $vertical_padding
-        padding-bottom: $vertical_padding
-      th
-        text-align: right
-        font-weight: bold
-        font-size: 14pt
-        vertical-align: top
-      td
-        padding-left: 20px
+  table.attribute_table
     tfoot
       background-color: #eee - #222
       th
@@ -51,3 +34,17 @@
     @include model_h1
   form, #found
     margin-bottom: 10px
+  ol
+    list-style-type: decimal
+    margin-left: 20px
+    li
+      $margin: 10px
+      margin-top: $margin
+      margin-bottom: $margin
+      table.attribute_table
+        display: inline-block
+        vertical-align: top
+        caption
+          font-size: 25px
+          #ncbi_url
+            margin-top: 5px

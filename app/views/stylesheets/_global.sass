@@ -13,6 +13,7 @@ strong.highlight
   $padding: 1px
   padding-left: $padding
   padding-right: $padding
+  text-decoration: inherit
 
 ul.hanging_indent
   padding-left: 1em
@@ -20,3 +21,24 @@ ul.hanging_indent
 ul.bullet_list
   list-style: disc
   list-style-position: inside
+
+table.attribute_table
+  tbody
+    tr:nth-child(odd)
+      background-color: #eee
+    th, td
+      $padding: 5px
+      padding: $padding
+      $vertical_padding: 8px
+      padding-top: $vertical_padding
+      padding-bottom: $vertical_padding
+    th
+      text-align: right
+      font-weight: bold
+      font-size: 14pt
+      vertical-align: top
+    td
+      padding-left: 20px
+
+#ncbi_url
+  font-size: 10pt

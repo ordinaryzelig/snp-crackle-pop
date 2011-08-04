@@ -42,7 +42,7 @@ module NCBI
       # Record response.
       # Can fetch single id or array of ids.
       def fetch(ncbi_id_or_ids)
-        ids = [ncbi_id_or_ids].flatten
+        ids = [ncbi_id_or_ids].flatten.map(&:to_i)
         response = perform_entrez_request(ids)
         verify_response(response)
         # Split into individual sections, parse, and instantiate objects.

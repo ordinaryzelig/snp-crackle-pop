@@ -7,7 +7,7 @@ SnpCracklePop.controllers :genes do
   get :search do
     @term = params[:q]
     if @term
-      @genes = Gene.search_local(@term)
+      @gene_search_results = Gene.search_NCBI(@term)
     end
     haml :'genes/search'
   end

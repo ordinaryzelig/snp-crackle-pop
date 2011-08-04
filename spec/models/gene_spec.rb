@@ -64,17 +64,6 @@ describe Gene do
     end
   end
 
-  it 'requires at least 3 characters or be a number to search NCBI' do
-    valids = ['iri', 1, 123, '1', '-1.23']
-    valids.each do |term|
-      term.should be_valid_for_search_request
-    end
-    invalids = ['ir', '']
-    invalids.each do |term|
-      term.should_not be_valid_for_search_request
-    end
-  end
-
   it_raises_error_if_ncbi_cannot_find_it
 
   it 'fetches multiple objects from NCBI' do

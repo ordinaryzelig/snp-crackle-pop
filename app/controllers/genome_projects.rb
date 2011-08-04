@@ -3,7 +3,7 @@ SnpCracklePop.controllers :genome_projects do
   get :search do
     @term = params[:q]
     if @term
-      @genome_projects = GenomeProject.search(@term)
+      @genome_project_search_results = GenomeProject.search_NCBI(@term)
     end
     haml :'genome_projects/search'
   end

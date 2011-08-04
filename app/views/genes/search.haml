@@ -6,11 +6,21 @@
 
   = form_tag url_for(:genes_search), method: 'get' do
     %p
-      = search_field_tag 'q', value: params[:q], id: 'q', size: 30, placeholder: 'Symbol, name, protein, location'
+      = search_field_tag 'q', value: params[:q], id: 'q', size: 30, placeholder: 'Symbol, name, protein, loc'
       = submit_tag :Search
 
-  - if @genes
-    %h2#found= 'Found ' + pluralize(@genes.size, 'gene')
-    %ul
-      - @genes.each do |gene|
-        %li= link_to highlight(gene.name_and_description, @term), url(:genes, :show, id: gene.ncbi_id)
+  - if @gene_search_results
+    %h2#found= 'Found ' + pluralize(@gene_search_results.size, 'gene')
+    %ol
+      - @gene_search_results.each do |gene|
+        %li
+          %table.attribute_table
+            %caption
+              = link_to highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
+              = partial 'shared/ncbi_url', locals: {object: gene}
+            %tbody
+              = row_for_attribute gene, :description, highlight: @term
+              = row_for_attribute gene, :location, highlight: @term
+              = row_for_attribute gene, :symbols_other, highlight: @term do
+                = gene.symbols_other.join(', ')
+              = row_for_attribute gene, :other

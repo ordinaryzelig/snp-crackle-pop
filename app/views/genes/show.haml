@@ -4,11 +4,11 @@
 
   %h1
     :plain
-      Gene #{@gene.symbol}: #{@gene.name}
+      Gene #{@gene.symbol}
 
   = partial 'shared/ncbi_url', locals: {object: @gene}
 
-  %table
+  %table.attribute_table
     %tbody
       = row_for_attribute @gene, :diseases do
         %ul.bullet_list.hanging_indent

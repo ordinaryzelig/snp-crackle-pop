@@ -18,6 +18,10 @@ module NCBI
       end
     end
 
+    def ncbi_url
+      "#{self.class.parent.ncbi_base_uri}#{ncbi_id}"
+    end
+
     module ClassMethods
 
       def field(attribute, &block)

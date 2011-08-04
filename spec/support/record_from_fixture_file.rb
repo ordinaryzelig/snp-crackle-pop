@@ -4,9 +4,10 @@
 
 MODEL_FIXTURE_FILES = {
   Gene =>                         'gene_55245_efetch.xml',
-  Gene::SearchRequest =>          'gene_672_esummary.xml',
+  Gene::SearchRequest =>          'gene_search_human_esummary.xml',
+  Gene::SearchResult =>           'gene_search_human_esummary.xml',
   GenomeProject =>                'genome_project_28911_esummary.xml',
-  GenomeProject::SearchRequest => 'genome_project_28911_esummary.xml',
+  GenomeProject::SearchRequest => 'genome_project_search_1000_Genomes_Project_Pliot_esummary.xml',
   Snp =>                          'snp_9268480_efetch.xml',
   Taxonomy =>                     'taxonomy_9606_efetch.xml',
 }
@@ -18,9 +19,15 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
     fixture_file = File.open(Padrino.root + '/spec/support/fixtures/' + fixture_file_name)
   end
 
-  def model_class.from_fixture_file
+  def model_class.all_from_fixture_file
     xml = fixture_file.read
-    send :new_from_xml, split_xml(xml).first
+    split_xml(xml).map do |node|
+      send :new_from_xml, node
+    end
+  end
+
+  def model_class.from_fixture_file
+    all_from_fixture_file.first
   end
 
   def model_class.attributes_from_fixture_file

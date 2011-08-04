@@ -65,23 +65,30 @@ class Gene
 
     # Search NCBI for term in name, symbols and location.
     # Return array of search result objects.
-    # Limits to human organisms.
     def search_NCBI(term)
-      ors = {
-        :GENE                   => "*#{term}*",
-        :'DEFAULT MAP LOCATION' => term,
-      }
-      query_string = "human[ORGN]+AND+" + Entrez.convert_search_term_hash(ors, 'OR')
-      request = SearchRequest.new(query_string)
+      request = SearchRequest.new(term)
       request.execute
     end
 
   end
 
+  # Search NCBI for term in name, symbols and location.
+  # Limits to human organisms.
   class SearchRequest
+
     include NCBI::SearchRequest
-    #field :title, :TITL
-    #field :description
+
+    # Construct query string from term.
+    # Pass query string to super.
+    def initialize(term)
+      ors = {
+        :GENE                   => "*#{term}*",
+        :'DEFAULT MAP LOCATION' => term,
+      }
+      query_string = "human[ORGN]+AND+" + Entrez.convert_search_term_hash(ors, 'OR')
+      super(query_string)
+    end
+
   end
 
   class SearchResult

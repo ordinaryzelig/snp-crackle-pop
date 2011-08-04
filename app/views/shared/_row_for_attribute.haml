@@ -1,3 +1,5 @@
 %tr
   %th= options[:label] || attribute.to_s.humanize
-  %td= options[:content] || object.send(attribute)
+  - content = options[:content] || object.send(attribute)
+  - content = highlight(content.to_s, options[:highlight]) if options[:highlight]
+  %td= content

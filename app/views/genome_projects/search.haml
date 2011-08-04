@@ -1,3 +1,5 @@
+- title 'Genome Project Search'
+
 .search_model
 
   %h1 Genome Projects
@@ -7,8 +9,15 @@
       = search_field_tag 'q', value: params[:q], id: 'q', placeholder: 'Name, sequencing centers', size: 30
       = submit_tag :Search
 
-  - if @genome_projects
-    %h2#found= 'Found ' + pluralize(@genome_projects.size, 'genome project')
-    %ul
-      - @genome_projects.each do |genome_project|
-        %li= link_to highlight(genome_project.name, @term), url(:genome_projects, :show, id: genome_project.ncbi_id)
+  - if @genome_project_search_results
+    %h2#found= 'Found ' + pluralize(@genome_project_search_results.size, 'genome project')
+    %ol
+      - @genome_project_search_results.each do |genome_project|
+        %li
+          %table.attribute_table
+            %caption
+              = link_to highlight(genome_project.name, @term), url(:genome_projects, :show, id: genome_project.ncbi_id)
+              = partial 'shared/ncbi_url', locals: {object: genome_project}
+            %tbody
+              = row_for_attribute genome_project, :sequencing_centers, highlight: @term do
+                = genome_project.sequencing_centers.join(', ')

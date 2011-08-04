@@ -40,7 +40,7 @@ class GenomeProject
     end
 
     def search_NCBI(term)
-      search_request = SearchRequest.new(ALL: "*#{term}*")
+      search_request = SearchRequest.new(term)
       search_request.execute
     end
 
@@ -53,14 +53,24 @@ class GenomeProject
 
   end
 
+  # Search NCBI for term in any field.
+  # Limits to human organisms.
   class SearchRequest
+
     include NCBI::SearchRequest
+
+    # Construct query string from term.
+    # Pass query string to super.
+    def initialize(term)
+      super ALL: "*#{term}*", ORGN: 'human'
+    end
+
   end
 
   class SearchResult
     include NCBI::SearchResult
     field(:name)               { |doc| doc.items['Defline'] }
-    field(:sequencing_centers) { |doc| doc.items['Center'] }
+    field(:sequencing_centers) { |doc| doc.items['Center'].split(', ') }
   end
 
 end

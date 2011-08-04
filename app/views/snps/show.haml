@@ -8,7 +8,7 @@
 
   = partial 'shared/ncbi_url', locals: {object: @snp}
 
-  %table
+  %table.attribute_table
     %tbody
       = row_for_attribute @snp, :ancestral_allele
       = row_for_attribute @snp, :alleles do

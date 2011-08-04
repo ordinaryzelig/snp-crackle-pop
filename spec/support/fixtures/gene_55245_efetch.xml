@@ -23,8 +23,8 @@
           <Date_std>
             <Date-std>
               <Date-std_year>2011</Date-std_year>
-              <Date-std_month>7</Date-std_month>
-              <Date-std_day>25</Date-std_day>
+              <Date-std_month>8</Date-std_month>
+              <Date-std_day>3</Date-std_day>
             </Date-std>
           </Date_std>
         </Date>
@@ -164,8 +164,8 @@
   <Entrezgene_locus>
     <Gene-commentary>
       <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-      <Gene-commentary_heading>GRCh37.p2 Reference primary assembly</Gene-commentary_heading>
-      <Gene-commentary_label>chromosome</Gene-commentary_label>
+      <Gene-commentary_heading>Reference GRCh37.p5 Primary Assembly</Gene-commentary_heading>
+      <Gene-commentary_label>chromosome 20 reference GRCh37.p5 Primary Assembly</Gene-commentary_label>
       <Gene-commentary_accession>NC_000020</Gene-commentary_accession>
       <Gene-commentary_version>10</Gene-commentary_version>
       <Gene-commentary_seqs>
@@ -190,7 +190,681 @@
         <Gene-commentary>
           <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
           <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>1</Gene-commentary_label>
+          <Gene-commentary_label>transcript variant 3</Gene-commentary_label>
+          <Gene-commentary_accession>NM_001184977</Gene-commentary_accession>
+          <Gene-commentary_version>1</Gene-commentary_version>
+          <Gene-commentary_genomic-coords>
+            <Seq-loc>
+              <Seq-loc_mix>
+                <Seq-loc-mix>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33999742</Seq-interval_from>
+                        <Seq-interval_to>33999944</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33981894</Seq-interval_from>
+                        <Seq-interval_to>33981998</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33961986</Seq-interval_from>
+                        <Seq-interval_to>33962058</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33954359</Seq-interval_from>
+                        <Seq-interval_to>33954416</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33934966</Seq-interval_from>
+                        <Seq-interval_to>33935074</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33902490</Seq-interval_from>
+                        <Seq-interval_to>33902567</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33894468</Seq-interval_from>
+                        <Seq-interval_to>33894581</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33890368</Seq-interval_from>
+                        <Seq-interval_to>33891871</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                </Seq-loc-mix>
+              </Seq-loc_mix>
+            </Seq-loc>
+          </Gene-commentary_genomic-coords>
+          <Gene-commentary_seqs>
+            <Seq-loc>
+              <Seq-loc_whole>
+                <Seq-id>
+                  <Seq-id_gi>296923778</Seq-id_gi>
+                </Seq-id>
+              </Seq-loc_whole>
+            </Seq-loc>
+          </Gene-commentary_seqs>
+          <Gene-commentary_products>
+            <Gene-commentary>
+              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
+              <Gene-commentary_heading>Reference</Gene-commentary_heading>
+              <Gene-commentary_label>isoform c</Gene-commentary_label>
+              <Gene-commentary_accession>NP_001171906</Gene-commentary_accession>
+              <Gene-commentary_version>1</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS54458.1</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS54458.1</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
+              <Gene-commentary_genomic-coords>
+                <Seq-loc>
+                  <Seq-loc_mix>
+                    <Seq-loc-mix>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33999742</Seq-interval_from>
+                            <Seq-interval_to>33999765</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33981894</Seq-interval_from>
+                            <Seq-interval_to>33981998</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33961986</Seq-interval_from>
+                            <Seq-interval_to>33962058</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33954359</Seq-interval_from>
+                            <Seq-interval_to>33954416</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33934966</Seq-interval_from>
+                            <Seq-interval_to>33935074</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33902490</Seq-interval_from>
+                            <Seq-interval_to>33902567</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33894468</Seq-interval_from>
+                            <Seq-interval_to>33894581</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33891737</Seq-interval_from>
+                            <Seq-interval_to>33891871</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                    </Seq-loc-mix>
+                  </Seq-loc_mix>
+                </Seq-loc>
+              </Gene-commentary_genomic-coords>
+              <Gene-commentary_seqs>
+                <Seq-loc>
+                  <Seq-loc_whole>
+                    <Seq-id>
+                      <Seq-id_gi>296923779</Seq-id_gi>
+                    </Seq-id>
+                  </Seq-loc_whole>
+                </Seq-loc>
+              </Gene-commentary_seqs>
+            </Gene-commentary>
+          </Gene-commentary_products>
+        </Gene-commentary>
+        <Gene-commentary>
+          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
+          <Gene-commentary_heading>Reference</Gene-commentary_heading>
+          <Gene-commentary_label>transcript variant 2</Gene-commentary_label>
+          <Gene-commentary_accession>NM_199487</Gene-commentary_accession>
+          <Gene-commentary_version>2</Gene-commentary_version>
+          <Gene-commentary_genomic-coords>
+            <Seq-loc>
+              <Seq-loc_mix>
+                <Seq-loc-mix>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33999742</Seq-interval_from>
+                        <Seq-interval_to>33999944</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33981894</Seq-interval_from>
+                        <Seq-interval_to>33981998</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33971840</Seq-interval_from>
+                        <Seq-interval_to>33971935</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33969720</Seq-interval_from>
+                        <Seq-interval_to>33969827</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33961986</Seq-interval_from>
+                        <Seq-interval_to>33962058</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33954359</Seq-interval_from>
+                        <Seq-interval_to>33954416</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33934966</Seq-interval_from>
+                        <Seq-interval_to>33935074</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33894468</Seq-interval_from>
+                        <Seq-interval_to>33894581</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33890368</Seq-interval_from>
+                        <Seq-interval_to>33891871</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>224589812</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                </Seq-loc-mix>
+              </Seq-loc_mix>
+            </Seq-loc>
+          </Gene-commentary_genomic-coords>
+          <Gene-commentary_seqs>
+            <Seq-loc>
+              <Seq-loc_whole>
+                <Seq-id>
+                  <Seq-id_gi>296923775</Seq-id_gi>
+                </Seq-id>
+              </Seq-loc_whole>
+            </Seq-loc>
+          </Gene-commentary_seqs>
+          <Gene-commentary_products>
+            <Gene-commentary>
+              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
+              <Gene-commentary_heading>Reference</Gene-commentary_heading>
+              <Gene-commentary_label>isoform b</Gene-commentary_label>
+              <Gene-commentary_accession>NP_955781</Gene-commentary_accession>
+              <Gene-commentary_version>2</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS13253.2</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS13253.2</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
+              <Gene-commentary_genomic-coords>
+                <Seq-loc>
+                  <Seq-loc_mix>
+                    <Seq-loc-mix>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33999742</Seq-interval_from>
+                            <Seq-interval_to>33999765</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33981894</Seq-interval_from>
+                            <Seq-interval_to>33981998</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33971840</Seq-interval_from>
+                            <Seq-interval_to>33971935</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33969720</Seq-interval_from>
+                            <Seq-interval_to>33969827</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33961986</Seq-interval_from>
+                            <Seq-interval_to>33962058</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33954359</Seq-interval_from>
+                            <Seq-interval_to>33954416</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33934966</Seq-interval_from>
+                            <Seq-interval_to>33935074</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33894468</Seq-interval_from>
+                            <Seq-interval_to>33894581</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33891737</Seq-interval_from>
+                            <Seq-interval_to>33891871</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>224589812</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                    </Seq-loc-mix>
+                  </Seq-loc_mix>
+                </Seq-loc>
+              </Gene-commentary_genomic-coords>
+              <Gene-commentary_seqs>
+                <Seq-loc>
+                  <Seq-loc_whole>
+                    <Seq-id>
+                      <Seq-id_gi>296923776</Seq-id_gi>
+                    </Seq-id>
+                  </Seq-loc_whole>
+                </Seq-loc>
+              </Gene-commentary_seqs>
+            </Gene-commentary>
+          </Gene-commentary_products>
+        </Gene-commentary>
+        <Gene-commentary>
+          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
+          <Gene-commentary_heading>Reference</Gene-commentary_heading>
+          <Gene-commentary_label>transcript variant 1</Gene-commentary_label>
           <Gene-commentary_accession>NM_018244</Gene-commentary_accession>
           <Gene-commentary_version>4</Gene-commentary_version>
           <Gene-commentary_genomic-coords>
@@ -377,6 +1051,21 @@
               <Gene-commentary_label>isoform a</Gene-commentary_label>
               <Gene-commentary_accession>NP_060714</Gene-commentary_accession>
               <Gene-commentary_version>3</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS13252.1</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS13252.1</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
               <Gene-commentary_genomic-coords>
                 <Seq-loc>
                   <Seq-loc_mix>
@@ -550,650 +1239,6 @@
                   <Seq-loc_whole>
                     <Seq-id>
                       <Seq-id_gi>41327685</Seq-id_gi>
-                    </Seq-id>
-                  </Seq-loc_whole>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-          </Gene-commentary_products>
-        </Gene-commentary>
-        <Gene-commentary>
-          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
-          <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>2</Gene-commentary_label>
-          <Gene-commentary_accession>NM_199487</Gene-commentary_accession>
-          <Gene-commentary_version>2</Gene-commentary_version>
-          <Gene-commentary_genomic-coords>
-            <Seq-loc>
-              <Seq-loc_mix>
-                <Seq-loc-mix>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33999742</Seq-interval_from>
-                        <Seq-interval_to>33999944</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33981894</Seq-interval_from>
-                        <Seq-interval_to>33981998</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33971840</Seq-interval_from>
-                        <Seq-interval_to>33971935</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33969720</Seq-interval_from>
-                        <Seq-interval_to>33969827</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33961986</Seq-interval_from>
-                        <Seq-interval_to>33962058</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33954359</Seq-interval_from>
-                        <Seq-interval_to>33954416</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33934966</Seq-interval_from>
-                        <Seq-interval_to>33935074</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33894468</Seq-interval_from>
-                        <Seq-interval_to>33894581</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33890368</Seq-interval_from>
-                        <Seq-interval_to>33891871</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                </Seq-loc-mix>
-              </Seq-loc_mix>
-            </Seq-loc>
-          </Gene-commentary_genomic-coords>
-          <Gene-commentary_seqs>
-            <Seq-loc>
-              <Seq-loc_whole>
-                <Seq-id>
-                  <Seq-id_gi>296923775</Seq-id_gi>
-                </Seq-id>
-              </Seq-loc_whole>
-            </Seq-loc>
-          </Gene-commentary_seqs>
-          <Gene-commentary_products>
-            <Gene-commentary>
-              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
-              <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform b</Gene-commentary_label>
-              <Gene-commentary_accession>NP_955781</Gene-commentary_accession>
-              <Gene-commentary_version>2</Gene-commentary_version>
-              <Gene-commentary_genomic-coords>
-                <Seq-loc>
-                  <Seq-loc_mix>
-                    <Seq-loc-mix>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33999742</Seq-interval_from>
-                            <Seq-interval_to>33999765</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33981894</Seq-interval_from>
-                            <Seq-interval_to>33981998</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33971840</Seq-interval_from>
-                            <Seq-interval_to>33971935</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33969720</Seq-interval_from>
-                            <Seq-interval_to>33969827</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33961986</Seq-interval_from>
-                            <Seq-interval_to>33962058</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33954359</Seq-interval_from>
-                            <Seq-interval_to>33954416</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33934966</Seq-interval_from>
-                            <Seq-interval_to>33935074</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33894468</Seq-interval_from>
-                            <Seq-interval_to>33894581</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33891737</Seq-interval_from>
-                            <Seq-interval_to>33891871</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                    </Seq-loc-mix>
-                  </Seq-loc_mix>
-                </Seq-loc>
-              </Gene-commentary_genomic-coords>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_whole>
-                    <Seq-id>
-                      <Seq-id_gi>296923776</Seq-id_gi>
-                    </Seq-id>
-                  </Seq-loc_whole>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-          </Gene-commentary_products>
-        </Gene-commentary>
-        <Gene-commentary>
-          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
-          <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>3</Gene-commentary_label>
-          <Gene-commentary_accession>NM_001184977</Gene-commentary_accession>
-          <Gene-commentary_version>1</Gene-commentary_version>
-          <Gene-commentary_genomic-coords>
-            <Seq-loc>
-              <Seq-loc_mix>
-                <Seq-loc-mix>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33999742</Seq-interval_from>
-                        <Seq-interval_to>33999944</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33981894</Seq-interval_from>
-                        <Seq-interval_to>33981998</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33961986</Seq-interval_from>
-                        <Seq-interval_to>33962058</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33954359</Seq-interval_from>
-                        <Seq-interval_to>33954416</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33934966</Seq-interval_from>
-                        <Seq-interval_to>33935074</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33902490</Seq-interval_from>
-                        <Seq-interval_to>33902567</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33894468</Seq-interval_from>
-                        <Seq-interval_to>33894581</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>33890368</Seq-interval_from>
-                        <Seq-interval_to>33891871</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>224589812</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                </Seq-loc-mix>
-              </Seq-loc_mix>
-            </Seq-loc>
-          </Gene-commentary_genomic-coords>
-          <Gene-commentary_seqs>
-            <Seq-loc>
-              <Seq-loc_whole>
-                <Seq-id>
-                  <Seq-id_gi>296923778</Seq-id_gi>
-                </Seq-id>
-              </Seq-loc_whole>
-            </Seq-loc>
-          </Gene-commentary_seqs>
-          <Gene-commentary_products>
-            <Gene-commentary>
-              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
-              <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform c</Gene-commentary_label>
-              <Gene-commentary_accession>NP_001171906</Gene-commentary_accession>
-              <Gene-commentary_version>1</Gene-commentary_version>
-              <Gene-commentary_genomic-coords>
-                <Seq-loc>
-                  <Seq-loc_mix>
-                    <Seq-loc-mix>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33999742</Seq-interval_from>
-                            <Seq-interval_to>33999765</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33981894</Seq-interval_from>
-                            <Seq-interval_to>33981998</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33961986</Seq-interval_from>
-                            <Seq-interval_to>33962058</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33954359</Seq-interval_from>
-                            <Seq-interval_to>33954416</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33934966</Seq-interval_from>
-                            <Seq-interval_to>33935074</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33902490</Seq-interval_from>
-                            <Seq-interval_to>33902567</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33894468</Seq-interval_from>
-                            <Seq-interval_to>33894581</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>33891737</Seq-interval_from>
-                            <Seq-interval_to>33891871</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>224589812</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                    </Seq-loc-mix>
-                  </Seq-loc_mix>
-                </Seq-loc>
-              </Gene-commentary_genomic-coords>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_whole>
-                    <Seq-id>
-                      <Seq-id_gi>296923779</Seq-id_gi>
                     </Seq-id>
                   </Seq-loc_whole>
                 </Seq-loc>
@@ -1617,16 +1662,428 @@
     </Gene-commentary>
     <Gene-commentary>
       <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-      <Gene-commentary_heading>Alternate assembly HuRef</Gene-commentary_heading>
-      <Gene-commentary_label>chromosome</Gene-commentary_label>
+      <Gene-commentary_heading>Reference assembly</Gene-commentary_heading>
+      <Gene-commentary_label>RefSeqGene</Gene-commentary_label>
+      <Gene-commentary_accession>NG_021421</Gene-commentary_accession>
+      <Gene-commentary_version>1</Gene-commentary_version>
+      <Gene-commentary_seqs>
+        <Seq-loc>
+          <Seq-loc_int>
+            <Seq-interval>
+              <Seq-interval_from>5000</Seq-interval_from>
+              <Seq-interval_to>114576</Seq-interval_to>
+              <Seq-interval_strand>
+                <Na-strand value="plus"/>
+              </Seq-interval_strand>
+              <Seq-interval_id>
+                <Seq-id>
+                  <Seq-id_gi>297747261</Seq-id_gi>
+                </Seq-id>
+              </Seq-interval_id>
+            </Seq-interval>
+          </Seq-loc_int>
+        </Seq-loc>
+      </Gene-commentary_seqs>
+      <Gene-commentary_products>
+        <Gene-commentary>
+          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
+          <Gene-commentary_heading>Reference</Gene-commentary_heading>
+          <Gene-commentary_label>transcript variant 1</Gene-commentary_label>
+          <Gene-commentary_accession>NM_018244</Gene-commentary_accession>
+          <Gene-commentary_version>4</Gene-commentary_version>
+          <Gene-commentary_genomic-coords>
+            <Seq-loc>
+              <Seq-loc_mix>
+                <Seq-loc-mix>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>5000</Seq-interval_from>
+                        <Seq-interval_to>5202</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>22946</Seq-interval_from>
+                        <Seq-interval_to>23050</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>33009</Seq-interval_from>
+                        <Seq-interval_to>33104</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>35117</Seq-interval_from>
+                        <Seq-interval_to>35224</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>42886</Seq-interval_from>
+                        <Seq-interval_to>42958</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>50528</Seq-interval_from>
+                        <Seq-interval_to>50585</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>69870</Seq-interval_from>
+                        <Seq-interval_to>69978</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>102377</Seq-interval_from>
+                        <Seq-interval_to>102454</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>110363</Seq-interval_from>
+                        <Seq-interval_to>110476</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>113073</Seq-interval_from>
+                        <Seq-interval_to>114576</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="plus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>297747261</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                </Seq-loc-mix>
+              </Seq-loc_mix>
+            </Seq-loc>
+          </Gene-commentary_genomic-coords>
+          <Gene-commentary_seqs>
+            <Seq-loc>
+              <Seq-loc_whole>
+                <Seq-id>
+                  <Seq-id_gi>296923772</Seq-id_gi>
+                </Seq-id>
+              </Seq-loc_whole>
+            </Seq-loc>
+          </Gene-commentary_seqs>
+          <Gene-commentary_products>
+            <Gene-commentary>
+              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
+              <Gene-commentary_heading>Reference</Gene-commentary_heading>
+              <Gene-commentary_label>isoform a</Gene-commentary_label>
+              <Gene-commentary_accession>NP_060714</Gene-commentary_accession>
+              <Gene-commentary_version>3</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS13252.1</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS13252.1</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
+              <Gene-commentary_genomic-coords>
+                <Seq-loc>
+                  <Seq-loc_mix>
+                    <Seq-loc-mix>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>5179</Seq-interval_from>
+                            <Seq-interval_to>5202</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>22946</Seq-interval_from>
+                            <Seq-interval_to>23050</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>33009</Seq-interval_from>
+                            <Seq-interval_to>33104</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>35117</Seq-interval_from>
+                            <Seq-interval_to>35224</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>42886</Seq-interval_from>
+                            <Seq-interval_to>42958</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>50528</Seq-interval_from>
+                            <Seq-interval_to>50585</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>69870</Seq-interval_from>
+                            <Seq-interval_to>69978</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>102377</Seq-interval_from>
+                            <Seq-interval_to>102454</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>110363</Seq-interval_from>
+                            <Seq-interval_to>110476</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>113073</Seq-interval_from>
+                            <Seq-interval_to>113207</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="plus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>297747261</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                    </Seq-loc-mix>
+                  </Seq-loc_mix>
+                </Seq-loc>
+              </Gene-commentary_genomic-coords>
+              <Gene-commentary_seqs>
+                <Seq-loc>
+                  <Seq-loc_whole>
+                    <Seq-id>
+                      <Seq-id_gi>41327685</Seq-id_gi>
+                    </Seq-id>
+                  </Seq-loc_whole>
+                </Seq-loc>
+              </Gene-commentary_seqs>
+            </Gene-commentary>
+          </Gene-commentary_products>
+        </Gene-commentary>
+      </Gene-commentary_products>
+    </Gene-commentary>
+    <Gene-commentary>
+      <Gene-commentary_type value="genomic">1</Gene-commentary_type>
+      <Gene-commentary_heading>Alternate HuRef</Gene-commentary_heading>
+      <Gene-commentary_label>chromosome 20 alternate HuRef</Gene-commentary_label>
       <Gene-commentary_accession>AC_000152</Gene-commentary_accession>
       <Gene-commentary_version>1</Gene-commentary_version>
       <Gene-commentary_seqs>
         <Seq-loc>
           <Seq-loc_int>
             <Seq-interval>
-              <Seq-interval_from>30667798</Seq-interval_from>
-              <Seq-interval_to>30777427</Seq-interval_to>
+              <Seq-interval_from>30667797</Seq-interval_from>
+              <Seq-interval_to>30777426</Seq-interval_to>
               <Seq-interval_strand>
                 <Na-strand value="minus"/>
               </Seq-interval_strand>
@@ -1643,715 +2100,7 @@
         <Gene-commentary>
           <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
           <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>1</Gene-commentary_label>
-          <Gene-commentary_accession>NM_018244</Gene-commentary_accession>
-          <Gene-commentary_version>4</Gene-commentary_version>
-          <Gene-commentary_genomic-coords>
-            <Seq-loc>
-              <Seq-loc_mix>
-                <Seq-loc-mix>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30777225</Seq-interval_from>
-                        <Seq-interval_to>30777427</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30759345</Seq-interval_from>
-                        <Seq-interval_to>30759449</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30749285</Seq-interval_from>
-                        <Seq-interval_to>30749380</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30747165</Seq-interval_from>
-                        <Seq-interval_to>30747272</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30739434</Seq-interval_from>
-                        <Seq-interval_to>30739506</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30731949</Seq-interval_from>
-                        <Seq-interval_to>30732006</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30712558</Seq-interval_from>
-                        <Seq-interval_to>30712666</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30679925</Seq-interval_from>
-                        <Seq-interval_to>30680002</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30671898</Seq-interval_from>
-                        <Seq-interval_to>30672011</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30667798</Seq-interval_from>
-                        <Seq-interval_to>30669301</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                </Seq-loc-mix>
-              </Seq-loc_mix>
-            </Seq-loc>
-          </Gene-commentary_genomic-coords>
-          <Gene-commentary_seqs>
-            <Seq-loc>
-              <Seq-loc_whole>
-                <Seq-id>
-                  <Seq-id_gi>296923772</Seq-id_gi>
-                </Seq-id>
-              </Seq-loc_whole>
-            </Seq-loc>
-          </Gene-commentary_seqs>
-          <Gene-commentary_products>
-            <Gene-commentary>
-              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
-              <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform a</Gene-commentary_label>
-              <Gene-commentary_accession>NP_060714</Gene-commentary_accession>
-              <Gene-commentary_version>3</Gene-commentary_version>
-              <Gene-commentary_genomic-coords>
-                <Seq-loc>
-                  <Seq-loc_mix>
-                    <Seq-loc-mix>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30777225</Seq-interval_from>
-                            <Seq-interval_to>30777248</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30759345</Seq-interval_from>
-                            <Seq-interval_to>30759449</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30749285</Seq-interval_from>
-                            <Seq-interval_to>30749380</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30747165</Seq-interval_from>
-                            <Seq-interval_to>30747272</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30739434</Seq-interval_from>
-                            <Seq-interval_to>30739506</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30731949</Seq-interval_from>
-                            <Seq-interval_to>30732006</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30712558</Seq-interval_from>
-                            <Seq-interval_to>30712666</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30679925</Seq-interval_from>
-                            <Seq-interval_to>30680002</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30671898</Seq-interval_from>
-                            <Seq-interval_to>30672011</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30669167</Seq-interval_from>
-                            <Seq-interval_to>30669301</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                    </Seq-loc-mix>
-                  </Seq-loc_mix>
-                </Seq-loc>
-              </Gene-commentary_genomic-coords>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_whole>
-                    <Seq-id>
-                      <Seq-id_gi>41327685</Seq-id_gi>
-                    </Seq-id>
-                  </Seq-loc_whole>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-          </Gene-commentary_products>
-        </Gene-commentary>
-        <Gene-commentary>
-          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
-          <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>2</Gene-commentary_label>
-          <Gene-commentary_accession>NM_199487</Gene-commentary_accession>
-          <Gene-commentary_version>2</Gene-commentary_version>
-          <Gene-commentary_genomic-coords>
-            <Seq-loc>
-              <Seq-loc_mix>
-                <Seq-loc-mix>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30777225</Seq-interval_from>
-                        <Seq-interval_to>30777427</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30759345</Seq-interval_from>
-                        <Seq-interval_to>30759449</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30749285</Seq-interval_from>
-                        <Seq-interval_to>30749380</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30747165</Seq-interval_from>
-                        <Seq-interval_to>30747272</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30739434</Seq-interval_from>
-                        <Seq-interval_to>30739506</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30731949</Seq-interval_from>
-                        <Seq-interval_to>30732006</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30712558</Seq-interval_from>
-                        <Seq-interval_to>30712666</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30671898</Seq-interval_from>
-                        <Seq-interval_to>30672011</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30667798</Seq-interval_from>
-                        <Seq-interval_to>30669301</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>157726890</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                </Seq-loc-mix>
-              </Seq-loc_mix>
-            </Seq-loc>
-          </Gene-commentary_genomic-coords>
-          <Gene-commentary_seqs>
-            <Seq-loc>
-              <Seq-loc_whole>
-                <Seq-id>
-                  <Seq-id_gi>296923775</Seq-id_gi>
-                </Seq-id>
-              </Seq-loc_whole>
-            </Seq-loc>
-          </Gene-commentary_seqs>
-          <Gene-commentary_products>
-            <Gene-commentary>
-              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
-              <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform b</Gene-commentary_label>
-              <Gene-commentary_accession>NP_955781</Gene-commentary_accession>
-              <Gene-commentary_version>2</Gene-commentary_version>
-              <Gene-commentary_genomic-coords>
-                <Seq-loc>
-                  <Seq-loc_mix>
-                    <Seq-loc-mix>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30777225</Seq-interval_from>
-                            <Seq-interval_to>30777248</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30759345</Seq-interval_from>
-                            <Seq-interval_to>30759449</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30749285</Seq-interval_from>
-                            <Seq-interval_to>30749380</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30747165</Seq-interval_from>
-                            <Seq-interval_to>30747272</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30739434</Seq-interval_from>
-                            <Seq-interval_to>30739506</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30731949</Seq-interval_from>
-                            <Seq-interval_to>30732006</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30712558</Seq-interval_from>
-                            <Seq-interval_to>30712666</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30671898</Seq-interval_from>
-                            <Seq-interval_to>30672011</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30669167</Seq-interval_from>
-                            <Seq-interval_to>30669301</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>157726890</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                    </Seq-loc-mix>
-                  </Seq-loc_mix>
-                </Seq-loc>
-              </Gene-commentary_genomic-coords>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_whole>
-                    <Seq-id>
-                      <Seq-id_gi>296923776</Seq-id_gi>
-                    </Seq-id>
-                  </Seq-loc_whole>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-          </Gene-commentary_products>
-        </Gene-commentary>
-        <Gene-commentary>
-          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
-          <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>3</Gene-commentary_label>
+          <Gene-commentary_label>transcript variant 3</Gene-commentary_label>
           <Gene-commentary_accession>NM_001184977</Gene-commentary_accession>
           <Gene-commentary_version>1</Gene-commentary_version>
           <Gene-commentary_genomic-coords>
@@ -2361,8 +2110,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30777225</Seq-interval_from>
-                        <Seq-interval_to>30777427</Seq-interval_to>
+                        <Seq-interval_from>30777224</Seq-interval_from>
+                        <Seq-interval_to>30777426</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2377,8 +2126,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30759345</Seq-interval_from>
-                        <Seq-interval_to>30759449</Seq-interval_to>
+                        <Seq-interval_from>30759344</Seq-interval_from>
+                        <Seq-interval_to>30759448</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2393,8 +2142,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30739434</Seq-interval_from>
-                        <Seq-interval_to>30739506</Seq-interval_to>
+                        <Seq-interval_from>30739433</Seq-interval_from>
+                        <Seq-interval_to>30739505</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2409,8 +2158,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30731949</Seq-interval_from>
-                        <Seq-interval_to>30732006</Seq-interval_to>
+                        <Seq-interval_from>30731948</Seq-interval_from>
+                        <Seq-interval_to>30732005</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2425,8 +2174,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30712558</Seq-interval_from>
-                        <Seq-interval_to>30712666</Seq-interval_to>
+                        <Seq-interval_from>30712557</Seq-interval_from>
+                        <Seq-interval_to>30712665</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2441,8 +2190,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30679925</Seq-interval_from>
-                        <Seq-interval_to>30680002</Seq-interval_to>
+                        <Seq-interval_from>30679924</Seq-interval_from>
+                        <Seq-interval_to>30680001</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2457,8 +2206,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30671898</Seq-interval_from>
-                        <Seq-interval_to>30672011</Seq-interval_to>
+                        <Seq-interval_from>30671897</Seq-interval_from>
+                        <Seq-interval_to>30672010</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2473,8 +2222,8 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30667798</Seq-interval_from>
-                        <Seq-interval_to>30669301</Seq-interval_to>
+                        <Seq-interval_from>30667797</Seq-interval_from>
+                        <Seq-interval_to>30669300</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
@@ -2506,6 +2255,21 @@
               <Gene-commentary_label>isoform c</Gene-commentary_label>
               <Gene-commentary_accession>NP_001171906</Gene-commentary_accession>
               <Gene-commentary_version>1</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS54458.1</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS54458.1</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
               <Gene-commentary_genomic-coords>
                 <Seq-loc>
                   <Seq-loc_mix>
@@ -2513,8 +2277,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30777225</Seq-interval_from>
-                            <Seq-interval_to>30777248</Seq-interval_to>
+                            <Seq-interval_from>30777224</Seq-interval_from>
+                            <Seq-interval_to>30777247</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2529,8 +2293,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30759345</Seq-interval_from>
-                            <Seq-interval_to>30759449</Seq-interval_to>
+                            <Seq-interval_from>30759344</Seq-interval_from>
+                            <Seq-interval_to>30759448</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2545,8 +2309,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30739434</Seq-interval_from>
-                            <Seq-interval_to>30739506</Seq-interval_to>
+                            <Seq-interval_from>30739433</Seq-interval_from>
+                            <Seq-interval_to>30739505</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2561,8 +2325,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30731949</Seq-interval_from>
-                            <Seq-interval_to>30732006</Seq-interval_to>
+                            <Seq-interval_from>30731948</Seq-interval_from>
+                            <Seq-interval_to>30732005</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2577,8 +2341,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30712558</Seq-interval_from>
-                            <Seq-interval_to>30712666</Seq-interval_to>
+                            <Seq-interval_from>30712557</Seq-interval_from>
+                            <Seq-interval_to>30712665</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2593,8 +2357,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30679925</Seq-interval_from>
-                            <Seq-interval_to>30680002</Seq-interval_to>
+                            <Seq-interval_from>30679924</Seq-interval_from>
+                            <Seq-interval_to>30680001</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2609,8 +2373,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30671898</Seq-interval_from>
-                            <Seq-interval_to>30672011</Seq-interval_to>
+                            <Seq-interval_from>30671897</Seq-interval_from>
+                            <Seq-interval_to>30672010</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2625,8 +2389,8 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30669167</Seq-interval_from>
-                            <Seq-interval_to>30669301</Seq-interval_to>
+                            <Seq-interval_from>30669166</Seq-interval_from>
+                            <Seq-interval_to>30669300</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
@@ -2654,407 +2418,10 @@
             </Gene-commentary>
           </Gene-commentary_products>
         </Gene-commentary>
-      </Gene-commentary_products>
-    </Gene-commentary>
-    <Gene-commentary>
-      <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-      <Gene-commentary_heading>Alternate assembly Celera</Gene-commentary_heading>
-      <Gene-commentary_label>chromosome</Gene-commentary_label>
-      <Gene-commentary_accession>AC_000063</Gene-commentary_accession>
-      <Gene-commentary_version>1</Gene-commentary_version>
-      <Gene-commentary_seqs>
-        <Seq-loc>
-          <Seq-loc_int>
-            <Seq-interval>
-              <Seq-interval_from>30638976</Seq-interval_from>
-              <Seq-interval_to>30748568</Seq-interval_to>
-              <Seq-interval_strand>
-                <Na-strand value="minus"/>
-              </Seq-interval_strand>
-              <Seq-interval_id>
-                <Seq-id>
-                  <Seq-id_gi>89161200</Seq-id_gi>
-                </Seq-id>
-              </Seq-interval_id>
-            </Seq-interval>
-          </Seq-loc_int>
-        </Seq-loc>
-      </Gene-commentary_seqs>
-      <Gene-commentary_products>
         <Gene-commentary>
           <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
           <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>1</Gene-commentary_label>
-          <Gene-commentary_accession>NM_018244</Gene-commentary_accession>
-          <Gene-commentary_version>4</Gene-commentary_version>
-          <Gene-commentary_genomic-coords>
-            <Seq-loc>
-              <Seq-loc_mix>
-                <Seq-loc-mix>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30748366</Seq-interval_from>
-                        <Seq-interval_to>30748568</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30730527</Seq-interval_from>
-                        <Seq-interval_to>30730631</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30720465</Seq-interval_from>
-                        <Seq-interval_to>30720560</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30718345</Seq-interval_from>
-                        <Seq-interval_to>30718452</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30710611</Seq-interval_from>
-                        <Seq-interval_to>30710683</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30702985</Seq-interval_from>
-                        <Seq-interval_to>30703042</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30683593</Seq-interval_from>
-                        <Seq-interval_to>30683701</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30651098</Seq-interval_from>
-                        <Seq-interval_to>30651175</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30643076</Seq-interval_from>
-                        <Seq-interval_to>30643189</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                  <Seq-loc>
-                    <Seq-loc_int>
-                      <Seq-interval>
-                        <Seq-interval_from>30638976</Seq-interval_from>
-                        <Seq-interval_to>30640479</Seq-interval_to>
-                        <Seq-interval_strand>
-                          <Na-strand value="minus"/>
-                        </Seq-interval_strand>
-                        <Seq-interval_id>
-                          <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
-                          </Seq-id>
-                        </Seq-interval_id>
-                      </Seq-interval>
-                    </Seq-loc_int>
-                  </Seq-loc>
-                </Seq-loc-mix>
-              </Seq-loc_mix>
-            </Seq-loc>
-          </Gene-commentary_genomic-coords>
-          <Gene-commentary_seqs>
-            <Seq-loc>
-              <Seq-loc_whole>
-                <Seq-id>
-                  <Seq-id_gi>296923772</Seq-id_gi>
-                </Seq-id>
-              </Seq-loc_whole>
-            </Seq-loc>
-          </Gene-commentary_seqs>
-          <Gene-commentary_products>
-            <Gene-commentary>
-              <Gene-commentary_type value="peptide">8</Gene-commentary_type>
-              <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform a</Gene-commentary_label>
-              <Gene-commentary_accession>NP_060714</Gene-commentary_accession>
-              <Gene-commentary_version>3</Gene-commentary_version>
-              <Gene-commentary_genomic-coords>
-                <Seq-loc>
-                  <Seq-loc_mix>
-                    <Seq-loc-mix>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30748366</Seq-interval_from>
-                            <Seq-interval_to>30748389</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30730527</Seq-interval_from>
-                            <Seq-interval_to>30730631</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30720465</Seq-interval_from>
-                            <Seq-interval_to>30720560</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30718345</Seq-interval_from>
-                            <Seq-interval_to>30718452</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30710611</Seq-interval_from>
-                            <Seq-interval_to>30710683</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30702985</Seq-interval_from>
-                            <Seq-interval_to>30703042</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30683593</Seq-interval_from>
-                            <Seq-interval_to>30683701</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30651098</Seq-interval_from>
-                            <Seq-interval_to>30651175</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30643076</Seq-interval_from>
-                            <Seq-interval_to>30643189</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                      <Seq-loc>
-                        <Seq-loc_int>
-                          <Seq-interval>
-                            <Seq-interval_from>30640345</Seq-interval_from>
-                            <Seq-interval_to>30640479</Seq-interval_to>
-                            <Seq-interval_strand>
-                              <Na-strand value="minus"/>
-                            </Seq-interval_strand>
-                            <Seq-interval_id>
-                              <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
-                              </Seq-id>
-                            </Seq-interval_id>
-                          </Seq-interval>
-                        </Seq-loc_int>
-                      </Seq-loc>
-                    </Seq-loc-mix>
-                  </Seq-loc_mix>
-                </Seq-loc>
-              </Gene-commentary_genomic-coords>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_whole>
-                    <Seq-id>
-                      <Seq-id_gi>41327685</Seq-id_gi>
-                    </Seq-id>
-                  </Seq-loc_whole>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-          </Gene-commentary_products>
-        </Gene-commentary>
-        <Gene-commentary>
-          <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
-          <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>2</Gene-commentary_label>
+          <Gene-commentary_label>transcript variant 2</Gene-commentary_label>
           <Gene-commentary_accession>NM_199487</Gene-commentary_accession>
           <Gene-commentary_version>2</Gene-commentary_version>
           <Gene-commentary_genomic-coords>
@@ -3064,14 +2431,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30748366</Seq-interval_from>
-                        <Seq-interval_to>30748568</Seq-interval_to>
+                        <Seq-interval_from>30777224</Seq-interval_from>
+                        <Seq-interval_to>30777426</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3080,14 +2447,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30730527</Seq-interval_from>
-                        <Seq-interval_to>30730631</Seq-interval_to>
+                        <Seq-interval_from>30759344</Seq-interval_from>
+                        <Seq-interval_to>30759448</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3096,14 +2463,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30720465</Seq-interval_from>
-                        <Seq-interval_to>30720560</Seq-interval_to>
+                        <Seq-interval_from>30749284</Seq-interval_from>
+                        <Seq-interval_to>30749379</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3112,14 +2479,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30718345</Seq-interval_from>
-                        <Seq-interval_to>30718452</Seq-interval_to>
+                        <Seq-interval_from>30747164</Seq-interval_from>
+                        <Seq-interval_to>30747271</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3128,14 +2495,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30710611</Seq-interval_from>
-                        <Seq-interval_to>30710683</Seq-interval_to>
+                        <Seq-interval_from>30739433</Seq-interval_from>
+                        <Seq-interval_to>30739505</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3144,14 +2511,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30702985</Seq-interval_from>
-                        <Seq-interval_to>30703042</Seq-interval_to>
+                        <Seq-interval_from>30731948</Seq-interval_from>
+                        <Seq-interval_to>30732005</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3160,14 +2527,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30683593</Seq-interval_from>
-                        <Seq-interval_to>30683701</Seq-interval_to>
+                        <Seq-interval_from>30712557</Seq-interval_from>
+                        <Seq-interval_to>30712665</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3176,14 +2543,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30643076</Seq-interval_from>
-                        <Seq-interval_to>30643189</Seq-interval_to>
+                        <Seq-interval_from>30671897</Seq-interval_from>
+                        <Seq-interval_to>30672010</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3192,14 +2559,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30638976</Seq-interval_from>
-                        <Seq-interval_to>30640479</Seq-interval_to>
+                        <Seq-interval_from>30667797</Seq-interval_from>
+                        <Seq-interval_to>30669300</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3225,6 +2592,21 @@
               <Gene-commentary_label>isoform b</Gene-commentary_label>
               <Gene-commentary_accession>NP_955781</Gene-commentary_accession>
               <Gene-commentary_version>2</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS13253.2</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS13253.2</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
               <Gene-commentary_genomic-coords>
                 <Seq-loc>
                   <Seq-loc_mix>
@@ -3232,14 +2614,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30748366</Seq-interval_from>
-                            <Seq-interval_to>30748389</Seq-interval_to>
+                            <Seq-interval_from>30777224</Seq-interval_from>
+                            <Seq-interval_to>30777247</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3248,14 +2630,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30730527</Seq-interval_from>
-                            <Seq-interval_to>30730631</Seq-interval_to>
+                            <Seq-interval_from>30759344</Seq-interval_from>
+                            <Seq-interval_to>30759448</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3264,14 +2646,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30720465</Seq-interval_from>
-                            <Seq-interval_to>30720560</Seq-interval_to>
+                            <Seq-interval_from>30749284</Seq-interval_from>
+                            <Seq-interval_to>30749379</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3280,14 +2662,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30718345</Seq-interval_from>
-                            <Seq-interval_to>30718452</Seq-interval_to>
+                            <Seq-interval_from>30747164</Seq-interval_from>
+                            <Seq-interval_to>30747271</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3296,14 +2678,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30710611</Seq-interval_from>
-                            <Seq-interval_to>30710683</Seq-interval_to>
+                            <Seq-interval_from>30739433</Seq-interval_from>
+                            <Seq-interval_to>30739505</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3312,14 +2694,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30702985</Seq-interval_from>
-                            <Seq-interval_to>30703042</Seq-interval_to>
+                            <Seq-interval_from>30731948</Seq-interval_from>
+                            <Seq-interval_to>30732005</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3328,14 +2710,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30683593</Seq-interval_from>
-                            <Seq-interval_to>30683701</Seq-interval_to>
+                            <Seq-interval_from>30712557</Seq-interval_from>
+                            <Seq-interval_to>30712665</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3344,14 +2726,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30643076</Seq-interval_from>
-                            <Seq-interval_to>30643189</Seq-interval_to>
+                            <Seq-interval_from>30671897</Seq-interval_from>
+                            <Seq-interval_to>30672010</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3360,14 +2742,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30640345</Seq-interval_from>
-                            <Seq-interval_to>30640479</Seq-interval_to>
+                            <Seq-interval_from>30669166</Seq-interval_from>
+                            <Seq-interval_to>30669300</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3392,9 +2774,9 @@
         <Gene-commentary>
           <Gene-commentary_type value="mRNA">3</Gene-commentary_type>
           <Gene-commentary_heading>Reference</Gene-commentary_heading>
-          <Gene-commentary_label>3</Gene-commentary_label>
-          <Gene-commentary_accession>NM_001184977</Gene-commentary_accession>
-          <Gene-commentary_version>1</Gene-commentary_version>
+          <Gene-commentary_label>transcript variant 1</Gene-commentary_label>
+          <Gene-commentary_accession>NM_018244</Gene-commentary_accession>
+          <Gene-commentary_version>4</Gene-commentary_version>
           <Gene-commentary_genomic-coords>
             <Seq-loc>
               <Seq-loc_mix>
@@ -3402,14 +2784,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30748366</Seq-interval_from>
-                        <Seq-interval_to>30748568</Seq-interval_to>
+                        <Seq-interval_from>30777224</Seq-interval_from>
+                        <Seq-interval_to>30777426</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3418,14 +2800,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30730527</Seq-interval_from>
-                        <Seq-interval_to>30730631</Seq-interval_to>
+                        <Seq-interval_from>30759344</Seq-interval_from>
+                        <Seq-interval_to>30759448</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3434,14 +2816,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30710611</Seq-interval_from>
-                        <Seq-interval_to>30710683</Seq-interval_to>
+                        <Seq-interval_from>30749284</Seq-interval_from>
+                        <Seq-interval_to>30749379</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3450,14 +2832,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30702985</Seq-interval_from>
-                        <Seq-interval_to>30703042</Seq-interval_to>
+                        <Seq-interval_from>30747164</Seq-interval_from>
+                        <Seq-interval_to>30747271</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3466,14 +2848,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30683593</Seq-interval_from>
-                        <Seq-interval_to>30683701</Seq-interval_to>
+                        <Seq-interval_from>30739433</Seq-interval_from>
+                        <Seq-interval_to>30739505</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3482,14 +2864,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30651098</Seq-interval_from>
-                        <Seq-interval_to>30651175</Seq-interval_to>
+                        <Seq-interval_from>30731948</Seq-interval_from>
+                        <Seq-interval_to>30732005</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3498,14 +2880,14 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30643076</Seq-interval_from>
-                        <Seq-interval_to>30643189</Seq-interval_to>
+                        <Seq-interval_from>30712557</Seq-interval_from>
+                        <Seq-interval_to>30712665</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3514,14 +2896,46 @@
                   <Seq-loc>
                     <Seq-loc_int>
                       <Seq-interval>
-                        <Seq-interval_from>30638976</Seq-interval_from>
-                        <Seq-interval_to>30640479</Seq-interval_to>
+                        <Seq-interval_from>30679924</Seq-interval_from>
+                        <Seq-interval_to>30680001</Seq-interval_to>
                         <Seq-interval_strand>
                           <Na-strand value="minus"/>
                         </Seq-interval_strand>
                         <Seq-interval_id>
                           <Seq-id>
-                            <Seq-id_gi>89161200</Seq-id_gi>
+                            <Seq-id_gi>157726890</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>30671897</Seq-interval_from>
+                        <Seq-interval_to>30672010</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>157726890</Seq-id_gi>
+                          </Seq-id>
+                        </Seq-interval_id>
+                      </Seq-interval>
+                    </Seq-loc_int>
+                  </Seq-loc>
+                  <Seq-loc>
+                    <Seq-loc_int>
+                      <Seq-interval>
+                        <Seq-interval_from>30667797</Seq-interval_from>
+                        <Seq-interval_to>30669300</Seq-interval_to>
+                        <Seq-interval_strand>
+                          <Na-strand value="minus"/>
+                        </Seq-interval_strand>
+                        <Seq-interval_id>
+                          <Seq-id>
+                            <Seq-id_gi>157726890</Seq-id_gi>
                           </Seq-id>
                         </Seq-interval_id>
                       </Seq-interval>
@@ -3535,7 +2949,7 @@
             <Seq-loc>
               <Seq-loc_whole>
                 <Seq-id>
-                  <Seq-id_gi>296923778</Seq-id_gi>
+                  <Seq-id_gi>296923772</Seq-id_gi>
                 </Seq-id>
               </Seq-loc_whole>
             </Seq-loc>
@@ -3544,9 +2958,24 @@
             <Gene-commentary>
               <Gene-commentary_type value="peptide">8</Gene-commentary_type>
               <Gene-commentary_heading>Reference</Gene-commentary_heading>
-              <Gene-commentary_label>isoform c</Gene-commentary_label>
-              <Gene-commentary_accession>NP_001171906</Gene-commentary_accession>
-              <Gene-commentary_version>1</Gene-commentary_version>
+              <Gene-commentary_label>isoform a</Gene-commentary_label>
+              <Gene-commentary_accession>NP_060714</Gene-commentary_accession>
+              <Gene-commentary_version>3</Gene-commentary_version>
+              <Gene-commentary_source>
+                <Other-source>
+                  <Other-source_src>
+                    <Dbtag>
+                      <Dbtag_db>CCDS</Dbtag_db>
+                      <Dbtag_tag>
+                        <Object-id>
+                          <Object-id_str>CCDS13252.1</Object-id_str>
+                        </Object-id>
+                      </Dbtag_tag>
+                    </Dbtag>
+                  </Other-source_src>
+                  <Other-source_anchor>CCDS13252.1</Other-source_anchor>
+                </Other-source>
+              </Gene-commentary_source>
               <Gene-commentary_genomic-coords>
                 <Seq-loc>
                   <Seq-loc_mix>
@@ -3554,14 +2983,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30748366</Seq-interval_from>
-                            <Seq-interval_to>30748389</Seq-interval_to>
+                            <Seq-interval_from>30777224</Seq-interval_from>
+                            <Seq-interval_to>30777247</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3570,14 +2999,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30730527</Seq-interval_from>
-                            <Seq-interval_to>30730631</Seq-interval_to>
+                            <Seq-interval_from>30759344</Seq-interval_from>
+                            <Seq-interval_to>30759448</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3586,14 +3015,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30710611</Seq-interval_from>
-                            <Seq-interval_to>30710683</Seq-interval_to>
+                            <Seq-interval_from>30749284</Seq-interval_from>
+                            <Seq-interval_to>30749379</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3602,14 +3031,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30702985</Seq-interval_from>
-                            <Seq-interval_to>30703042</Seq-interval_to>
+                            <Seq-interval_from>30747164</Seq-interval_from>
+                            <Seq-interval_to>30747271</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3618,14 +3047,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30683593</Seq-interval_from>
-                            <Seq-interval_to>30683701</Seq-interval_to>
+                            <Seq-interval_from>30739433</Seq-interval_from>
+                            <Seq-interval_to>30739505</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3634,14 +3063,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30651098</Seq-interval_from>
-                            <Seq-interval_to>30651175</Seq-interval_to>
+                            <Seq-interval_from>30731948</Seq-interval_from>
+                            <Seq-interval_to>30732005</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3650,14 +3079,14 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30643076</Seq-interval_from>
-                            <Seq-interval_to>30643189</Seq-interval_to>
+                            <Seq-interval_from>30712557</Seq-interval_from>
+                            <Seq-interval_to>30712665</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3666,14 +3095,46 @@
                       <Seq-loc>
                         <Seq-loc_int>
                           <Seq-interval>
-                            <Seq-interval_from>30640345</Seq-interval_from>
-                            <Seq-interval_to>30640479</Seq-interval_to>
+                            <Seq-interval_from>30679924</Seq-interval_from>
+                            <Seq-interval_to>30680001</Seq-interval_to>
                             <Seq-interval_strand>
                               <Na-strand value="minus"/>
                             </Seq-interval_strand>
                             <Seq-interval_id>
                               <Seq-id>
-                                <Seq-id_gi>89161200</Seq-id_gi>
+                                <Seq-id_gi>157726890</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>30671897</Seq-interval_from>
+                            <Seq-interval_to>30672010</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>157726890</Seq-id_gi>
+                              </Seq-id>
+                            </Seq-interval_id>
+                          </Seq-interval>
+                        </Seq-loc_int>
+                      </Seq-loc>
+                      <Seq-loc>
+                        <Seq-loc_int>
+                          <Seq-interval>
+                            <Seq-interval_from>30669166</Seq-interval_from>
+                            <Seq-interval_to>30669300</Seq-interval_to>
+                            <Seq-interval_strand>
+                              <Na-strand value="minus"/>
+                            </Seq-interval_strand>
+                            <Seq-interval_id>
+                              <Seq-id>
+                                <Seq-id_gi>157726890</Seq-id_gi>
                               </Seq-id>
                             </Seq-interval_id>
                           </Seq-interval>
@@ -3687,7 +3148,7 @@
                 <Seq-loc>
                   <Seq-loc_whole>
                     <Seq-id>
-                      <Seq-id_gi>296923779</Seq-id_gi>
+                      <Seq-id_gi>41327685</Seq-id_gi>
                     </Seq-id>
                   </Seq-loc_whole>
                 </Seq-loc>
@@ -4888,11 +4349,11 @@
         </Gene-commentary>
         <Gene-commentary>
           <Gene-commentary_type value="comment">254</Gene-commentary_type>
-          <Gene-commentary_heading>RefSeqs of Annotated Genomes: Build 37.2</Gene-commentary_heading>
+          <Gene-commentary_heading>RefSeqs of Annotated Genomes: Build 37.3</Gene-commentary_heading>
           <Gene-commentary_products>
             <Gene-commentary>
               <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-              <Gene-commentary_heading>GRCh37.p2 Reference primary assembly</Gene-commentary_heading>
+              <Gene-commentary_heading>Reference GRCh37.p5 Primary Assembly</Gene-commentary_heading>
               <Gene-commentary_accession>NC_000020</Gene-commentary_accession>
               <Gene-commentary_version>10</Gene-commentary_version>
               <Gene-commentary_source>
@@ -4930,45 +4391,7 @@
             </Gene-commentary>
             <Gene-commentary>
               <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-              <Gene-commentary_heading>Alternate assembly Celera</Gene-commentary_heading>
-              <Gene-commentary_accession>AC_000063</Gene-commentary_accession>
-              <Gene-commentary_version>1</Gene-commentary_version>
-              <Gene-commentary_source>
-                <Other-source>
-                  <Other-source_src>
-                    <Dbtag>
-                      <Dbtag_db>Nucleotide</Dbtag_db>
-                      <Dbtag_tag>
-                        <Object-id>
-                          <Object-id_id>89161200</Object-id_id>
-                        </Object-id>
-                      </Dbtag_tag>
-                    </Dbtag>
-                  </Other-source_src>
-                </Other-source>
-              </Gene-commentary_source>
-              <Gene-commentary_seqs>
-                <Seq-loc>
-                  <Seq-loc_int>
-                    <Seq-interval>
-                      <Seq-interval_from>30638976</Seq-interval_from>
-                      <Seq-interval_to>30748568</Seq-interval_to>
-                      <Seq-interval_strand>
-                        <Na-strand value="minus"/>
-                      </Seq-interval_strand>
-                      <Seq-interval_id>
-                        <Seq-id>
-                          <Seq-id_gi>89161200</Seq-id_gi>
-                        </Seq-id>
-                      </Seq-interval_id>
-                    </Seq-interval>
-                  </Seq-loc_int>
-                </Seq-loc>
-              </Gene-commentary_seqs>
-            </Gene-commentary>
-            <Gene-commentary>
-              <Gene-commentary_type value="genomic">1</Gene-commentary_type>
-              <Gene-commentary_heading>Alternate assembly HuRef</Gene-commentary_heading>
+              <Gene-commentary_heading>Alternate HuRef</Gene-commentary_heading>
               <Gene-commentary_accession>AC_000152</Gene-commentary_accession>
               <Gene-commentary_version>1</Gene-commentary_version>
               <Gene-commentary_source>
@@ -4989,8 +4412,8 @@
                 <Seq-loc>
                   <Seq-loc_int>
                     <Seq-interval>
-                      <Seq-interval_from>30667798</Seq-interval_from>
-                      <Seq-interval_to>30777427</Seq-interval_to>
+                      <Seq-interval_from>30667797</Seq-interval_from>
+                      <Seq-interval_to>30777426</Seq-interval_to>
                       <Seq-interval_strand>
                         <Na-strand value="minus"/>
                       </Seq-interval_strand>

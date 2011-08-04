@@ -46,7 +46,8 @@ strong.highlight {
   background-color: yellow;
   font-weight: bold;
   padding-left: 1px;
-  padding-right: 1px; }
+  padding-right: 1px;
+  text-decoration: inherit; }
 
 ul.hanging_indent {
   padding-left: 1em;
@@ -55,6 +56,23 @@ ul.hanging_indent {
 ul.bullet_list {
   list-style: disc;
   list-style-position: inside; }
+
+table.attribute_table tbody tr:nth-child(odd) {
+  background-color: #eeeeee; }
+table.attribute_table tbody th, table.attribute_table tbody td {
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+table.attribute_table tbody th {
+  text-align: right;
+  font-weight: bold;
+  font-size: 14pt;
+  vertical-align: top; }
+table.attribute_table tbody td {
+  padding-left: 20px; }
+
+#ncbi_url {
+  font-size: 10pt; }
 
 html {
   font-family: sans-serif; }
@@ -90,26 +108,12 @@ body {
   margin-bottom: 10px;
   font-weight: bold; }
 .show_model #ncbi_url {
-  margin-bottom: 10px;
-  font-size: 10pt; }
-.show_model table tbody tr:nth-child(odd) {
-  background-color: #eeeeee; }
-.show_model table tbody th, .show_model table tbody td {
-  padding: 5px;
-  padding-top: 8px;
-  padding-bottom: 8px; }
-.show_model table tbody th {
-  text-align: right;
-  font-weight: bold;
-  font-size: 14pt;
-  vertical-align: top; }
-.show_model table tbody td {
-  padding-left: 20px; }
-.show_model table tfoot {
+  margin-bottom: 10px; }
+.show_model table.attribute_table tfoot {
   background-color: #cccccc; }
-  .show_model table tfoot th {
+  .show_model table.attribute_table tfoot th {
     padding: 5px; }
-    .show_model table tfoot th .time {
+    .show_model table.attribute_table tfoot th .time {
       font-weight: bold; }
 .show_model li {
   padding-bottom: 5px; }
@@ -126,3 +130,16 @@ body {
   font-weight: bold; }
 .search_model form, .search_model #found {
   margin-bottom: 10px; }
+.search_model ol {
+  list-style-type: decimal;
+  margin-left: 20px; }
+  .search_model ol li {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .search_model ol li table.attribute_table {
+      display: inline-block;
+      vertical-align: top; }
+      .search_model ol li table.attribute_table caption {
+        font-size: 25px; }
+        .search_model ol li table.attribute_table caption #ncbi_url {
+          margin-top: 5px; }

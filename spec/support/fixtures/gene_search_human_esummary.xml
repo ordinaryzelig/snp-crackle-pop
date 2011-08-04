@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>28973</Id>
+	<Item Name="Name" Type="String">MRPS18B</Item>
+	<Item Name="Description" Type="String">mitochondrial ribosomal protein S18B</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p21.3</Item>
+	<Item Name="OtherAliases" Type="String">DADB-129D20.6, C6orf14, DKFZp564H0223, HSPC183, HumanS18a, MRP-S18-2, MRPS18-2, PTD017, S18amt</Item>
+	<Item Name="OtherDesignations" Type="String">28S ribosomal protein S18-2, mitochondrial|28S ribosomal protein S18b, mitochondrial|MRP-S18-b|OTTHUMP00000029404|OTTHUMP00000163697|S18mt-b|mitochondrial ribosomal protein S18-2|mrps18-b</Item>
+	<Item Name="NomenclatureSymbol" Type="String">MRPS18B</Item>
+	<Item Name="NomenclatureName" Type="String">mitochondrial ribosomal protein S18B</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">611982</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">30585485</Item>
+			<Item Name="ChrStop" Type="Integer">30594173</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1640</Item>
+	<Item Name="Summary" Type="String">Mammalian mitochondrial ribosomal proteins are encoded by nuclear genes and help in protein synthesis within the mitochondrion. Mitochondrial ribosomes (mitoribosomes) consist of a small 28S subunit and a large 39S subunit. They have an estimated 75% protein to rRNA composition compared to prokaryotic ribosomes, where this ratio is reversed. Another difference between mammalian mitoribosomes and prokaryotic ribosomes is that the latter contain a 5S rRNA. Among different species, the proteins comprising the mitoribosome differ greatly in sequence, and sometimes in biochemical properties, which prevents easy recognition by sequence homology. This gene encodes a 28S subunit protein that belongs to the ribosomal protein S18P family. The encoded protein is one of three that has significant sequence similarity to bacterial S18 proteins. The primary sequences of the three human mitochondrial S18 proteins are no more closely related to each other than they are to the prokaryotic S18 proteins. Pseudogenes corresponding to this gene are found on chromosomes 1q and 2q. [provided by RefSeq]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">30585485</Item>
+</DocSum>
+
+<DocSum>
+	<Id>55168</Id>
+	<Item Name="Name" Type="String">MRPS18A</Item>
+	<Item Name="Description" Type="String">mitochondrial ribosomal protein S18A</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p21.3</Item>
+	<Item Name="OtherAliases" Type="String">RP1-261G23.2, FLJ10548, HumanS18b, MRP-S18-3, MRPS18-3, S18bmt</Item>
+	<Item Name="OtherDesignations" Type="String">28S ribosomal protein S18-3, mitochondrial|28S ribosomal protein S18a, mitochondrial|MRP-S18-a|OTTHUMP00000016497|OTTHUMP00000016498|OTTHUMP00000016499|S18mt-a|mitochondrial ribosomal protein S18-3</Item>
+	<Item Name="NomenclatureSymbol" Type="String">MRPS18A</Item>
+	<Item Name="NomenclatureName" Type="String">mitochondrial ribosomal protein S18A</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">611981</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">43655548</Item>
+			<Item Name="ChrStop" Type="Integer">43638933</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1478</Item>
+	<Item Name="Summary" Type="String">Mammalian mitochondrial ribosomal proteins are encoded by nuclear genes and help in protein synthesis within the mitochondrion. Mitochondrial ribosomes (mitoribosomes) consist of a small 28S subunit and a large 39S subunit. They have an estimated 75% protein to rRNA composition compared to prokaryotic ribosomes, where this ratio is reversed. Another difference between mammalian mitoribosomes and prokaryotic ribosomes is that the latter contain a 5S rRNA. Among different species, the proteins comprising the mitoribosome differ greatly in sequence, and sometimes in biochemical properties, which prevents easy recognition by sequence homology. This gene encodes a 28S subunit protein that belongs to the ribosomal protein S18P family. The encoded protein is one of three that has significant sequence similarity to bacterial S18 proteins. The primary sequences of the three human mitochondrial S18 proteins are no more closely related to each other than they are to the prokaryotic S18 proteins. A pseudogene corresponding to this gene is found on chromosome 3p. Alternative splicing results in multiple transcript variants.[provided by RefSeq]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">43638933</Item>
+</DocSum>
+
+</eSummaryResult>

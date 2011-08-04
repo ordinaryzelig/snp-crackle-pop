@@ -80,10 +80,11 @@ class Gene
 
     # Construct query string from term.
     # Pass query string to super.
-    def initialize(term)
+    def initialize(search_term)
+      @search_term = search_term
       ors = {
-        :GENE                   => "*#{term}*",
-        :'DEFAULT MAP LOCATION' => term,
+        :GENE                   => "*#{@search_term}*",
+        :'DEFAULT MAP LOCATION' => @search_term,
       }
       query_string = "human[ORGN]+AND+" + Entrez.convert_search_term_hash(ors, 'OR')
       super(query_string)

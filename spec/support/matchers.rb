@@ -31,15 +31,15 @@ RSpec::Matchers.define :have_attributes do |atts|
   end
 end
 
-RSpec::Matchers.define :be_valid_for_search_request do
+RSpec::Matchers.define :be_valid_to_search do |model_class|
   match do |term|
-    Gene::SearchRequest.new(ALL: term).should be_valid
+    model_class::SearchRequest.new(term).should be_valid
   end
   failure_message_for_should do |term|
-    "Expected '#{term}' to be valid for SearchRequest"
+    "Expected '#{term}' to be valid for #{model_class}::SearchRequest"
   end
   failure_message_for_should_not do |term|
-    "Expected '#{term}' to not be valid for SearchRequest"
+    "Expected '#{term}' to not be valid for #{model_class}::SearchRequest"
   end
 end
 

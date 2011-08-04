@@ -62,6 +62,7 @@ class GenomeProject
     # Construct query string from term.
     # Pass query string to super.
     def initialize(term)
+      @search_term = term
       super ALL: "*#{term}*", ORGN: 'human'
     end
 

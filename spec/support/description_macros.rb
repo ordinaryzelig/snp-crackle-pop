@@ -29,14 +29,21 @@ module DescriptionMacros
     end
   end
 
+  # From the home page, perform a polymorphic search for a term.
+  # Search term must match search term of fixture file.
   def it_can_polymorphically_search_for(model_class, options)
     it "can polymorphically search for #{model_class}" do
       visit '/'
-      attribute_to_search = options[:with]
-      attribute_to_find_after_search = options[:finding]
-      object = model_class.make_from_fixture_file
-      submit_polymorphic_search_for object, attribute_to_search
-      page.should have_content(object.send(attribute_to_find_after_search))
+      # Spec will stub search. If told not to, will just make the object from fixture file.
+      if options[:stub] == false
+        model_class.make_from_fixture_file
+      else
+        model_class.stubs(:search_NCBI).returns(model_class.search_ncbi_from_fixture_file)
+      end
+      submit_polymorphic_search_for model_class, options[:search_term]
+      within '.attribute_table' do
+        page.should have_content(options[:search_term])
+      end
     end
   end
 

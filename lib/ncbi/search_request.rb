@@ -12,25 +12,28 @@ module NCBI
         attr_reader :search_terms
         attr_reader :ids
         attr_reader :results
+        attr_reader :search_term
       end
     end
 
-    def initialize(search_terms = {})
+    def initialize(search_terms)
       @search_terms = search_terms
       @database_name = self.class.parent.ncbi_database_name
     end
 
     def valid?
       begin
-        validate_search_terms
-        true
+        # Attempt to convert to number.
+        !!Float(@search_term)
       rescue
-        false
+        # @search_term cannot be coerced into number, must be non-number string,
+        # and it should be >=3 characters.
+        @search_term.size >= 3
       end
     end
 
     def execute
-      validate_search_terms
+      validate_search_term
       search_ncbi_for_ids
       get_results_from_ids
       results
@@ -38,17 +41,8 @@ module NCBI
 
     private
 
-    # Term is valid if it has at least 3 characters or is a number.
-    def validate_search_terms
-      return unless @search_terms.respond_to?(:each)
-      @search_terms.each do |field, term|
-        begin
-          Float(term)
-        rescue
-          bare_term = term.gsub('*', '')
-          raise NCBI::SearchRequest::NotEnoughCharacters.new(term) unless bare_term.to_s.length >= 3
-        end
-      end
+    def validate_search_term
+      raise NotEnoughCharacters.new(@search_term) unless valid?
     end
 
     # Use Entrez.ESearch to get ids.

@@ -20,10 +20,10 @@ module ExampleMacros
     end
   end
 
-  def submit_polymorphic_search_for(object, attribute_to_search)
+  def submit_polymorphic_search_for(model_class, term)
     within '#menu_bar' do
-      fill_in 'q', with: object.send(attribute_to_search)
-      select object.class.humanize, from: 'database'
+      fill_in 'q', with: term
+      select model_class.humanize, from: 'database'
       click_button 'Search'
     end
   end

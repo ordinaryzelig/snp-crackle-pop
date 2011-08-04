@@ -1,0 +1,12 @@
+= form_tag "#{ActiveSupport::Inflector.tableize(model_class.name)}/download", class: 'download' do
+  %h2= 'Download ' + model_class.humanize.pluralize
+  %p
+    - name = :"#{model_class.name}_ids"
+    = label_tag name, caption: 'Unique identifiers'
+    %br
+    %span.hint
+      Separate with spaces, new lines, or commas
+    %br
+    = text_area_tag :ids, id: name, rows: 25
+  %p
+    = submit_tag 'Download CSV'

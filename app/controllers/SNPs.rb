@@ -1,7 +1,7 @@
 SnpCracklePop.controllers :snps do
 
   get :index do
-    haml :'shared/download'
+    haml :'snps/download'
   end
 
   # Instead of searching, just redirect to show.

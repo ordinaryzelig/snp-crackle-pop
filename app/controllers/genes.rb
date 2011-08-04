@@ -1,7 +1,7 @@
 SnpCracklePop.controllers :genes do
 
   get :index do
-    haml :'shared/download'
+    haml :'genes/download'
   end
 
   get :search do

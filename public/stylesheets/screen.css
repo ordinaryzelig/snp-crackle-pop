@@ -74,6 +74,11 @@ table.attribute_table tbody td {
 #ncbi_url {
   font-size: 10pt; }
 
+.hint {
+  font-size: 70%;
+  font-style: italic;
+  color: gray; }
+
 html {
   font-family: sans-serif; }
 
@@ -102,6 +107,10 @@ body {
   padding-top: 3em;
   background-color: white;
   border-radius: 10px; }
+
+#home form.download {
+  display: inline-block;
+  padding: 50px; }
 
 .show_model h1 {
   font-size: 20pt;
@@ -143,3 +152,7 @@ body {
         font-size: 25px; }
         .search_model ol li table.attribute_table caption #ncbi_url {
           margin-top: 5px; }
+
+form.download h2 {
+  font-size: 20pt;
+  font-weight: bold; }

@@ -42,7 +42,7 @@ class SnpCracklePop < Padrino::Application
     def download_action(model_class)
       post :download do
         # Only supports 1 id per line, no commas.
-        ids = params[:ids].split
+        ids = TokenizerHelpers.tokenize_ids(params[:ids])
         data = model_class.with_ncbi_ids(ids).to_csv
         file_name = "#{model_class.humanize.pluralize} #{Time.now}.csv"
         csv data, file_name

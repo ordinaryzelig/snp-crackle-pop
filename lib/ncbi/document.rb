@@ -46,11 +46,8 @@ module NCBI
         response = perform_entrez_request(ids)
         verify_response(response)
         # Split into individual sections, parse, and instantiate objects.
-        objects = split_xml(response.body).map do |node|
-          object = new_from_xml(node)
-          object.response = response
-          object
-        end
+        objects = new_from_splitting_xml(response.body)
+        objects.each { |obj| obj.response = response }
         # Verify all found.
         ids_not_found = ids - objects.map(&:ncbi_id)
         raise NotFound.new(ids_not_found, self) if ids_not_found.any?

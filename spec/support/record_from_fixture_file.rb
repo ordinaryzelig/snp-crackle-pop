@@ -8,6 +8,7 @@ MODEL_FIXTURE_FILES = {
   Gene::SearchResult =>           'gene_search_human_esummary.xml',
   GenomeProject =>                'genome_project_28911_esummary.xml',
   GenomeProject::SearchRequest => 'genome_project_search_1000_Genomes_Project_Pliot_esummary.xml',
+  GenomeProject::SearchResult =>  'genome_project_search_1000_Genomes_Project_Pliot_esummary.xml',
   Snp =>                          'snp_9268480_efetch.xml',
   Taxonomy =>                     'taxonomy_9606_efetch.xml',
 }
@@ -38,12 +39,4 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
     make(attributes_from_fixture_file.merge(atts))
   end
 
-end
-
-def Gene.search_ncbi_from_fixture_file
-  Gene::SearchResult.parse_esummary(Gene::SearchRequest.fixture_file.read)
-end
-
-def GenomeProject.search_ncbi_from_fixture_file
-  GenomeProject::SearchResult.parse_esummary(GenomeProject::SearchRequest.fixture_file.read)
 end

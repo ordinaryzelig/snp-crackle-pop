@@ -38,7 +38,7 @@ module DescriptionMacros
       if options[:stub] == false
         model_class.make_from_fixture_file
       else
-        model_class.stubs(:search).returns(model_class.search_ncbi_from_fixture_file)
+        model_class.stubs(:search).returns(model_class::SearchResult.all_from_fixture_file)
       end
       submit_polymorphic_search_for model_class, options[:search_term]
       within '.attribute_table' do

@@ -4,7 +4,7 @@ describe 'Genes', type: :acceptance do
 
   it 'searches NCBI' do
     visit url(:genes, :search)
-    search_results = Gene.search_ncbi_from_fixture_file
+    search_results = Gene::SearchResult.all_from_fixture_file
     Gene.stubs(:search).returns(search_results)
     submit_search_for 'human'
     ['MRPS18B', 'MRPS18A'].each do |symbol|

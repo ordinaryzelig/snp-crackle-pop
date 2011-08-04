@@ -4,7 +4,7 @@ describe 'GenomeProjects', type: :acceptance do
 
   it 'searches NCBI' do
     visit url(:genome_projects, :search)
-    search_results = GenomeProject.search_ncbi_from_fixture_file
+    search_results = GenomeProject::SearchResult.all_from_fixture_file
     GenomeProject.stubs(:search).returns(search_results)
     submit_search_for '1000 Genomes Project Pilot'
     search_results.each do |search_result|

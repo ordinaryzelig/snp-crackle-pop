@@ -3,14 +3,14 @@ require 'spec_helper'
 describe GenomeProject::SearchResult do
 
   it '#parse_esummary returns array of search results' do
-    search_results = GenomeProject.search_ncbi_from_fixture_file
+    search_results = GenomeProject::SearchResult.all_from_fixture_file
     search_results.size.should == 3
   end
 
   context 'parses attribute' do
 
     before :all do
-      search_results = GenomeProject.search_ncbi_from_fixture_file
+      search_results = GenomeProject::SearchResult.all_from_fixture_file
       @object = search_results.first
     end
 

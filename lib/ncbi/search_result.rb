@@ -7,6 +7,8 @@ module NCBI
       target.extend ClassMethods
       target.extend NCBI::XMLParseable
       target.instance_eval do
+        # All searches are ESummary results, so the XML should split the same way.
+        split_xml_on { |node| node.css('DocSum') }
         # Automatically define ncbi_id field since it's the same for all.
         field(:ncbi_id) { |doc| doc.css('Id').first.content.to_i }
       end

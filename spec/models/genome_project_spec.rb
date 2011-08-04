@@ -25,13 +25,6 @@ describe GenomeProject do
 
   it_raises_error_if_ncbi_cannot_find_it
 
-  it 'searches local db by name or sequencing centers' do
-    genome_project = GenomeProject.make_from_fixture_file(sequencing_centers: ['OMRF'])
-    ['1000 Genomes', 'genomes', 'OMRF', 'omr'].each do |term|
-      genome_project.should be_found_when_searching_locally_for(term)
-    end
-  end
-
   it 'searches NCBI by any field' do
     genome_project = GenomeProject.make_from_fixture_file(sequencing_centers: ['OMRF'])
     genome_project.should be_found_when_searching_NCBI_for('1000 Genomes Project')

@@ -1,15 +1,6 @@
-RSpec::Matchers.define :be_found_when_searching_locally_for do |term|
-  match do |object|
-    object.class.search_local(term).include?(object)
-  end
-  failure_message_for_should do |object|
-    "Searching for '#{term}' did not include object"
-  end
-end
-
 RSpec::Matchers.define :be_found_when_searching_NCBI_for do |term|
   match do |object|
-    search_results = object.class.search_NCBI(term)
+    search_results = object.class.search(term)
     search_results.map(&:ncbi_id).include?(object.ncbi_id)
   end
   failure_message_for_should do |object|

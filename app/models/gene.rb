@@ -54,18 +54,9 @@ class Gene
 
   class << self
 
-    def search_local(term)
-      return [] if term.blank?
-      reg_exp = Regexp.new(term, true)
-      conditions = [:location, :description, :protein_name, :symbol, :symbols_other].map do |field_to_search|
-        {field_to_search => reg_exp}
-      end
-      any_of(conditions)
-    end
-
     # Search NCBI for term in name, symbols and location.
     # Return array of search result objects.
-    def search_NCBI(term)
+    def search(term)
       request = SearchRequest.new(term)
       request.execute
     end

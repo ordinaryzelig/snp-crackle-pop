@@ -34,7 +34,7 @@ module NCBI
 
     def execute
       validate_search_term
-      search_ncbi_for_ids
+      search_for_ncbi_ids
       get_results_from_ids
       results
     end
@@ -46,7 +46,7 @@ module NCBI
     end
 
     # Use Entrez.ESearch to get ids.
-    def search_ncbi_for_ids
+    def search_for_ncbi_ids
       esearch = Entrez.ESearch(@database_name, @search_terms)
       # TODO: doesn't Entrez have a sorting option?
       @ids = esearch.ids.sort

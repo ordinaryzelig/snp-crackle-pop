@@ -17,7 +17,6 @@ describe Gene do
       @object = gene
     end
 
-    it_parses_attribute :accessions,             :pending
     it_parses_attribute :description,           'ubiquinol-cytochrome c reductase complex chaperone'
     it_parses_attribute :diseases,               ["A genome-wide association study in 19 633 Japanese subjects identified LHX3-QSOX2 and IGF1 as adult height loci.",
                                                   "Common variants in the GDF5-UQCC region are associated with variation in human height.",
@@ -48,13 +47,6 @@ describe Gene do
     gene = Gene.make(ncbi_id: gene_id)
     gene.assign_to_child_snps
     snp.reload.gene.should == gene
-  end
-
-  it 'searches local DB by symbols, name, location, or protein name' do
-    gene = Gene.make_from_fixture_file
-    ['UQCC', 'uq', 'BFZB', 'bf', 'ubiquinol', 'CBP3 homol', '20q11.22', '20q'].each do |term|
-      gene.should be_found_when_searching_locally_for(term)
-    end
   end
 
   it 'searches NCBI by symbols or location' do

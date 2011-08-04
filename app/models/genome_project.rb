@@ -21,25 +21,7 @@ class GenomeProject
 
   class << self
 
-    # Search name and sequencing centers.
-    def search(name)
-      reg_exp = Regexp.new(Regexp.escape(name), true)
-      conditions = [:name, :sequencing_centers].map do |field_to_search|
-        {field_to_search => reg_exp}
-      end
-      any_of(conditions)
-    end
-
-    def search_local(term)
-      return [] if term.blank?
-      reg_exp = Regexp.new(term, true)
-      conditions = [:name, :ncbi_id, :sequencing_centers].map do |field_to_search|
-        {field_to_search => reg_exp}
-      end
-      any_of(conditions)
-    end
-
-    def search_NCBI(term)
+    def search(term)
       search_request = SearchRequest.new(term)
       search_request.execute
     end

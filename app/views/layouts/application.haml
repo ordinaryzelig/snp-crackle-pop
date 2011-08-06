@@ -9,5 +9,7 @@
     %nav#menu_bar
       %ul
         %li#title= link_to 'SNP Crackle Pop', '/'
-        %li= partial 'shared/polymorphic_search'
+        %li#polymorphic_search= partial 'shared/polymorphic_search'
     #main= yield
+    #footer
+      #version= 'v0.1.0 (2012-8-6)'

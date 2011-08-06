@@ -94,11 +94,12 @@ body {
   padding: 5px;
   -webkit-box-shadow: 0px 1px 5px gray;
   -moz-box-shadow: 0px 1px 5px gray; }
-  #menu_bar #title {
-    float: left;
-    font-size: 20px;
+  #menu_bar ul li {
+    float: left; }
+  #menu_bar ul #title {
+    font-size: 20pt;
     font-weight: bold; }
-  #menu_bar #polymorphic_search {
+  #menu_bar ul #polymorphic_search {
     float: right;
     margin-right: 10px; }
 
@@ -107,6 +108,18 @@ body {
   padding-top: 3em;
   background-color: white;
   border-radius: 10px; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #cccccc;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  opacity: 0.9; }
+  #footer #version {
+    font-size: 10pt;
+    padding: 5px; }
 
 #home form.download {
   display: inline-block;

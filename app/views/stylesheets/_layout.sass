@@ -15,16 +15,30 @@ $menu_bar_height: 1.5em
   $box_shadow: 0px 1px 5px gray
   -webkit-box-shadow: $box_shadow
   -moz-box-shadow: $box_shadow
-  #title
-    float: left
-    font-size: 20px
-    font-weight: bold
-  #polymorphic_search
-    float: right
-    margin-right: 10px // going off page.
+  ul
+    li
+      float: left
+    #title
+      font-size: 20pt
+      font-weight: bold
+    #polymorphic_search
+      float: right
+      margin-right: 10px // going off page.
 
 #main
   padding: 10px
   padding-top: $menu_bar_height + 1.5
   background-color: white
   border-radius: 10px
+
+#footer
+  position: fixed
+  bottom: 0
+  right: 0
+  color: #ccc
+  background: #eee
+  border: 1px solid #ccc
+  opacity: 0.9
+  #version
+    font-size: 10pt
+    padding: 5px

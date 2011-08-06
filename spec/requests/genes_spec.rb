@@ -12,6 +12,15 @@ describe 'Genes', type: :acceptance do
     end
   end
 
+  it 'fetches data from search result' do
+    visit url(:genes, :search)
+    gene = Gene.from_fixture_file
+    submit_search_for gene.symbol
+    click_link(gene.symbol)
+    current_path.should == url_for(gene)
+    page.should have_content(gene.description)
+  end
+
   it 'displays data for single gene' do
     gene = Gene.make_from_fixture_file
     visit url_for(gene)

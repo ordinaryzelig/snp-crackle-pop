@@ -99,6 +99,8 @@ body {
   #menu_bar ul #title {
     font-size: 20pt;
     font-weight: bold; }
+    #menu_bar ul #title a {
+      text-decoration: none; }
   #menu_bar ul #polymorphic_search {
     float: right;
     margin-right: 10px; }

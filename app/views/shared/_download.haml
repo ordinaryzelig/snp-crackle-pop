@@ -2,7 +2,7 @@
   %h2= 'Download ' + model_class.humanize.pluralize
   %p
     - name = :"#{model_class.name}_ids"
-    = label_tag name, caption: 'Unique identifiers'
+    = label_tag name, caption: caption
     %br
     %span.hint
       Separate with spaces, new lines, or commas

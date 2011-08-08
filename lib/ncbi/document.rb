@@ -7,6 +7,8 @@ module NCBI
     def self.included(base)
       class << base
         attr_reader :ncbi_base_uri
+        attr_reader :unique_id_field
+        attr_reader :unique_id_search_field
       end
       base.instance_eval do
         include Mongoid::Document
@@ -37,6 +39,17 @@ module NCBI
         @ncbi_base_uri ||= base_uri
       end
 
+      # Cache field name and create DB unique index.
+      def set_unique_id_field(field_name)
+        @unique_id_field = field_name
+        index field_name, unique: true
+      end
+
+      # Set the search field that will be used to for Entrez.ESearch to search by a unique identifier.
+      def set_unique_id_search_field(field_name)
+        @unique_id_search_field = field_name
+      end
+
       # Fetch data from NCBI.
       # Instantiate new object and return.
       # Record response.
@@ -50,7 +63,7 @@ module NCBI
         objects.each { |obj| obj.response = response }
         # Verify all found.
         ids_not_found = ids - objects.map(&:ncbi_id)
-        raise NotFound.new(ids_not_found, self) if ids_not_found.any?
+        raise NotFound.new(ids_not_found) if ids_not_found.any?
         if ncbi_id_or_ids.respond_to?(:each)
           objects
         else
@@ -58,10 +71,10 @@ module NCBI
         end
       rescue NCBI::XMLParseable::XMLCouldNotBeVerified
         # This might happen if ncbi_ids had the correct format, but were not found anyway.
-        raise NotFound.new(ncbi_id_or_ids, self)
+        raise NotFound.new(ncbi_id_or_ids)
       rescue BadResponse
         # This could either be a badly formed request, or more likely, ncbi_ids were not valid.
-        raise NotFound.new(ncbi_id_or_ids, self)
+        raise NotFound.new(ncbi_id_or_ids)
       end
 
       # Same as fetch and saves to database.
@@ -69,6 +82,32 @@ module NCBI
         object = fetch(ncbi_id_or_ids)
         [object].flatten.each(&:save!)
         object
+      end
+
+      def search_by_unique_id_field(ids)
+        self::UniqueIdSearchRequest.new(ids).execute
+      end
+
+      def find_all_by_unique_id_field_or_fetch_by_unique_id_field!(unique_ids)
+        # Use case-insensitive regular expressions to search for strings
+        mongoid_field = fields[unique_id_field.to_s]
+        formatted_ids = case mongoid_field.type.name
+          when 'String'
+            unique_ids.map { |unique_id| Regexp.new(unique_id.to_s, true) }
+          when 'Integer'
+            unique_ids.map { |unique_id| unique_id.to_i }
+          else
+             raise "#{mongoid_field.type} not implemented"
+          end
+        found_locally = where(unique_id_field.in => formatted_ids)
+        did_not_find_all = found_locally.count < unique_ids.size
+        if did_not_find_all
+          # Search for all and subtract from ids found locally.
+          search_results = search_by_unique_id_field(unique_ids)
+          ids_not_found_locally = search_results.map(&:ncbi_id) - found_locally.map(&:ncbi_id)
+          fetch!(ids_not_found_locally)
+        end
+        found_locally
       end
 
       # Find from database.
@@ -196,8 +235,11 @@ module NCBI
     end
 
     class NotFound < StandardError
-      def initialize(ncbi_ids, model_class)
+      def initialize(ncbi_ids)
         super("NCBI could not find #{model_class.name.humanize} with id(s): #{ncbi_ids}")
+      end
+      def model_class
+        self.class.parent
       end
     end
 

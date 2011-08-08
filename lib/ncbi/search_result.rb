@@ -24,19 +24,16 @@ module NCBI
       "#{self.class.parent.ncbi_base_uri}#{ncbi_id}"
     end
 
+    # Refers to designated unique_id_field, not ncbi_id.
+    def unique_identifier
+      send self.class.parent.unique_id_field
+    end
+
     module ClassMethods
 
       def field(attribute, &block)
         attr_accessor attribute
         fields[attribute] = block
-      end
-
-      # Given an XML response, parse and return each document summary.
-      def parse_esummary(xml)
-        document = Nokogiri.XML(xml)
-        document.css('DocSum').map do |docsum_node|
-          new_from_xml(docsum_node)
-        end
       end
 
       def fields
@@ -46,10 +43,10 @@ module NCBI
       private
 
       # Parse a Nokogiri::Document and return attributes hash.
-      def parse(document)
-        document.extend NokogiriDocSummary
+      def parse(node_or_document)
+        node_or_document.extend NokogiriDocSummary
         fields.each_with_object({}) do |(attribute, parse_proc), attributes|
-          attributes[attribute] = parse_proc.call(document)
+          attributes[attribute] = parse_proc.call(node_or_document)
         end
       end
 

@@ -5,6 +5,8 @@ class Gene
   verify_xml { |node| node.css('Entrezgene_track-info').first }
   split_xml_on { |doc| doc.css('Entrezgene') }
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/gene/'
+  set_unique_id_field :symbol
+  set_unique_id_search_field :GENE
 
   field :description,            type: String,  xml: lambda { |node| node.css('Gene-ref_desc').first.content }
   field :diseases,               type: Array,   xml: lambda { |node| node.css('Entrezgene_comments > Gene-commentary > Gene-commentary_comment > Gene-commentary > Gene-commentary_type').select { |node| node['value'] == 'phenotype' }.map { |node| node.next.next.content } }
@@ -26,6 +28,8 @@ class Gene
   alias_method :name, :symbol
 
   has_many :snps
+
+  validates_uniqueness_of :symbol
 
   has_taxonomy
 
@@ -85,13 +89,19 @@ class Gene
 
   end
 
+  # Search by symbol and return exactly 1 result.
+  class UniqueIdSearchRequest
+    include NCBI::UniqueIdSearchRequest
+  end
+
   class SearchResult
     include NCBI::SearchResult
-    field(:description)   { |doc| doc.items['Description'] }
-    field(:location)      { |doc| doc.items['MapLocation'] }
-    field(:symbol)        { |doc| doc.items['NomenclatureSymbol'] }
-    field(:symbols_other) { |doc| doc.items['OtherAliases'].split(', ') }
-    field(:other)         { |doc| doc.items['OtherDesignations'] }
+    field(:description)   { |node| node.items['Description'] }
+    field(:discontinued)  { |node| node.items['CurrentID'] != 0 }
+    field(:location)      { |node| node.items['MapLocation'] }
+    field(:symbol)        { |node| node.items['NomenclatureSymbol'] }
+    field(:symbols_other) { |node| node.items['OtherAliases'].split(', ') }
+    field(:other)         { |node| node.items['OtherDesignations'] }
   end
 
 end

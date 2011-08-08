@@ -10,14 +10,14 @@ module NCBI
 
     # Parse XML and return attributes hash.
     # If XML is string, create Nokogiri::Document.
-    def attributes_from_xml(xml)
-      document = case xml
+    def attributes_from_xml(string_or_document_or_node)
+      node_or_document = case string_or_document_or_node
         when String
-          Nokogiri.XML(xml)
+          Nokogiri.XML(string_or_document_or_node)
         else
-          xml
+          string_or_document_or_node
         end
-      parse(document)
+      parse(node_or_document)
     end
 
     def new_from_splitting_xml(xml)

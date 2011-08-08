@@ -51,7 +51,7 @@ module DescriptionMacros
     model_class = model_class()
     it 'can download CSV of list of NCBI ids' do
       ids = [1, 2]
-      ids.each { |id| model_class.make(ncbi_id: id) }
+      ids.each { |i| model_class.make(:ncbi_id => i, model_class.unique_id_field => i) }
       visit url_for(model_class, :index)
       fill_in :ids, with: ids.join("\n")
       click_button 'Download'

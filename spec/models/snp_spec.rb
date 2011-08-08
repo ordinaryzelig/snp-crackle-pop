@@ -105,4 +105,17 @@ describe Snp do
     lambda { Snp.fetch([9268480, 1]) }.should raise_error(NCBI::Document::NotFound)
   end
 
+  it 'fetches unique identifiers' do
+    ncbi_ids = [9268480, 672]
+    identifiers = ncbi_ids.map(&:to_s)
+    Snp.make_from_fixture_file # Will save 9268480 to db.
+    # stub unique search.
+    search_results = Snp::SearchResult.all_from_fixture_file[0...1]
+    Snp::UniqueIdSearchRequest.any_instance.stubs(:execute).returns(search_results)
+    # stub fetch.
+    stub_entrez_request_with_stubbed_response :EFetch, fixture_file('snp_672_efetch.xml')
+    genes = Snp.find_all_by_unique_id_field_or_fetch_by_unique_id_field!(identifiers)
+    genes.map(&:ncbi_id).should =~ ncbi_ids
+  end
+
 end

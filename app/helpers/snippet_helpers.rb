@@ -24,8 +24,8 @@ SnpCracklePop.helpers do
     content_for(:title) { truncate(page_title, length: 40) }
   end
 
-  def download_partial(model_class)
-    partial 'shared/download', locals: {model_class: model_class}
+  def download_partial(model_class, caption)
+    partial 'shared/download', locals: {model_class: model_class, caption: caption}
   end
 
 end

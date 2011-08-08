@@ -5,6 +5,8 @@ class Snp
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
   split_xml_on { |doc| doc.css('Rs') }
   verify_xml { |node| node.attributes['rsId'] }
+  set_unique_id_field :rs_number
+  set_unique_id_search_field :RS
 
   field :ancestral_allele,   type: String,   xml: lambda { |node| node.css('Sequence').first['ancestralAllele'] }
   field :chromosome,         type: Integer,  xml: lambda { |node| node.css('Assembly Component').first['chromosome'] }
@@ -54,6 +56,22 @@ class Snp
 
   def assign_gene
     self.gene = Gene.find_by_ncbi_id self.ncbi_gene_id
+  end
+
+  class UniqueIdSearchRequest
+    include NCBI::UniqueIdSearchRequest
+    # Prepend 'rs' if not already prepended.
+    def initialize(rs_numbers)
+      ids = [rs_numbers].flatten
+      ids.map! { |id| id =~ /^rs/ ? id : "rs#{id}" }
+      super ids
+    end
+  end
+
+  class SearchResult
+    include NCBI::SearchResult
+    field(:rs_number) { |node| "rs#{node.items['SNP_ID']}" } # Prepend 'rs' just for convenience when validating unique id search results.
+    def discontinued; false; end
   end
 
 end

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ExchangeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.ncbi.nlm.nih.gov/SNP/docsum"
+xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/SNP/docsum
+ftp://ftp.ncbi.nlm.nih.gov/snp/specs/docsum_3.1.xsd"><SourceDatabase taxId="0"
+organism=""/>
+ 
+
+
+ 
+
+
+<Rs rsId="672" snpClass="snp" snpType="notwithdrawn" molType="genomic" bitField="050000840001000000000100" taxId="9606">
+  <Het type="est" value="0" stdError="0"/>
+  <Validation></Validation>
+  <Create build="36" date="2000-09-19 17:02"/>
+  <Update build="36" date="2011-01-11 12:25"/>
+  <Sequence exemplarSs="677" ancestralAllele="G,G,G">
+    <Seq5>GCCGCAATGCCCGGGAGTTTCTCCAATGTGTGGAGAAGGCCTTAGAAGACATGTTTGATGCCTTAGAAGGCAAATCCATCAAAAGTTAACTTCTGGGCAGATGAAAAGCTACCATCACTTCCTCATCATGAAAACTGGGAggccgggcat</Seq5>
+    <Observed>A/G</Observed>
+    <Seq3>gtgctcatgcctgtaatcccagcattttgagaggctgaggcgggtggatcacttgaggtcaggagtttgagaccaacctggccaacat</Seq3>
+  </Sequence>
+  <Ss ssId="677" handle="WIAF" batchId="484" locSnpId="WIAF-1443" subSnpClass="snp" orient="forward" strand="top" molType="genomic" buildId="36" methodClass="unknown">
+    <Sequence>
+      <Seq5>GCCGCAATGCCCGGGAGTTTCTCCAATGTGTGGAGAAGGCCTTAGAAGACATGTTTGATGCCTTAGAAGGCAAATCCATCAAAAGTTAACTTCTGGGCAGATGAAAAGCTACCATCACTTCCTCATCATGAAAACTGGGAggccgggcat</Seq5>
+      <Observed>A/G</Observed>
+      <Seq3>gtgctcatgcctgtaatcccagcattttgagaggctgaggcgggtggatcacttgaggtcaggagtttgagaccaacctggccaacat</Seq3>
+    </Sequence>
+  </Ss>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="Celera" current="true">
+    <Component componentType="contig" ctgId="88950243" accession="NW_921351.1" name="NW_921351.1" chromosome="1" start="24139142" end="81884930" orientation="fwd" gi="88950243" groupTerm="Celera" contigLabel="Celera">
+      <MapLoc asnFrom="27828029" asnTo="27828029" locType="exact" alnQuality="1" orient="forward" physMapInt="51967171" leftFlankNeighborPos="149" rightFlankNeighborPos="151" leftContigNeighborPos="27828028" rightContigNeighborPos="27828030" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="1"></MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="1" hapCount="0"/>
+  </Assembly>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="GRCh37" current="true" reference="true">
+    <Component componentType="contig" ctgId="224514623" accession="NT_032977.9" name="NT_032977.9" chromosome="1" start="30028082" end="120936694" orientation="fwd" gi="224514623" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="23651246" asnTo="23651246" locType="exact" alnQuality="1" orient="forward" physMapInt="53679328" leftFlankNeighborPos="149" rightFlankNeighborPos="151" leftContigNeighborPos="23651245" rightContigNeighborPos="23651247" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="1">
+        <FxnSet geneId="1376" symbol="CPT2" mrnaAcc="NM_000098" mrnaVer="2" fxnClass="utr-variant-3-prime"/>
+        <FxnSet geneId="54987" symbol="C1orf123" mrnaAcc="NM_017887" mrnaVer="1" fxnClass="downstream-variant-500B"/>
+      </MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="1" hapCount="0"/>
+  </Assembly>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="HuRef" current="true">
+    <Component componentType="contig" ctgId="157811766" accession="NW_001838579.2" name="NW_001838579.2" chromosome="1" start="48952737" end="81794720" orientation="rev" gi="157811766" groupTerm="HuRef" contigLabel="HuRef">
+      <MapLoc asnFrom="29999738" asnTo="29999738" locType="exact" alnQuality="1" orient="reverse" physMapInt="51794982" leftFlankNeighborPos="149" rightFlankNeighborPos="151" leftContigNeighborPos="29999737" rightContigNeighborPos="29999739" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="1"></MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="1" hapCount="0"/>
+  </Assembly>
+  <PrimarySequence dbSnpBuild="132" gi="169790951" source="remap" accession="NM_000098">
+    <MapLoc asnFrom="2553" asnTo="2553" locType="exact" alnQuality="1" orient="forward" leftContigNeighborPos="2552" rightContigNeighborPos="2554"></MapLoc>
+  </PrimarySequence>
+  <PrimarySequence dbSnpBuild="132" gi="190358485" source="remap" accession="NG_008035">
+    <MapLoc asnFrom="22228" asnTo="22228" locType="exact" alnQuality="1" orient="forward" leftContigNeighborPos="22227" rightContigNeighborPos="22229"></MapLoc>
+  </PrimarySequence>
+  <RsLinkout resourceId="1" linkValue="672"/>
+  <RsLinkout resourceId="4" linkValue="95146"/>
+  <hgvs>NG_008035.1:g.22229G&gt;A</hgvs>
+  <hgvs>NM_000098.2:c.*62G&gt;A</hgvs>
+  <hgvs>NT_032977.9:g.23651247G&gt;A</hgvs>
+</Rs>
+
+
+
+<Summary/><BaseURL></BaseURL></ExchangeSet>

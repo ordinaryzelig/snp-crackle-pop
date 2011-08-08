@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe Gene::SearchResult do
 
-  it '#parse_esummary returns array of search results' do
-    search_results = Gene::SearchResult.all_from_fixture_file
-    search_results.size.should == 2
-  end
-
   context 'parses attribute' do
 
     before :all do
@@ -15,6 +10,7 @@ describe Gene::SearchResult do
     end
 
     it_parses_attribute :description,   'mitochondrial ribosomal protein S18B'
+    it_parses_attribute :discontinued,  false
     it_parses_attribute :location,      '6p21.3'
     it_parses_attribute :ncbi_id,       28973
     it_parses_attribute :symbol,        'MRPS18B'

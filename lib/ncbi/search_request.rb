@@ -6,21 +6,21 @@
 module NCBI
   module SearchRequest
 
-    def self.included(target)
-      target.send :include, HTTPartyResponse
-      target.class_eval do
-        attr_reader :search_terms
-        attr_reader :ids
-        attr_reader :results
-        attr_reader :search_term
-      end
-    end
+    include HTTPartyResponse
+
+    attr_reader :search_terms
+    attr_reader :ids
+    attr_reader :results
+    attr_reader :search_term
+
+    delegate :ncbi_database_name, to: :parent
 
     def initialize(search_terms)
       @search_terms = search_terms
-      @database_name = self.class.parent.ncbi_database_name
     end
 
+    # Validates that @search_term (singular, i.e. the word that is being searched)
+    # is a number or at least 3 characters.
     def valid?
       begin
         # Attempt to convert to number.
@@ -39,6 +39,10 @@ module NCBI
       results
     end
 
+    def parent
+      self.class.parent
+    end
+
     private
 
     def validate_search_term
@@ -47,18 +51,19 @@ module NCBI
 
     # Use Entrez.ESearch to get ids.
     def search_for_ncbi_ids
-      esearch = Entrez.ESearch(@database_name, @search_terms)
+      esearch = Entrez.ESearch(ncbi_database_name, @search_terms)
       # TODO: doesn't Entrez have a sorting option?
-      @ids = esearch.ids.sort
+      # Uniq the array. Sometimes ESearch uselessly returns more than 1 id.
+      @ids = esearch.ids.uniq.sort
     end
 
     # Use Entrez.ESearch to get document summaries from ids.
     # Assign to @results.
     def get_results_from_ids
-      @response = Entrez.ESummary(@database_name, id: @ids)
+      @response = Entrez.ESummary(ncbi_database_name, id: @ids)
       # URL is too long, probably because there are too many results for NCBI server.
       raise SearchTooBroad.new(@ids) if @response.code == 414
-      @results = self.class.parent::SearchResult.parse_esummary(xml)
+      @results = parent::SearchResult.new_from_splitting_xml(xml)
     end
 
     class NotEnoughCharacters < StandardError

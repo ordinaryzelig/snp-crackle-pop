@@ -1,7 +1,7 @@
 # Extend a nokogiri node with convenience methods that parse an Entrez DocSummary.
 # node.items returns hash with name of item as key and content as value.
 # Value is type cast depending on 'Type' attribute.
-# Node string should look like this:
+# Nokogiri::Node.to_s should look like this:
 # <DocSum>
 #   <Item Name="something" Type="Integer">123</Item>
 #   ...

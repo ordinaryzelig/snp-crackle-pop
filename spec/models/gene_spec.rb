@@ -18,6 +18,7 @@ describe Gene do
     end
 
     it_parses_attribute :description,           'ubiquinol-cytochrome c reductase complex chaperone'
+    it_parses_attribute :discontinued,          false
     it_parses_attribute :diseases,               ["A genome-wide association study in 19 633 Japanese subjects identified LHX3-QSOX2 and IGF1 as adult height loci.",
                                                   "Common variants in the GDF5-UQCC region are associated with variation in human height.",
                                                   "Genome-wide association analysis identifies 20 loci that influence adult height.",
@@ -73,6 +74,19 @@ describe Gene do
   it 'calculates seequence length' do
     gene = Gene.make_from_fixture_file
     gene.sequence_length.should == 109_577
+  end
+
+  it 'fetches unique identifiers' do
+    identifiers = ['UQCC', 'MRPS18B']
+    ncbi_ids = [55245, 28973]
+    Gene.make_from_fixture_file # Will save 55245 (UQCC) to db.
+    # stub unique search.
+    gene_search_results = Gene::SearchResult.all_from_fixture_file.reject(&:discontinued)[0...1]
+    Gene::UniqueIdSearchRequest.any_instance.stubs(:execute).returns(gene_search_results)
+    # stub fetch.
+    stub_entrez_request_with_stubbed_response :EFetch, fixture_file('gene_28973_efetch.xml')
+    genes = Gene.find_all_by_unique_id_field_or_fetch_by_unique_id_field!(identifiers)
+    genes.map(&:ncbi_id).should =~ ncbi_ids
   end
 
 end

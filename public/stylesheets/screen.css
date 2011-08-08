@@ -124,6 +124,9 @@ body {
   background: #eeeeee;
   border: 1px solid #cccccc;
   opacity: 0.9; }
+  #footer:hover {
+    opacity: 1;
+    color: #888888; }
   #footer #version {
     font-size: 10pt;
     padding: 5px; }

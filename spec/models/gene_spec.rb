@@ -40,6 +40,11 @@ describe Gene do
 
   end
 
+  it 'parses attribute discontinued' do
+    gene = Gene.new_from_xml(fixture_file('gene_84531_efetch.xml').read)
+    gene.discontinued.should == true
+  end
+
   it 'assigns itself to child Snps' do
     gene_id = 1
     snp = Snp.make(ncbi_gene_id: gene_id)

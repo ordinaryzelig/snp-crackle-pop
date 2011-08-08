@@ -79,6 +79,11 @@ table.attribute_table tbody td {
   font-style: italic;
   color: gray; }
 
+.discontinued {
+  color: red;
+  font-style: italic;
+  font-size: 125%; }
+
 html {
   font-family: sans-serif; }
 

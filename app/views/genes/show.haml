@@ -5,6 +5,8 @@
   %h1
     :plain
       Gene #{@gene.symbol}
+    - if @gene.discontinued
+      .discontinued= 'DISCONTINUED'
 
   = partial 'shared/ncbi_url', locals: {object: @gene}
 
@@ -18,8 +20,9 @@
       = row_for_attribute @gene, :mim,           label: 'MIM'
       = row_for_attribute @gene, :protein_name
       = row_for_attribute @gene, :sequence_range do
-        :plain
-          #{@gene.sequence_range} (+/-1)
+        - if @gene.sequence_range
+          :plain
+            #{@gene.sequence_range} (+/-1)
       = row_for_attribute @gene, :sequence_length
       = row_for_attribute @gene, :symbols do
         %ul

@@ -8,6 +8,7 @@ class Gene
 
   field :description,            type: String,  xml: lambda { |node| node.css('Gene-ref_desc').first.content }
   field :diseases,               type: Array,   xml: lambda { |node| node.css('Entrezgene_comments > Gene-commentary > Gene-commentary_comment > Gene-commentary > Gene-commentary_type').select { |node| node['value'] == 'phenotype' }.map { |node| node.next.next.content } }
+  field :discontinued,           type: Boolean, xml: lambda { |node| node.css('Gene-track_discontinue-date').present? }
   field :location,               type: String,  xml: lambda { |node| node.css('Gene-ref_maploc').first.content }
   field :mim,                    type: Integer, xml: lambda { |node| node.css('Entrezgene_unique-keys Dbtag_db').detect { |node| node.content == 'MIM' }.next.next.css('Object-id_id').first.content }
   field :ncbi_id,                type: Integer, xml: lambda { |node| node.css('Gene-track_geneid').first.content }
@@ -44,6 +45,7 @@ class Gene
   end
 
   def sequence_range
+    return nil unless [:sequence_accession, :sequence_version, :sequence_interval_from, :sequence_interval_to].all? { |field| send(field).present? }
     "#{sequence_accession}.#{sequence_version} (#{sequence_interval_from}..#{sequence_interval_to})"
   end
 

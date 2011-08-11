@@ -1,5 +1,6 @@
 %ul
 - assemblies.each do |assembly|
   %li
-    :plain
-      #{assembly.base_position} #{'(reference)' if assembly.reference?}
+    = assembly.base_position
+    - if assembly.reference?
+      %span.hint (reference)

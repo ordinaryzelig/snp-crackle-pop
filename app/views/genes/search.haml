@@ -17,7 +17,7 @@
         %li
           %table.attribute_table
             %caption
-              = link_to highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
+              = link_to_unless gene.discontinued, highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
               - if gene.discontinued
                 %span.discontinued= 'DISCONTINUED'
               = partial 'shared/ncbi_url', locals: {object: gene}

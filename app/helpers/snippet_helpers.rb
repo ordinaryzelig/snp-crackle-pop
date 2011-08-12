@@ -28,4 +28,12 @@ SnpCracklePop.helpers do
     partial 'shared/download', locals: {model_class: model_class, caption: caption}
   end
 
+  def link_to_unless(condition, *args)
+    unless condition
+      link_to *args
+    else
+      args.first
+    end
+  end
+
 end

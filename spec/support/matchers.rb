@@ -39,17 +39,19 @@ end
 # and the fixture file needs to be updated as well.
 # If the comparison takes too long, just give up and fail the test.
 # Failure ouputs actual string for easy copy/paste.
-RSpec::Matchers.define :match_xml_response_with do |expected_string|
+RSpec::Matchers.define :match_xml_response_with do |file|
   match do |model|
     begin
       @actual_string = model.response.body.chomp
-      timeout(2.seconds) { @actual_string.should == expected_string.chomp }
+      @file = file
+      timeout(2.seconds) { @actual_string.should == file.read.chomp }
     rescue Timeout::Error
       false
     end
   end
   failure_message_for_should do |model|
+    message = "#{model.class} response did not match #{file.path}."
+    puts message
     puts @actual_string
-    "#{model.class} response did not match given string."
   end
 end

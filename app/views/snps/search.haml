@@ -1,8 +1,17 @@
 .search_model
 
-  %h1 SNPs
+  %h1 Search SNPs
 
   - form_tag url_for(:snps, :search), method: :get do
     %p
       = search_field_tag 'q', value: params[:q], placeholder: 'RS number'
       = submit_tag :Search
+
+  = partial 'shared/locate_form', locals: {url_name: :snps_search, location: @location || {}}
+
+  - if @snp_search_results
+    %h2#found= 'Found ' + pluralize(@snp_search_results.size, 'SNP')
+    %ol
+      - @snp_search_results.each do |snp|
+        %li
+          = link_to snp.rs_number, url(:snps, :show, id: snp.ncbi_id)

@@ -131,9 +131,12 @@ body {
     font-size: 10pt;
     padding: 5px; }
 
-#home form.download {
+#home ul.model {
   display: inline-block;
-  padding: 50px; }
+  padding-left: 30px;
+  padding-right: 30px; }
+  #home ul.model li {
+    padding: 50px; }
 
 .show_model h1 {
   font-size: 20pt;
@@ -160,8 +163,10 @@ body {
   font-size: 20pt;
   margin-bottom: 10px;
   font-weight: bold; }
-.search_model form, .search_model #found {
+.search_model form {
   margin-bottom: 10px; }
+.search_model #found {
+  margin-top: 30px; }
 .search_model ol {
   list-style-type: decimal;
   margin-left: 20px; }

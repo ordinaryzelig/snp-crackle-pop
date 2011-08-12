@@ -5,9 +5,8 @@ describe Snp do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    fixture_file_xml_content = Snp.fixture_file.read
     snp = Snp.fetch(9268480)
-    snp.should match_xml_response_with(fixture_file_xml_content)
+    snp.should match_xml_response_with(Snp.fixture_file)
   end
 
   it 'splits XML into Rs sections' do

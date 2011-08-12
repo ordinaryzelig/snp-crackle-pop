@@ -5,9 +5,8 @@ describe Gene do
   # This tests if the actual response matches what we have stored in the fixture file.
   # If this test passes, we can mock the rest of the way.
   it 'fetches data from NCBI' do
-    fixture_file_xml_content = Gene.fixture_file.read
     gene = Gene.fetch(55245)
-    gene.should match_xml_response_with(fixture_file_xml_content)
+    gene.should match_xml_response_with(Gene.fixture_file)
   end
 
   context 'parses attribute' do
@@ -87,6 +86,12 @@ describe Gene do
     stub_entrez_request_with_stubbed_response :EFetch, fixture_file('gene_28973_efetch.xml')
     genes = Gene.find_all_by_unique_id_field_or_fetch_by_unique_id_field!(identifiers)
     genes.map(&:ncbi_id).should =~ ncbi_ids
+  end
+
+  it 'locates by searching for chromosome and base positions' do
+    ids = Gene::SearchResult.all_from_file(fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml')).map(&:ncbi_id)
+    search_results = Gene.locate(chromosome: 6, base_position_low: 1_000_000, base_position_high: 2_000_000)
+    search_results.map(&:ncbi_id).should =~ ids
   end
 
 end

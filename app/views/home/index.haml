@@ -1,3 +1,5 @@
 #home
   - [:snps, :genes].each do |controller|
-    = render "#{controller}/download", layout: false
+    %ul.model
+      %li= render "#{controller}/search", layout: false
+      %li= render "#{controller}/download", layout: false

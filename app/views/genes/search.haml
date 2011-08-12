@@ -2,12 +2,13 @@
 
 .search_model
 
-  %h1 Genes
+  %h1 Search Genes
 
-  = form_tag url_for(:genes_search), method: 'get' do
-    %p
-      = search_field_tag 'q', value: params[:q], id: 'q', size: 30, placeholder: 'Symbol, name, protein, loc'
-      = submit_tag :Search
+  = form_tag url_for(:genes_search), method: :get do
+    = search_field_tag 'q', value: @term, id: 'q', size: 30, placeholder: 'Symbol, name, protein, loc'
+    = submit_tag :Search
+
+  = partial 'shared/locate_form', locals: {url_name: :genes_search, location: @location || {}}
 
   - if @gene_search_results
     %h2#found= 'Found ' + pluralize(@gene_search_results.size, 'gene')

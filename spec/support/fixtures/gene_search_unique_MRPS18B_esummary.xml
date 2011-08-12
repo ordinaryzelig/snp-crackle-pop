@@ -28,7 +28,7 @@
 			<Item Name="ChrStop" Type="Integer">30594173</Item>
 		</Item>
 	</Item>
-	<Item Name="GeneWeight" Type="Integer">1640</Item>
+	<Item Name="GeneWeight" Type="Integer">1631</Item>
 	<Item Name="Summary" Type="String">Mammalian mitochondrial ribosomal proteins are encoded by nuclear genes and help in protein synthesis within the mitochondrion. Mitochondrial ribosomes (mitoribosomes) consist of a small 28S subunit and a large 39S subunit. They have an estimated 75% protein to rRNA composition compared to prokaryotic ribosomes, where this ratio is reversed. Another difference between mammalian mitoribosomes and prokaryotic ribosomes is that the latter contain a 5S rRNA. Among different species, the proteins comprising the mitoribosome differ greatly in sequence, and sometimes in biochemical properties, which prevents easy recognition by sequence homology. This gene encodes a 28S subunit protein that belongs to the ribosomal protein S18P family. The encoded protein is one of three that has significant sequence similarity to bacterial S18 proteins. The primary sequences of the three human mitochondrial S18 proteins are no more closely related to each other than they are to the prokaryotic S18 proteins. Pseudogenes corresponding to this gene are found on chromosomes 1q and 2q. [provided by RefSeq]</Item>
 	<Item Name="ChrSort" Type="String">06</Item>
 	<Item Name="ChrStart" Type="Integer">30585485</Item>

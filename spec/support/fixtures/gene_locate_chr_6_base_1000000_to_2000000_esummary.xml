@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>2296</Id>
+	<Item Name="Name" Type="String">FOXC1</Item>
+	<Item Name="Description" Type="String">forkhead box C1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25</Item>
+	<Item Name="OtherAliases" Type="String">ARA, FKHL7, FREAC-3, FREAC3, IGDA, IHG1, IRID1, RIEG3</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000017802|forkhead box protein C1|forkhead, drosophila, homolog-like 7|forkhead-related activator 3|forkhead-related protein FKHL7|forkhead-related transcription factor 3|forkhead/winged helix-like transcription factor 7|myeloid factor-delta</Item>
+	<Item Name="NomenclatureSymbol" Type="String">FOXC1</Item>
+	<Item Name="NomenclatureName" Type="String">forkhead box C1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">601090</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1610680</Item>
+			<Item Name="ChrStop" Type="Integer">1614131</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">14733</Item>
+	<Item Name="Summary" Type="String">This gene belongs to the forkhead family of transcription factors which is characterized by a distinct DNA-binding forkhead domain. The specific function of this gene has not yet been determined; however, it has been shown to play a role in the regulation of embryonic and ocular development. Mutations in this gene cause various glaucoma phenotypes including primary congenital glaucoma, autosomal dominant iridogoniodysgenesis anomaly, and Axenfeld-Rieger anomaly. [provided by RefSeq]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1610680</Item>
+</DocSum>
+
+<DocSum>
+	<Id>94234</Id>
+	<Item Name="Name" Type="String">FOXQ1</Item>
+	<Item Name="Description" Type="String">forkhead box Q1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25</Item>
+	<Item Name="OtherAliases" Type="String">HFH1</Item>
+	<Item Name="OtherDesignations" Type="String">HFH-1|HNF-3/forkhead-like protein 1|OTTHUMP00000017774|forkhead box protein Q1|hepatocyte nuclear factor 3 forkhead homolog 1|winged helix/forkhead transcription factor</Item>
+	<Item Name="NomenclatureSymbol" Type="String">FOXQ1</Item>
+	<Item Name="NomenclatureName" Type="String">forkhead box Q1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">612788</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1312674</Item>
+			<Item Name="ChrStop" Type="Integer">1314992</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2849</Item>
+	<Item Name="Summary" Type="String">FOXQ1 is a member of the FOX gene family, which is characterized by a conserved 110-amino acid DNA-binding motif called the forkhead or winged helix domain. FOX genes are involved in embryonic development, cell cycle regulation, tissue-specific gene expression, cell signaling, and tumorigenesis (Bieller et al., 2001 [PubMed 11747606]).[supplied by OMIM]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1312674</Item>
+</DocSum>
+
+<DocSum>
+	<Id>2295</Id>
+	<Item Name="Name" Type="String">FOXF2</Item>
+	<Item Name="Description" Type="String">forkhead box F2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String">FKHL6, FREAC2</Item>
+	<Item Name="OtherDesignations" Type="String">FREAC-2|OTTHUMP00000017863|forkhead box protein F2|forkhead-like 6|forkhead-related activator 2|forkhead-related protein FKHL6|forkhead-related transcription factor 2</Item>
+	<Item Name="NomenclatureSymbol" Type="String">FOXF2</Item>
+	<Item Name="NomenclatureName" Type="String">forkhead box F2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">603250</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1390068</Item>
+			<Item Name="ChrStop" Type="Integer">1395831</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2663</Item>
+	<Item Name="Summary" Type="String">FOXF2 encodes forkhead box F2, one of many human homologues of the Drosophila melanogaster transcription factor forkhead. FOXF2 is expressed in lung and placenta, and has been shown to transcriptionally activate several lung-specific genes. [provided by RefSeq]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1390068</Item>
+</DocSum>
+
+<DocSum>
+	<Id>2762</Id>
+	<Item Name="Name" Type="String">GMDS</Item>
+	<Item Name="Description" Type="String">GDP-mannose 4,6-dehydratase</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25</Item>
+	<Item Name="OtherAliases" Type="String">RP1-118B18.1, GMD, SDR3E1</Item>
+	<Item Name="OtherDesignations" Type="String">GDP-D-mannose dehydratase|GDP-mannose 4,6 dehydratase|OTTHUMP00000017756|OTTHUMP00000232770|short chain dehydrogenase/reductase family 3E, member 1</Item>
+	<Item Name="NomenclatureSymbol" Type="String">GMDS</Item>
+	<Item Name="NomenclatureName" Type="String">GDP-mannose 4,6-dehydratase</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">602884</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">2245845</Item>
+			<Item Name="ChrStop" Type="Integer">1624040</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2445</Item>
+	<Item Name="Summary" Type="String">GDP-mannose 4,6-dehydratase (GMD; EC 4.2.1.47) catalyzes the conversion of GDP-mannose to GDP-4-keto-6-deoxymannose, the first step in the synthesis of GDP-fucose from GDP-mannose, using NADP+ as a cofactor. The second and third steps of the pathway are catalyzed by a single enzyme, GDP-keto-6-deoxymannose 3,5-epimerase, 4-reductase, designated FX in humans (MIM 137020).[supplied by OMIM]</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1624040</Item>
+</DocSum>
+
+<DocSum>
+	<Id>260335</Id>
+	<Item Name="Name" Type="String">ELF2P2</Item>
+	<Item Name="Description" Type="String">E74-like factor 2 pseudogene 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">ELF2P2</Item>
+	<Item Name="NomenclatureName" Type="String">E74-like factor 2 pseudogene 2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1515816</Item>
+			<Item Name="ChrStop" Type="Integer">1512575</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">421</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1512575</Item>
+</DocSum>
+
+<DocSum>
+	<Id>401230</Id>
+	<Item Name="Name" Type="String">FLJ46552</Item>
+	<Item Name="Description" Type="String">FLJ46552 protein</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1620997</Item>
+			<Item Name="ChrStop" Type="Integer">1617523</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">318</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1617523</Item>
+</DocSum>
+
+<DocSum>
+	<Id>285768</Id>
+	<Item Name="Name" Type="String">LOC285768</Item>
+	<Item Name="Description" Type="String">hypothetical LOC285768</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1101566</Item>
+			<Item Name="ChrStop" Type="Integer">961240</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">25</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">961240</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100288267</Id>
+	<Item Name="Name" Type="String">LOC100288267</Item>
+	<Item Name="Description" Type="String">hypothetical protein LOC100288267</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.11</Item>
+			<Item Name="ChrStart" Type="Integer">1385294</Item>
+			<Item Name="ChrStop" Type="Integer">1384026</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1384026</Item>
+</DocSum>
+
+<DocSum>
+	<Id>642728</Id>
+	<Item Name="Name" Type="String">FLJ34594</Item>
+	<Item Name="Description" Type="String">hypothetical protein LOC642728</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">6</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">6p25.3</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">6</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000006.10</Item>
+			<Item Name="ChrStart" Type="Integer">1025163</Item>
+			<Item Name="ChrStop" Type="Integer">1050180</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String">DISCONTINUED: This record has been withdrawn by NCBI staff. This record was defined by AK091913.1 and NM_001039760.1, which contain repetitive elements.</Item>
+	<Item Name="ChrSort" Type="String">06</Item>
+	<Item Name="ChrStart" Type="Integer">1025163</Item>
+</DocSum>
+
+</eSummaryResult>

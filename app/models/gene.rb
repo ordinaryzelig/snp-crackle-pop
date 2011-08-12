@@ -1,6 +1,7 @@
 class Gene
 
   include NCBI::Document
+  extend NCBI::Locatable
 
   verify_xml { |node| node.css('Entrezgene_track-info').first }
   split_xml_on { |doc| doc.css('Entrezgene') }
@@ -94,12 +95,17 @@ class Gene
     include NCBI::UniqueIdSearchRequest
   end
 
+  # Locate objects by chromosome and base positions.
+  class LocationRequest
+    include NCBI::LocationRequest
+  end
+
   class SearchResult
     include NCBI::SearchResult
     field(:description)   { |node| node.items['Description'] }
     field(:discontinued)  { |node| node.items['CurrentID'] != 0 }
     field(:location)      { |node| node.items['MapLocation'] }
-    field(:symbol)        { |node| node.items['NomenclatureSymbol'] }
+    field(:symbol)        { |node| node.items['Name'] }
     field(:symbols_other) { |node| node.items['OtherAliases'].split(', ') }
     field(:other)         { |node| node.items['OtherDesignations'] }
   end

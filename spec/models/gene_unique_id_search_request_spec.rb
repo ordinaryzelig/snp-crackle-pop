@@ -5,8 +5,7 @@ describe Gene::UniqueIdSearchRequest do
   it 'performs Entrez ESearch and ESummary requests' do
     search_request = Gene::UniqueIdSearchRequest.new('MRPS18B')
     search_request.execute
-    fixture_file_content = Gene::UniqueIdSearchRequest.fixture_file.read
-    search_request.should match_xml_response_with(fixture_file_content)
+    search_request.should match_xml_response_with(Gene::UniqueIdSearchRequest.fixture_file)
   end
 
   # Perform the same search for Gene::SearchRequest and Gene::UniqueIdSearchRequest.

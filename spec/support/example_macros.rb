@@ -10,14 +10,26 @@ module ExampleMacros
     File.open(Padrino.root + '/spec/support/fixtures/' + file_name)
   end
 
+  def fill_in_fields(fields_and_values)
+    fields_and_values.each do |field, value|
+      fill_in field.to_s, with: value
+    end
+  end
+
   # Generic steps to search for a term.
   # Assumes there is a form with a text field named 'q'
   # and a Search button.
   def submit_search_for(term)
     within '#main' do
-      fill_in 'q', with: term
+      fill_in_fields 'q' => term
       click_button 'Search'
     end
+  end
+
+  def submit_location_search_for(terms)
+    formatted_terms = terms.each_with_object({}) { |(field, value), new| new["location[#{field}]"] = value }
+    fill_in_fields(formatted_terms)
+    click_button 'Locate'
   end
 
   def submit_polymorphic_search_for(model_class, term)

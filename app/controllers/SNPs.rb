@@ -6,13 +6,15 @@ SnpCracklePop.controllers :snps do
 
   # Perform unique id search.
   get :search do
+    @location = params[:location]
     if params[:q]
       rs_number = params[:q].match(/(?<number>\d+)/)[:number]
       snp = Snp.find_all_by_unique_id_field_or_fetch_by_unique_id_field!([rs_number]).first
       redirect url(:snps, :show, id: snp.rs_number)
-    else
-      haml :'snps/search'
+    elsif @location
+      @snp_search_results = Snp.locate(@location)
     end
+    haml :'snps/search'
   end
 
   get :show, 'snps/:id' do

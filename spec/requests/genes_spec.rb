@@ -2,13 +2,28 @@ require 'spec_helper'
 
 describe 'Genes', type: :acceptance do
 
-  it 'searches NCBI' do
+  it 'searches NCBI by symbol, name, protein, or location' do
     visit url(:genes, :search)
     search_results = Gene::SearchResult.all_from_fixture_file
     Gene.stubs(:search).returns(search_results)
     submit_search_for 'human'
     ['MRPS18B', 'MRPS18A'].each do |symbol|
       find_link(symbol)
+    end
+  end
+
+  it 'searches NCBI by chromosome and base position' do
+    terms = {
+      chromosome:         '6',
+      base_position_low:  1_000_000,
+      base_position_high: 2_000_000,
+    }
+    search_results = Gene::SearchResult.all_from_file(fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml'))
+    Gene.stubs(:locate).returns(search_results)
+    visit url(:genes, :search)
+    submit_location_search_for terms
+    search_results.each do |search_result|
+      find_link(search_result.symbol)
     end
   end
 

@@ -24,7 +24,10 @@
             <Date-std>
               <Date-std_year>2011</Date-std_year>
               <Date-std_month>8</Date-std_month>
-              <Date-std_day>5</Date-std_day>
+              <Date-std_day>7</Date-std_day>
+              <Date-std_hour>13</Date-std_hour>
+              <Date-std_minute>20</Date-std_minute>
+              <Date-std_second>0</Date-std_second>
             </Date-std>
           </Date_std>
         </Date>
@@ -7014,10 +7017,10 @@
               <Date_std>
                 <Date-std>
                   <Date-std_year>2011</Date-std_year>
-                  <Date-std_month>7</Date-std_month>
-                  <Date-std_day>3</Date-std_day>
-                  <Date-std_hour>12</Date-std_hour>
-                  <Date-std_minute>17</Date-std_minute>
+                  <Date-std_month>8</Date-std_month>
+                  <Date-std_day>7</Date-std_day>
+                  <Date-std_hour>13</Date-std_hour>
+                  <Date-std_minute>20</Date-std_minute>
                   <Date-std_second>0</Date-std_second>
                 </Date-std>
               </Date_std>
@@ -7117,10 +7120,10 @@
               <Date_std>
                 <Date-std>
                   <Date-std_year>2011</Date-std_year>
-                  <Date-std_month>7</Date-std_month>
-                  <Date-std_day>3</Date-std_day>
-                  <Date-std_hour>11</Date-std_hour>
-                  <Date-std_minute>53</Date-std_minute>
+                  <Date-std_month>8</Date-std_month>
+                  <Date-std_day>7</Date-std_day>
+                  <Date-std_hour>13</Date-std_hour>
+                  <Date-std_minute>20</Date-std_minute>
                   <Date-std_second>0</Date-std_second>
                 </Date-std>
               </Date_std>
@@ -7220,10 +7223,10 @@
               <Date_std>
                 <Date-std>
                   <Date-std_year>2011</Date-std_year>
-                  <Date-std_month>7</Date-std_month>
-                  <Date-std_day>3</Date-std_day>
-                  <Date-std_hour>11</Date-std_hour>
-                  <Date-std_minute>40</Date-std_minute>
+                  <Date-std_month>8</Date-std_month>
+                  <Date-std_day>7</Date-std_day>
+                  <Date-std_hour>13</Date-std_hour>
+                  <Date-std_minute>20</Date-std_minute>
                   <Date-std_second>0</Date-std_second>
                 </Date-std>
               </Date_std>

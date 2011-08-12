@@ -8,9 +8,13 @@
   font-weight: bold
 
 #home
-  form.download
+  ul.model
     display: inline-block
-    padding: 50px
+    $padding: 30px
+    padding-left: $padding
+    padding-right: $padding
+    li
+      padding: 50px
 
 .show_model
   h1
@@ -33,12 +37,16 @@
       clear: both
       margin-right: 5px
       font-weight: bold
+  .discontinued
+    font-size: 125%
 
 .search_model
   h1
     @include model_h1
-  form, #found
+  form
     margin-bottom: 10px
+  #found
+    margin-top: 30px
   ol
     list-style-type: decimal
     margin-left: 20px

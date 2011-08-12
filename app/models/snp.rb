@@ -1,6 +1,7 @@
 class Snp
 
   include NCBI::Document
+  extend NCBI::Locatable
 
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
   split_xml_on { |doc| doc.css('Rs') }
@@ -56,6 +57,10 @@ class Snp
 
   def assign_gene
     self.gene = Gene.find_by_ncbi_id self.ncbi_gene_id
+  end
+
+  class LocationRequest
+    include NCBI::LocationRequest
   end
 
   class UniqueIdSearchRequest

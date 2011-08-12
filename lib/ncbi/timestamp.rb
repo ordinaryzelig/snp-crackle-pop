@@ -12,7 +12,7 @@ module NCBI
     private
 
     def set_updated_from_ncbi_at
-      self.updated_from_ncbi_at = Time.now.utc
+      self.updated_from_ncbi_at = Time.zone.now.utc
     end
 
     module ClassMethods

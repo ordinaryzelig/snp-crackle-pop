@@ -23,3 +23,5 @@
 
 # Mounts the core application for this project
 Padrino.mount("SnpCracklePop").to('/')
+
+Time.zone = 'US/Central'

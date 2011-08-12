@@ -1,5 +1,5 @@
 %tr
   %th{colspan: 2}
     Updated from NCBI at
-    %span.time= object.updated_from_ncbi_at
+    %span.time= object.updated_from_ncbi_at.in_time_zone
     %span.link= link_to 'Get updates', url(object.class.name.tableize.to_sym, :refetch, id: object.ncbi_id, method: :put), title: "#{object.class.humanize} will update immediately"

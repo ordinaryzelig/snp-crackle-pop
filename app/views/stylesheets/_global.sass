@@ -26,6 +26,8 @@ table.attribute_table
   tbody
     tr:nth-child(odd)
       background-color: #eee
+    tr:nth-child(even)
+      background-color: #fff
     th, td
       $padding: 5px
       padding: $padding
@@ -38,6 +40,7 @@ table.attribute_table
       font-size: 14pt
       vertical-align: top
     td
+      vertical-align: middle
       padding-left: 20px
 
 #ncbi_url
@@ -48,6 +51,13 @@ table.attribute_table
   font-style: italic
   color: gray
 
-.discontinued
+@mixin discontinued
   color: red
   font-style: italic
+
+.discontinued
+  @include discontinued
+
+.discontinued_info
+  @include discontinued
+  font-size: 70%

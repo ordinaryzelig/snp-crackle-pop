@@ -10,9 +10,7 @@
 module NokogiriDocSummary
 
   def items
-    @items ||= children.select do |node|
-      node.name == 'Item'
-    end.each_with_object({}) do |item_node, hash|
+    css('Item').each_with_object({}) do |item_node, hash|
       value = item_node.content
       case item_node['Type']
       when 'Integer'

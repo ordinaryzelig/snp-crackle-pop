@@ -22,9 +22,7 @@ describe 'Genes', type: :acceptance do
     Gene.stubs(:locate).returns(search_results)
     visit url(:genes, :search)
     submit_location_search_for terms
-    search_results.each do |search_result|
-      find_link(search_result.symbol)
-    end
+    search_results.should be_found_on_search_results_page_when_looking_for(:symbol)
   end
 
   it 'fetches data from search result' do

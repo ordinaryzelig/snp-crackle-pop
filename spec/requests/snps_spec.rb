@@ -19,9 +19,7 @@ describe 'Snps', type: :acceptance do
     Snp.stubs(:locate).returns(search_results)
     visit url(:snps, :search)
     submit_location_search_for terms
-    search_results.each do |search_result|
-      find_link(search_result.rs_number)
-    end
+    search_results.should be_found_on_search_results_page_when_looking_for(:rs_number)
   end
 
   it "can be searched by rs number with 'rs' at front" do

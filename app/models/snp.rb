@@ -74,9 +74,20 @@ class Snp
   end
 
   class SearchResult
+
     include NCBI::SearchResult
-    field(:rs_number) { |node| "rs#{node.items['SNP_ID']}" } # Prepend 'rs' just for convenience when validating unique id search results.
-    def discontinued; false; end
+
+    field(:base_position)  { |node| node.items['CHRPOS'].match(/\d:(?<base_position>\d+)/)[:base_position].to_i }
+    field(:chromosome)     { |node| node.items['CHR'].to_i }
+    field(:function_class) { |node| node.items['FXN_CLASS'] }
+    field(:merged_with)    { |node| if match = node.items['TEXT'].match(/MergedRs=(?<rs>\d+)/) then match[:rs].to_i end }
+    field(:rs_number)      { |node| "rs#{node.items['SNP_ID']}" } # Prepend 'rs' just for convenience when validating unique id search results.
+    field(:snp_class)      { |node| node.items['SNP_CLASS'] }
+
+    def discontinued
+      merged_with.present?
+    end
+
   end
 
 end

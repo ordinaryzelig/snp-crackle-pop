@@ -101,13 +101,31 @@ class Gene
   end
 
   class SearchResult
+
     include NCBI::SearchResult
-    field(:description)   { |node| node.items['Description'] }
-    field(:discontinued)  { |node| node.items['CurrentID'] != 0 }
-    field(:location)      { |node| node.items['MapLocation'] }
-    field(:symbol)        { |node| node.items['Name'] }
-    field(:symbols_other) { |node| node.items['OtherAliases'].split(', ') }
-    field(:other)         { |node| node.items['OtherDesignations'] }
+
+    field(:accession)          { |node| node.items['ChrAccVer'] }
+    field(:base_position_low)  { |node| node.items['ChrStart'] }
+    field(:base_position_high) { |node| node.items['ChrStop'] }
+    field(:chromosome)         { |node| node.items['ChrLoc'].to_i }
+    field(:description)        { |node| node.items['Description'] }
+    field(:location)           { |node| node.items['MapLocation'] }
+    field(:replaced_with)      { |node| (id = node.items['CurrentID']) == 0 ? nil : id }
+    field(:status)             { |node| node.items['Status'] }
+    field(:summary)            { |node| node.items['Summary'] }
+    field(:symbol)             { |node| node.items['Name'] }
+    field(:symbols_other)      { |node| node.items['OtherAliases'].split(', ') }
+    field(:other)              { |node| node.items['OtherDesignations'] }
+
+    def discontinued
+      status != 0
+    end
+
+    def sequence_range
+      return nil unless [:accession, :base_position_low, :base_position_high].all? { |field| send(field).present? }
+      "#{accession} (#{base_position_low}..#{base_position_high})"
+    end
+
   end
 
 end

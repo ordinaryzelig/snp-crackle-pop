@@ -48,13 +48,24 @@
   ol
     list-style-type: decimal
     margin-left: 20px
+    font-weight: bold
     li
-      $margin: 10px
+      $margin: 25px
       margin-top: $margin
       margin-bottom: $margin
+      padding: 5px
+      padding-left: 10px
+      .summary
+        font-size: 60%
+        color: gray
       table.attribute_table
         display: inline-block
         vertical-align: top
+        border: 2px solid #aaa
+        padding: 5px
+        border-radius: 10px
+        &:hover
+          border-color: green
         caption
           font-size: 25px
           #ncbi_url

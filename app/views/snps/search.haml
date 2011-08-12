@@ -14,4 +14,18 @@
     %ol
       - @snp_search_results.each do |snp|
         %li
-          = link_to snp.rs_number, url(:snps, :show, id: snp.ncbi_id)
+          %table.attribute_table
+            %caption
+              = link_to_unless snp.discontinued, snp.rs_number, url(:snps, :show, id: snp.ncbi_id)
+              - if snp.discontinued
+                %span.discontinued DISCONTINUED
+                - if snp.merged_with
+                  .discontinued_info
+                    :plain
+                      merged with #{link_to "rs#{snp.merged_with}", url(:snps, :show, id: snp.merged_with)}
+              = partial 'shared/ncbi_url', locals: {object: snp}
+            %tbody
+              = row_for_attribute snp, :base_position
+              = row_for_attribute snp, :chromosome
+              = row_for_attribute snp, :function_class
+              = row_for_attribute snp, :snp_class

@@ -19,9 +19,19 @@
             %caption
               = link_to_unless gene.discontinued, highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
               - if gene.discontinued
-                %span.discontinued= 'DISCONTINUED'
+                %span.discontinued DISCONTINUED
+                -if gene.replaced_with
+                  .discontinued_info
+                    :plain
+                      replaced with gene id #{link_to gene.replaced_with, url(:genes, :show, id: gene.replaced_with)}
               = partial 'shared/ncbi_url', locals: {object: gene}
+              - if gene.summary
+                .summary= gene.summary
             %tbody
+              = row_for_attribute gene, :sequence_range do
+                - if gene.sequence_range
+                  :plain
+                    #{gene.sequence_range} (+/-1)
               = row_for_attribute gene, :description, highlight: @term
               = row_for_attribute gene, :location, highlight: @term
               = row_for_attribute gene, :symbols_other, highlight: @term do

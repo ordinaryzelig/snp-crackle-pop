@@ -17,7 +17,7 @@
         = partial 'assemblies/assemblies', locals: {assemblies: @snp.assemblies}
       = row_for_attribute @snp, :chromosome
       = row_for_attribute @snp, :gene do
-        = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.ncbi_gene_id)
+        = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.ncbi_gene_id) if @snp.gene_symbol
       = row_for_attribute @snp, :het_uncertainty
       = row_for_attribute @snp, :heterozygosity
       = row_for_attribute @snp, :min_success_rate

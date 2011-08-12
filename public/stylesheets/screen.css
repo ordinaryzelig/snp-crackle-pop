@@ -81,8 +81,7 @@ table.attribute_table tbody td {
 
 .discontinued {
   color: red;
-  font-style: italic;
-  font-size: 125%; }
+  font-style: italic; }
 
 html {
   font-family: sans-serif; }

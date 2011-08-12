@@ -6,7 +6,7 @@
     :plain
       Gene #{@gene.symbol}
     - if @gene.discontinued
-      .discontinued= 'DISCONTINUED'
+      %span.discontinued= 'DISCONTINUED'
 
   = partial 'shared/ncbi_url', locals: {object: @gene}
 

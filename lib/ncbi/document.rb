@@ -63,7 +63,7 @@ module NCBI
         objects.each { |obj| obj.response = response }
         # Verify all found.
         ids_not_found = ids - objects.map(&:ncbi_id)
-        raise NotFound.new(ids_not_found) if ids_not_found.any?
+        raise NotFound.new(ids_not_found, self) if ids_not_found.any?
         if ncbi_id_or_ids.respond_to?(:each)
           objects
         else
@@ -71,10 +71,10 @@ module NCBI
         end
       rescue NCBI::XMLParseable::XMLCouldNotBeVerified
         # This might happen if ncbi_ids had the correct format, but were not found anyway.
-        raise NotFound.new(ncbi_id_or_ids)
+        raise NotFound.new(ncbi_id_or_ids, self)
       rescue BadResponse
         # This could either be a badly formed request, or more likely, ncbi_ids were not valid.
-        raise NotFound.new(ncbi_id_or_ids)
+        raise NotFound.new(ncbi_id_or_ids, self)
       end
 
       # Same as fetch and saves to database.
@@ -235,11 +235,8 @@ module NCBI
     end
 
     class NotFound < StandardError
-      def initialize(ncbi_ids)
-        super("NCBI could not find #{model_class.name.humanize} with id(s): #{ncbi_ids}")
-      end
-      def model_class
-        self.class.parent
+      def initialize(ncbi_ids, model_class)
+        super("NCBI could not find #{model_class.humanize} with id(s): #{ncbi_ids}")
       end
     end
 

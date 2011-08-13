@@ -25,8 +25,9 @@ class SnpCracklePop < Padrino::Application
 
     # Overwrite Padrino's default errors.
     def default_errors!
-      error NCBI::Document::NotFound do
+      error DisplayableError do
         @exception = env['sinatra.error']
+        response.status = 500
         haml :'shared/exception'
       end
     end

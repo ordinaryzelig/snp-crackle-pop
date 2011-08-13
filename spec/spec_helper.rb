@@ -16,6 +16,8 @@ Spork.prefork do
 end
 
 Spork.each_run do
+  # Spork (I think) kills Time.zone, so load it at each run.
+  load Padrino.root + '/config/initializers/time_zone.rb'
   # require files in support dir.
   Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
   RSpec.configure do |config|

@@ -66,13 +66,13 @@ module NCBI
       @results = parent::SearchResult.new_from_splitting_xml(xml)
     end
 
-    class NotEnoughCharacters < StandardError
+    class NotEnoughCharacters < DisplayableError
       def initialize(term)
         super "Search requires at least 3 characters: #{term}"
       end
     end
 
-    class SearchTooBroad < StandardError
+    class SearchTooBroad < DisplayableError
       def initialize(ids)
         super "Search is too broad: #{ids.size} results"
       end

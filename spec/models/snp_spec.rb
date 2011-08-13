@@ -101,7 +101,7 @@ describe Snp do
   end
 
   it 'raises exception if all ids not found when fetching' do
-    lambda { Snp.fetch([9268480, 1]) }.should raise_error(NCBI::Document::NotFound)
+    lambda { Snp.fetch([9268480, 1]) }.should raise_error(Snp::NotFound)
   end
 
   it 'fetches unique identifiers' do

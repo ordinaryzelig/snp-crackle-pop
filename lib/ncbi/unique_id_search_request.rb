@@ -34,24 +34,24 @@ module NCBI
         found = results.select { |r| r.unique_identifier.to_s =~ Regexp.new(id, true) }
         case found.size
         when 0
-          raise NotFound.new(id)
+          raise NotFound.new(id, self.class.parent)
         when 1
           # Search produced single result, which makes it unique.
         else
-          raise NotUnique.new(id, found.size)
+          raise NotUnique.new(id, found.size, self.class.parent)
         end
       end
     end
 
-    class NotFound < StandardError
-      def initialize(id)
-        super "Search could not find '#{id}'"
+    class NotFound < DisplayableError
+      def initialize(id, model_class)
+        super "#{model_class.humanize} search could not find '#{id}'"
       end
     end
 
-    class NotUnique < StandardError
-      def initialize(id, num_found)
-        super "Identifier '#{id}' is not unique: searching found #{num_found} results"
+    class NotUnique < DisplayableError
+      def initialize(id, num_found, model_class)
+        super "#{model_class.humanize} identifier '#{id}' is not unique: searching found #{num_found} results"
       end
     end
 

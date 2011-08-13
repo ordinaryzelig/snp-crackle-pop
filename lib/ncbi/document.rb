@@ -234,7 +234,7 @@ module NCBI
       end
     end
 
-    class NotFound < StandardError
+    class NotFound < DisplayableError
       def initialize(ncbi_ids, model_class)
         super("NCBI could not find #{model_class.humanize} with id(s): #{ncbi_ids}")
       end

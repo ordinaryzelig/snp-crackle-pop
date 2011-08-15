@@ -10,7 +10,7 @@ gem 'thin', '1.2.7' # or mongrel
 
 # Component requirements
 gem 'bson_ext', '1.3.1'
-gem 'entrez', '0.5.6'
+gem 'entrez', '0.5.7'
 gem 'haml', '3.1.1'
 gem 'mongoid', '2.0.0.rc.7'
 gem 'nokogiri', '1.4.4'

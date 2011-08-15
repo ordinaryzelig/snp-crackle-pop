@@ -21,16 +21,22 @@ class SnpCracklePop < Padrino::Application
     #disable :show_exceptions
   end
 
-  class << self
+  # Uncomment following line to disable typical development exception backtrace and
+  # let error handling process Exception like in production.
+  #set :show_exceptions, false
 
-    # Overwrite Padrino's default errors.
-    def default_errors!
-      error DisplayableError do
-        @exception = env['sinatra.error']
-        response.status = 500
-        haml :'shared/exception'
-      end
+  # Only show Exception messages of DisplayableErrors.
+  error do
+    @exception = env['sinatra.error']
+    case @exception
+    when DisplayableError
+      haml :'shared/exception'
+    else
+      raise @exception
     end
+  end
+
+  class << self
 
     def refetch_action(model_class)
       get :refetch, with: :id do

@@ -39,4 +39,15 @@ describe 'Snps', type: :acceptance do
 
   it_can_download_csv_of_list_of_ncbi_ids
 
+  raise_errors_disabled do
+
+    it 'displays "displayable" error message when SNP not found' do
+      visit url(:snps, :show, id: 1)
+      within '.error' do
+        page.should have_content('NCBI could not find SNP with id(s): [1]')
+      end
+    end
+
+  end
+
 end

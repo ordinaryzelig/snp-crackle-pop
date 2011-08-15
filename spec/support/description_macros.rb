@@ -59,6 +59,14 @@ module DescriptionMacros
     end
   end
 
+  # For the duration of this context, set SinatraApp.raise_errors to false.
+  # This will force the app to handle exceptions (like in production).
+  def raise_errors_disabled
+    before(:all) { SnpCracklePop.set :raise_errors, false }
+    yield
+    after(:all)  { SnpCracklePop.set :raise_errors, true }
+  end
+
   private
 
   def model_class

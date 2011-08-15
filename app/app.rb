@@ -38,6 +38,9 @@ class SnpCracklePop < Padrino::Application
 
   class << self
 
+    # Overwrite Padrino's default errors so ours above will be used instead.
+    def default_errors!; end
+
     def refetch_action(model_class)
       get :refetch, with: :id do
         object = model_class.find_by_ncbi_id(params[:id])

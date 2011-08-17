@@ -61,4 +61,28 @@ module ExampleMacros
     url(model_class.name.tableize.to_sym, action, parameters)
   end
 
+  # Use FakeWeb to simulate Entrez service with fakeweb options (mainly the :body options).
+  # Since the generated URL is a bit difficult to capture,
+  # Faked uri will just match regular expression of service.
+  # When block ends, clean registry.
+  def fake_service(service, options, &block)
+    FakeWeb.register_uri(:get, Regexp.new(service.to_s.downcase), options.merge(content_type: 'text/xml'))
+    block.call
+  ensure
+    FakeWeb.clean_registry
+  end
+
+  def fake_service_with_file(service, file, &block)
+    file_content = file.read
+    file.rewind
+    fake_service(service, body: file_content, &block)
+  end
+
+  # Fake ESearch with nothing, fake ESummary with file contents.
+  def fake_search_request(file, &block)
+    fake_service_with_file :ESearch, fixture_file('empty_esearch.xml') do
+      fake_service_with_file :ESummary, file, &block
+    end
+  end
+
 end

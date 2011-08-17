@@ -4,9 +4,9 @@ describe 'Genes', type: :acceptance do
 
   it 'searches NCBI by symbol, name, protein, or location' do
     visit url(:genes, :search)
-    search_results = Gene::SearchResult.all_from_fixture_file
-    Gene.stubs(:search).returns(search_results)
-    submit_search_for 'human'
+    fake_search_request Gene::SearchResult.fixture_file do
+      submit_search_for 'human'
+    end
     ['MRPS18B', 'MRPS18A'].each do |symbol|
       find_link(symbol)
     end
@@ -18,18 +18,25 @@ describe 'Genes', type: :acceptance do
       base_position_low:  1_000_000,
       base_position_high: 2_000_000,
     }
-    search_results = Gene::SearchResult.all_from_file(fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml'))
-    Gene.stubs(:locate).returns(search_results)
     visit url(:genes, :search)
-    submit_location_search_for terms
+    file = fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml')
+    fake_search_request file do
+      submit_location_search_for terms
+    end
+    search_results = Gene::SearchResult.all_from_file(file)
     search_results.should be_found_on_search_results_page_when_looking_for(:symbol)
   end
 
   it 'fetches data from search result' do
     visit url(:genes, :search)
     gene = Gene.from_fixture_file
-    submit_search_for gene.symbol
-    click_link(gene.symbol)
+    Taxonomy.make_from_fixture_file
+    fake_search_request fixture_file('gene_search_UQCC_esummary.xml') do
+      submit_search_for gene.symbol
+    end
+    fake_service_with_file :EFetch, fixture_file('gene_55245_efetch.xml') do
+      click_link(gene.symbol)
+    end
     current_path.should == url_for(gene)
     page.should have_content(gene.description)
   end

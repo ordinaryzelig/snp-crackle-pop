@@ -1,0 +1,2634 @@
+<?xml version="1.0"?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>2686</Id>
+	<Item Name="Name" Type="String">GGT7</Item>
+	<Item Name="Description" Type="String">gamma-glutamyltransferase 7</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">D20S101, GGT4, GGTL3, GGTL5, dJ18C9.2</Item>
+	<Item Name="OtherDesignations" Type="String">GGT 7|OTTHUMP00000030708|gamma-glutamyltransferase 4|gamma-glutamyltransferase-like 3|gamma-glutamyltransferase-like 5|gamma-glutamyltranspeptidase 7|gamma-glutamyltranspeptidase-like 3</Item>
+	<Item Name="NomenclatureSymbol" Type="String">GGT7</Item>
+	<Item Name="NomenclatureName" Type="String">gamma-glutamyltransferase 7</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">612342</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33460660</Item>
+			<Item Name="ChrStop" Type="Integer">33432522</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1713</Item>
+	<Item Name="Summary" Type="String">This gene is a member of a gene family that encodes enzymes involved in both the metabolism of glutathione and in the transpeptidation of amino acids. Changes in the activity of gamma-glutamyltransferase may signal preneoplastic or toxic conditions in the liver or kidney. The protein encoded by this gene consists of a heavy and a light chain, and it can interact with CT120, a plasma membrane-associated protein that is possibly involved in lung carcinogenesis. [provided by RefSeq, Jul 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33432522</Item>
+</DocSum>
+
+<DocSum>
+	<Id>8904</Id>
+	<Item Name="Name" Type="String">CPNE1</Item>
+	<Item Name="Description" Type="String">copine I</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP1-309K20.2, COPN1, CPN1, MGC1142</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030775|OTTHUMP00000030776|OTTHUMP00000030778|OTTHUMP00000030784|OTTHUMP00000196688|OTTHUMP00000199602|OTTHUMP00000204169|copine-1</Item>
+	<Item Name="NomenclatureSymbol" Type="String">CPNE1</Item>
+	<Item Name="NomenclatureName" Type="String">copine I</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">604205</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34252877</Item>
+			<Item Name="ChrStop" Type="Integer">34213952</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2527</Item>
+	<Item Name="Summary" Type="String">Calcium-dependent membrane-binding proteins may regulate molecular events at the interface of the cell membrane and cytoplasm. This gene encodes a calcium-dependent protein that also contains two N-terminal type II C2 domains and an integrin A domain-like sequence in the C-terminus. However, the encoded protein does not contain a predicted signal sequence or transmembrane domains. This protein has a broad tissue distribution and it may function in membrane trafficking. This gene and the gene for RNA binding motif protein 12 overlap at map location 20q11.21. Alternate splicing results in multiple transcript variants encoding different proteins. [provided by RefSeq, Aug 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34213952</Item>
+</DocSum>
+
+<DocSum>
+	<Id>9054</Id>
+	<Item Name="Name" Type="String">NFS1</Item>
+	<Item Name="Description" Type="String">NFS1 nitrogen fixation 1 homolog (S. cerevisiae)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">HUSSY-08, IscS, NIFS</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030799|OTTHUMP00000030800|OTTHUMP00000179026|cysteine desulfurase, mitochondrial|nitrogen fixation 1 (S. cerevisiae, homolog)|nitrogen-fixing bacteria S-like protein</Item>
+	<Item Name="NomenclatureSymbol" Type="String">NFS1</Item>
+	<Item Name="NomenclatureName" Type="String">NFS1 nitrogen fixation 1 homolog (S. cerevisiae)</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">603485</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34287286</Item>
+			<Item Name="ChrStop" Type="Integer">34256609</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2647</Item>
+	<Item Name="Summary" Type="String">Iron-sulfur clusters are required for the function of many cellular enzymes. The proteins encoded by this gene supply inorganic sulfur to these clusters by removing the sulfur from cysteine, creating alanine in the process. This gene uses alternate in-frame translation initiation sites to generate mitochondrial forms and cytoplasmic/nuclear forms. Selection of the alternative initiation sites is determined by the cytosolic pH. The encoded proteins belong to the class-V family of pyridoxal phosphate-dependent aminotransferases. Alternatively spliced transcript variants have been described. [provided by RefSeq, Nov 2010]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34256609</Item>
+</DocSum>
+
+<DocSum>
+	<Id>9584</Id>
+	<Item Name="Name" Type="String">RBM39</Item>
+	<Item Name="Description" Type="String">RNA binding motif protein 39</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP11-353C18.2, CAPER, CAPERalpha, DKFZp781C0423, FLJ44170, FSAP59, HCC1, RNPC2</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030794|OTTHUMP00000030795|OTTHUMP00000063388|OTTHUMP00000196683|OTTHUMP00000198911|OTTHUMP00000198912|OTTHUMP00000198913|RNA-binding protein 39|RNA-binding region (RNP1, RRM) containing 2|RNA-binding region-containing protein 2|coactivator of activating protein-1 and estrogen receptors|functional spliceosome-associated protein 59|hepatocellular carcinoma protein 1|splicing factor HCC1</Item>
+	<Item Name="NomenclatureSymbol" Type="String">RBM39</Item>
+	<Item Name="NomenclatureName" Type="String">RNA binding motif protein 39</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">604739</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34330257</Item>
+			<Item Name="ChrStop" Type="Integer">34291530</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">3903</Item>
+	<Item Name="Summary" Type="String">This gene encodes a member of the U2AF65 family of proteins. The encoded protein is found in the nucleus, where it co-localizes with core spliceosomal proteins. It has been shown to play a role in both steroid hormone receptor-mediated transcription and alternative splicing, and it is also a transcriptional coregulator of the viral oncoprotein v-Rel. Multiple transcript variants have been observed for this gene. A related pseudogene has been identified on chromosome X. [provided by RefSeq, Aug 2011]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34291530</Item>
+</DocSum>
+
+<DocSum>
+	<Id>11190</Id>
+	<Item Name="Name" Type="String">CEP250</Item>
+	<Item Name="Description" Type="String">centrosomal protein 250kDa</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP3-477O4.2, C-NAP1, CEP2, CNAP1, MGC88542</Item>
+	<Item Name="OtherDesignations" Type="String">250 kDa centrosomal protein|OTTHUMP00000030757|centrosomal Nek2-associated protein 1|centrosomal protein, 250-KD|centrosome associated protein|centrosome-associated protein CEP250</Item>
+	<Item Name="NomenclatureSymbol" Type="String">CEP250</Item>
+	<Item Name="NomenclatureName" Type="String">centrosomal protein 250kDa</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">609689</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34043222</Item>
+			<Item Name="ChrStop" Type="Integer">34099802</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">3025</Item>
+	<Item Name="Summary" Type="String">This gene encodes a core centrosomal protein required for centriole-centriole cohesion during interphase of the cell cycle. The encoded protein dissociates from the centrosomes when parental centrioles separate at the beginning of mitosis. The protein associates with and is phosphorylated by NIMA-related kinase 2, which is also associated with the centrosome. [provided by RefSeq, Jun 2009]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34043222</Item>
+</DocSum>
+
+<DocSum>
+	<Id>11264</Id>
+	<Item Name="Name" Type="String">PXMP4</Item>
+	<Item Name="Description" Type="String">peroxisomal membrane protein 4, 24kDa</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-553F4.4, PMP24</Item>
+	<Item Name="OtherDesignations" Type="String">24 kDa peroxisomal intrinsic membrane protein|OTTHUMP00000030669|OTTHUMP00000175038|OTTHUMP00000205443|peroxisomal membrane protein 4</Item>
+	<Item Name="NomenclatureSymbol" Type="String">PXMP4</Item>
+	<Item Name="NomenclatureName" Type="String">peroxisomal membrane protein 4, 24kDa</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32308135</Item>
+			<Item Name="ChrStop" Type="Integer">32290549</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1288</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32290549</Item>
+</DocSum>
+
+<DocSum>
+	<Id>26133</Id>
+	<Item Name="Name" Type="String">TRPC4AP</Item>
+	<Item Name="Description" Type="String">transient receptor potential cation channel, subfamily C, member 4 associated protein</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">C20orf188, TRRP4AP, TRUSS</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030719|TNF-receptor ubiquitous scaffolding/signaling protein|TRP4-associated protein|short transient receptor potential channel 4 associated protein|short transient receptor potential channel 4-associated protein|trpc4-associated protein|tumor necrosis factor receptor-associated ubiquitous scaffolding and signaling protein</Item>
+	<Item Name="NomenclatureSymbol" Type="String">TRPC4AP</Item>
+	<Item Name="NomenclatureName" Type="String">transient receptor potential cation channel, subfamily C, member 4 associated protein</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">608430</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33680617</Item>
+			<Item Name="ChrStop" Type="Integer">33590206</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2907</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33590206</Item>
+</DocSum>
+
+<DocSum>
+	<Id>55245</Id>
+	<Item Name="Name" Type="String">UQCC</Item>
+	<Item Name="Description" Type="String">ubiquinol-cytochrome c reductase complex chaperone</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-614O4.7, BFZB, C20orf44, CBP3, MGC104353, MGC141902</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030744|OTTHUMP00000030746|OTTHUMP00000030747|OTTHUMP00000030748|OTTHUMP00000030750|OTTHUMP00000061641|OTTHUMP00000061642|OTTHUMP00000194710|basic FGF-repressed Zic-binding protein|ubiquinol-cytochrome c reductase complex chaperone CBP3 homolog</Item>
+	<Item Name="NomenclatureSymbol" Type="String">UQCC</Item>
+	<Item Name="NomenclatureName" Type="String">ubiquinol-cytochrome c reductase complex chaperone</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">611797</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33999944</Item>
+			<Item Name="ChrStop" Type="Integer">33890368</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">4147</Item>
+	<Item Name="Summary" Type="String">This gene encodes a transmembrane protein that is structurally similar to the mouse basic fibroblast growth factor repressed ZIC-binding protein. In mouse this protein may be involved in fibroblast growth factor regulated growth control. In humans, polymorphisms in this gene are associated with variation in human height and osteoarthritis. Alternate splicing results in multiple transcript variants. [provided by RefSeq, May 2010]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33890368</Item>
+</DocSum>
+
+<DocSum>
+	<Id>55741</Id>
+	<Item Name="Name" Type="String">EDEM2</Item>
+	<Item Name="Description" Type="String">ER degradation enhancer, mannosidase alpha-like 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">UNQ573/PRO1135, C20orf31, C20orf49, FLJ10783, bA4204.1</Item>
+	<Item Name="OtherDesignations" Type="String">ER degradation-enhancing alpha-mannosidase-like 2|ER degradation-enhancing-mannosidase-like protein 2|OTTHUMP00000030728</Item>
+	<Item Name="NomenclatureSymbol" Type="String">EDEM2</Item>
+	<Item Name="NomenclatureName" Type="String">ER degradation enhancer, mannosidase alpha-like 2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">610302</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33735160</Item>
+			<Item Name="ChrStop" Type="Integer">33703159</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1976</Item>
+	<Item Name="Summary" Type="String">In the endoplasmic reticulum (ER), misfolded proteins are retrotranslocated to the cytosol and degraded by the proteasome in a process known as ER-associated degradation (ERAD). EDEM2 belongs to a family of proteins involved in ERAD of glycoproteins (Mast et al., 2005 [PubMed 15537790]).[supplied by OMIM, Mar 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33703159</Item>
+</DocSum>
+
+<DocSum>
+	<Id>55902</Id>
+	<Item Name="Name" Type="String">ACSS2</Item>
+	<Item Name="Description" Type="String">acyl-CoA synthetase short-chain family member 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP5-1161H23.2, ACAS2, ACECS, ACS, ACSA, DKFZp762G026, dJ1161H23.1</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030713|OTTHUMP00000030717|acetate thiokinase|acetate-CoA ligase|acetyl-Coenzyme A synthetase 2 (ADP forming)|acetyl-coenzyme A synthetase, cytoplasmic|acyl-activating enzyme|cytoplasmic acetyl-coenzyme A synthetase</Item>
+	<Item Name="NomenclatureSymbol" Type="String">ACSS2</Item>
+	<Item Name="NomenclatureName" Type="String">acyl-CoA synthetase short-chain family member 2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">605832</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33462765</Item>
+			<Item Name="ChrStop" Type="Integer">33515768</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2128</Item>
+	<Item Name="Summary" Type="String">This gene encodes a cytosolic enzyme that catalyzes the activation of acetate for use in lipid synthesis and energy generation. The protein acts as a monomer and produces acetyl-CoA from acetate in a reaction that requires ATP. Expression of this gene is regulated by sterol regulatory element-binding proteins, transcription factors that activate genes required for the synthesis of cholesterol and unsaturated fatty acids. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Jul 2009]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33462765</Item>
+</DocSum>
+
+<DocSum>
+	<Id>57644</Id>
+	<Item Name="Name" Type="String">MYH7B</Item>
+	<Item Name="Description" Type="String">myosin, heavy chain 7B, cardiac muscle, beta</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-756N5.1, MGC96928, MGC96940, MHC14, MYH14</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030720|U937-associated antigen|antigen MLAA-21|myosin heavy chain 7B, cardiac muscle beta isoform|myosin, heavy polypeptide 7B, cardiac muscle, beta|myosin-7B|slow A MYH14</Item>
+	<Item Name="NomenclatureSymbol" Type="String">MYH7B</Item>
+	<Item Name="NomenclatureName" Type="String">myosin, heavy chain 7B, cardiac muscle, beta</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">609928</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33543703</Item>
+			<Item Name="ChrStop" Type="Integer">33590239</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2794</Item>
+	<Item Name="Summary" Type="String">The myosin II molecule is a multi-subunit complex consisting of two heavy chains and four light chains. This gene encodes a heavy chain of myosin II, which is a member of the motor-domain superfamily. The heavy chain includes a globular motor domain, which catalyzes ATP hydrolysis and interacts with actin, and a tail domain in which heptad repeat sequences promote dimerization by interacting to form a rod-like alpha-helical coiled coil. This heavy chain subunit is a slow-twitch myosin. Alternatively spliced transcript variants have been found, but the full-length nature of these variants is not determined. [provided by RefSeq, Mar 2010]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33543703</Item>
+</DocSum>
+
+<DocSum>
+	<Id>58476</Id>
+	<Item Name="Name" Type="String">TP53INP2</Item>
+	<Item Name="Description" Type="String">tumor protein p53 inducible nuclear protein 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP5-1181N3.1, C20orf110, DKFZp434B2411, DKFZp434O0827, DOR, FLJ21759, FLJ23500, PINH, dJ1181N3.1</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030701|OTTHUMP00000030703|PIG-U|diabetes and obesity regulated|p53-inducible protein U|tumor protein p53-inducible nuclear protein 2</Item>
+	<Item Name="NomenclatureSymbol" Type="String">TP53INP2</Item>
+	<Item Name="NomenclatureName" Type="String">tumor protein p53 inducible nuclear protein 2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33292147</Item>
+			<Item Name="ChrStop" Type="Integer">33301236</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1368</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33292147</Item>
+</DocSum>
+
+<DocSum>
+	<Id>63941</Id>
+	<Item Name="Name" Type="String">NECAB3</Item>
+	<Item Name="Description" Type="String">N-terminal EF-hand calcium binding protein 3</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP1-63M2.1, APBA2BP, EFCBP3, NIP1, STIP3, SYTIP2, XB51, dJ63M2.4, dJ63M2.5</Item>
+	<Item Name="OtherDesignations" Type="String">EF-hand calcium binding protein 3|N-terminal EF-hand calcium-binding protein 3|Nek2-interacting protein 1|OTTHUMP00000030659|OTTHUMP00000030660|OTTHUMP00000035342|X11L-binding protein 51|amyloid beta (A4) precursor protein-binding, family A, member 2 binding protein|amyloid beta A4 protein-binding family A member 2-binding protein|neuronal calcium-binding protein 3|neuronal calcium-binding protein NECAB3|synaptotagmin interacting protein 2|synaptotagmin interacting protein STIP3</Item>
+	<Item Name="NomenclatureSymbol" Type="String">NECAB3</Item>
+	<Item Name="NomenclatureName" Type="String">N-terminal EF-hand calcium binding protein 3</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">612478</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32262263</Item>
+			<Item Name="ChrStop" Type="Integer">32244892</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2281</Item>
+	<Item Name="Summary" Type="String">The protein encoded by this gene interacts with the amino-terminal domain of the neuron-specific X11-like protein (X11L), inhibits the association of X11L with amyloid precursor protein through a non-competitive mechanism, and abolishes the suppression of beta-amyloid production by X11L. This protein, together with X11L, may play an important role in the regulatory system of amyloid precursor protein metabolism and beta-amyloid generation. The protein is phosphorylated by NIMA-related expressed kinase 2, and localizes to the Golgi apparatus. Multiple transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jul 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32244892</Item>
+</DocSum>
+
+<DocSum>
+	<Id>65864</Id>
+	<Item Name="Name" Type="String">LOC65864</Item>
+	<Item Name="Description" Type="String">similar to tRNA exportin; EXPORTIN-T</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>80307</Id>
+	<Item Name="Name" Type="String">FER1L4</Item>
+	<Item Name="Description" Type="String">fer-1-like 4 (C. elegans) pseudogene</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP3-477O4.7, C20orf124, DKFZp686F01207, FLJ13459, FLJ22613, bA563A22B.1, dJ309K20.1</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">FER1L4</Item>
+	<Item Name="NomenclatureName" Type="String">fer-1-like 4 (C. elegans) pseudogene</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34195483</Item>
+			<Item Name="ChrStop" Type="Integer">34146506</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">1549</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34146506</Item>
+</DocSum>
+
+<DocSum>
+	<Id>83737</Id>
+	<Item Name="Name" Type="String">ITCH</Item>
+	<Item Name="Description" Type="String">itchy E3 ubiquitin protein ligase homolog (mouse)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">AIF4, AIP4, NAPP1, dJ468O1.1</Item>
+	<Item Name="OtherDesignations" Type="String">E3 ubiquitin-protein ligase Itchy homolog|NFE2-associated polypeptide 1|OTTHUMP00000030688|OTTHUMP00000030689|atrophin-1 interacting protein 4|atrophin-1-interacting protein 4|dJ468O1.1 (atrophin 1 interacting protein 4 (AIP4))|itchy homolog E3 ubiquitin protein ligase|ubiquitin protein ligase ITCH</Item>
+	<Item Name="NomenclatureSymbol" Type="String">ITCH</Item>
+	<Item Name="NomenclatureName" Type="String">itchy E3 ubiquitin protein ligase homolog (mouse)</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">606409</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32951061</Item>
+			<Item Name="ChrStop" Type="Integer">33099196</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">12425</Item>
+	<Item Name="Summary" Type="String">Atrophin-1 contains a polyglutamine repeat, expansion of which is responsible for dentatorubral and pallidoluysian atrophy. The protein encoded by this gene interacts with atrophin-1. This encoded protein is a closely related member of the NEDD4-like protein family. This family of proteins are E3 ubiquitin-ligase molecules and regulate key trafficking decisions, including targeting of proteins to proteosomes or lysosomes. This encoded protein contains four tandem WW domains and a HECT (homologous to the E6-associated protein carboxyl terminus) domain. It can act as a transcriptional corepressor of p45/NFE2 and may participate in the regulation of immune responses by modifying Notch-mediated signaling. It is highly similar to the mouse Itch protein, which has been implicated in the regulation and differentiation of erythroid and lymphoid cells. [provided by RefSeq, Jul 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32951061</Item>
+</DocSum>
+
+<DocSum>
+	<Id>84905</Id>
+	<Item Name="Name" Type="String">ZNF341</Item>
+	<Item Name="Description" Type="String">zinc finger protein 341</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-553F4.1</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030670|OTTHUMP00000233911</Item>
+	<Item Name="NomenclatureSymbol" Type="String">ZNF341</Item>
+	<Item Name="NomenclatureName" Type="String">zinc finger protein 341</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32319807</Item>
+			<Item Name="ChrStop" Type="Integer">32380074</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">877</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32319807</Item>
+</DocSum>
+
+<DocSum>
+	<Id>90072</Id>
+	<Item Name="Name" Type="String">FLJ11961</Item>
+	<Item Name="Description" Type="String">hypothetical protein FLJ11961</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">140710</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>92765</Id>
+	<Item Name="Name" Type="String">LOC92765</Item>
+	<Item Name="Description" Type="String">similar to ferredoxin 1 precursor; adrenodoxin</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>92781</Id>
+	<Item Name="Name" Type="String">LOC92781</Item>
+	<Item Name="Description" Type="String">similar to dJ309K20.4 (KIAA0765, putative brain nuclearly targeted protein (HRIHFB2091, RNA recognition motif (RNP, RRM or RBD domain) containing protein))</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>96814</Id>
+	<Item Name="Name" Type="String">LOC96814</Item>
+	<Item Name="Description" Type="String">similar to hypothetical protein FLJ10783</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">55741</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>115575</Id>
+	<Item Name="Name" Type="String">LOC115575</Item>
+	<Item Name="Description" Type="String">similar to ENDOTHELIAL PROTEIN C RECEPTOR PRECURSOR (ENDOTHELIAL CELL PROTEIN C RECEPTOR) (ACTIVATED PROTEIN C RECEPTOR) (APC RECEPTOR)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>115576</Id>
+	<Item Name="Name" Type="String">LOC115576</Item>
+	<Item Name="Description" Type="String">hypothetical gene supported by AL096738; BC013144</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">26133</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128427</Id>
+	<Item Name="Name" Type="String">LOC128427</Item>
+	<Item Name="Description" Type="String">hypothetical gene LOC128427</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128430</Id>
+	<Item Name="Name" Type="String">LOC128430</Item>
+	<Item Name="Description" Type="String">similar to Peptidyl-prolyl cis-trans isomerase A (PPIase) (Rotamase) (Cyclophilin A) (Cyclosporin A-binding protein) (SP18)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128864</Id>
+	<Item Name="Name" Type="String">C20orf144</Item>
+	<Item Name="Description" Type="String">chromosome 20 open reading frame 144</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">dJ63M2.6</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030658|hypothetical protein LOC128864</Item>
+	<Item Name="NomenclatureSymbol" Type="String">C20orf144</Item>
+	<Item Name="NomenclatureName" Type="String">chromosome 20 open reading frame 144</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32250091</Item>
+			<Item Name="ChrStop" Type="Integer">32251720</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">98</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32250091</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128866</Id>
+	<Item Name="Name" Type="String">CHMP4B</Item>
+	<Item Name="Description" Type="String">chromatin modifying protein 4B</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">C20orf178, CHMP4A, CTPP3, SNF7, SNF7-2, Shax1, VPS32B, Vps32-2, dJ553F4.4</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030668|SNF7 homolog associated with Alix 1|Snf7 homologue associated with Alix 1|charged multivesicular body protein 4b|chromatin-modifying protein 4b|hSnf7-2|hVps32-2|vacuolar protein sorting-associated protein 32-2|vacuolar protein-sorting-associated protein 32-2</Item>
+	<Item Name="NomenclatureSymbol" Type="String">CHMP4B</Item>
+	<Item Name="NomenclatureName" Type="String">chromatin modifying protein 4B</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">610897</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32399109</Item>
+			<Item Name="ChrStop" Type="Integer">32442172</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">3385</Item>
+	<Item Name="Summary" Type="String">This gene encodes a member of the chromatin-modifying protein/charged multivesicular body protein (CHMP) protein family. The protein is part of the endosomal sorting complex required for transport (ESCRT) complex III (ESCRT-III), which functions in the sorting of endocytosed cell-surface receptors into multivesicular endosomes. The ESCRT machinery also functions in the final abscisson stage of cytokinesis and in the budding of enveloped viruses such as HIV-1. The three proteins of the CHMP4 subfamily interact with programmed cell death 6 interacting protein (PDCD6IP, also known as ALIX), which also functions in the ESCRT pathway. The CHMP4 proteins assemble into membrane-attached 5-nm filaments that form circular scaffolds and promote or stabilize outward budding. These polymers are proposed to help generate the luminal vesicles of multivesicular bodies. Mutations in this gene result in autosomal dominant posterior polar cataracts.[provided by RefSeq, Oct 2009]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32399109</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128867</Id>
+	<Item Name="Name" Type="String">LOC128867</Item>
+	<Item Name="Description" Type="String">hypothetical gene supported by XM_072165</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128868</Id>
+	<Item Name="Name" Type="String">LOC128868</Item>
+	<Item Name="Description" Type="String">hypothetical gene supported by XM_075877</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128869</Id>
+	<Item Name="Name" Type="String">PIGU</Item>
+	<Item Name="Description" Type="String">phosphatidylinositol glycan anchor biosynthesis, class U</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP11-346K17.2, CDC91L1, GAB1, MGC40420</Item>
+	<Item Name="OtherDesignations" Type="String">CDC91 (cell division cycle 91, S. cerevisiae, homolog)-like 1|GPI transamidase component PIG-U|GPI transamidase subunit|OTTHUMP00000030693|cell division cycle 91-like 1 protein|cell division cycle protein 91-like 1|phosphatidylinositol glycan anchor biosynthesis class U protein|protein CDC91-like 1</Item>
+	<Item Name="NomenclatureSymbol" Type="String">PIGU</Item>
+	<Item Name="NomenclatureName" Type="String">phosphatidylinositol glycan anchor biosynthesis, class U</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">608528</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33265088</Item>
+			<Item Name="ChrStop" Type="Integer">33148345</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">2307</Item>
+	<Item Name="Summary" Type="String">The protein encoded by this gene shares similarity with Saccharomyces cerevisiae Cdc91, a predicted integral membrane protein that may function in cell division control. The protein encoded by this gene is the fifth subunit of GPI transamidase that attaches GPI-anchors to proteins. [provided by RefSeq, Jul 2008]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33148345</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128870</Id>
+	<Item Name="Name" Type="String">LOC128870</Item>
+	<Item Name="Description" Type="String">similar to cytochrome c oxidase subunit III</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128871</Id>
+	<Item Name="Name" Type="String">Corf110</Item>
+	<Item Name="Description" Type="String">chromosome 20 open reading frame 110</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">58476</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">dJ1181N3.1</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128872</Id>
+	<Item Name="Name" Type="String">HMGB3P1</Item>
+	<Item Name="Description" Type="String">high mobility group box 3 pseudogene 1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">HMG4L, HMGB3L1, MGC118987, MGC118988, MGC118989, dJ18C9.3</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">HMGB3P1</Item>
+	<Item Name="NomenclatureName" Type="String">high mobility group box 3 pseudogene 1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33422264</Item>
+			<Item Name="ChrStop" Type="Integer">33421377</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">399</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33421377</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128873</Id>
+	<Item Name="Name" Type="String">LOC128873</Item>
+	<Item Name="Description" Type="String">similar to dJ18C9.2.1 (novel gene similar to Gamma-glutamyltranspeptidase isoform 1) (H. sapiens)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128875</Id>
+	<Item Name="Name" Type="String">LOC128875</Item>
+	<Item Name="Description" Type="String">hypothetical gene supported by XM_059285</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128876</Id>
+	<Item Name="Name" Type="String">FAM83C</Item>
+	<Item Name="Description" Type="String">family with sequence similarity 83, member C</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">C20orf128, MGC142043, dJ614O4.7</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030740|hypothetical protein LOC128876</Item>
+	<Item Name="NomenclatureSymbol" Type="String">FAM83C</Item>
+	<Item Name="NomenclatureName" Type="String">family with sequence similarity 83, member C</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33880224</Item>
+			<Item Name="ChrStop" Type="Integer">33873533</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">450</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33873533</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128877</Id>
+	<Item Name="Name" Type="String">LOC128877</Item>
+	<Item Name="Description" Type="String">hypothetical gene supported by AL122112</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>128880</Id>
+	<Item Name="Name" Type="String">LOC128880</Item>
+	<Item Name="Description" Type="String">LOC128880</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>140699</Id>
+	<Item Name="Name" Type="String">C20orf132</Item>
+	<Item Name="Description" Type="String">chromosome 20 open reading frame 132</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-621N11.1, C20orf131, DKFZp434N0426, FLJ36113, dJ621N11.3, dJ621N11.4</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030894|OTTHUMP00000030896|OTTHUMP00000030898|OTTHUMP00000180603|hypothetical protein LOC140699</Item>
+	<Item Name="NomenclatureSymbol" Type="String">C20orf132</Item>
+	<Item Name="NomenclatureName" Type="String">chromosome 20 open reading frame 132</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">35807973</Item>
+			<Item Name="ChrStop" Type="Integer">35729628</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">784</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">35729628</Item>
+</DocSum>
+
+<DocSum>
+	<Id>140823</Id>
+	<Item Name="Name" Type="String">ROMO1</Item>
+	<Item Name="Description" Type="String">reactive oxygen species modulator 1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP11-353C18.54-005, C20orf52, MGC111180, MTGMP, bA353C18.2</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030797|OTTHUMP00000062052|OTTHUMP00000062053|OTTHUMP00000196684|ROS modulator 1|mitochondrial targeting GXXXG protein|protein MGR2 homolog</Item>
+	<Item Name="NomenclatureSymbol" Type="String">ROMO1</Item>
+	<Item Name="NomenclatureName" Type="String">reactive oxygen species modulator 1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34287231</Item>
+			<Item Name="ChrStop" Type="Integer">34288901</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">3125</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34287231</Item>
+</DocSum>
+
+<DocSum>
+	<Id>140826</Id>
+	<Item Name="Name" Type="String">BXDC1P</Item>
+	<Item Name="Description" Type="String">brix domain containing 1 pseudogene</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">729608</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">C20orf53, bA353C18.4</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">BXDC1P</Item>
+	<Item Name="NomenclatureName" Type="String">brix domain containing 1 pseudogene</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>140873</Id>
+	<Item Name="Name" Type="String">C20orf173</Item>
+	<Item Name="Description" Type="String">chromosome 20 open reading frame 173</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP3-477O4.3, FLJ25360, MGC138265, MGC138267, dJ477O4.4</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000196097|hypothetical protein LOC140873</Item>
+	<Item Name="NomenclatureSymbol" Type="String">C20orf173</Item>
+	<Item Name="NomenclatureName" Type="String">chromosome 20 open reading frame 173</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34117480</Item>
+			<Item Name="ChrStop" Type="Integer">34108568</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">522</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34108568</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149671</Id>
+	<Item Name="Name" Type="String">LOC149671</Item>
+	<Item Name="Description" Type="String">LOC149671</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149674</Id>
+	<Item Name="Name" Type="String">FLJ36113</Item>
+	<Item Name="Description" Type="String">hypothetical protein FLJ36113</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">140699</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149676</Id>
+	<Item Name="Name" Type="String">LOC149676</Item>
+	<Item Name="Description" Type="String">LOC149676</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149677</Id>
+	<Item Name="Name" Type="String">LOC149677</Item>
+	<Item Name="Description" Type="String">LOC149677</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149957</Id>
+	<Item Name="Name" Type="String">LOC149957</Item>
+	<Item Name="Description" Type="String">LOC149957</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149962</Id>
+	<Item Name="Name" Type="String">LOC149962</Item>
+	<Item Name="Description" Type="String">similar to dJ1181N3.1 (similar to collagen)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149963</Id>
+	<Item Name="Name" Type="String">LOC149963</Item>
+	<Item Name="Description" Type="String">similar to chromosome 20 open reading frame 31 (H. sapiens)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">55741</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149965</Id>
+	<Item Name="Name" Type="String">LOC149965</Item>
+	<Item Name="Description" Type="String">LOC149965</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>149966</Id>
+	<Item Name="Name" Type="String">LOC149966</Item>
+	<Item Name="Description" Type="String">LOC149966</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164204</Id>
+	<Item Name="Name" Type="String">LOC164204</Item>
+	<Item Name="Description" Type="String">LOC164204</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164205</Id>
+	<Item Name="Name" Type="String">LOC164205</Item>
+	<Item Name="Description" Type="String">LOC164205</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164206</Id>
+	<Item Name="Name" Type="String">LOC164206</Item>
+	<Item Name="Description" Type="String">similar to dJ132F21.2 (Contains a novel protein similar to the L82E from Drosophila)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164400</Id>
+	<Item Name="Name" Type="String">LOC164400</Item>
+	<Item Name="Description" Type="String">similar to CTD-BINDING SR-LIKE PROTEIN RA4</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164402</Id>
+	<Item Name="Name" Type="String">LOC164402</Item>
+	<Item Name="Description" Type="String">LOC164402</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164403</Id>
+	<Item Name="Name" Type="String">LOC164403</Item>
+	<Item Name="Description" Type="String">LOC164403</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164404</Id>
+	<Item Name="Name" Type="String">LOC164404</Item>
+	<Item Name="Description" Type="String">LOC164404</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164405</Id>
+	<Item Name="Name" Type="String">LOC164405</Item>
+	<Item Name="Description" Type="String">hypothetical gene LOC164405</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164406</Id>
+	<Item Name="Name" Type="String">LOC164406</Item>
+	<Item Name="Description" Type="String">LOC164406</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164407</Id>
+	<Item Name="Name" Type="String">LOC164407</Item>
+	<Item Name="Description" Type="String">LOC164407</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>164410</Id>
+	<Item Name="Name" Type="String">LOC164410</Item>
+	<Item Name="Description" Type="String">LOC164410</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>170487</Id>
+	<Item Name="Name" Type="String">C20orf134</Item>
+	<Item Name="Description" Type="String">chromosome 20 open reading frame 134</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">dJ63M2.2</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030657|putative uncharacterized actin family protein C20orf134</Item>
+	<Item Name="NomenclatureSymbol" Type="String">C20orf134</Item>
+	<Item Name="NomenclatureName" Type="String">chromosome 20 open reading frame 134</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32254303</Item>
+			<Item Name="ChrStop" Type="Integer">32256330</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">702</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32254303</Item>
+</DocSum>
+
+<DocSum>
+	<Id>170503</Id>
+	<Item Name="Name" Type="String">CDC42P1</Item>
+	<Item Name="Description" Type="String">cell division cycle 42 pseudogene 1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">bK3216D2.3</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">CDC42P1</Item>
+	<Item Name="NomenclatureName" Type="String">cell division cycle 42 pseudogene 1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32990577</Item>
+			<Item Name="ChrStop" Type="Integer">32989754</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">316</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32989754</Item>
+</DocSum>
+
+<DocSum>
+	<Id>170555</Id>
+	<Item Name="Name" Type="String">TPM3P2</Item>
+	<Item Name="Description" Type="String">tropomyosin 3 pseudogene 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">TPM5P, dJ1125A11.2</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">TPM3P2</Item>
+	<Item Name="NomenclatureName" Type="String">tropomyosin 3 pseudogene 2</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32501201</Item>
+			<Item Name="ChrStop" Type="Integer">32458380</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">316</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32458380</Item>
+</DocSum>
+
+<DocSum>
+	<Id>170559</Id>
+	<Item Name="Name" Type="String">XPOTP1</Item>
+	<Item Name="Description" Type="String">exportin, tRNA (nuclear export receptor for tRNAs) pseudogene 1</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">XPO3P1, dJ785G19.1</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">XPOTP1</Item>
+	<Item Name="NomenclatureName" Type="String">exportin, tRNA (nuclear export receptor for tRNAs) pseudogene 1</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32803897</Item>
+			<Item Name="ChrStop" Type="Integer">32801299</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">316</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32801299</Item>
+</DocSum>
+
+<DocSum>
+	<Id>205082</Id>
+	<Item Name="Name" Type="String">LOC205082</Item>
+	<Item Name="Description" Type="String">LOC205082</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>256576</Id>
+	<Item Name="Name" Type="String">LOC256576</Item>
+	<Item Name="Description" Type="String">similar to DNA segment, numerous copies, expressed probes (GS1 gene)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>284806</Id>
+	<Item Name="Name" Type="String">LOC284806</Item>
+	<Item Name="Description" Type="String">similar to FKSG53</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>284808</Id>
+	<Item Name="Name" Type="String">FLJ38773</Item>
+	<Item Name="Description" Type="String">hypothetical protein FLJ38773</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32567956</Item>
+			<Item Name="ChrStop" Type="Integer">32565541</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">31</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32565541</Item>
+</DocSum>
+
+<DocSum>
+	<Id>343576</Id>
+	<Item Name="Name" Type="String">LOC343576</Item>
+	<Item Name="Description" Type="String">LOC343576</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>343704</Id>
+	<Item Name="Name" Type="String">LOC343704</Item>
+	<Item Name="Description" Type="String">similar to 60S RIBOSOMAL PROTEIN L12</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>343705</Id>
+	<Item Name="Name" Type="String">LOC343705</Item>
+	<Item Name="Description" Type="String">similar to CMP-N-acetylneuraminate-beta-galactosamide-alpha-2,3-sialyltransferase (Beta-galactoside alpha-2,3-sialyltransferase) (Alpha 2,3-ST) (Gal-NAc6S) (Gal-beta-1,3-GalNAc-alpha-2,3-sialyltransferase) (ST3GalIA) (ST3O) (ST3GalA.1) (SIAT4-A) (S...</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">33574657</Item>
+			<Item Name="ChrStop" Type="Integer">33573306</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33573306</Item>
+</DocSum>
+
+<DocSum>
+	<Id>348563</Id>
+	<Item Name="Name" Type="String">LOC348563</Item>
+	<Item Name="Description" Type="String">similar to ribosomal protein S2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>350976</Id>
+	<Item Name="Name" Type="String">LOC350976</Item>
+	<Item Name="Description" Type="String">LOC350976</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>350977</Id>
+	<Item Name="Name" Type="String">LOC350977</Item>
+	<Item Name="Description" Type="String">LOC350977</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>375094</Id>
+	<Item Name="Name" Type="String">LOC375094</Item>
+	<Item Name="Description" Type="String">LOC375094</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>376779</Id>
+	<Item Name="Name" Type="String">LOC376779</Item>
+	<Item Name="Description" Type="String">similar to DNA segment, numerous copies, expressed probes (GS1 gene)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>376780</Id>
+	<Item Name="Name" Type="String">LOC376780</Item>
+	<Item Name="Description" Type="String">similar to dJ1187J4.2 (novel protein similar to rat RYF3)</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>376781</Id>
+	<Item Name="Name" Type="String">LOC376781</Item>
+	<Item Name="Description" Type="String">similar to ribosomal protein S2; 40S ribosomal protein S2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>391244</Id>
+	<Item Name="Name" Type="String">LOC391244</Item>
+	<Item Name="Description" Type="String">similar to ribosomal protein S2; 40S ribosomal protein S2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>400843</Id>
+	<Item Name="Name" Type="String">LOC400843</Item>
+	<Item Name="Description" Type="String">hypothetical LOC400843</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>440762</Id>
+	<Item Name="Name" Type="String">LOC440762</Item>
+	<Item Name="Description" Type="String">similar to 40S ribosomal protein S2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32174062</Item>
+			<Item Name="ChrStop" Type="Integer">32174756</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32174062</Item>
+</DocSum>
+
+<DocSum>
+	<Id>574501</Id>
+	<Item Name="Name" Type="String">MIR499</Item>
+	<Item Name="Description" Type="String">microRNA 499</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">MIRN499, hsa-mir-499</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">MIR499</Item>
+	<Item Name="NomenclatureName" Type="String">microRNA 499</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">613614</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33578178</Item>
+			<Item Name="ChrStop" Type="Integer">33578299</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">3447</Item>
+	<Item Name="Summary" Type="String">microRNAs (miRNAs) are short (20-24 nt) non-coding RNAs that are involved in post-transcriptional regulation of gene expression in multicellular organisms by affecting both the stability and translation of mRNAs. miRNAs are transcribed by RNA polymerase II as part of capped and polyadenylated primary transcripts (pri-miRNAs) that can be either protein-coding or non-coding. The primary transcript is cleaved by the Drosha ribonuclease III enzyme to produce an approximately 70-nt stem-loop precursor miRNA (pre-miRNA), which is further cleaved by the cytoplasmic Dicer ribonuclease to generate the mature miRNA and antisense miRNA star (miRNA*) products. The mature miRNA is incorporated into a RNA-induced silencing complex (RISC), which recognizes target mRNAs through imperfect base pairing with the miRNA and most commonly results in translational inhibition or destabilization of the target mRNA. The RefSeq represents the predicted microRNA stem-loop. [provided by RefSeq, Sep 2009]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33578178</Item>
+</DocSum>
+
+<DocSum>
+	<Id>653678</Id>
+	<Item Name="Name" Type="String">LOC653678</Item>
+	<Item Name="Description" Type="String">similar to tumor protein p53 inducible nuclear protein 2</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32740418</Item>
+			<Item Name="ChrStop" Type="Integer">32760212</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32740418</Item>
+</DocSum>
+
+<DocSum>
+	<Id>693229</Id>
+	<Item Name="Name" Type="String">MIR644</Item>
+	<Item Name="Description" Type="String">microRNA 644</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">MIRN644, hsa-mir-644</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">MIR644</Item>
+	<Item Name="NomenclatureName" Type="String">microRNA 644</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33054129</Item>
+			<Item Name="ChrStop" Type="Integer">33054222</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">402</Item>
+	<Item Name="Summary" Type="String">microRNAs (miRNAs) are short (20-24 nt) non-coding RNAs that are involved in post-transcriptional regulation of gene expression in multicellular organisms by affecting both the stability and translation of mRNAs. miRNAs are transcribed by RNA polymerase II as part of capped and polyadenylated primary transcripts (pri-miRNAs) that can be either protein-coding or non-coding. The primary transcript is cleaved by the Drosha ribonuclease III enzyme to produce an approximately 70-nt stem-loop precursor miRNA (pre-miRNA), which is further cleaved by the cytoplasmic Dicer ribonuclease to generate the mature miRNA and antisense miRNA star (miRNA*) products. The mature miRNA is incorporated into a RNA-induced silencing complex (RISC), which recognizes target mRNAs through imperfect base pairing with the miRNA and most commonly results in translational inhibition or destabilization of the target mRNA. The RefSeq represents the predicted microRNA stem-loop. [provided by RefSeq, Sep 2009]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33054129</Item>
+</DocSum>
+
+<DocSum>
+	<Id>729547</Id>
+	<Item Name="Name" Type="String">RPS2_26_1696</Item>
+	<Item Name="Description" Type="String">ribosomal protein S2 pseudogene</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">140755</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32173936</Item>
+			<Item Name="ChrStop" Type="Integer">32174808</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32173936</Item>
+</DocSum>
+
+<DocSum>
+	<Id>729557</Id>
+	<Item Name="Name" Type="String">LOC729557</Item>
+	<Item Name="Description" Type="String">density-regulated protein pseudogene</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32834342</Item>
+			<Item Name="ChrStop" Type="Integer">32833761</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32833761</Item>
+</DocSum>
+
+<DocSum>
+	<Id>729580</Id>
+	<Item Name="Name" Type="String">LOC729580</Item>
+	<Item Name="Description" Type="String">hypothetical LOC729580</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33866120</Item>
+			<Item Name="ChrStop" Type="Integer">33862315</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33862315</Item>
+</DocSum>
+
+<DocSum>
+	<Id>729591</Id>
+	<Item Name="Name" Type="String">LOC729591</Item>
+	<Item Name="Description" Type="String">similar to hCG38224</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">1</Item>
+	<Item Name="CurrentID" Type="Integer">140873</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>729608</Id>
+	<Item Name="Name" Type="String">RPF2P</Item>
+	<Item Name="Description" Type="String">ribosome production factor 2 pseudogene</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP11-353C18.53-001, BXDC1P, C20orf53, bA353C18.4</Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String">RPF2P</Item>
+	<Item Name="NomenclatureName" Type="String">ribosome production factor 2 pseudogene</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">34340716</Item>
+			<Item Name="ChrStop" Type="Integer">34341658</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">360</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">34340716</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100128033</Id>
+	<Item Name="Name" Type="String">LOC100128033</Item>
+	<Item Name="Description" Type="String">phosphatidylinositol N-acetylglucosaminyltransferase subunit P-like</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">32552991</Item>
+			<Item Name="ChrStop" Type="Integer">32553381</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32552991</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100129151</Id>
+	<Item Name="Name" Type="String">LOC100129151</Item>
+	<Item Name="Description" Type="String">hypothetical LOC100129151</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32567962</Item>
+			<Item Name="ChrStop" Type="Integer">32566395</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32566395</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100130797</Id>
+	<Item Name="Name" Type="String">LOC100130797</Item>
+	<Item Name="Description" Type="String">PRO0566</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.9</Item>
+			<Item Name="ChrStart" Type="Integer">32102158</Item>
+			<Item Name="ChrStop" Type="Integer">32102304</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String">DISCONTINUED: This record has been withdrawn by NCBI. This record was defined by AF116649.1 which is not sufficient evidence to define a distinct locus.</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">32102158</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100270797</Id>
+	<Item Name="Name" Type="String">STQTL14</Item>
+	<Item Name="Description" Type="String">Stature QTL 14</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">612228</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List"></Item>
+	<Item Name="GeneWeight" Type="Integer">633</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">~~last</Item>
+	<Item Name="ChrStart" Type="Integer">999999999</Item>
+</DocSum>
+
+<DocSum>
+	<Id>100287479</Id>
+	<Item Name="Name" Type="String">LOC100287479</Item>
+	<Item Name="Description" Type="String">hypothetical protein LOC100287479</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">2</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String"></Item>
+	<Item Name="OtherDesignations" Type="String"></Item>
+	<Item Name="NomenclatureSymbol" Type="String"></Item>
+	<Item Name="NomenclatureName" Type="String"></Item>
+	<Item Name="NomenclatureStatus" Type="String"></Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List"></Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33124554</Item>
+			<Item Name="ChrStop" Type="Integer">33122566</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">0</Item>
+	<Item Name="Summary" Type="String"></Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33122566</Item>
+</DocSum>
+
+</eSummaryResult>

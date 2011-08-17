@@ -10,8 +10,12 @@ module DescriptionMacros
   def it_raises_error_if_ncbi_cannot_find_it
     model_class = describes
     it 'raises error if NCBI cannot find it' do
-      lambda { model_class.fetch('asdf') }.should raise_error(model_class::NotFound)
-      lambda { model_class.fetch(9876543210) }.should raise_error(model_class::NotFound)
+      fake_service :EFetch, body: '' do
+        fake_service :ESummary, body: '' do # GenomeProject.fetch uses ESummary.
+          lambda { model_class.fetch('asdf') }.should raise_error(model_class::NotFound)
+          lambda { model_class.fetch(9876543210) }.should raise_error(model_class::NotFound)
+        end
+      end
     end
   end
 
@@ -21,9 +25,13 @@ module DescriptionMacros
     model_class = model_class()
     it 'can be refetched' do
       object = model_class.make_from_fixture_file(attribute => initial_value)
-      stub_entrez_request_with_stubbed_response :EFetch, model_class.fixture_file.read
+      file = model_class.fixture_file
       visit url_for(object)
-      click_link('Get updates')
+      fake_service_with_file :EFetch, file do
+        fake_service_with_file :ESummary, file do
+          click_link('Get updates')
+        end
+      end
       updated_value = model_class.from_fixture_file.send(attribute)
       page.should have_content(updated_value.to_s)
     end

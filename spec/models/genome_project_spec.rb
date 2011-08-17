@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe GenomeProject do
 
-  it 'fetches data from NCBI' do
-    genome_project = GenomeProject.fetch(28911)
-    genome_project.should match_xml_response_with(GenomeProject.fixture_file)
-  end
-
   context 'parses attribute' do
 
     before :all do
@@ -25,8 +20,11 @@ describe GenomeProject do
   it_raises_error_if_ncbi_cannot_find_it
 
   it 'searches NCBI by any field' do
-    genome_project = GenomeProject.make_from_fixture_file(sequencing_centers: ['OMRF'])
-    genome_project.should be_found_when_searching_NCBI_for('1000 Genomes Project')
+    fake_search_request fixture_file('genome_project_search_1000_Genomes_Project_Pliot_esummary.xml') do
+      Taxonomy.make_from_fixture_file
+      genome_project = GenomeProject.make_from_fixture_file(sequencing_centers: ['OMRF'])
+      genome_project.should be_found_when_searching_NCBI_for('1000 Genomes Project')
+    end
   end
 
 end

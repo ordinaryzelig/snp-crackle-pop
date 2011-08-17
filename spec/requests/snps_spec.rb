@@ -15,10 +15,12 @@ describe 'Snps', type: :acceptance do
       base_position_low:  32_363_840,
       base_position_high: 32_363_850,
     }
-    search_results = Snp::SearchResult.all_from_file(fixture_file('snp_locate_chr_6_base_32363840_to_32363850_esummary.xml'))
-    Snp.stubs(:locate).returns(search_results)
+    file = fixture_file('snp_locate_chr_6_base_32363840_to_32363850_esummary.xml')
     visit url(:snps, :search)
-    submit_location_search_for terms
+    fake_search_request file do
+      submit_location_search_for terms
+    end
+    search_results = Snp::SearchResult.all_from_file(file)
     search_results.should be_found_on_search_results_page_when_looking_for(:rs_number)
   end
 
@@ -42,7 +44,9 @@ describe 'Snps', type: :acceptance do
   raise_errors_disabled do
 
     it 'displays "displayable" error message when SNP not found' do
-      visit url(:snps, :show, id: 1)
+      fake_service :EFetch, body: '' do
+        visit url(:snps, :show, id: 1)
+      end
       within '.error' do
         page.should have_content('NCBI could not find SNP with id(s): [1]')
       end

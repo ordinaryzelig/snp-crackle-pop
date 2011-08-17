@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>55245</Id>
+	<Item Name="Name" Type="String">UQCC</Item>
+	<Item Name="Description" Type="String">ubiquinol-cytochrome c reductase complex chaperone</Item>
+	<Item Name="Orgname" Type="String">Homo sapiens</Item>
+	<Item Name="Status" Type="Integer">0</Item>
+	<Item Name="CurrentID" Type="Integer">0</Item>
+	<Item Name="Chromosome" Type="String">20</Item>
+	<Item Name="GeneticSource" Type="String">genomic</Item>
+	<Item Name="MapLocation" Type="String">20q11.22</Item>
+	<Item Name="OtherAliases" Type="String">RP4-614O4.7, BFZB, C20orf44, CBP3, MGC104353, MGC141902</Item>
+	<Item Name="OtherDesignations" Type="String">OTTHUMP00000030744|OTTHUMP00000030746|OTTHUMP00000030747|OTTHUMP00000030748|OTTHUMP00000030750|OTTHUMP00000061641|OTTHUMP00000061642|OTTHUMP00000194710|basic FGF-repressed Zic-binding protein|ubiquinol-cytochrome c reductase complex chaperone CBP3 homolog</Item>
+	<Item Name="NomenclatureSymbol" Type="String">UQCC</Item>
+	<Item Name="NomenclatureName" Type="String">ubiquinol-cytochrome c reductase complex chaperone</Item>
+	<Item Name="NomenclatureStatus" Type="String">Official</Item>
+	<Item Name="TaxID" Type="Integer">9606</Item>
+	<Item Name="Mim" Type="List">
+		<Item Name="int" Type="Integer">611797</Item>
+	</Item>
+	<Item Name="GenomicInfo" Type="List">
+		<Item Name="GenomicInfoType" Type="Structure">
+			<Item Name="ChrLoc" Type="String">20</Item>
+			<Item Name="ChrAccVer" Type="String">NC_000020.10</Item>
+			<Item Name="ChrStart" Type="Integer">33999944</Item>
+			<Item Name="ChrStop" Type="Integer">33890368</Item>
+		</Item>
+	</Item>
+	<Item Name="GeneWeight" Type="Integer">4147</Item>
+	<Item Name="Summary" Type="String">This gene encodes a transmembrane protein that is structurally similar to the mouse basic fibroblast growth factor repressed ZIC-binding protein. In mouse this protein may be involved in fibroblast growth factor regulated growth control. In humans, polymorphisms in this gene are associated with variation in human height and osteoarthritis. Alternate splicing results in multiple transcript variants. [provided by RefSeq, May 2010]</Item>
+	<Item Name="ChrSort" Type="String">20</Item>
+	<Item Name="ChrStart" Type="Integer">33890368</Item>
+</DocSum>
+
+</eSummaryResult>

@@ -13,6 +13,7 @@ Spork.prefork do
   require 'capybara/rspec'
   Capybara.app = SnpCracklePop
   SnpCracklePop.setup_application!
+  FakeWeb.allow_net_connect = false
 end
 
 Spork.each_run do
@@ -22,7 +23,6 @@ Spork.each_run do
   Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
   RSpec.configure do |config|
     config.include(ExampleMacros)
-    config.include(MochaMacros)
     config.extend(DescriptionMacros)
   end
 end

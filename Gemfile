@@ -19,6 +19,7 @@ gem 'mongoid_to_csv', '0.1.0'
 
 group :test do
   gem 'capybara', '~>0.4.1'
+  gem 'fakeweb', '1.3.0'
   gem 'launchy', '0.4.0'
   gem 'machinist_mongo', '1.2.0', require: 'machinist/mongoid'
   gem 'mocha', '0.9.12'

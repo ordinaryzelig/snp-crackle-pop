@@ -2,12 +2,6 @@ require 'spec_helper'
 
 describe Gene::SearchRequest do
 
-  it 'performs Entrez ESearch and ESummary requests' do
-    search_request = Gene::SearchRequest.new('human')
-    search_request.execute
-    search_request.should match_xml_response_with(Gene::SearchRequest.fixture_file)
-  end
-
   it 'requires at least 3 characters' do
     valids = ['iri', 1, 123, '1', '-1.23']
     valids.each do |term|

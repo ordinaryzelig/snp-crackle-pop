@@ -11,17 +11,4 @@ class Taxonomy
   field :scientific_name,     type: String, xml: lambda { |node| node.css('ScientificName').first.content }
   ncbi_timestamp_field
 
-  class << self
-
-    # Search scientific_name, genbank_common_name, and common_name.
-    def search(name)
-      reg_exp = Regexp.new(name, true)
-      conditions = [:scientific_name, :genbank_common_name, :common_name].map do |field_to_search|
-        {field_to_search => reg_exp}
-      end
-      any_of(conditions)
-    end
-
-  end
-
 end

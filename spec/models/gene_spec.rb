@@ -2,13 +2,6 @@ require 'spec_helper'
 
 describe Gene do
 
-  # This tests if the actual response matches what we have stored in the fixture file.
-  # If this test passes, we can mock the rest of the way.
-  it 'fetches data from NCBI' do
-    gene = Gene.fetch(55245)
-    gene.should match_xml_response_with(Gene.fixture_file)
-  end
-
   context 'parses attribute' do
 
     before :all do
@@ -57,7 +50,9 @@ describe Gene do
   it 'searches NCBI by symbols or location' do
     gene = Gene.from_fixture_file
     ['UQCC', 'BFZB', '20q11.22'].each do |term|
-      gene.should be_found_when_searching_NCBI_for(term)
+      fake_search_request fixture_file("gene_search_#{term}_esummary.xml") do
+        gene.should be_found_when_searching_NCBI_for(term)
+      end
     end
   end
 
@@ -65,9 +60,9 @@ describe Gene do
 
   it 'fetches multiple objects from NCBI' do
     ids = [253461, 55245]
-    fixture_file_xml_content = fixture_file('genes_253461_55245_efetch.xml')
-    stub_entrez_request_with_stubbed_response :EFetch, fixture_file_xml_content
-    Gene.fetch(ids).map(&:ncbi_id).should == ids
+    fake_service_with_file :EFetch, fixture_file('genes_253461_55245_efetch.xml') do
+      Gene.fetch(ids).map(&:ncbi_id).should == ids
+    end
   end
 
   it 'calculates seequence length' do
@@ -75,23 +70,33 @@ describe Gene do
     gene.sequence_length.should == 109_577
   end
 
-  it 'fetches unique identifiers' do
-    identifiers = ['UQCC', 'MRPS18B']
-    ncbi_ids = [55245, 28973]
-    Gene.make_from_fixture_file # Will save 55245 (UQCC) to db.
-    # stub unique search.
-    gene_search_results = Gene::SearchResult.all_from_fixture_file.reject(&:discontinued)[0...1]
-    Gene::UniqueIdSearchRequest.any_instance.stubs(:execute).returns(gene_search_results)
-    # stub fetch.
-    stub_entrez_request_with_stubbed_response :EFetch, fixture_file('gene_28973_efetch.xml')
+  it 'fetches by unique identifier' do
+    fake_search_request fixture_file('gene_search_unique_MRPS18B_esummary.xml') do
+      fake_service_with_file :EFetch, fixture_file('gene_28973_efetch.xml') do
+        Taxonomy.make_from_fixture_file
+        identifier = 'MRPS18B'
+        gene = Gene.find_all_by_unique_id_field_or_fetch_by_unique_id_field!([identifier]).first
+        gene.symbol.should == identifier
+      end
+    end
+  end
+
+  it 'finds by unique identifiers' do
+    identifiers = ['abc', 'xyz']
+    identifiers.each do |symbol|
+      Gene.make_from_fixture_file symbol: symbol
+    end
     genes = Gene.find_all_by_unique_id_field_or_fetch_by_unique_id_field!(identifiers)
-    genes.map(&:ncbi_id).should =~ ncbi_ids
+    genes.map(&:symbol).should == identifiers
   end
 
   it 'locates by searching for chromosome and base positions' do
-    ids = Gene::SearchResult.all_from_file(fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml')).map(&:ncbi_id)
-    search_results = Gene.locate(chromosome: 6, base_position_low: 1_000_000, base_position_high: 2_000_000)
-    search_results.map(&:ncbi_id).should =~ ids
+    file = fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml')
+    ids = Gene::SearchResult.all_from_file(file).map(&:ncbi_id)
+    fake_search_request file do
+      search_results = Gene.locate(chromosome: 6, base_position_low: 1_000_000, base_position_high: 2_000_000)
+      search_results.map(&:ncbi_id).should =~ ids
+    end
   end
 
 end

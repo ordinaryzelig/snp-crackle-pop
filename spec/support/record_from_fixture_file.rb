@@ -24,6 +24,7 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
 
   def model_class.all_from_file(file)
     xml = file.read
+    file.rewind
     split_xml(xml).map do |node|
       send :new_from_xml, node
     end
@@ -38,7 +39,8 @@ MODEL_FIXTURE_FILES.keys.each do |model_class|
   end
 
   def model_class.attributes_from_fixture_file
-    send :attributes_from_xml, split_xml(fixture_file.read).first
+    xml = fixture_file.read
+    send :attributes_from_xml, split_xml(xml).first
   end
 
   def model_class.make_from_fixture_file(atts = {})

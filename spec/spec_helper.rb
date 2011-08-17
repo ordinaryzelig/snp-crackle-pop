@@ -2,18 +2,25 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
+
   ENV["PADRINO_ENV"] ||= "test"
   require File.expand_path("config/boot.rb", Dir.pwd)
+
   RSpec.configure do |config|
     config.mock_with :mocha
     config.before :each do
       drop_tables
     end
   end
+
   require 'capybara/rspec'
   Capybara.app = SnpCracklePop
+
   SnpCracklePop.setup_application!
+
   FakeWeb.allow_net_connect = false
+  require 'entrez/spec_helpers'
+  Entrez.ignore_query_limit = true
 end
 
 Spork.each_run do

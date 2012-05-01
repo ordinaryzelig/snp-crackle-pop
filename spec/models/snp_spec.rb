@@ -15,6 +15,7 @@ describe Snp do
     end
 
     it_parses_attribute :ancestral_allele,       'C'
+    it_parses_attribute :refSNP_alleles,         ['C', 'T']
     it_parses_attribute :chromosome,             6
     it_parses_attribute :gene_symbol,            'BTNL2'
     it_parses_attribute :het_uncertainty,        0.244

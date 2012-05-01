@@ -11,6 +11,8 @@
   %table.attribute_table
     %tbody
       = row_for_attribute @snp, :ancestral_allele
+      = row_for_attribute @snp, :refSNP_alleles, label: 'refSNP Alleles' do
+        = @snp.refSNP_alleles.join('/')
       = row_for_attribute @snp, :alleles do
         = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
       = row_for_attribute @snp, 'base_positions (+/-1 )' do

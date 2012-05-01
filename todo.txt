@@ -1,0 +1,1 @@
+Refetch should delete associations. After fixing bug with Snp#alleles, old allele remained.

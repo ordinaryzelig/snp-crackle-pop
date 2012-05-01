@@ -157,14 +157,16 @@ body {
     padding: 5px; }
     .show_model table.attribute_table tfoot th .time {
       font-weight: bold; }
+.show_model ul {
+  list-style-type: disc; }
 .show_model li {
   padding-bottom: 5px; }
 .show_model dl dt, .show_model dl dd {
-  float: left; }
+  display: inline-block; }
 .show_model dl dt {
-  clear: both;
-  margin-right: 5px;
   font-weight: bold; }
+.show_model dl dd {
+  margin-right: 10px; }
 
 .search_model h1 {
   font-size: 20pt;

@@ -14,22 +14,24 @@ describe Snp do
       @object = snp
     end
 
-    it_parses_attribute :ancestral_allele,   'C'
-    it_parses_attribute :chromosome,         6
-    it_parses_attribute :gene_symbol,        'BTNL2'
-    it_parses_attribute :het_uncertainty,    0.244
-    it_parses_attribute :heterozygosity,     0.307
-    it_parses_attribute :max_success_rate,   nil
-    it_parses_attribute :min_success_rate,   nil
-    it_parses_attribute :modification_build, 132
-    it_parses_attribute :modification_date,  Time.new(2011, 6, 17, 15, 29)
-    it_parses_attribute :ncbi_id,            9268480
-    it_parses_attribute :ncbi_gene_id,       56244
-    it_parses_attribute :ncbi_taxonomy_id,   9606
-    it_parses_attribute :protein_accession,  'NP_062548'
-    it_parses_attribute :protein_version,    1
-    it_parses_attribute :rs_number,          9268480
-    it_parses_attribute :snp_class,          'snp'
+    it_parses_attribute :ancestral_allele,       'C'
+    it_parses_attribute :chromosome,             6
+    it_parses_attribute :gene_symbol,            'BTNL2'
+    it_parses_attribute :het_uncertainty,        0.244
+    it_parses_attribute :heterozygosity,         0.307
+    it_parses_attribute :max_success_rate,       nil
+    it_parses_attribute :min_success_rate,       nil
+    it_parses_attribute :minor_allele,           'T'
+    it_parses_attribute :minor_allele_frequency, 0.2006
+    it_parses_attribute :modification_build,     132
+    it_parses_attribute :modification_date,      Time.new(2011, 6, 17, 15, 29)
+    it_parses_attribute :ncbi_id,                9268480
+    it_parses_attribute :ncbi_gene_id,           56244
+    it_parses_attribute :ncbi_taxonomy_id,       9606
+    it_parses_attribute :protein_accession,      'NP_062548'
+    it_parses_attribute :protein_version,        1
+    it_parses_attribute :rs_number,              9268480
+    it_parses_attribute :snp_class,              'snp'
 
   end
 

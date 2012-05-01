@@ -239,6 +239,7 @@ organism=""/>
   <MergeHistory rsId="57538739" buildId="130"/>
   <hgvs>NM_019602.1:c.1050G&gt;A</hgvs>
   <hgvs>NT_007592.15:g.32303844C&gt;T</hgvs>
+  <Frequency freq="0.2006" allele="T" sampleSize="2188"/>
 </Rs>
 
 

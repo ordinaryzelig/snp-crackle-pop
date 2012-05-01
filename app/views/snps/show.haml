@@ -22,6 +22,8 @@
       = row_for_attribute @snp, :heterozygosity
       = row_for_attribute @snp, :min_success_rate
       = row_for_attribute @snp, :max_success_rate
+      = row_for_attribute @snp, :minor_allele_frequency, label: 'Minor Allele Frequency' do
+        == #{@snp.minor_allele}=#{@snp.minor_allele_frequency}
       = row_for_attribute @snp, :modification_date
       = row_for_attribute @snp, :modification_build
       = row_for_attribute @snp, :ncbi_id,            label: 'RS number'

@@ -1,0 +1,2 @@
+#	Trait	SNP rs	Context	Gene	Gene ID	Gene 2	Gene ID 2	Chromosome	Location	P-Value	Source	PubMed	Analysis ID	Study ID	Study Name
+1	Arthritis, Rheumatoid	6859219	intron	ANKRD55	79722	ANKRD55	79722	5	55438580	1e-11	NHGRI	20453842			

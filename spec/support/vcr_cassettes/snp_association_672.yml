@@ -1,0 +1,47 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: http://www.ncbi.nlm.nih.gov/gap/PheGenI?rs=672&tab=2&type=text&data=SNP&log_op=downloadAssocText_L&p%24l=AssocText_L&p%24st=gap
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 03 May 2012 13:46:43 GMT
+      server: 
+      - Apache
+      cache-control: 
+      - private
+      content-disposition: 
+      - attachment; filename=PheGenI_Association.tab
+      ncbi-sid: 
+      - CE881A56FA28C431_0108SID
+      content-type: 
+      - application/octet-stream
+      set-cookie: 
+      - ncbi_sid=CE881A56FA28C431_0108SID; domain=.nih.gov; path=/; expires=Fri, 03 May 2013 13:46:43 GMT
+      - WebEnv=1hUM_5%40CE881A56FA28C431_0108SID; domain=.nlm.nih.gov; path=/; expires=Thu, 03 May 2012 21:46:43 GMT
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+      transfer-encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        No data retrieved, possibly due to a timeout.  Please try again.
+
+    http_version: "1.1"
+  recorded_at: Thu, 03 May 2012 13:46:43 GMT
+recorded_with: VCR 2.1.1

@@ -10,6 +10,10 @@ module ExampleMacros
     File.open(Padrino.root + '/spec/support/fixtures/' + file_name)
   end
 
+  def fixture_file_content(file_name)
+    fixture_file(file_name).read
+  end
+
   def fill_in_fields(fields_and_values)
     fields_and_values.each do |field, value|
       fill_in field.to_s, with: value

@@ -114,4 +114,12 @@ describe Snp do
     end
   end
 
+  it 'fetches associations' do
+    VCR.use_cassette 'snp_association_6859219' do
+      snp = Snp.new(rs_number: 6859219)
+      snp.send :fetch_associations
+      snp.has_associations.should == true
+    end
+  end
+
 end

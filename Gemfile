@@ -25,6 +25,7 @@ group :test do
   gem 'mocha', '0.9.12'
   gem 'rspec', '2.6.0'
   gem 'spork', '0.8.5'
+  gem 'vcr', '2.1.1'
 end
 
 group :development, :test do

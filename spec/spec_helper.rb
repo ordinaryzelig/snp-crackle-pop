@@ -21,6 +21,14 @@ Spork.prefork do
   FakeWeb.allow_net_connect = false
   require 'entrez/spec_helpers'
   Entrez.ignore_query_limit = true
+
+  # VCR.
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/support/vcr_cassettes'
+    c.hook_into :fakeweb
+    c.allow_http_connections_when_no_cassette = true
+  end
+
 end
 
 Spork.each_run do

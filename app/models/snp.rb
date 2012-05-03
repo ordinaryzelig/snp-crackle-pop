@@ -9,63 +9,26 @@ class Snp
   set_unique_id_field :rs_number
   set_unique_id_search_field :RS
 
-  field :ancestral_allele,
-        type: String,
-        xml: lambda { |node| node.css('Sequence').first['ancestralAllele'] }
-  field :refSNP_alleles,
-        type: Array,
-        default: [],
-        xml: lambda { |node| node.at_css('Sequence Observed').text.split('/') }
-  field :chromosome,
-        type: Integer,
-        xml: lambda { |node| node.css('Assembly Component').first['chromosome'] }
-  field :gene_symbol,
-        type: Integer,  xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
-  field :het_uncertainty,
-        type: Float,
-        xml: lambda { |node| node.css('Het').first['stdError'].to_f.round(3) }
-  field :heterozygosity,
-        type: Float,
-        xml: lambda { |node| node.css('Het').first['value'].to_f.round(3) }
-  field :max_success_rate,
-        type: Float,
-        xml: lambda { |node| node.css('validProbMax').first }
-  field :min_success_rate,
-        type: Float,
-        xml: lambda { |node| node.css('validProbMin').first }
-  field :minor_allele,
-        type: String,
-        xml: lambda { |node| node.at_css('Frequency')[:allele] }
-  field :minor_allele_frequency,
-        type: Float,
-        xml: lambda { |node| node.at_css('Frequency')[:freq].to_f }
-  field :modification_build,
-        type: Integer,
-        xml: lambda { |node| node.css('Update').first['build'] }
-  field :modification_date,
-        type: Time,
-        xml: lambda { |node| node.css('Update').first['date'] }
-  field :ncbi_gene_id,
-        type: Integer,
-        xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
-  field :ncbi_id,
-        type: Integer,
-        xml: lambda { |node| node['rsId'] }
-  field :ncbi_taxonomy_id,
-        type: Integer,
-        xml: lambda { |node| node['taxId'] }
-  field :protein_accession,
-        type: String,
-        xml: lambda { |node| node.css('FxnSet').first['protAcc'] }
-  field :protein_version,
-        type: Integer,
-        xml: lambda { |node| node.css('FxnSet').first['protVer'] }
-  field :rs_number,
-        type: Integer,
-        xml: lambda { |node| node['rsId'] }
-  field :snp_class,
-        type: String,
-        xml: lambda { |node| node['snpClass'] }
+  field :ancestral_allele,       type: String,  xml: lambda { |node| node.css('Sequence').first['ancestralAllele'] }
+  field :refSNP_alleles,         type: Array,   default: [], xml: lambda { |node| node.at_css('Sequence Observed').text.split('/') }
+  field :chromosome,             type: Integer, xml: lambda { |node| node.css('Assembly Component').first['chromosome'] }
+  field :gene_symbol,            type: Integer, xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['symbol'] }
+  field :has_associations,       type: Boolean
+  field :het_uncertainty,        type: Float,   xml: lambda { |node| node.css('Het').first['stdError'].to_f.round(3) }
+  field :heterozygosity,         type: Float,   xml: lambda { |node| node.css('Het').first['value'].to_f.round(3) }
+  field :max_success_rate,       type: Float,   xml: lambda { |node| node.css('validProbMax').first }
+  field :min_success_rate,       type: Float,   xml: lambda { |node| node.css('validProbMin').first }
+  field :minor_allele,           type: String,  xml: lambda { |node| node.at_css('Frequency')[:allele] }
+  field :minor_allele_frequency, type: Float,   xml: lambda { |node| node.at_css('Frequency')[:freq].to_f }
+  field :modification_build,     type: Integer, xml: lambda { |node| node.css('Update').first['build'] }
+  field :modification_date,      type: Time,    xml: lambda { |node| node.css('Update').first['date'] }
+  field :ncbi_gene_id,           type: Integer, xml: lambda { |node| node.css('Assembly Component MapLoc FxnSet').first['geneId'] }
+  field :ncbi_id,                type: Integer, xml: lambda { |node| node['rsId'] }
+  field :ncbi_taxonomy_id,       type: Integer, xml: lambda { |node| node['taxId'] }
+  field :protein_accession,      type: String,  xml: lambda { |node| node.css('FxnSet').first['protAcc'] }
+  field :protein_version,        type: Integer, xml: lambda { |node| node.css('FxnSet').first['protVer'] }
+  field :rs_number,              type: Integer, xml: lambda { |node| node['rsId'] }
+  field :snp_class,              type: String,  xml: lambda { |node| node['snpClass'] }
   ncbi_timestamp_field
 
   embeds_many :alleles,    autosave: true, options: {xml: lambda { |node| node.css('Assembly').detect { |fxnset| fxnset[:reference] == 'true' }.css('FxnSet') } }
@@ -75,6 +38,7 @@ class Snp
   validates_uniqueness_of :rs_number
 
   before_create :assign_gene, unless: :gene_id
+  before_create :fetch_associations, unless: :has_associations
 
   scope :for_ncbi_gene_id, ->(ncbi_gene_id) { where(ncbi_gene_id: ncbi_gene_id) }
   scope :without_gene_object, where(gene_id: nil)
@@ -98,6 +62,12 @@ class Snp
 
   def assign_gene
     self.gene = Gene.find_by_ncbi_id self.ncbi_gene_id
+  end
+
+  def fetch_associations
+    snp_association = SnpAssociation.fetch(self.rs_number)
+    self.has_associations = snp_association.present?
+    true
   end
 
   class LocationRequest

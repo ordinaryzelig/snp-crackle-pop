@@ -6,7 +6,8 @@
 # there is a download button. This is where this URL comes from. However, there is a bit of JavaScript required to arrive at this URL.
 class SnpAssociation
 
-  URL_TEMPLATE = 'http://www.ncbi.nlm.nih.gov/gap/PheGenI?rs=%s&tab=2&type=text&data=SNP&log_op=downloadAssocText_L&p%24l=AssocText_L&p%24st=gap'
+  DOWNLOAD_URL_TEMPLATE = 'http://www.ncbi.nlm.nih.gov/gap/PheGenI?rs=%s&tab=2&type=text&data=SNP&log_op=downloadAssocText_L&p%24l=AssocText_L&p%24st=gap'
+  URL_TEMPLATE = 'http://www.ncbi.nlm.nih.gov/gap/PheGenI?tab=2&rs=%s#pgGAP'
 
   attr_accessor :rs_number
 
@@ -23,10 +24,14 @@ class SnpAssociation
       end
     end
 
+    def url(rs_number)
+      URL_TEMPLATE.sub('%s', rs_number.to_s)
+    end
+
     private
 
     def request(rs_number)
-      url = URL_TEMPLATE.sub('%s', rs_number.to_s)
+      url = DOWNLOAD_URL_TEMPLATE.sub('%s', rs_number.to_s)
       uri = URI.parse(url)
       Net::HTTP.get_response(uri)
     end

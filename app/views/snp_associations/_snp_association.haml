@@ -1,0 +1,7 @@
+- if snp.has_associations.nil?
+  %span.hint (not fetched)
+- else
+  - if snp.has_associations
+    = link_to 'Yes', snp.association_url
+  - else
+    No

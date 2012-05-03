@@ -17,6 +17,8 @@
         = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
       = row_for_attribute @snp, 'base_positions (+/-1 )' do
         = partial 'assemblies/assemblies', locals: {assemblies: @snp.assemblies}
+      = row_for_attribute @snp, :has_associations do
+        = partial 'snp_associations/snp_association', locals: {snp: @snp}
       = row_for_attribute @snp, :chromosome
       = row_for_attribute @snp, :gene do
         = link_to @snp.gene_symbol, url(:genes, :show, id: @snp.ncbi_gene_id) if @snp.gene_symbol

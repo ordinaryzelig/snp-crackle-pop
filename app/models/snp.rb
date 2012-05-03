@@ -58,6 +58,10 @@ class Snp
     "#{protein_accession}.#{protein_version}"
   end
 
+  def association_url
+    SnpAssociation.url(rs_number)
+  end
+
   private
 
   def assign_gene

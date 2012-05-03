@@ -62,17 +62,29 @@ describe Snp do
 
   it_raises_error_if_ncbi_cannot_find_it
 
-  it 'refetches data from NCBI' do
-    snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago, alleles: [])
-    old_id = snp._id
-    fake_service_with_file :EFetch, Snp.fixture_file do
-      snp.refetch
+  describe '#refetch' do
+
+    it 'refetches data from NCBI' do
+      snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago, alleles: [])
+      old_id = snp._id
+      fake_service_with_file :EFetch, Snp.fixture_file do
+        snp.refetch
+      end
+      snp._id.should == old_id
+      snp_fixture = Snp.from_fixture_file
+      snp.het_uncertainty.should == snp_fixture.het_uncertainty
+      snp.alleles.should == snp_fixture.alleles
+      snp.updated_from_ncbi_at_changed?.should be_true
     end
-    snp._id.should == old_id
-    snp_fixture = Snp.from_fixture_file
-    snp.het_uncertainty.should == snp_fixture.het_uncertainty
-    snp.alleles.should == snp_fixture.alleles
-    snp.updated_from_ncbi_at_changed?.should be_true
+
+    it 'runs create callbacks' do
+      snp = Snp.make_from_fixture_file
+      snp.expects(:run_callbacks).with(:create)
+      fake_service_with_file :EFetch, Snp.fixture_file do
+        snp.refetch
+      end
+    end
+
   end
 
   it 'finds multiple objects that exist in local db by NCBI ids' do

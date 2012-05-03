@@ -33,11 +33,9 @@ class Snp
 
   embeds_many :alleles,    autosave: true, options: {xml: lambda { |node| node.css('Assembly').detect { |fxnset| fxnset[:reference] == 'true' }.css('FxnSet') } }
   embeds_many :assemblies, autosave: true, options: {xml: lambda { |node| node.css('Assembly') }}
-  belongs_to :gene
 
   validates_uniqueness_of :rs_number
 
-  before_create :assign_gene, unless: :gene_id
   before_create :fetch_associations, unless: :has_associations
 
   scope :for_ncbi_gene_id, ->(ncbi_gene_id) { where(ncbi_gene_id: ncbi_gene_id) }
@@ -63,10 +61,6 @@ class Snp
   end
 
   private
-
-  def assign_gene
-    self.gene = Gene.find_by_ncbi_id self.ncbi_gene_id
-  end
 
   def fetch_associations
     snp_association = SnpAssociation.fetch(self.rs_number)

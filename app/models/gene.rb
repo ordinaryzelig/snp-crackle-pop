@@ -28,18 +28,9 @@ class Gene
   ncbi_timestamp_field
   alias_method :name, :symbol
 
-  has_many :snps
-
   validates_uniqueness_of :symbol
 
   has_taxonomy
-
-  # For any Snps that have the same gene_id,
-  # but don't yet have a gene object in the db,
-  # assign this one to them.
-  def assign_to_child_snps
-    Snp.without_gene_object.for_ncbi_gene_id(self.ncbi_id).update_all(gene_id: self.id)
-  end
 
   def name_and_description
     "#{name}: #{description}"

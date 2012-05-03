@@ -47,13 +47,6 @@ describe Snp do
     Snp.find_by_ncbi_id_or_fetch! 1
   end
 
-  it 'assigns existing gene after creation' do
-    gene_id = 1
-    gene = Gene.make(ncbi_id: gene_id)
-    snp = Snp.make(ncbi_gene_id: gene_id)
-    snp.gene.should == gene
-  end
-
   it 'assigns taxonomy after creation' do
     snp = Snp.make_from_fixture_file
     Taxonomy.count.should == 1

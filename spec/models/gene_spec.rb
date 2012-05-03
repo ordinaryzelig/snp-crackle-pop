@@ -38,15 +38,6 @@ describe Gene do
     gene.discontinued.should == true
   end
 
-  it 'assigns itself to child Snps' do
-    gene_id = 1
-    snp = Snp.make(ncbi_gene_id: gene_id)
-    snp.gene.should be_nil
-    gene = Gene.make(ncbi_id: gene_id)
-    gene.assign_to_child_snps
-    snp.reload.gene.should == gene
-  end
-
   it 'searches NCBI by symbols or location' do
     gene = Gene.from_fixture_file
     ['UQCC', 'BFZB', '20q11.22'].each do |term|

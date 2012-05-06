@@ -78,6 +78,17 @@ describe Snp do
       end
     end
 
+    it 'replaces embedded relations' do
+      snp = Snp.make_from_fixture_file
+      old_allele_ids = snp.alleles.map(&:_id)
+      fake_service_with_file :EFetch, Snp.fixture_file do
+        snp.refetch!
+      end
+      snp.reload
+      new_allele_ids = snp.alleles.map(&:_id)
+      new_allele_ids.should_not == old_allele_ids
+    end
+
   end
 
   it 'finds multiple objects that exist in local db by NCBI ids' do

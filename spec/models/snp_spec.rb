@@ -78,7 +78,7 @@ describe Snp do
       end
     end
 
-    it 'replaces embedded relations' do
+    it 'replaces relations' do
       snp = Snp.make_from_fixture_file
       old_allele_ids = snp.alleles.map(&:_id)
       fake_service_with_file :EFetch, Snp.fixture_file do
@@ -86,6 +86,7 @@ describe Snp do
       end
       snp.reload
       new_allele_ids = snp.alleles.map(&:_id)
+      new_allele_ids.size.should == 2
       new_allele_ids.should_not == old_allele_ids
     end
 
@@ -136,6 +137,29 @@ describe Snp do
       snp.send :fetch_associations
       snp.has_associations.should == true
     end
+  end
+
+  specify '.delete_embedded_relations removes embedded relations' do
+    snp = Snp.make_from_fixture_file
+    snp.alleles.size.should == 2
+    snp.send :delete_embedded_relations
+    snp.save
+    snp.reload
+    snp.alleles.should be_empty
+  end
+
+  specify '.replace_relations substitutes relations with given document relations' do
+    snp = Snp.make_from_fixture_file
+    old_allele_ids = snp.alleles.map(&:_id)
+    new_snp = fake_service_with_file :EFetch, Snp.fixture_file do
+      Snp.fetch(snp.rs_number)
+    end
+    snp.send :replace_relations, new_snp
+    snp.save
+    snp.reload
+    new_alleles = snp.alleles
+    new_alleles.size.should == 2
+    new_alleles.map(&:_id).should_not == old_allele_ids
   end
 
 end

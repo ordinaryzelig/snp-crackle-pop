@@ -84,6 +84,14 @@ module NCBI
         object
       end
 
+      # Get updated data from NCBI.
+      # Destroy existing objects, fetch! them again.
+      # NOTE The _id field is not preserved!
+      def refetch!(ncbi_id_or_ids)
+        where(ncbi_id: ncbi_id_or_ids).destroy_all
+        fetch!(ncbi_id_or_ids)
+      end
+
       def search_by_unique_id_field(ids)
         self::UniqueIdSearchRequest.new(ids).execute
       end

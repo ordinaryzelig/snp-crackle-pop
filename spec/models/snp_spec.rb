@@ -57,37 +57,11 @@ describe Snp do
 
   describe '#refetch' do
 
-    it 'refetches data from NCBI' do
-      snp = Snp.make_from_fixture_file(het_uncertainty: 0.999, updated_from_ncbi_at: 1.year.ago, alleles: [])
-      old_id = snp._id
-      fake_service_with_file :EFetch, Snp.fixture_file do
-        snp.refetch
-      end
-      snp._id.should == old_id
-      snp_fixture = Snp.from_fixture_file
-      snp.het_uncertainty.should == snp_fixture.het_uncertainty
-      snp.alleles.should == snp_fixture.alleles
-      snp.updated_from_ncbi_at_changed?.should be_true
-    end
-
-    it 'runs create callbacks' do
+    it 'destroys existing SNPs and replaces them with fetch!' do
       snp = Snp.make_from_fixture_file
-      snp.expects(:run_callbacks).with(:create)
-      fake_service_with_file :EFetch, Snp.fixture_file do
-        snp.refetch
-      end
-    end
-
-    it 'replaces relations' do
-      snp = Snp.make_from_fixture_file
-      old_allele_ids = snp.alleles.map(&:_id)
-      fake_service_with_file :EFetch, Snp.fixture_file do
-        snp.refetch!
-      end
-      snp.reload
-      new_allele_ids = snp.alleles.map(&:_id)
-      new_allele_ids.size.should == 2
-      new_allele_ids.should_not == old_allele_ids
+      Snp.refetch!(snp.ncbi_id)
+      proc { snp.reload }.should raise_error(Mongoid::Errors::DocumentNotFound)
+      Snp.find_by_ncbi_id(snp.ncbi_id).should_not be_nil
     end
 
   end
@@ -137,29 +111,6 @@ describe Snp do
       snp.send :fetch_associations
       snp.has_associations.should == true
     end
-  end
-
-  specify '.delete_embedded_relations removes embedded relations' do
-    snp = Snp.make_from_fixture_file
-    snp.alleles.size.should == 2
-    snp.send :delete_embedded_relations
-    snp.save
-    snp.reload
-    snp.alleles.should be_empty
-  end
-
-  specify '.replace_relations substitutes relations with given document relations' do
-    snp = Snp.make_from_fixture_file
-    old_allele_ids = snp.alleles.map(&:_id)
-    new_snp = fake_service_with_file :EFetch, Snp.fixture_file do
-      Snp.fetch(snp.rs_number)
-    end
-    snp.send :replace_relations, new_snp
-    snp.save
-    snp.reload
-    new_alleles = snp.alleles
-    new_alleles.size.should == 2
-    new_alleles.map(&:_id).should_not == old_allele_ids
   end
 
 end

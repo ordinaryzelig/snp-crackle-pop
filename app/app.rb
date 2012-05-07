@@ -43,8 +43,7 @@ class SnpCracklePop < Padrino::Application
 
     def refetch_action(model_class)
       get :refetch, with: :id do
-        object = model_class.find_by_ncbi_id(params[:id])
-        object.refetch!
+        object = model_class.refetch!(params[:id])
         redirect url(model_class.name.tableize.to_sym, :show, id: object.ncbi_id)
       end
     end

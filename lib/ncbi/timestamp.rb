@@ -18,7 +18,6 @@ module NCBI
     module ClassMethods
 
       def ncbi_timestamp_field
-        include NCBI::Refetchable
         field :updated_from_ncbi_at, type: Time
         before_create :set_updated_from_ncbi_at, unless: :updated_from_ncbi_at?
       end

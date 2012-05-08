@@ -6,11 +6,15 @@ Spork.prefork do
   ENV["PADRINO_ENV"] ||= "test"
   require File.expand_path("config/boot.rb", Dir.pwd)
 
+  # require files in support dir.
+  Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
   RSpec.configure do |config|
     config.mock_with :mocha
     config.before :each do
       drop_tables
     end
+    config.include(ExampleMacros)
+    config.extend(DescriptionMacros)
   end
 
   require 'capybara/rspec'
@@ -18,7 +22,6 @@ Spork.prefork do
 
   SnpCracklePop.setup_application!
 
-  FakeWeb.allow_net_connect = false
   require 'entrez/spec_helpers'
   Entrez.ignore_query_limit = true
 
@@ -34,10 +37,4 @@ end
 Spork.each_run do
   # Spork (I think) kills Time.zone, so load it at each run.
   load Padrino.root + '/config/initializers/time_zone.rb'
-  # require files in support dir.
-  Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
-  RSpec.configure do |config|
-    config.include(ExampleMacros)
-    config.extend(DescriptionMacros)
-  end
 end

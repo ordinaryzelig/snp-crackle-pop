@@ -28,6 +28,11 @@ group :test do
   gem 'vcr', '2.1.1'
 end
 
+group :development do
+  gem 'foreman', '0.46.0'
+  gem 'guard-spork', '0.8.0'
+end
+
 group :development, :test do
   gem 'awesome_print'
 end

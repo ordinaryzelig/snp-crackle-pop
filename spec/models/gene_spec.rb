@@ -81,13 +81,4 @@ describe Gene do
     genes.map(&:symbol).should == identifiers
   end
 
-  it 'locates by searching for chromosome and base positions' do
-    file = fixture_file('gene_locate_chr_6_base_1000000_to_2000000_esummary.xml')
-    ids = Gene::SearchResult.all_from_file(file).map(&:ncbi_id)
-    fake_search_request file do
-      search_results = Gene.locate(chromosome: 6, base_position_low: 1_000_000, base_position_high: 2_000_000)
-      search_results.map(&:ncbi_id).should =~ ids
-    end
-  end
-
 end

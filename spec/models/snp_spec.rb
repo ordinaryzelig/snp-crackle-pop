@@ -113,4 +113,18 @@ describe Snp do
     end
   end
 
+  describe '.search' do
+
+    it 'finds by unique id or fetches' do
+      term = 'rs123'
+      Snp.expects(:find_all_by_unique_id_field_or_fetch_by_unique_id_field!).with(['123']).returns([])
+      Snp.search(term)
+    end
+
+    it 'raises exception if term invalid' do
+      proc { Snp.search('invalid') }.should raise_exception(NCBI::SearchRequest::InvalidSearchTerm)
+    end
+
+  end
+
 end

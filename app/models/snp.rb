@@ -49,6 +49,13 @@ class Snp
       'SNP'
     end
 
+    # Search by unique id. Fetch if necessary.
+    def search(term)
+      rs_number = term.to_s[/\d+/]
+      raise NCBI::SearchRequest::InvalidSearchTerm.new(term, "Invalid rs#: #{term}") if rs_number.blank?
+      Snp.find_all_by_unique_id_field_or_fetch_by_unique_id_field!([rs_number]).first
+    end
+
   end
 
   def protein_accession_str

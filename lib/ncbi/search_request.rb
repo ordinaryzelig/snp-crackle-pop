@@ -78,5 +78,11 @@ module NCBI
       end
     end
 
+    class InvalidSearchTerm < DisplayableError
+      def initialize(term, message = nil)
+        super (message || "Search term is invalid: #{term}")
+      end
+    end
+
   end
 end

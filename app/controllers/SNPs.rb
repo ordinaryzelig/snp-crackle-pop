@@ -4,12 +4,12 @@ SnpCracklePop.controllers :snps do
     haml :'snps/download'
   end
 
-  # Perform unique id search.
+  # Perform unique id search or location search.
   get :search do
+    @term = params[:q]
     @location = params[:location]
-    if params[:q]
-      rs_number = params[:q].match(/(?<number>\d+)/)[:number]
-      snp = Snp.find_all_by_unique_id_field_or_fetch_by_unique_id_field!([rs_number]).first
+    if @term
+      snp = Snp.search(@term)
       redirect url(:snps, :show, id: snp.rs_number)
     elsif @location
       @snp_search_results = Snp.locate(@location)

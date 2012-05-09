@@ -1,10 +1,10 @@
-- title "Genome project #{@genome_project.name}"
+- title "Genome project: #{@genome_project.name}"
 
 .show_model
 
   %h1
     :plain
-      Genome Project #{@genome_project.name}
+      Genome Project: #{@genome_project.name}
 
   = partial 'shared/ncbi_url', locals: {object: @genome_project}
 

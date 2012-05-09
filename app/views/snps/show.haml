@@ -1,10 +1,10 @@
-- title "SNP rs#{@snp.rs_number}"
+- title "SNP: rs#{@snp.rs_number}"
 
 .show_model
 
   %h1
     :plain
-      SNP #{@snp.rs_number}
+      SNP: #{@snp.rs_number}
 
   = partial 'shared/ncbi_url', locals: {object: @snp}
 

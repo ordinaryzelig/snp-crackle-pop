@@ -1,10 +1,10 @@
-- title "Gene #{@gene.symbol}"
+- title "Gene: #{@gene.symbol}"
 
 .show_model
 
   %h1
     :plain
-      Gene #{@gene.symbol}
+      Gene: #{@gene.symbol}
     - if @gene.discontinued
       %span.discontinued= 'DISCONTINUED'
 

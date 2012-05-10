@@ -13,7 +13,7 @@
       = row_for_attribute @snp, :ancestral_allele
       = row_for_attribute @snp, :refSNP_alleles, label: 'refSNP Alleles' do
         = @snp.refSNP_alleles.join('/')
-      = row_for_attribute @snp, :alleles do
+      = row_for_attribute @snp, :alleles, label: 'Reference assembly alleles' do
         = partial 'alleles/alleles', locals: {alleles: @snp.alleles}
       = row_for_attribute @snp, 'base_positions (+/-1 )' do
         = partial 'assemblies/assemblies', locals: {assemblies: @snp.assemblies}

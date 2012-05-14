@@ -36,4 +36,3 @@ Searching 100 locations is OK.
 
 * **MORE README**
 * Unhandled exception + mailer
-* Add link to wiki.

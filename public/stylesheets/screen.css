@@ -124,19 +124,15 @@ body {
   border-radius: 10px; }
 
 #footer {
+  padding: 5px;
   position: fixed;
   bottom: 0;
   right: 0;
-  color: #cccccc;
+  color: #888888;
   background: #eeeeee;
-  border: 1px solid #cccccc;
-  opacity: 0.9; }
-  #footer:hover {
-    opacity: 1;
-    color: #888888; }
+  border: 1px solid #cccccc; }
   #footer #version {
-    font-size: 10pt;
-    padding: 5px; }
+    margin-left: 10px; }
 
 #home ul.model {
   display: inline-block;

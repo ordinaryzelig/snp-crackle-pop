@@ -78,7 +78,7 @@ table.attribute_table tbody td {
   font-size: 10pt; }
 
 .hint {
-  font-size: 70%;
+  font-size: 85%;
   font-style: italic;
   color: gray; }
 
@@ -201,6 +201,6 @@ body {
         .search_model ol li table.attribute_table caption #ncbi_url {
           margin-top: 5px; }
 
-form.download h2 {
+form h2 {
   font-size: 20pt;
   font-weight: bold; }

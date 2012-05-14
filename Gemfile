@@ -15,7 +15,7 @@ gem 'haml', '3.1.1'
 gem 'mongoid', '2.0.0.rc.7'
 gem 'nokogiri', '1.4.4'
 gem 'sass', '3.1.1'
-gem 'mongoid_to_csv', '0.1.0'
+gem 'mongoid_to_csv', '0.4.0'
 
 group :test do
   gem 'capybara', '~>0.4.1'

@@ -8,7 +8,7 @@
     = search_field_tag 'q', value: @term, id: 'q', size: 30, placeholder: 'Symbol, name, protein, loc'
     = submit_tag :Search
 
-  = partial 'shared/locate_form', locals: {url_name: :genes_search, location: @location || {}}
+  = partial 'shared/locate_form', locals: {url_name: :genes_search, location: @location || Location.new}
 
   - if @gene_search_results
     %h2#found= 'Found ' + pluralize(@gene_search_results.size, 'gene')
@@ -17,8 +17,8 @@
         %li
           %table.attribute_table
             %caption
-              = link_to_unless gene.discontinued, highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
-              - if gene.discontinued
+              = link_to_unless gene.discontinued?, highlight(gene.symbol, @term), url(:genes, :show, id: gene.ncbi_id)
+              - if gene.discontinued?
                 %span.discontinued DISCONTINUED
                 -if gene.replaced_with
                   .discontinued_info

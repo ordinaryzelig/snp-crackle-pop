@@ -6,7 +6,7 @@ SnpCracklePop.controllers :genes do
 
   get :search do
     @term = params[:q]
-    @location = params[:location]
+    @location = Location.new(params[:location]) if params[:location]
     if @term
       @gene_search_results = Gene.search(@term)
     elsif @location

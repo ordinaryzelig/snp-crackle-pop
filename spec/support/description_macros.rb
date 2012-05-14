@@ -24,6 +24,7 @@ module DescriptionMacros
   def it_can_be_refetched(attribute, initial_value)
     model_class = model_class()
     it 'can be refetched' do
+      disable_snp_associations
       object = model_class.make_from_fixture_file(attribute => initial_value)
       file = model_class.fixture_file
       visit url_for(object)

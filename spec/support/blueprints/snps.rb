@@ -3,4 +3,5 @@ Snp.blueprint do
   ncbi_id { 1 }
   rs_number { ncbi_id }
   taxonomy { Taxonomy.first || Taxonomy.make_from_fixture_file }
+  has_associations { true }
 end

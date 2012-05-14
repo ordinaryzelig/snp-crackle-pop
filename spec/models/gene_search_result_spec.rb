@@ -14,7 +14,7 @@ describe Gene::SearchResult do
     it_parses_attribute :base_position_high, 30594173
     it_parses_attribute :chromosome,         6
     it_parses_attribute :description,        'mitochondrial ribosomal protein S18B'
-    it_parses_attribute :discontinued,       false
+    it_parses_attribute :discontinued?,      false
     it_parses_attribute :location,           '6p21.3'
     it_parses_attribute :ncbi_id,            28973
     it_parses_attribute :replaced_with,      nil

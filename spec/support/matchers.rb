@@ -60,7 +60,7 @@ RSpec::Matchers.define :be_found_on_search_results_page_when_looking_for do |att
   match do |search_results|
     search_results.each do |search_result|
       content = search_result.send(attribute)
-      if search_result.discontinued
+      if search_result.discontinued?
         page.should have_content(content)
       else
         find_link(content)

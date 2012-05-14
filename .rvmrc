@@ -1,1 +1,1 @@
-rvm 1.9.2-p0@snp-crackle-pop
+rvm use --create 1.9.2-p320@snp-crackle-pop

@@ -18,13 +18,10 @@ module NCBI
     # Return single result.
     def execute
       super
-      results.reject!(&:discontinued)
+      results.reject!(&:discontinued?)
       validate_results
       results
     end
-
-    # This is an exact search, so no need to validate search.
-    def validate_search_term; true; end
 
     private
 

@@ -89,4 +89,11 @@ module ExampleMacros
     end
   end
 
+  # Bad hack to prevent fetching snp associations.
+  # This happens when a test is already heavily invested in faking requests that
+  # it cannot easily add another to fetch snp associations.
+  def disable_snp_associations
+    Snp.any_instance.stubs(:fetch_associations)
+  end
+
 end

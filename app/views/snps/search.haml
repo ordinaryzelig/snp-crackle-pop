@@ -7,7 +7,7 @@
       = search_field_tag 'q', value: params[:q], placeholder: 'RS number'
       = submit_tag :Search
 
-  = partial 'shared/locate_form', locals: {url_name: :snps_search, location: @location || {}}
+  = partial 'shared/locate_form', locals: {url_name: :snps_search, location: @location || Location.new}
 
   - if @snp_search_results
     %h2#found= 'Found ' + pluralize(@snp_search_results.size, 'SNP')
@@ -16,8 +16,8 @@
         %li
           %table.attribute_table
             %caption
-              = link_to_unless snp.discontinued, snp.rs_number, url(:snps, :show, id: snp.ncbi_id)
-              - if snp.discontinued
+              = link_to_unless snp.discontinued?, snp.rs_number, url(:snps, :show, id: snp.ncbi_id)
+              - if snp.discontinued?
                 %span.discontinued DISCONTINUED
                 - if snp.merged_with
                   .discontinued_info

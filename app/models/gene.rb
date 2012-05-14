@@ -70,13 +70,25 @@ class Gene
     # Construct query string from term.
     # Pass query string to super.
     def initialize(search_term)
-      @search_term = search_term
+      @search_term_to_validate = search_term
       ors = {
-        :GENE                   => "*#{@search_term}*",
-        :'DEFAULT MAP LOCATION' => @search_term,
+        :GENE                   => "*#{search_term}*",
+        :'DEFAULT MAP LOCATION' => search_term,
       }
       query_string = "human[ORGN]+AND+" + Entrez.convert_search_term_hash(ors, 'OR')
       super(query_string)
+    end
+
+    # Validates that @search_term_to_validate is a number or at least 3 characters.
+    def valid?
+      begin
+        # Attempt to convert to number.
+        !!Float(@search_term_to_validate)
+      rescue
+        # @search_term cannot be coerced into number, must be non-number string,
+        # and it should be >=3 characters.
+        @search_term_to_validate.size >= 3
+      end
     end
 
   end
@@ -108,7 +120,7 @@ class Gene
     field(:symbols_other)      { |node| node.items['OtherAliases'].split(', ') }
     field(:other)              { |node| node.items['OtherDesignations'] }
 
-    def discontinued
+    def discontinued?
       status != 0
     end
 

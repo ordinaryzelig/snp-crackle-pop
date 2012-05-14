@@ -9,6 +9,15 @@ module NCBI
       base.extend ClassMethods
     end
 
+    # Days since updated_from_ncbi_at.
+    def age
+      (Date.today - updated_from_ncbi_at.to_date).to_i
+    end
+
+    def older_than?(days)
+      age > days
+    end
+
     private
 
     def set_updated_from_ncbi_at

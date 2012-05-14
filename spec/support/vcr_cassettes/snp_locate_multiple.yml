@@ -1,0 +1,488 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?tool=ruby&email=jared@redningja.com&retmode=xml&retmax=999999999&db=snp&term=((32364354[CPOS]%20:%2032364356[CPOS])+AND+6[CHR]+AND+human[ORGN])%20+OR+%20((32363842[CPOS]%20:%2032363844[CPOS])+AND+6[CHR]+AND+human[ORGN])
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 10 May 2012 22:23:10 GMT
+      server: 
+      - Apache
+      access-control-allow-origin: 
+      - "*"
+      cache-control: 
+      - private
+      ncbi-sid: 
+      - 9DFC15F5FAC3FCE1_0015SID
+      content-type: 
+      - text/xml; charset=UTF-8
+      set-cookie: 
+      - ncbi_sid=9DFC15F5FAC3FCE1_0015SID; domain=.nih.gov; path=/; expires=Fri, 10 May 2013 22:23:10 GMT
+      connection: 
+      - close
+      transfer-encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" ?>
+        <!DOCTYPE eSearchResult PUBLIC "-//NLM//DTD eSearchResult, 11 May 2002//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSearch_020511.dtd">
+        <eSearchResult>
+        <Count>9</Count><RetMax>9</RetMax><RetStart>0</RetStart>
+        <IdList>
+        	<Id>117919974</Id>
+        	<Id>116165642</Id>
+        	<Id>117100552</Id>
+        	<Id>114338049</Id>
+        	<Id>9268481</Id>
+        	<Id>17423795</Id>
+        	<Id>17208804</Id>
+        	<Id>57538739</Id>
+        	<Id>9268480</Id>
+        </IdList>
+        <TranslationSet><Translation>     <From>human[ORGN]</From>     <To>"Homo sapiens"[Organism]</To>    </Translation></TranslationSet><TranslationStack>   <TermSet>    <Term>32364354[CHRPOS]</Term>    <Field>CHRPOS</Field>    <Count>0</Count>    <Explode>Y</Explode>   </TermSet>   <TermSet>    <Term>32364356[CHRPOS]</Term>    <Field>CHRPOS</Field>    <Count>0</Count>    <Explode>Y</Explode>   </TermSet>   <OP>RANGE</OP>   <OP>GROUP</OP>   <TermSet>    <Term>6[CHR]</Term>    <Field>CHR</Field>    <Count>7076088</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>   <TermSet>    <Term>"Homo sapiens"[Organism]</Term>    <Field>Organism</Field>    <Count>60480978</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>   <OP>GROUP</OP>   <TermSet>    <Term>32363842[CHRPOS]</Term>    <Field>CHRPOS</Field>    <Count>0</Count>    <Explode>Y</Explode>   </TermSet>   <TermSet>    <Term>32363844[CHRPOS]</Term>    <Field>CHRPOS</Field>    <Count>0</Count>    <Explode>Y</Explode>   </TermSet>   <OP>RANGE</OP>   <OP>GROUP</OP>   <TermSet>    <Term>6[CHR]</Term>    <Field>CHR</Field>    <Count>7076088</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>   <TermSet>    <Term>"Homo sapiens"[Organism]</Term>    <Field>Organism</Field>    <Count>60480978</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>   <OP>GROUP</OP>   <OP>OR</OP>  </TranslationStack><QueryTranslation>((32364354[CHRPOS] : 32364356[CHRPOS]) AND 6[CHR] AND "Homo sapiens"[Organism]) OR ((32363842[CHRPOS] : 32363844[CHRPOS]) AND 6[CHR] AND "Homo sapiens"[Organism])</QueryTranslation>
+        
+        </eSearchResult>
+
+    http_version: "1.1"
+  recorded_at: Thu, 10 May 2012 22:23:11 GMT
+- request: 
+    method: get
+    uri: http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?tool=ruby&email=jared@redningja.com&retmode=xml&retmax=999999999&db=snp&id=9268480,9268481,17208804,17423795,57538739,114338049,116165642,117100552,117919974
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 10 May 2012 22:23:11 GMT
+      server: 
+      - Apache
+      access-control-allow-origin: 
+      - "*"
+      cache-control: 
+      - private
+      ncbi-sid: 
+      - 08DE4BD0FAC3FCF1_0073SID
+      content-type: 
+      - text/xml; charset=UTF-8
+      set-cookie: 
+      - ncbi_sid=08DE4BD0FAC3FCF1_0073SID; domain=.nih.gov; path=/; expires=Fri, 10 May 2013 22:23:11 GMT
+      connection: 
+      - close
+      transfer-encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD eSummaryResult, 29 October 2004//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSummary_041029.dtd">
+        <eSummaryResult>
+        <DocSum>
+        	<Id>9268480</Id>
+        	<Item Name="SNP_ID" Type="Integer">9268480</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2006</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String">true</Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=9268480|CLINICAL=Y|TAX_ID=9606|VALIDATED=by-cluster,by-frequency|HET= 31|GTYPE=true|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1|HANDLE=ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">31</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">9268480|2|0|1|1|8|6|NT_167249.1|3711286| |BTNL2| 31| 24| |3|1|1|118|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">118</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2003-10-31 16:50</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-09-09 11:55</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,hybridize,other,sequence,unknown</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String">ABI|http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488470,AFFY|http://www.affymetrix.com/support/technical/byproduct.affx?product=100kSNP_A-2047476,HUMANGENOME_JCVI|http://huref.jcvi.org/browse.html?search=1103652828650</Item>
+        	<Item Name="SS" Type="Integer">207457298</Item>
+        	<Item Name="LOCSNPID" Type="String">BCM_CMT_1011-1284727</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844|NT_113891.2:3834265|NT_167244.1:3678214|NT_167245.1:3642743|NT_167246.1:3706680|NT_167247.1:3743402|NT_167248.1:3624702|NT_167249.1:3711287</Item>
+        	<Item Name="TEXT" Type="String"></Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:3917669217</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>9268481</Id>
+        	<Item Name="SNP_ID" Type="Integer">9268481</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String"></Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">0</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">ABI,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,GMI,HUMANGENOME_JCVI,ILLUMINA,SI_MHC_SNP</Item>
+        	<Item Name="FXN_CLASS" Type="String">intron-variant</Item>
+        	<Item Name="VALIDATED" Type="String">by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String">true</Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=9268481|TAX_ID=9606|VALIDATED=by-cluster,by-frequency|HET= 21|GTYPE=true|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1|HANDLE=ABI,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,GMI,HUMANGENOME_JCVI,ILLUMINA,SI_MHC_SNP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=intron-variant</Item>
+        	<Item Name="HET" Type="Integer">21</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">9268481|2|0|1|1|8|6|NT_167249.1|3711798| |BTNL2| 21| 25| |3|1|1|118|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">118</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2003-10-31 16:50</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-09-09 11:55</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,hybridize,sequence,unknown</Item>
+        	<Item Name="SNP3D" Type="String"></Item>
+        	<Item Name="LINKOUT" Type="String">ABI|http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488468,HUMANGENOME_JCVI|http://huref.jcvi.org/browse.html?search=1103652828652</Item>
+        	<Item Name="SS" Type="Integer">207530571</Item>
+        	<Item Name="LOCSNPID" Type="String">BCM_CMT_1011-1309191</Item>
+        	<Item Name="ALLELE" Type="String">R</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32364356</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32304356|NT_113891.2:3834777|NT_167244.1:3678726|NT_167245.1:3643255|NT_167246.1:3707192|NT_167247.1:3743914|NT_167248.1:3625214|NT_167249.1:3711799</Item>
+        	<Item Name="TEXT" Type="String"></Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:3917684584</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>17208804</Id>
+        	<Item Name="SNP_ID" Type="Integer">17208804</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2006</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String">true</Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=17208804|CLINICAL=Y|TAX_ID=9606|VALIDATED=by-cluster,by-frequency|HET= 31|GTYPE=true|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1|HANDLE=ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">31</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">9268480|2|0|1|1|8|6|NT_167249.1|3711286| |BTNL2| 31| 24| |3|1|1|118|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">118</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2003-10-31 16:50</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-09-09 11:55</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,hybridize,other,sequence,unknown</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String">ABI|http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488470,AFFY|http://www.affymetrix.com/support/technical/byproduct.affx?product=100kSNP_A-2047476,HUMANGENOME_JCVI|http://huref.jcvi.org/browse.html?search=1103652828650</Item>
+        	<Item Name="SS" Type="Integer">207457298</Item>
+        	<Item Name="LOCSNPID" Type="String">BCM_CMT_1011-1284727</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844|NT_113891.2:3834265|NT_167244.1:3678214|NT_167245.1:3642743|NT_167246.1:3706680|NT_167247.1:3743402|NT_167248.1:3624702|NT_167249.1:3711287</Item>
+        	<Item Name="TEXT" Type="String">MergedRs=9268480</Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:3917669217</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>17423795</Id>
+        	<Item Name="SNP_ID" Type="Integer">17423795</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2006</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String">true</Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=17423795|CLINICAL=Y|TAX_ID=9606|VALIDATED=by-cluster,by-frequency|HET= 31|GTYPE=true|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1|HANDLE=ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">31</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">9268480|2|0|1|1|8|6|NT_167249.1|3711286| |BTNL2| 31| 24| |3|1|1|118|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">118</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2003-10-31 16:50</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-09-09 11:55</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,hybridize,other,sequence,unknown</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String">ABI|http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488470,AFFY|http://www.affymetrix.com/support/technical/byproduct.affx?product=100kSNP_A-2047476,HUMANGENOME_JCVI|http://huref.jcvi.org/browse.html?search=1103652828650</Item>
+        	<Item Name="SS" Type="Integer">207457298</Item>
+        	<Item Name="LOCSNPID" Type="String">BCM_CMT_1011-1284727</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844|NT_113891.2:3834265|NT_167244.1:3678214|NT_167245.1:3642743|NT_167246.1:3706680|NT_167247.1:3743402|NT_167248.1:3624702|NT_167249.1:3711287</Item>
+        	<Item Name="TEXT" Type="String">MergedRs=9268480</Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:3917669217</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>57538739</Id>
+        	<Item Name="SNP_ID" Type="Integer">57538739</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2006</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String">true</Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=57538739|CLINICAL=Y|TAX_ID=9606|VALIDATED=by-cluster,by-frequency|HET= 31|GTYPE=true|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15,NT_113891.2,NT_167244.1,NT_167245.1,NT_167246.1,NT_167247.1,NT_167248.1,NT_167249.1|HANDLE=ABI,AFFY,BCM-HGSC-SUB,BCMHGSC_JDW,BGI,BUSHMAN,COMPLETE_GENOMICS,CORNELL,ENSEMBL,FHCRC,GMI,HUMANGENOME_JCVI,ILLUMINA,KRIBB_YJKIM,PERLEGEN,PULMONOLOGYMSSM,SEATTLESEQ,SI_EXO,SI_MHC_SNP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">31</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">9268480|2|0|1|1|8|6|NT_167249.1|3711286| |BTNL2| 31| 24| |3|1|1|118|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">118</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2003-10-31 16:50</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-09-09 11:55</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,hybridize,other,sequence,unknown</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String">ABI|http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488470,AFFY|http://www.affymetrix.com/support/technical/byproduct.affx?product=100kSNP_A-2047476,HUMANGENOME_JCVI|http://huref.jcvi.org/browse.html?search=1103652828650</Item>
+        	<Item Name="SS" Type="Integer">207457298</Item>
+        	<Item Name="LOCSNPID" Type="String">BCM_CMT_1011-1284727</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844|NT_113891.2:3834265|NT_167244.1:3678214|NT_167245.1:3642743|NT_167246.1:3706680|NT_167247.1:3743402|NT_167248.1:3624702|NT_167249.1:3711287</Item>
+        	<Item Name="TEXT" Type="String">MergedRs=9268480</Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:3917669217</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>114338049</Id>
+        	<Item Name="SNP_ID" Type="Integer">114338049</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2002</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NT_007592.15</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">1000GENOMES</Item>
+        	<Item Name="FXN_CLASS" Type="String">intron-variant</Item>
+        	<Item Name="VALIDATED" Type="String">by-1000G,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String"></Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=114338049|TAX_ID=9606|VALIDATED=by-1000G,by-frequency|HET= 32|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NT_007592.15|HANDLE=1000GENOMES|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=intron-variant</Item>
+        	<Item Name="HET" Type="Integer">32</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">114338049|2|0|1|1|1|6|NT_007592.15|32304355|32364356|BTNL2| 32| 24| |34|0|1|132|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">132</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2010-07-14 10:57</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-07-08 13:17</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">sequence</Item>
+        	<Item Name="SNP3D" Type="String"></Item>
+        	<Item Name="LINKOUT" Type="String"></Item>
+        	<Item Name="SS" Type="Integer">240472395</Item>
+        	<Item Name="LOCSNPID" Type="String">pilot_1_CHB+JPT_2357472_chr6_32472334</Item>
+        	<Item Name="ALLELE" Type="String">R</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32364356</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32304356</Item>
+        	<Item Name="TEXT" Type="String"></Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:9483798048</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>116165642</Id>
+        	<Item Name="SNP_ID" Type="Integer">116165642</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String"></Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">0</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">1000GENOMES,NHLBI-ESP,PJP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-1000G,by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String"></Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=116165642|TAX_ID=9606|VALIDATED=by-1000G,by-cluster,by-frequency|HET= 36|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15|HANDLE=1000GENOMES,NHLBI-ESP,PJP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">36</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">116165642|2|0|1|1|1|6|NT_007592.15|32303843|32363844|BTNL2| 36| 22| |35|0|1|132|134</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">132</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">134</Item>
+        	<Item Name="CREATEDATE" Type="String">2010-07-14 10:57</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-07-08 13:28</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,sequence</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String"></Item>
+        	<Item Name="SS" Type="Integer">342208108</Item>
+        	<Item Name="LOCSNPID" Type="String">ESP2500-chr6-32363844</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844</Item>
+        	<Item Name="TEXT" Type="String"></Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:9718244404</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>117100552</Id>
+        	<Item Name="SNP_ID" Type="Integer">117100552</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String">0.2002</Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">2188</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NT_007592.15</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">1000GENOMES</Item>
+        	<Item Name="FXN_CLASS" Type="String">intron-variant</Item>
+        	<Item Name="VALIDATED" Type="String">by-1000G,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String"></Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=117100552|TAX_ID=9606|VALIDATED=by-1000G,by-frequency|HET= 32|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NT_007592.15|HANDLE=1000GENOMES|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=intron-variant</Item>
+        	<Item Name="HET" Type="Integer">32</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">114338049|2|0|1|1|1|6|NT_007592.15|32304355|32364356|BTNL2| 32| 24| |34|0|1|132|132</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">132</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">132</Item>
+        	<Item Name="CREATEDATE" Type="String">2010-07-14 10:57</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-07-08 13:17</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">sequence</Item>
+        	<Item Name="SNP3D" Type="String"></Item>
+        	<Item Name="LINKOUT" Type="String"></Item>
+        	<Item Name="SS" Type="Integer">240472395</Item>
+        	<Item Name="LOCSNPID" Type="String">pilot_1_CHB+JPT_2357472_chr6_32472334</Item>
+        	<Item Name="ALLELE" Type="String">R</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32364356</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32304356</Item>
+        	<Item Name="TEXT" Type="String">MergedRs=114338049</Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:9483798048</Item>
+        </DocSum>
+        
+        <DocSum>
+        	<Id>117919974</Id>
+        	<Item Name="SNP_ID" Type="Integer">117919974</Item>
+        	<Item Name="Organism" Type="String"></Item>
+        	<Item Name="ALLELE_ORIGIN" Type="String"></Item>
+        	<Item Name="GLOBAL_MAF" Type="String"></Item>
+        	<Item Name="GLOBAL_POPULATION" Type="String"></Item>
+        	<Item Name="GLOBAL_SAMPLESIZE" Type="Integer">0</Item>
+        	<Item Name="SUSPECTED" Type="String"></Item>
+        	<Item Name="CLINICAL_SIGNIFICANCE" Type="String"></Item>
+        	<Item Name="GENE" Type="String">BTNL2</Item>
+        	<Item Name="LOCUS_ID" Type="Integer">56244</Item>
+        	<Item Name="ACC" Type="String">NM_019602.1,NP_062548.1,NT_007592.15</Item>
+        	<Item Name="CHR" Type="String">6</Item>
+        	<Item Name="WEIGHT" Type="Integer">1</Item>
+        	<Item Name="HANDLE" Type="String">1000GENOMES,NHLBI-ESP,PJP</Item>
+        	<Item Name="FXN_CLASS" Type="String">reference,synonymous-codon</Item>
+        	<Item Name="VALIDATED" Type="String">by-1000G,by-cluster,by-frequency</Item>
+        	<Item Name="GTYPE" Type="String"></Item>
+        	<Item Name="NONREF" Type="String">false</Item>
+        	<Item Name="DOCSUM" Type="String">SNP_ID=117919974|TAX_ID=9606|VALIDATED=by-1000G,by-cluster,by-frequency|HET= 36|WEIGHT=1|NONREF=false|CHR=6|ACC=NM_019602.1,NP_062548.1,NT_007592.15|HANDLE=1000GENOMES,NHLBI-ESP,PJP|GENE=BTNL2|LOCUS_ID=56244|FXN_CLASS=reference,synonymous-codon</Item>
+        	<Item Name="HET" Type="Integer">36</Item>
+        	<Item Name="SRATE" Type="Integer">0</Item>
+        	<Item Name="TAX_ID" Type="Integer">9606</Item>
+        	<Item Name="CHRRPT" Type="String">116165642|2|0|1|1|1|6|NT_007592.15|32303843|32363844|BTNL2| 36| 22| |35|0|1|132|134</Item>
+        	<Item Name="ORIG_BUILD" Type="Integer">132</Item>
+        	<Item Name="UPD_BUILD" Type="Integer">134</Item>
+        	<Item Name="CREATEDATE" Type="String">2010-07-14 10:57</Item>
+        	<Item Name="UPDATEDATE" Type="String">2011-07-08 13:28</Item>
+        	<Item Name="POP_CLASS" Type="String"></Item>
+        	<Item Name="METHOD_CLASS" Type="String">computed,sequence</Item>
+        	<Item Name="SNP3D" Type="String">NP_062548|9624969|351|Q|Q|209870436|112|E|</Item>
+        	<Item Name="LINKOUT" Type="String"></Item>
+        	<Item Name="SS" Type="Integer">342208108</Item>
+        	<Item Name="LOCSNPID" Type="String">ESP2500-chr6-32363844</Item>
+        	<Item Name="ALLELE" Type="String">Y</Item>
+        	<Item Name="SNP_CLASS" Type="String">snp</Item>
+        	<Item Name="CHRPOS" Type="String">6:32363844</Item>
+        	<Item Name="CONTIGPOS" Type="String">NT_007592.15:32303844</Item>
+        	<Item Name="TEXT" Type="String">MergedRs=116165642</Item>
+        	<Item Name="LOOKUP" Type="String">ds_bin_ch6.bin:9718244404</Item>
+        </DocSum>
+        
+        </eSummaryResult>
+
+    http_version: "1.1"
+  recorded_at: Thu, 10 May 2012 22:23:12 GMT
+recorded_with: VCR 2.1.1

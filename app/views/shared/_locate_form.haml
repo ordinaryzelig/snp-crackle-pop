@@ -1,8 +1,8 @@
 or locate by chromosome and base positions
 
 = form_tag url_for(url_name), method: :get do
-  = search_field_tag 'location[chromosome]', value: location[:chromosome], id: 'chromosome', size: 5, placeholder: 'Chro'
-  = search_field_tag 'location[base_position_low]', value: location[:base_position_low], id: 'base_position_low', placeholder: 'Base position low'
+  = search_field_tag 'location[chromosome]', value: location.chromosome, id: 'chromosome', size: 5, placeholder: 'Chro'
+  = search_field_tag 'location[base_position_low]', value: location.base_position_low, id: 'base_position_low', placeholder: 'Base position low'
   to
-  = search_field_tag 'location[base_position_high]', value: location[:base_position_high], id: 'base_position_high', placeholder: 'Base position high'
+  = search_field_tag 'location[base_position_high]', value: location.base_position_high, id: 'base_position_high', placeholder: 'Base position high'
   = submit_tag :Locate

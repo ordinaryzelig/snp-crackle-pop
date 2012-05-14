@@ -2,6 +2,7 @@ class Snp
 
   include NCBI::Document
   extend NCBI::Locatable
+  extend NCBI::FreshLocator
 
   set_ncbi_base_uri 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
   split_xml_on { |doc| doc.css('Rs') }
@@ -67,6 +68,14 @@ class Snp
     SnpAssociation.url(rs_number)
   end
 
+  def reference_assembly
+    assemblies.detect(&:reference)
+  end
+
+  def location
+    Location.new(chromosome: chromosome, base_position_low: reference_assembly.base_position)
+  end
+
   private
 
   def fetch_associations
@@ -77,6 +86,10 @@ class Snp
 
   class LocationRequest
     include NCBI::LocationRequest
+  end
+
+  class SearchRequest
+    include NCBI::SearchRequest
   end
 
   class UniqueIdSearchRequest
@@ -100,7 +113,7 @@ class Snp
     field(:rs_number)      { |node| "rs#{node.items['SNP_ID']}" } # Prepend 'rs' just for convenience when validating unique id search results.
     field(:snp_class)      { |node| node.items['SNP_CLASS'] }
 
-    def discontinued
+    def discontinued?
       merged_with.present?
     end
 

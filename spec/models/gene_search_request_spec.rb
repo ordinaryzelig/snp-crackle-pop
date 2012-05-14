@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Gene::SearchRequest do
 
-  it 'requires at least 3 characters' do
+  it 'requires at least 3 characters or is a number' do
     valids = ['iri', 1, 123, '1', '-1.23']
     valids.each do |term|
       term.should be_valid_to_search(Gene)

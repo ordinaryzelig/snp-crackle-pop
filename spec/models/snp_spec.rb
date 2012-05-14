@@ -55,17 +55,6 @@ describe Snp do
 
   it_raises_error_if_ncbi_cannot_find_it
 
-  describe '#refetch' do
-
-    it 'destroys existing SNPs and replaces them with fetch!' do
-      snp = Snp.make_from_fixture_file
-      Snp.refetch!(snp.ncbi_id)
-      proc { snp.reload }.should raise_error(Mongoid::Errors::DocumentNotFound)
-      Snp.find_by_ncbi_id(snp.ncbi_id).should_not be_nil
-    end
-
-  end
-
   it 'finds multiple objects that exist in local db by NCBI ids' do
     ids = [1, 2]
     ids.each { |id| Snp.make(ncbi_id: id) }
@@ -95,6 +84,7 @@ describe Snp do
   end
 
   it 'fetches unique identifiers' do
+    disable_snp_associations
     fake_search_request fixture_file('snp_search_9268480_672_esummary.xml') do
       fake_service_with_file :EFetch, fixture_file('snps_9268480_672_efetch.xml') do
         Taxonomy.make_from_fixture_file
@@ -125,6 +115,12 @@ describe Snp do
       proc { Snp.search('invalid') }.should raise_exception(NCBI::SearchRequest::InvalidSearchTerm)
     end
 
+  end
+
+  specify '#location returns Location object with chromosome and base position range' do
+    snp = Snp.new(chromosome: 1, assemblies: [Assembly.new(reference: true, base_position: 10)])
+    location = Location.new(chromosome: 1, base_position_low: 10)
+    snp.location.should == location
   end
 
 end

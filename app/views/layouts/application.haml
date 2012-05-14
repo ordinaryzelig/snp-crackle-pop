@@ -1,15 +1,24 @@
 !!! 5
 %html
+
   %head
-    = stylesheet_link_tag 'screen'
+    %meta{charset: 'utf-8'}
     %title
       :plain
         SNP Crackle Pop - #{yield_content :title}
+
+    = stylesheet_link_tag 'screen'
+    %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', type: 'text/javascript'}
+    = javascript_include_tag 'application'
+
   %body
+
     %nav#menu_bar
       %ul
         %li#title= link_to 'SNP Crackle Pop', '/'
         %li#polymorphic_search= partial 'home/polymorphic_search'
+
     #main= yield
+
     #footer
       = partial 'layouts/version'

@@ -1,0 +1,92 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: http://www.ncbi.nlm.nih.gov/gap/PheGenI?rs=9268480&tab=2&type=text&data=SNP&log_op=downloadAssocText_L&p%24l=AssocText_L&p%24st=gap
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 10 May 2012 21:02:15 GMT
+      server: 
+      - Apache
+      cache-control: 
+      - private
+      content-disposition: 
+      - attachment; filename=PheGenI_Association.tab
+      ncbi-sid: 
+      - 396E0AAAFAC2CD71_0121SID
+      content-type: 
+      - application/octet-stream
+      set-cookie: 
+      - ncbi_sid=396E0AAAFAC2CD71_0121SID; domain=.nih.gov; path=/; expires=Fri, 10 May 2013 21:02:15 GMT
+      - WebEnv=1juIdr%40396E0AAAFAC2CD71_0121SID; domain=.nlm.nih.gov; path=/; expires=Fri, 11 May 2012 05:02:15 GMT
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+      transfer-encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        #	Trait	SNP rs	Context	Gene	Gene ID	Gene 2	Gene ID 2	Chromosome	Location	P-Value	Source	PubMed	Analysis ID	Study ID	Study Name
+        1	Colitis, Ulcerative	9268480	cds-synon	BTNL2	56244	BTNL2	56244	6	32363844	3e-06	NHGRI	19915573			
+
+    http_version: "1.1"
+  recorded_at: Thu, 10 May 2012 21:02:16 GMT
+- request: 
+    method: get
+    uri: http://www.ncbi.nlm.nih.gov/gap/PheGenI?rs=672&tab=2&type=text&data=SNP&log_op=downloadAssocText_L&p%24l=AssocText_L&p%24st=gap
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 10 May 2012 21:02:16 GMT
+      server: 
+      - Apache
+      cache-control: 
+      - private
+      content-disposition: 
+      - attachment; filename=PheGenI_Association.tab
+      ncbi-sid: 
+      - CE8B584BFAC2CD81_0008SID
+      content-type: 
+      - application/octet-stream
+      set-cookie: 
+      - ncbi_sid=CE8B584BFAC2CD81_0008SID; domain=.nih.gov; path=/; expires=Fri, 10 May 2013 21:02:16 GMT
+      - WebEnv=18AAKp%40CE8B584BFAC2CD81_0008SID; domain=.nlm.nih.gov; path=/; expires=Fri, 11 May 2012 05:02:16 GMT
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+      transfer-encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        No data retrieved, possibly due to a timeout.  Please try again.
+
+    http_version: "1.1"
+  recorded_at: Thu, 10 May 2012 21:02:17 GMT
+recorded_with: VCR 2.1.1

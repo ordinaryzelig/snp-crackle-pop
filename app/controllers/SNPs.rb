@@ -7,7 +7,7 @@ SnpCracklePop.controllers :snps do
   # Perform unique id search or location search.
   get :search do
     @term = params[:q]
-    @location = params[:location]
+    @location = Location.new(params[:location]) if params[:location]
     if @term
       snp = Snp.search(@term)
       redirect url(:snps, :show, id: snp.rs_number)
@@ -15,6 +15,16 @@ SnpCracklePop.controllers :snps do
       @snp_search_results = Snp.locate(@location)
     end
     haml :'snps/search'
+  end
+
+  get :locate, 'snps/locate' do
+    haml :'snps/locate'
+  end
+
+  post :locate do
+    locations = Location.new_from_input(params[:locations])
+    objects = Snp.locate_fresh(locations, params[:refetch_if_older_than])
+    csv objects.mongoid_to_csv, 'located.csv'
   end
 
   get :show, 'snps/:id' do

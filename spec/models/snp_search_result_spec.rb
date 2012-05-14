@@ -21,7 +21,7 @@ describe Snp::SearchResult do
   it 'parses attribute merged_with and points to another RS number' do
     search_results = Snp::SearchResult.all_from_file(fixture_file('snp_locate_chr_6_base_32363840_to_32363850_esummary.xml'))
     snp_search_result = search_results.detect { |s| s.ncbi_id == 17208804 }
-    snp_search_result.discontinued.should be_true
+    snp_search_result.discontinued?.should be_true
     snp_search_result.merged_with.should == 9268480
   end
 

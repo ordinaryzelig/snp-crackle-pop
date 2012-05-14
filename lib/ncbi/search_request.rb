@@ -11,7 +11,6 @@ module NCBI
     attr_reader :search_terms
     attr_reader :ids
     attr_reader :results
-    attr_reader :search_term
 
     delegate :ncbi_database_name, to: :parent
 
@@ -19,17 +18,9 @@ module NCBI
       @search_terms = search_terms
     end
 
-    # Validates that @search_term (singular, i.e. the word that is being searched)
-    # is a number or at least 3 characters.
+    # Overwrite in subclasses.
     def valid?
-      begin
-        # Attempt to convert to number.
-        !!Float(@search_term)
-      rescue
-        # @search_term cannot be coerced into number, must be non-number string,
-        # and it should be >=3 characters.
-        @search_term.size >= 3
-      end
+      true
     end
 
     def execute

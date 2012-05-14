@@ -51,4 +51,10 @@ describe 'Genes', type: :acceptance do
 
   it_can_download_csv_of_list_of_ncbi_ids
 
+  specify 'GET genes/show refetches if older than 0 days' do
+    gene = Gene.make_from_fixture_file(updated_from_ncbi_at: 1.day.ago)
+    Gene.expects(:refetch_if_stale!).with([gene], 0).returns([gene])
+    visit url(:genes, :show, id: gene.ncbi_id)
+  end
+
 end

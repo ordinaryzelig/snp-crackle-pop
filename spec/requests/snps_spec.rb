@@ -54,4 +54,11 @@ describe 'Snps', type: :acceptance do
 
   end
 
+  specify 'GET snps/show refetches if older than 0 days' do
+    Snp.count.should == 0
+    snp = Snp.make_from_fixture_file(updated_from_ncbi_at: 1.day.ago)
+    Snp.expects(:refetch_if_stale!).with([snp], 0).returns([snp])
+    visit url(:snps, :show, id: snp.ncbi_id)
+  end
+
 end

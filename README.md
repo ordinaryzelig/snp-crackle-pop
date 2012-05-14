@@ -11,6 +11,8 @@ Data can be updated through `NCBI::Document.refetch!`.
 `refetch!` destroys existing objects and `fetch!`es again.
 Because the old document is destroyed, the _id is not currently preserved.
 
+Each show action should refetch if data is older than 0 days.
+
 # Limits
 
 ## SNP
@@ -34,5 +36,4 @@ Searching 100 locations is OK.
 
 * **MORE README**
 * Unhandled exception + mailer
-* refetch before showing (slows us down).
 * Add link to wiki.

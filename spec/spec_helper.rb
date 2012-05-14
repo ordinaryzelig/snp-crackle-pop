@@ -29,6 +29,11 @@ Spork.prefork do
   VCR.configure do |c|
     c.cassette_library_dir = 'spec/support/vcr_cassettes'
     c.hook_into :fakeweb
+    # Tests can be run without internet (and should be every once in a while).
+    # Since VCR was introduced later in development,
+    # there was already a system in place (see ExampleMacros#fake_service_with_file).
+    # And because of that older system, VCR needs to allow HTTP connections.
+    # TODO See if there is a per-test way to disable so we can get rid of this line.
     c.allow_http_connections_when_no_cassette = true
   end
 

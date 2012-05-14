@@ -64,7 +64,7 @@ module DescriptionMacros
       visit url_for(model_class, :index)
       fill_in :ids, with: ids.join("\n")
       click_button 'Download'
-      page.body.should == model_class.with_ncbi_ids(ids).to_csv
+      page.body.should == model_class.where(:ncbi_id.in => ids).to_csv
     end
   end
 

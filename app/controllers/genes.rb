@@ -17,6 +17,7 @@ SnpCracklePop.controllers :genes do
 
   get :show, 'genes/:id' do
     @gene = Gene.find_by_ncbi_id_or_fetch!(params[:id])
+    @gene = Gene.refetch_if_stale!([@gene], 0).first
     haml :'genes/show'
   end
 

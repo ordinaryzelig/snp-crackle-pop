@@ -58,7 +58,7 @@ describe Snp do
   it 'finds multiple objects that exist in local db by NCBI ids' do
     ids = [1, 2]
     ids.each { |id| Snp.make(ncbi_id: id) }
-    Snp.with_ncbi_ids(ids).map(&:ncbi_id).should =~ ids
+    Snp.where(:ncbi_id.in => ids).map(&:ncbi_id).should =~ ids
   end
 
   it 'fetches multiple objects that do not already exist in local DB' do

@@ -29,6 +29,7 @@ SnpCracklePop.controllers :snps do
 
   get :show, 'snps/:id' do
     @snp = Snp.find_by_ncbi_id_or_fetch!(params[:id])
+    @snp = Snp.refetch_if_stale!([@snp], 0).first
     haml :'snps/show'
   end
 

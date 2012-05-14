@@ -81,7 +81,7 @@ module NCBI
       # Find objects that already exist in local DB.
       # If any not found locally, fetch from NCBI.
       def find_all_by_ncbi_id_or_fetch!(ncbi_ids)
-        found_locally = with_ncbi_ids(ncbi_ids)
+        found_locally = where(:ncbi_id.in => ncbi_ids)
         ids_not_found_locally = ncbi_ids.map(&:to_i) - found_locally.map(&:ncbi_id)
         fetch_in_batches!(50, ids_not_found_locally) if ids_not_found_locally.any?
         # found_locally is a Mongoid::Criteria object.

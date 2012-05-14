@@ -22,4 +22,10 @@ describe 'GenomeProjects', type: :acceptance do
 
   it_can_be_refetched :name, 'asdf'
 
+  specify 'GET genome_projects/show refetches if older than 0 days' do
+    genome_project = GenomeProject.make_from_fixture_file(updated_from_ncbi_at: 1.day.ago)
+    GenomeProject.expects(:refetch_if_stale!).with([genome_project], 0).returns([genome_project])
+    visit url(:genome_projects, :show, id: genome_project.ncbi_id)
+  end
+
 end

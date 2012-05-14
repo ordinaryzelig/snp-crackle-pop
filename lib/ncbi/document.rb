@@ -56,10 +56,6 @@ module NCBI
         self::UniqueIdSearchRequest.new(ids).execute
       end
 
-      def with_ncbi_ids(ids)
-        where :ncbi_id.in => ids
-      end
-
       # Some naming convenience methods.
 
       def model_name

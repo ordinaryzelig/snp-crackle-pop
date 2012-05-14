@@ -10,6 +10,7 @@ SnpCracklePop.controllers :genome_projects do
 
   get :show, 'genome_projects/:id' do
     @genome_project = GenomeProject.find_by_ncbi_id_or_fetch!(params[:id])
+    @genome_project = GenomeProject.refetch_if_stale!([@genome_project], 0).first
     haml :'genome_projects/show'
   end
 

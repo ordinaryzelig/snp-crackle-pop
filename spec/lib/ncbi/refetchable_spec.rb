@@ -6,8 +6,8 @@ describe NCBI::Refetchable do
 
     it 'destroys existing object and replaces them with fetch!' do
       snp = Snp.make_from_fixture_file
-      Snp.expects(:fetch).with(snp.rs_number).returns(snp.clone)
-      Snp.refetch!(snp.ncbi_id)
+      Snp.expects(:fetch).with([snp.rs_number]).returns(snp.clone)
+      Snp.refetch!([snp.ncbi_id])
       proc { snp.reload }.should raise_error(Mongoid::Errors::DocumentNotFound)
       Snp.find_by_ncbi_id(snp.ncbi_id).should_not be_nil
     end

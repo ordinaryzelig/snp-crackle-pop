@@ -91,11 +91,9 @@ table.attribute_table tbody td {
   font-style: italic;
   font-size: 70%; }
 
-html {
-  font-family: sans-serif; }
-
 body {
-  padding-top: 0; }
+  padding-top: 0;
+  font-family: sans-serif; }
 
 #menu_bar {
   height: 1.5em;
@@ -121,7 +119,8 @@ body {
   padding: 10px;
   padding-top: 3em;
   background-color: white;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 1200px; }
 
 #footer {
   padding: 5px;

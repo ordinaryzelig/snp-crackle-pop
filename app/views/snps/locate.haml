@@ -11,9 +11,4 @@
   = text_area_tag :locations, id: 'locations', rows: 25, cols: 25, placeholder: ''
   %br
 
-  = label_tag      :refetch_if_older_than, caption: "Update if data older than"
-  = text_field_tag :refetch_if_older_than, id: :refetch_if_older_than, size: 2, value: 1
-  days.
-  %br
-
   = submit_tag 'Locate and download CSV', id: 'locate_and_download'

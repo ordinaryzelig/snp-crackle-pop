@@ -25,7 +25,7 @@ SnpCracklePop.controllers :snps do
   # Locate fresh and download.
   post :locate do
     locations = Location.new_from_input(params[:locations])
-    objects = Snp.locate_fresh(locations, params[:refetch_if_older_than])
+    objects = Snp.locate_fresh(locations, 0)
     csv objects.mongoid_to_csv, 'located.csv'
   end
 

@@ -17,10 +17,12 @@ SnpCracklePop.controllers :snps do
     haml :'snps/search'
   end
 
+  # Form for fresh locating and downloading.
   get :locate, 'snps/locate' do
     haml :'snps/locate'
   end
 
+  # Locate fresh and download.
   post :locate do
     locations = Location.new_from_input(params[:locations])
     objects = Snp.locate_fresh(locations, params[:refetch_if_older_than])

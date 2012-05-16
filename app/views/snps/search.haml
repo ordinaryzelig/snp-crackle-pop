@@ -8,6 +8,7 @@
       = submit_tag :Search
 
   = partial 'shared/locate_form', locals: {url_name: :snps_search, location: @location || Location.new}
+  = link_to 'Locate multiple SNPs', url(:snps, :locate)
 
   - if @snp_search_results
     %h2#found= 'Found ' + pluralize(@snp_search_results.size, 'SNP')

@@ -137,7 +137,8 @@ body {
 #home ul.model {
   display: inline-block;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  vertical-align: top; }
   #home ul.model li {
     padding: 50px; }
 

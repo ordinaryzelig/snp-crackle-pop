@@ -17,6 +17,9 @@ gem 'nokogiri', '1.4.4'
 gem 'sass', '3.1.1'
 gem 'mongoid_to_csv', '0.4.0'
 
+# Wiki.
+gem 'rdiscount', '1.6.8'
+
 group :test do
   gem 'capybara', '~>0.4.1'
   gem 'fakeweb', '1.3.0'

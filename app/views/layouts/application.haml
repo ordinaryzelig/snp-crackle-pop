@@ -8,6 +8,7 @@
         SNP Crackle Pop - #{yield_content :title}
 
     = stylesheet_link_tag 'screen'
+    = stylesheet_link_tag 'wiki'
     %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', type: 'text/javascript'}
     = javascript_include_tag 'application'
 
@@ -21,5 +22,5 @@
     #main= yield
 
     #footer
-      = link_to 'Help', 'https://github.com/ordinaryzelig/snp-crackle-pop/wiki', target: 'blank'
+      = link_to 'Help', url(:wiki, :index)
       = partial 'layouts/version'
